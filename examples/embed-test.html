@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Embed test — connection chart</title>
+  <style>
+    :root { color-scheme: light; }
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      background: #f3f0e8;
+      color: #1c1917;
+    }
+    .post {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 32px 18px 64px;
+    }
+    .site {
+      font-family: Inter, "Segoe UI", sans-serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #78716c;
+    }
+    h1 { font-size: 2rem; font-weight: 560; line-height: 1.2; margin: 10px 0; }
+    p { font-size: 1.05rem; line-height: 1.55; }
+    .frame-wrap {
+      background: #fff;
+      border: 1px solid #e7e5e4;
+      margin: 20px 0;
+    }
+    iframe {
+      display: block;
+      width: 100%;
+      height: 180px;
+      border: 0;
+      overflow: hidden;
+      background: #fff;
+    }
+    .status {
+      font-family: Inter, "Segoe UI", sans-serif;
+      font-size: 0.92rem;
+      background: #ecfdf3;
+      border: 1px solid #86efac;
+      border-radius: 10px;
+      padding: 10px 12px;
+      margin: 0 0 16px;
+    }
+    .status strong { font-family: inherit; }
+    code { font-family: ui-monospace, monospace; font-size: 0.86em; }
+  </style>
+</head>
+<body>
+  <article class="post">
+    <p class="site">Example parent page</p>
+    <h1>A chart inside a post</h1>
+    <p>This page stands in for a WordPress article. The chart starts in a short frame. The script below listens for <code>pfd:resize</code> and sets the iframe height to the chart’s content, so the frame does not scroll on its own.</p>
+    <p class="status" id="status">Waiting for the chart to report its height…</p>
+    <div class="frame-wrap">
+      <iframe
+        id="chart-frame"
+        title="Prophecies of the Messiah"
+        data-pfd-id="messianic-prophecies"
+        src="../index.html"
+        scrolling="no"
+      ></iframe>
+    </div>
+    <p>Text after the chart stays below it. When a passage opens inside the chart, this page grows with the frame instead of clipping the reading.</p>
+  </article>
+  <script src="../embed.js"></script>
+  <script>
+    var statusEl = document.getElementById("status");
+    var frame = document.getElementById("chart-frame");
+    var seen = 0;
+    window.addEventListener("message", function (event) {
+      var data = event.data;
+      if (!data || data.type !== "pfd:resize") return;
+      if (event.source !== frame.contentWindow) return;
+      seen += 1;
+      statusEl.innerHTML = "Parent received <code>{ type: 'pfd:resize', height: " +
+        data.height + ", id: '" + (data.id || "") + "' }</code>. " +
+        "Iframe height is now <strong data-iframe-height=\"" + frame.style.height + "\">" +
+        frame.style.height + "</strong> (" + seen + " message" + (seen === 1 ? "" : "s") + ").";
+    });
+  </script>
+</body>
+</html>
