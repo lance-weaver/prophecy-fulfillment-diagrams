@@ -1,0 +1,4751 @@
+{
+  "credit": {
+    "title": "Chart of Old Testament prophecies fulfilled by Jesus",
+    "author": "Ray Konig",
+    "url": "https://www.about-jesus.org/complete-chart-prophecies-jesus.htm",
+    "retrieved": "2026-10-11",
+    "note": "Summaries and prophecy/fulfillment pairings are from Ray Konig's chart. The source page does not include verse text.",
+    "translation": "King James Version",
+    "translationNote": "Verse text is the classic King James Version (public domain), bundled when this file was built. It is not fetched at runtime.",
+    "translationSource": "https://raw.githubusercontent.com/thiagobodruk/bible/master/json/en_kjv.json"
+  },
+  "books": {
+    "source": [
+      "Genesis",
+      "Deuteronomy",
+      "2 Samuel",
+      "Psalms",
+      "Isaiah",
+      "Jeremiah",
+      "Ezekiel",
+      "Daniel",
+      "Micah",
+      "Zechariah",
+      "Malachi"
+    ],
+    "target": [
+      "Matthew",
+      "Mark",
+      "Luke",
+      "John",
+      "Acts",
+      "Romans",
+      "1 Corinthians",
+      "2 Corinthians",
+      "Galatians",
+      "Hebrews",
+      "1 John"
+    ]
+  },
+  "build": {
+    "itemCount": 70,
+    "passageCount": 148,
+    "unparsed": [],
+    "unplotted": [
+      {
+        "id": "69",
+        "summary": "The Messiah will return to preside over Judgment Day",
+        "reason": "Fulfillment citation is not a New Testament book, so no curve is drawn. The passage still appears when its Old Testament book is selected.",
+        "targets": [
+          "Daniel 7:13-14",
+          "Daniel 12:1-2"
+        ]
+      }
+    ]
+  },
+  "passages": {
+    "Genesis 3:15": [
+      {
+        "n": 15,
+        "text": "And I will put enmity between thee and the woman, and between thy seed and her seed; it shall bruise thy head, and thou shalt bruise his heel."
+      }
+    ],
+    "Galatians 4:4-5": [
+      {
+        "n": 4,
+        "text": "But when the fulness of the time was come, God sent forth his Son, made of a woman, made under the law,"
+      },
+      {
+        "n": 5,
+        "text": "To redeem them that were under the law, that we might receive the adoption of sons."
+      }
+    ],
+    "Matthew 1:18": [
+      {
+        "n": 18,
+        "text": "Now the birth of Jesus Christ was on this wise: When as his mother Mary was espoused to Joseph, before they came together, she was found with child of the Holy Ghost."
+      }
+    ],
+    "Genesis 22:18": [
+      {
+        "n": 18,
+        "text": "And in thy seed shall all the nations of the earth be blessed; because thou hast obeyed my voice."
+      }
+    ],
+    "Matthew 1:1": [
+      {
+        "n": 1,
+        "text": "The book of the generation of Jesus Christ, the son of David, the son of Abraham."
+      }
+    ],
+    "Luke 3:34": [
+      {
+        "n": 34,
+        "text": "Which was the son of Jacob, which was the son of Isaac, which was the son of Abraham, which was the son of Thara, which was the son of Nachor,"
+      }
+    ],
+    "Romans 4:13": [
+      {
+        "n": 13,
+        "text": "For the promise, that he should be the heir of the world, was not to Abraham, or to his seed, through the law, but through the righteousness of faith."
+      }
+    ],
+    "Galatians 3:7": [
+      {
+        "n": 7,
+        "text": "Know ye therefore that they which are of faith, the same are the children of Abraham."
+      }
+    ],
+    "Genesis 26:1-5": [
+      {
+        "n": 1,
+        "text": "And there was a famine in the land, beside the first famine that was in the days of Abraham. And Isaac went unto Abimelech king of the Philistines unto Gerar."
+      },
+      {
+        "n": 2,
+        "text": "And the LORD appeared unto him, and said, Go not down into Egypt; dwell in the land which I shall tell thee of:"
+      },
+      {
+        "n": 3,
+        "text": "Sojourn in this land, and I will be with thee, and will bless thee; for unto thee, and unto thy seed, I will give all these countries, and I will perform the oath which I sware unto Abraham thy father;"
+      },
+      {
+        "n": 4,
+        "text": "And I will make thy seed to multiply as the stars of heaven, and will give unto thy seed all these countries; and in thy seed shall all the nations of the earth be blessed;"
+      },
+      {
+        "n": 5,
+        "text": "Because that Abraham obeyed my voice, and kept my charge, my commandments, my statutes, and my laws."
+      }
+    ],
+    "Romans 9:7": [
+      {
+        "n": 7,
+        "text": "Neither, because they are the seed of Abraham, are they all children: but, In Isaac shall thy seed be called."
+      }
+    ],
+    "Hebrews 11:18": [
+      {
+        "n": 18,
+        "text": "Of whom it was said, That in Isaac shall thy seed be called:"
+      }
+    ],
+    "Matthew 1:2": [
+      {
+        "n": 2,
+        "text": "Abraham begat Isaac; and Isaac begat Jacob; and Jacob begat Judas and his brethren;"
+      }
+    ],
+    "Genesis 28:10-14": [
+      {
+        "n": 10,
+        "text": "And Jacob went out from Beer-sheba, and went toward Haran."
+      },
+      {
+        "n": 11,
+        "text": "And he lighted upon a certain place, and tarried there all night, because the sun was set; and he took of the stones of that place, and put them for his pillows, and lay down in that place to sleep."
+      },
+      {
+        "n": 12,
+        "text": "And he dreamed, and behold a ladder set up on the earth, and the top of it reached to heaven: and behold the angels of God ascending and descending on it."
+      },
+      {
+        "n": 13,
+        "text": "And, behold, the LORD stood above it, and said, I am the LORD God of Abraham thy father, and the God of Isaac: the land whereon thou liest, to thee will I give it, and to thy seed;"
+      },
+      {
+        "n": 14,
+        "text": "And thy seed shall be as the dust of the earth, and thou shalt spread abroad to the west, and to the east, and to the north, and to the south: and in thee and in thy seed shall all the families of the earth be blessed."
+      }
+    ],
+    "Genesis 49:10": [
+      {
+        "n": 10,
+        "text": "The sceptre shall not depart from Judah, nor a lawgiver from between his feet, until Shiloh come; and unto him shall the gathering of the people be."
+      }
+    ],
+    "Matthew 1:3": [
+      {
+        "n": 3,
+        "text": "And Judas begat Phares and Zara of Thamar; and Phares begat Esrom; and Esrom begat Aram;"
+      }
+    ],
+    "Luke 3:33": [
+      {
+        "n": 33,
+        "text": "Which was the son of Aminadab, which was the son of Aram, which was the son of Esrom, which was the son of Phares, which was the son of Juda,"
+      }
+    ],
+    "Isaiah 11:1-10": [
+      {
+        "n": 1,
+        "text": "And there shall come forth a rod out of the stem of Jesse, and a Branch shall grow out of his roots:"
+      },
+      {
+        "n": 2,
+        "text": "And the spirit of the LORD shall rest upon him, the spirit of wisdom and understanding, the spirit of counsel and might, the spirit of knowledge and of the fear of the LORD;"
+      },
+      {
+        "n": 3,
+        "text": "And shall make him of quick understanding in the fear of the LORD: and he shall not judge after the sight of his eyes, neither reprove after the hearing of his ears:"
+      },
+      {
+        "n": 4,
+        "text": "But with righteousness shall he judge the poor, and reprove with equity for the meek of the earth: and he shall smite the earth with the rod of his mouth, and with the breath of his lips shall he slay the wicked."
+      },
+      {
+        "n": 5,
+        "text": "And righteousness shall be the girdle of his loins, and faithfulness the girdle of his reins."
+      },
+      {
+        "n": 6,
+        "text": "The wolf also shall dwell with the lamb, and the leopard shall lie down with the kid; and the calf and the young lion and the fatling together; and a little child shall lead them."
+      },
+      {
+        "n": 7,
+        "text": "And the cow and the bear shall feed; their young ones shall lie down together: and the lion shall eat straw like the ox."
+      },
+      {
+        "n": 8,
+        "text": "And the sucking child shall play on the hole of the asp, and the weaned child shall put his hand on the cockatrice’ den."
+      },
+      {
+        "n": 9,
+        "text": "They shall not hurt nor destroy in all my holy mountain: for the earth shall be full of the knowledge of the LORD, as the waters cover the sea."
+      },
+      {
+        "n": 10,
+        "text": "And in that day there shall be a root of Jesse, which shall stand for an ensign of the people; to it shall the Gentiles seek: and his rest shall be glorious."
+      }
+    ],
+    "Matthew 1:6": [
+      {
+        "n": 6,
+        "text": "And Jesse begat David the king; and David the king begat Solomon of her that had been the wife of Urias;"
+      }
+    ],
+    "Luke 3:32": [
+      {
+        "n": 32,
+        "text": "Which was the son of Jesse, which was the son of Obed, which was the son of Booz, which was the son of Salmon, which was the son of Naasson,"
+      }
+    ],
+    "2 Samuel 7:12-16": [
+      {
+        "n": 12,
+        "text": "And when thy days be fulfilled, and thou shalt sleep with thy fathers, I will set up thy seed after thee, which shall proceed out of thy bowels, and I will establish his kingdom."
+      },
+      {
+        "n": 13,
+        "text": "He shall build an house for my name, and I will stablish the throne of his kingdom for ever."
+      },
+      {
+        "n": 14,
+        "text": "I will be his father, and he shall be my son. If he commit iniquity, I will chasten him with the rod of men, and with the stripes of the children of men:"
+      },
+      {
+        "n": 15,
+        "text": "But my mercy shall not depart away from him, as I took it from Saul, whom I put away before thee."
+      },
+      {
+        "n": 16,
+        "text": "And thine house and thy kingdom shall be established for ever before thee: thy throne shall be established for ever."
+      }
+    ],
+    "Luke 3:31": [
+      {
+        "n": 31,
+        "text": "Which was the son of Melea, which was the son of Menan, which was the son of Mattatha, which was the son of Nathan, which was the son of David,"
+      }
+    ],
+    "Isaiah 11:1": [
+      {
+        "n": 1,
+        "text": "And there shall come forth a rod out of the stem of Jesse, and a Branch shall grow out of his roots:"
+      }
+    ],
+    "Luke 3:1-23": [
+      {
+        "n": 1,
+        "text": "Now in the fifteenth year of the reign of Tiberius Cæsar, Pontius Pilate being governor of Judæa, and Herod being tetrarch of Galilee, and his brother Philip tetrarch of Ituraea and of the region of Trachonitis, and Lysanias the tetrarch of Abilene,"
+      },
+      {
+        "n": 2,
+        "text": "Annas and Caiaphas being the high priests, the word of God came unto John the son of Zacharias in the wilderness."
+      },
+      {
+        "n": 3,
+        "text": "And he came into all the country about Jordan, preaching the baptism of repentance for the remission of sins;"
+      },
+      {
+        "n": 4,
+        "text": "As it is written in the book of the words of Esaias the prophet, saying, The voice of one crying in the wilderness, Prepare ye the way of the Lord, make his paths straight."
+      },
+      {
+        "n": 5,
+        "text": "Every valley shall be filled, and every mountain and hill shall be brought low; and the crooked shall be made straight, and the rough ways shall be made smooth;"
+      },
+      {
+        "n": 6,
+        "text": "And all flesh shall see the salvation of God."
+      },
+      {
+        "n": 7,
+        "text": "Then said he to the multitude that came forth to be baptized of him, O generation of vipers, who hath warned you to flee from the wrath to come?"
+      },
+      {
+        "n": 8,
+        "text": "Bring forth therefore fruits worthy of repentance, and begin not to say within yourselves, We have Abraham to our father: for I say unto you, That God is able of these stones to raise up children unto Abraham."
+      },
+      {
+        "n": 9,
+        "text": "And now also the axe is laid unto the root of the trees: every tree therefore which bringeth not forth good fruit is hewn down, and cast into the fire."
+      },
+      {
+        "n": 10,
+        "text": "And the people asked him, saying, What shall we do then?"
+      },
+      {
+        "n": 11,
+        "text": "He answereth and saith unto them, He that hath two coats, let him impart to him that hath none; and he that hath meat, let him do likewise."
+      },
+      {
+        "n": 12,
+        "text": "Then came also publicans to be baptized, and said unto him, Master, what shall we do?"
+      },
+      {
+        "n": 13,
+        "text": "And he said unto them, Exact no more than that which is appointed you."
+      },
+      {
+        "n": 14,
+        "text": "And the soldiers likewise demanded of him, saying, And what shall we do? And he said unto them, Do violence to no man, neither accuse any falsely; and be content with your wages."
+      },
+      {
+        "n": 15,
+        "text": "And as the people were in expectation, and all men mused in their hearts of John, whether he were the Christ, or not;"
+      },
+      {
+        "n": 16,
+        "text": "John answered, saying unto them all, I indeed baptize you with water; but one mightier than I cometh, the latchet of whose shoes I am not worthy to unloose: he shall baptize you with the Holy Ghost and with fire:"
+      },
+      {
+        "n": 17,
+        "text": "Whose fan is in his hand, and he will throughly purge his floor, and will gather the wheat into his garner; but the chaff he will burn with fire unquenchable."
+      },
+      {
+        "n": 18,
+        "text": "And many other things in his exhortation preached he unto the people."
+      },
+      {
+        "n": 19,
+        "text": "But Herod the tetrarch, being reproved by him for Herodias his brother Philip’s wife, and for all the evils which Herod had done,"
+      },
+      {
+        "n": 20,
+        "text": "Added yet this above all, that he shut up John in prison."
+      },
+      {
+        "n": 21,
+        "text": "Now when all the people were baptized, it came to pass, that Jesus also being baptized, and praying, the heaven was opened,"
+      },
+      {
+        "n": 22,
+        "text": "And the Holy Ghost descended in a bodily shape like a dove upon him, and a voice came from heaven, which said, Thou art my beloved Son; in thee I am well pleased."
+      },
+      {
+        "n": 23,
+        "text": "And Jesus himself began to be about thirty years of age, being (as was supposed) the son of Joseph, which was the son of Heli,"
+      }
+    ],
+    "Jeremiah 23:3-6": [
+      {
+        "n": 3,
+        "text": "And I will gather the remnant of my flock out of all countries whither I have driven them, and will bring them again to their folds; and they shall be fruitful and increase."
+      },
+      {
+        "n": 4,
+        "text": "And I will set up shepherds over them which shall feed them: and they shall fear no more, nor be dismayed, neither shall they be lacking, saith the LORD."
+      },
+      {
+        "n": 5,
+        "text": "Behold, the days come, saith the LORD, that I will raise unto David a righteous Branch, and a King shall reign and prosper, and shall execute judgment and justice in the earth."
+      },
+      {
+        "n": 6,
+        "text": "In his days Judah shall be saved, and Israel shall dwell safely: and this is his name whereby he shall be called, THE LORD OUR RIGHTEOUSNESS."
+      }
+    ],
+    "Daniel 9:24-26": [
+      {
+        "n": 24,
+        "text": "Seventy weeks are determined upon thy people and upon thy holy city, to finish the transgression, and to make an end of sins, and to make reconciliation for iniquity, and to bring in everlasting righteousness, and to seal up the vision and prophecy, and to anoint the most Holy."
+      },
+      {
+        "n": 25,
+        "text": "Know therefore and understand, that from the going forth of the commandment to restore and to build Jerusalem unto the Messiah the Prince shall be seven weeks, and threescore and two weeks: the street shall be built again, and the wall, even in troublous times."
+      },
+      {
+        "n": 26,
+        "text": "And after threescore and two weeks shall Messiah be cut off, but not for himself: and the people of the prince that shall come shall destroy the city and the sanctuary; and the end thereof shall be with a flood, and unto the end of the war desolations are determined."
+      }
+    ],
+    "Matthew 2": [
+      {
+        "n": 1,
+        "text": "Now when Jesus was born in Bethlehem of Judaea in the days of Herod the king, behold, there came wise men from the east to Jerusalem,"
+      },
+      {
+        "n": 2,
+        "text": "Saying, Where is he that is born King of the Jews? for we have seen his star in the east, and are come to worship him."
+      },
+      {
+        "n": 3,
+        "text": "When Herod the king had heard these things, he was troubled, and all Jerusalem with him."
+      },
+      {
+        "n": 4,
+        "text": "And when he had gathered all the chief priests and scribes of the people together, he demanded of them where Christ should be born."
+      },
+      {
+        "n": 5,
+        "text": "And they said unto him, In Bethlehem of Judaea: for thus it is written by the prophet,"
+      },
+      {
+        "n": 6,
+        "text": "And thou Bethlehem, in the land of Juda, art not the least among the princes of Juda: for out of thee shall come a Governor, that shall rule my people Israel."
+      },
+      {
+        "n": 7,
+        "text": "Then Herod, when he had privily called the wise men, enquired of them diligently what time the star appeared."
+      },
+      {
+        "n": 8,
+        "text": "And he sent them to Bethlehem, and said, Go and search diligently for the young child; and when ye have found him, bring me word again, that I may come and worship him also."
+      },
+      {
+        "n": 9,
+        "text": "When they had heard the king, they departed; and, lo, the star, which they saw in the east, went before them, till it came and stood over where the young child was."
+      },
+      {
+        "n": 10,
+        "text": "When they saw the star, they rejoiced with exceeding great joy."
+      },
+      {
+        "n": 11,
+        "text": "And when they were come into the house, they saw the young child with Mary his mother, and fell down, and worshipped him: and when they had opened their treasures, they presented unto him gifts; gold, and frankincense, and myrrh."
+      },
+      {
+        "n": 12,
+        "text": "And being warned of God in a dream that they should not return to Herod, they departed into their own country another way."
+      },
+      {
+        "n": 13,
+        "text": "And when they were departed, behold, the angel of the Lord appeareth to Joseph in a dream, saying, Arise, and take the young child and his mother, and flee into Egypt, and be thou there until I bring thee word: for Herod will seek the young child to destroy him."
+      },
+      {
+        "n": 14,
+        "text": "When he arose, he took the young child and his mother by night, and departed into Egypt:"
+      },
+      {
+        "n": 15,
+        "text": "And was there until the death of Herod: that it might be fulfilled which was spoken of the Lord by the prophet, saying, Out of Egypt have I called my son."
+      },
+      {
+        "n": 16,
+        "text": "Then Herod, when he saw that he was mocked of the wise men, was exceeding wroth, and sent forth, and slew all the children that were in Bethlehem, and in all the coasts thereof, from two years old and under, according to the time which he had diligently enquired of the wise men."
+      },
+      {
+        "n": 17,
+        "text": "Then was fulfilled that which was spoken by Jeremy the prophet, saying,"
+      },
+      {
+        "n": 18,
+        "text": "In Rama was there a voice heard, lamentation, and weeping, and great mourning, Rachel weeping for her children, and would not be comforted, because they are not."
+      },
+      {
+        "n": 19,
+        "text": "But when Herod was dead, behold, an angel of the Lord appeareth in a dream to Joseph in Egypt,"
+      },
+      {
+        "n": 20,
+        "text": "Saying, Arise, and take the young child and his mother, and go into the land of Israel: for they are dead which sought the young child’s life."
+      },
+      {
+        "n": 21,
+        "text": "And he arose, and took the young child and his mother, and came into the land of Israel."
+      },
+      {
+        "n": 22,
+        "text": "But when he heard that Archelaus did reign in Judaea in the room of his father Herod, he was afraid to go thither: notwithstanding, being warned of God in a dream, he turned aside into the parts of Galilee:"
+      },
+      {
+        "n": 23,
+        "text": "And he came and dwelt in a city called Nazareth: that it might be fulfilled which was spoken by the prophets, He shall be called a Nazarene."
+      }
+    ],
+    "Ezekiel 21:26-27": [
+      {
+        "n": 26,
+        "text": "Thus saith the Lord GOD; Remove the diadem, and take off the crown: this shall not be the same: exalt him that is low, and abase him that is high."
+      },
+      {
+        "n": 27,
+        "text": "I will overturn, overturn, overturn, it: and it shall be no more, until he come whose right it is; and I will give it him."
+      }
+    ],
+    "Micah 5:1-2": [
+      {
+        "n": 1,
+        "text": "Now gather thyself in troops, O daughter of troops: he hath laid siege against us: they shall smite the judge of Israel with a rod upon the cheek."
+      },
+      {
+        "n": 2,
+        "text": "But thou, Beth-lehem Ephratah, though thou be little among the thousands of Judah, yet out of thee shall he come forth unto me that is to be ruler in Israel; whose goings forth have been from of old, from everlasting."
+      }
+    ],
+    "Matthew 2:1-12": [
+      {
+        "n": 1,
+        "text": "Now when Jesus was born in Bethlehem of Judaea in the days of Herod the king, behold, there came wise men from the east to Jerusalem,"
+      },
+      {
+        "n": 2,
+        "text": "Saying, Where is he that is born King of the Jews? for we have seen his star in the east, and are come to worship him."
+      },
+      {
+        "n": 3,
+        "text": "When Herod the king had heard these things, he was troubled, and all Jerusalem with him."
+      },
+      {
+        "n": 4,
+        "text": "And when he had gathered all the chief priests and scribes of the people together, he demanded of them where Christ should be born."
+      },
+      {
+        "n": 5,
+        "text": "And they said unto him, In Bethlehem of Judaea: for thus it is written by the prophet,"
+      },
+      {
+        "n": 6,
+        "text": "And thou Bethlehem, in the land of Juda, art not the least among the princes of Juda: for out of thee shall come a Governor, that shall rule my people Israel."
+      },
+      {
+        "n": 7,
+        "text": "Then Herod, when he had privily called the wise men, enquired of them diligently what time the star appeared."
+      },
+      {
+        "n": 8,
+        "text": "And he sent them to Bethlehem, and said, Go and search diligently for the young child; and when ye have found him, bring me word again, that I may come and worship him also."
+      },
+      {
+        "n": 9,
+        "text": "When they had heard the king, they departed; and, lo, the star, which they saw in the east, went before them, till it came and stood over where the young child was."
+      },
+      {
+        "n": 10,
+        "text": "When they saw the star, they rejoiced with exceeding great joy."
+      },
+      {
+        "n": 11,
+        "text": "And when they were come into the house, they saw the young child with Mary his mother, and fell down, and worshipped him: and when they had opened their treasures, they presented unto him gifts; gold, and frankincense, and myrrh."
+      },
+      {
+        "n": 12,
+        "text": "And being warned of God in a dream that they should not return to Herod, they departed into their own country another way."
+      }
+    ],
+    "Luke 2:1-21": [
+      {
+        "n": 1,
+        "text": "And it came to pass in those days, that there went out a decree from Cæsar Augustus, that all the world should be taxed."
+      },
+      {
+        "n": 2,
+        "text": "( And this taxing was first made when Cyrenius was governor of Syria.)"
+      },
+      {
+        "n": 3,
+        "text": "And all went to be taxed, every one into his own city."
+      },
+      {
+        "n": 4,
+        "text": "And Joseph also went up from Galilee, out of the city of Nazareth, into Judæa, unto the city of David, which is called Bethlehem; (because he was of the house and lineage of David:)"
+      },
+      {
+        "n": 5,
+        "text": "To be taxed with Mary his espoused wife, being great with child."
+      },
+      {
+        "n": 6,
+        "text": "And so it was, that, while they were there, the days were accomplished that she should be delivered."
+      },
+      {
+        "n": 7,
+        "text": "And she brought forth her firstborn son, and wrapped him in swaddling clothes, and laid him in a manger; because there was no room for them in the inn."
+      },
+      {
+        "n": 8,
+        "text": "And there were in the same country shepherds abiding in the field, keeping watch over their flock by night."
+      },
+      {
+        "n": 9,
+        "text": "And, lo, the angel of the Lord came upon them, and the glory of the Lord shone round about them: and they were sore afraid."
+      },
+      {
+        "n": 10,
+        "text": "And the angel said unto them, Fear not: for, behold, I bring you good tidings of great joy, which shall be to all people."
+      },
+      {
+        "n": 11,
+        "text": "For unto you is born this day in the city of David a Saviour, which is Christ the Lord."
+      },
+      {
+        "n": 12,
+        "text": "And this shall be a sign unto you; Ye shall find the babe wrapped in swaddling clothes, lying in a manger."
+      },
+      {
+        "n": 13,
+        "text": "And suddenly there was with the angel a multitude of the heavenly host praising God, and saying,"
+      },
+      {
+        "n": 14,
+        "text": "Glory to God in the highest, and on earth peace, good will toward men."
+      },
+      {
+        "n": 15,
+        "text": "And it came to pass, as the angels were gone away from them into heaven, the shepherds said one to another, Let us now go even unto Bethlehem, and see this thing which is come to pass, which the Lord hath made known unto us."
+      },
+      {
+        "n": 16,
+        "text": "And they came with haste, and found Mary, and Joseph, and the babe lying in a manger."
+      },
+      {
+        "n": 17,
+        "text": "And when they had seen it, they made known abroad the saying which was told them concerning this child."
+      },
+      {
+        "n": 18,
+        "text": "And all they that heard it wondered at those things which were told them by the shepherds."
+      },
+      {
+        "n": 19,
+        "text": "But Mary kept all these things, and pondered them in her heart."
+      },
+      {
+        "n": 20,
+        "text": "And the shepherds returned, glorifying and praising God for all the things that they had heard and seen, as it was told unto them."
+      },
+      {
+        "n": 21,
+        "text": "And when eight days were accomplished for the circumcising of the child, his name was called JESUS, which was so named of the angel before he was conceived in the womb."
+      }
+    ],
+    "Genesis 17:15-21": [
+      {
+        "n": 15,
+        "text": "And God said unto Abraham, As for Sarai thy wife, thou shalt not call her name Sarai, but Sarah shall her name be."
+      },
+      {
+        "n": 16,
+        "text": "And I will bless her, and give thee a son also of her: yea, I will bless her, and she shall be a mother of nations; kings of people shall be of her."
+      },
+      {
+        "n": 17,
+        "text": "Then Abraham fell upon his face, and laughed, and said in his heart, Shall a child be born unto him that is an hundred years old? and shall Sarah, that is ninety years old, bear?"
+      },
+      {
+        "n": 18,
+        "text": "And Abraham said unto God, O that Ishmael might live before thee!"
+      },
+      {
+        "n": 19,
+        "text": "And God said, Sarah thy wife shall bear thee a son indeed; and thou shalt call his name Isaac: and I will establish my covenant with him for an everlasting covenant, and with his seed after him."
+      },
+      {
+        "n": 20,
+        "text": "And as for Ishmael, I have heard thee: Behold, I have blessed him, and will make him fruitful, and will multiply him exceedingly; twelve princes shall he beget, and I will make him a great nation."
+      },
+      {
+        "n": 21,
+        "text": "But my covenant will I establish with Isaac, which Sarah shall bear unto thee at this set time in the next year."
+      }
+    ],
+    "Matthew 1:18-25": [
+      {
+        "n": 18,
+        "text": "Now the birth of Jesus Christ was on this wise: When as his mother Mary was espoused to Joseph, before they came together, she was found with child of the Holy Ghost."
+      },
+      {
+        "n": 19,
+        "text": "Then Joseph her husband, being a just man, and not willing to make her a publick example, was minded to put her away privily."
+      },
+      {
+        "n": 20,
+        "text": "But while he thought on these things, behold, the angel of the Lord appeared unto him in a dream, saying, Joseph, thou son of David, fear not to take unto thee Mary thy wife: for that which is conceived in her is of the Holy Ghost."
+      },
+      {
+        "n": 21,
+        "text": "And she shall bring forth a son, and thou shalt call his name JESUS: for he shall save his people from their sins."
+      },
+      {
+        "n": 22,
+        "text": "Now all this was done, that it might be fulfilled which was spoken of the Lord by the prophet, saying,"
+      },
+      {
+        "n": 23,
+        "text": "Behold, a virgin shall be with child, and shall bring forth a son, and they shall call his name Emmanuel, which being interpreted is, God with us."
+      },
+      {
+        "n": 24,
+        "text": "Then Joseph being raised from sleep did as the angel of the Lord had bidden him, and took unto him his wife:"
+      },
+      {
+        "n": 25,
+        "text": "And knew her not till she had brought forth her firstborn son: and he called his name JESUS."
+      }
+    ],
+    "Luke 1:26-38": [
+      {
+        "n": 26,
+        "text": "And in the sixth month the angel Gabriel was sent from God unto a city of Galilee, named Nazareth,"
+      },
+      {
+        "n": 27,
+        "text": "To a virgin espoused to a man whose name was Joseph, of the house of David; and the virgin’s name was Mary."
+      },
+      {
+        "n": 28,
+        "text": "And the angel came in unto her, and said, Hail, thou that art highly favoured, the Lord is with thee: blessed art thou among women."
+      },
+      {
+        "n": 29,
+        "text": "And when she saw him, she was troubled at his saying, and cast in her mind what manner of salutation this should be."
+      },
+      {
+        "n": 30,
+        "text": "And the angel said unto her, Fear not, Mary: for thou hast found favour with God."
+      },
+      {
+        "n": 31,
+        "text": "And, behold, thou shalt conceive in thy womb, and bring forth a son, and shalt call his name JESUS."
+      },
+      {
+        "n": 32,
+        "text": "He shall be great, and shall be called the Son of the Highest: and the Lord God shall give unto him the throne of his father David:"
+      },
+      {
+        "n": 33,
+        "text": "And he shall reign over the house of Jacob for ever; and of his kingdom there shall be no end."
+      },
+      {
+        "n": 34,
+        "text": "Then said Mary unto the angel, How shall this be, seeing I know not a man?"
+      },
+      {
+        "n": 35,
+        "text": "And the angel answered and said unto her, The Holy Ghost shall come upon thee, and the power of the Highest shall overshadow thee: therefore also that holy thing which shall be born of thee shall be called the Son of God."
+      },
+      {
+        "n": 36,
+        "text": "And, behold, thy cousin Elisabeth, she hath also conceived a son in her old age: and this is the sixth month with her, who was called barren."
+      },
+      {
+        "n": 37,
+        "text": "For with God nothing shall be impossible."
+      },
+      {
+        "n": 38,
+        "text": "And Mary said, Behold the handmaid of the Lord; be it unto me according to thy word. And the angel departed from her."
+      }
+    ],
+    "Isaiah 7:13-14": [
+      {
+        "n": 13,
+        "text": "And he said, Hear ye now, O house of David; Is it a small thing for you to weary men, but will ye weary my God also?"
+      },
+      {
+        "n": 14,
+        "text": "Therefore the Lord himself shall give you a sign; Behold, a virgin shall conceive, and bear a son, and shall call his name Immanuel."
+      }
+    ],
+    "Isaiah 7:14": [
+      {
+        "n": 14,
+        "text": "Therefore the Lord himself shall give you a sign; Behold, a virgin shall conceive, and bear a son, and shall call his name Immanuel."
+      }
+    ],
+    "Matthew 1:23": [
+      {
+        "n": 23,
+        "text": "Behold, a virgin shall be with child, and shall bring forth a son, and they shall call his name Emmanuel, which being interpreted is, God with us."
+      }
+    ],
+    "Daniel 9:26": [
+      {
+        "n": 26,
+        "text": "And after threescore and two weeks shall Messiah be cut off, but not for himself: and the people of the prince that shall come shall destroy the city and the sanctuary; and the end thereof shall be with a flood, and unto the end of the war desolations are determined."
+      }
+    ],
+    "Malachi 3:1": [
+      {
+        "n": 1,
+        "text": "Behold, I will send my messenger, and he shall prepare the way before me: and the Lord, whom ye seek, shall suddenly come to his temple, even the messenger of the covenant, whom ye delight in: behold, he shall come, saith the LORD of hosts."
+      }
+    ],
+    "Matthew 21:12": [
+      {
+        "n": 12,
+        "text": "And Jesus went into the temple of God, and cast out all them that sold and bought in the temple, and overthrew the tables of the moneychangers, and the seats of them that sold doves,"
+      }
+    ],
+    "Isaiah 40:1-9": [
+      {
+        "n": 1,
+        "text": "Comfort ye, comfort ye my people, saith your God."
+      },
+      {
+        "n": 2,
+        "text": "Speak ye comfortably to Jerusalem, and cry unto her, that her warfare is accomplished, that her iniquity is pardoned: for she hath received of the LORD’s hand double for all her sins."
+      },
+      {
+        "n": 3,
+        "text": "The voice of him that crieth in the wilderness, Prepare ye the way of the LORD, make straight in the desert a highway for our God."
+      },
+      {
+        "n": 4,
+        "text": "Every valley shall be exalted, and every mountain and hill shall be made low: and the crooked shall be made straight, and the rough places plain:"
+      },
+      {
+        "n": 5,
+        "text": "And the glory of the LORD shall be revealed, and all flesh shall see it together: for the mouth of the LORD hath spoken it."
+      },
+      {
+        "n": 6,
+        "text": "The voice said, Cry. And he said, What shall I cry? All flesh is grass, and all the goodliness thereof is as the flower of the field:"
+      },
+      {
+        "n": 7,
+        "text": "The grass withereth, the flower fadeth: because the spirit of the LORD bloweth upon it: surely the people is grass."
+      },
+      {
+        "n": 8,
+        "text": "The grass withereth, the flower fadeth: but the word of our God shall stand for ever."
+      },
+      {
+        "n": 9,
+        "text": "O Zion, that bringest good tidings, get thee up into the high mountain; O Jerusalem, that bringest good tidings, lift up thy voice with strength; lift it up, be not afraid; say unto the cities of Judah, Behold your God!"
+      }
+    ],
+    "Matthew 3:1-4": [
+      {
+        "n": 1,
+        "text": "In those days came John the Baptist, preaching in the wilderness of Judaea,"
+      },
+      {
+        "n": 2,
+        "text": "And saying, Repent ye: for the kingdom of heaven is at hand."
+      },
+      {
+        "n": 3,
+        "text": "For this is he that was spoken of by the prophet Esaias, saying, The voice of one crying in the wilderness, Prepare ye the way of the Lord, make his paths straight."
+      },
+      {
+        "n": 4,
+        "text": "And the same John had his raiment of camel’s hair, and a leathern girdle about his loins; and his meat was locusts and wild honey."
+      }
+    ],
+    "Mark 1:1-11": [
+      {
+        "n": 1,
+        "text": "The beginning of the gospel of Jesus Christ, the Son of God;"
+      },
+      {
+        "n": 2,
+        "text": "As it is written in the prophets, Behold, I send my messenger before thy face, which shall prepare thy way before thee."
+      },
+      {
+        "n": 3,
+        "text": "The voice of one crying in the wilderness, Prepare ye the way of the Lord, make his paths straight."
+      },
+      {
+        "n": 4,
+        "text": "John did baptize in the wilderness, and preach the baptism of repentance for the remission of sins."
+      },
+      {
+        "n": 5,
+        "text": "And there went out unto him all the land of Judæa, and they of Jerusalem, and were all baptized of him in the river of Jordan, confessing their sins."
+      },
+      {
+        "n": 6,
+        "text": "And John was clothed with camel’s hair, and with a girdle of a skin about his loins; and he did eat locusts and wild honey;"
+      },
+      {
+        "n": 7,
+        "text": "And preached, saying, There cometh one mightier than I after me, the latchet of whose shoes I am not worthy to stoop down and unloose."
+      },
+      {
+        "n": 8,
+        "text": "I indeed have baptized you with water: but he shall baptize you with the Holy Ghost."
+      },
+      {
+        "n": 9,
+        "text": "And it came to pass in those days, that Jesus came from Nazareth of Galilee, and was baptized of John in Jordan."
+      },
+      {
+        "n": 10,
+        "text": "And straightway coming up out of the water, he saw the heavens opened, and the Spirit like a dove descending upon him:"
+      },
+      {
+        "n": 11,
+        "text": "And there came a voice from heaven, saying, Thou art my beloved Son, in whom I am well pleased."
+      }
+    ],
+    "Daniel 9:24-27": [
+      {
+        "n": 24,
+        "text": "Seventy weeks are determined upon thy people and upon thy holy city, to finish the transgression, and to make an end of sins, and to make reconciliation for iniquity, and to bring in everlasting righteousness, and to seal up the vision and prophecy, and to anoint the most Holy."
+      },
+      {
+        "n": 25,
+        "text": "Know therefore and understand, that from the going forth of the commandment to restore and to build Jerusalem unto the Messiah the Prince shall be seven weeks, and threescore and two weeks: the street shall be built again, and the wall, even in troublous times."
+      },
+      {
+        "n": 26,
+        "text": "And after threescore and two weeks shall Messiah be cut off, but not for himself: and the people of the prince that shall come shall destroy the city and the sanctuary; and the end thereof shall be with a flood, and unto the end of the war desolations are determined."
+      },
+      {
+        "n": 27,
+        "text": "And he shall confirm the covenant with many for one week: and in the midst of the week he shall cause the sacrifice and the oblation to cease, and for the overspreading of abominations he shall make it desolate, even until the consummation, and that determined shall be poured upon the desolate."
+      }
+    ],
+    "John 1:29-34": [
+      {
+        "n": 29,
+        "text": "The next day John seeth Jesus coming unto him, and saith, Behold the Lamb of God, which taketh away the sin of the world."
+      },
+      {
+        "n": 30,
+        "text": "This is he of whom I said, After me cometh a man which is preferred before me: for he was before me."
+      },
+      {
+        "n": 31,
+        "text": "And I knew him not: but that he should be made manifest to Israel, therefore am I come baptizing with water."
+      },
+      {
+        "n": 32,
+        "text": "And John bare record, saying, I saw the Spirit descending from heaven like a dove, and it abode upon him."
+      },
+      {
+        "n": 33,
+        "text": "And I knew him not: but he that sent me to baptize with water, the same said unto me, Upon whom thou shalt see the Spirit descending, and remaining on him, the same is he which baptizeth with the Holy Ghost."
+      },
+      {
+        "n": 34,
+        "text": "And I saw, and bare record that this is the Son of God."
+      }
+    ],
+    "Isaiah 61:1-2": [
+      {
+        "n": 1,
+        "text": "The Spirit of the Lord GOD is upon me; because the LORD hath anointed me to preach good tidings unto the meek; he hath sent me to bind up the brokenhearted, to proclaim liberty to the captives, and the opening of the prison to them that are bound;"
+      },
+      {
+        "n": 2,
+        "text": "To proclaim the acceptable year of the LORD, and the day of vengeance of our God; to comfort all that mourn;"
+      }
+    ],
+    "Luke 4:14-30": [
+      {
+        "n": 14,
+        "text": "And Jesus returned in the power of the Spirit into Galilee: and there went out a fame of him through all the region round about."
+      },
+      {
+        "n": 15,
+        "text": "And he taught in their synagogues, being glorified of all."
+      },
+      {
+        "n": 16,
+        "text": "And he came to Nazareth, where he had been brought up: and, as his custom was, he went into the synagogue on the sabbath day, and stood up for to read."
+      },
+      {
+        "n": 17,
+        "text": "And there was delivered unto him the book of the prophet Esaias. And when he had opened the book, he found the place where it was written,"
+      },
+      {
+        "n": 18,
+        "text": "The Spirit of the Lord is upon me, because he hath anointed me to preach the gospel to the poor; he hath sent me to heal the brokenhearted, to preach deliverance to the captives, and recovering of sight to the blind, to set at liberty them that are bruised,"
+      },
+      {
+        "n": 19,
+        "text": "To preach the acceptable year of the Lord."
+      },
+      {
+        "n": 20,
+        "text": "And he closed the book, and he gave it again to the minister, and sat down. And the eyes of all them that were in the synagogue were fastened on him."
+      },
+      {
+        "n": 21,
+        "text": "And he began to say unto them, This day is this scripture fulfilled in your ears."
+      },
+      {
+        "n": 22,
+        "text": "And all bare him witness, and wondered at the gracious words which proceeded out of his mouth. And they said, Is not this Joseph’s son?"
+      },
+      {
+        "n": 23,
+        "text": "And he said unto them, Ye will surely say unto me this proverb, Physician, heal thyself: whatsoever we have heard done in Capernaum, do also here in thy country."
+      },
+      {
+        "n": 24,
+        "text": "And he said, Verily I say unto you, No prophet is accepted in his own country."
+      },
+      {
+        "n": 25,
+        "text": "But I tell you of a truth, many widows were in Israel in the days of Elias, when the heaven was shut up three years and six months, when great famine was throughout all the land;"
+      },
+      {
+        "n": 26,
+        "text": "But unto none of them was Elias sent, save unto Sarepta, a city of Sidon, unto a woman that was a widow."
+      },
+      {
+        "n": 27,
+        "text": "And many lepers were in Israel in the time of Eliseus the prophet; and none of them was cleansed, saving Naaman the Syrian."
+      },
+      {
+        "n": 28,
+        "text": "And all they in the synagogue, when they heard these things, were filled with wrath,"
+      },
+      {
+        "n": 29,
+        "text": "And rose up, and thrust him out of the city, and led him unto the brow of the hill whereon their city was built, that they might cast him down headlong."
+      },
+      {
+        "n": 30,
+        "text": "But he passing through the midst of them went his way,"
+      }
+    ],
+    "Isaiah 9:1-2": [
+      {
+        "n": 1,
+        "text": "Nevertheless the dimness shall not be such as was in her vexation, when at the first he lightly afflicted the land of Zebulun and the land of Naphtali, and afterward did more grievously afflict her by the way of the sea, beyond Jordan, in Galilee of the nations."
+      },
+      {
+        "n": 2,
+        "text": "The people that walked in darkness have seen a great light: they that dwell in the land of the shadow of death, upon them hath the light shined."
+      }
+    ],
+    "Matthew 4:12-17": [
+      {
+        "n": 12,
+        "text": "Now when Jesus had heard that John was cast into prison, he departed into Galilee;"
+      },
+      {
+        "n": 13,
+        "text": "And leaving Nazareth, he came and dwelt in Capernaum, which is upon the sea coast, in the borders of Zabulon and Nephthalim:"
+      },
+      {
+        "n": 14,
+        "text": "That it might be fulfilled which was spoken by Esaias the prophet, saying,"
+      },
+      {
+        "n": 15,
+        "text": "The land of Zabulon, and the land of Nephthalim, by the way of the sea, beyond Jordan, Galilee of the Gentiles;"
+      },
+      {
+        "n": 16,
+        "text": "The people which sat in darkness saw great light; and to them which sat in the region and shadow of death light is sprung up."
+      },
+      {
+        "n": 17,
+        "text": "From that time Jesus began to preach, and to say, Repent: for the kingdom of heaven is at hand."
+      }
+    ],
+    "Isaiah 35:4-6": [
+      {
+        "n": 4,
+        "text": "Say to them that are of a fearful heart, Be strong, fear not: behold, your God will come with vengeance, even God with a recompence; he will come and save you."
+      },
+      {
+        "n": 5,
+        "text": "Then the eyes of the blind shall be opened, and the ears of the deaf shall be unstopped."
+      },
+      {
+        "n": 6,
+        "text": "Then shall the lame man leap as an hart, and the tongue of the dumb sing: for in the wilderness shall waters break out, and streams in the desert."
+      }
+    ],
+    "Matthew 4:23-25": [
+      {
+        "n": 23,
+        "text": "And Jesus went about all Galilee, teaching in their synagogues, and preaching the gospel of the kingdom, and healing all manner of sickness and all manner of disease among the people."
+      },
+      {
+        "n": 24,
+        "text": "And his fame went throughout all Syria: and they brought unto him all sick people that were taken with divers diseases and torments, and those which were possessed with devils, and those which were lunatick, and those that had the palsy; and he healed them."
+      },
+      {
+        "n": 25,
+        "text": "And there followed him great multitudes of people from Galilee, and from Decapolis, and from Jerusalem, and from Judaea, and from beyond Jordan."
+      }
+    ],
+    "Psalm 78:1-2": [
+      {
+        "n": 1,
+        "text": "Give ear, O my people, to my law: incline your ears to the words of my mouth."
+      },
+      {
+        "n": 2,
+        "text": "I will open my mouth in a parable: I will utter dark sayings of old:"
+      }
+    ],
+    "Matthew 13:3": [
+      {
+        "n": 3,
+        "text": "And he spake many things unto them in parables, saying, Behold, a sower went forth to sow;"
+      }
+    ],
+    "Matthew 13:13-15": [
+      {
+        "n": 13,
+        "text": "Therefore speak I to them in parables: because they seeing see not; and hearing they hear not, neither do they understand."
+      },
+      {
+        "n": 14,
+        "text": "And in them is fulfilled the prophecy of Esaias, which saith, By hearing ye shall hear, and shall not understand; and seeing ye shall see, and shall not perceive:"
+      },
+      {
+        "n": 15,
+        "text": "For this people’s heart is waxed gross, and their ears are dull of hearing, and their eyes they have closed; lest at any time they should see with their eyes, and hear with their ears, and should understand with their heart, and should be converted, and I should heal them."
+      }
+    ],
+    "Deuteronomy 18:15-18": [
+      {
+        "n": 15,
+        "text": "The LORD thy God will raise up unto thee a Prophet from the midst of thee, of thy brethren, like unto me; unto him ye shall hearken;"
+      },
+      {
+        "n": 16,
+        "text": "According to all that thou desiredst of the LORD thy God in Horeb in the day of the assembly, saying, Let me not hear again the voice of the LORD my God, neither let me see this great fire any more, that I die not."
+      },
+      {
+        "n": 17,
+        "text": "And the LORD said unto me, They have well spoken that which they have spoken."
+      },
+      {
+        "n": 18,
+        "text": "I will raise them up a Prophet from among their brethren, like unto thee, and will put my words in his mouth; and he shall speak unto them all that I shall command him."
+      }
+    ],
+    "John 5:45-47": [
+      {
+        "n": 45,
+        "text": "Do not think that I will accuse you to the Father: there is one that accuseth you, even Moses, in whom ye trust."
+      },
+      {
+        "n": 46,
+        "text": "For had ye believed Moses, ye would have believed me: for he wrote of me."
+      },
+      {
+        "n": 47,
+        "text": "But if ye believe not his writings, how shall ye believe my words?"
+      }
+    ],
+    "John 6:14": [
+      {
+        "n": 14,
+        "text": "Then those men, when they had seen the miracle that Jesus did, said, This is of a truth that prophet that should come into the world."
+      }
+    ],
+    "Isaiah 42:1-9": [
+      {
+        "n": 1,
+        "text": "Behold my servant, whom I uphold; mine elect, in whom my soul delighteth; I have put my spirit upon him: he shall bring forth judgment to the Gentiles."
+      },
+      {
+        "n": 2,
+        "text": "He shall not cry, nor lift up, nor cause his voice to be heard in the street."
+      },
+      {
+        "n": 3,
+        "text": "A bruised reed shall he not break, and the smoking flax shall he not quench: he shall bring forth judgment unto truth."
+      },
+      {
+        "n": 4,
+        "text": "He shall not fail nor be discouraged, till he have set judgment in the earth: and the isles shall wait for his law."
+      },
+      {
+        "n": 5,
+        "text": "Thus saith God the LORD, he that created the heavens, and stretched them out; he that spread forth the earth, and that which cometh out of it; he that giveth breath unto the people upon it, and spirit to them that walk therein:"
+      },
+      {
+        "n": 6,
+        "text": "I the LORD have called thee in righteousness, and will hold thine hand, and will keep thee, and give thee for a covenant of the people, for a light of the Gentiles;"
+      },
+      {
+        "n": 7,
+        "text": "To open the blind eyes, to bring out the prisoners from the prison, and them that sit in darkness out of the prison house."
+      },
+      {
+        "n": 8,
+        "text": "I am the LORD: that is my name: and my glory will I not give to another, neither my praise to graven images."
+      },
+      {
+        "n": 9,
+        "text": "Behold, the former things are come to pass, and new things do I declare: before they spring forth I tell you of them."
+      }
+    ],
+    "Matthew 11:28-30": [
+      {
+        "n": 28,
+        "text": "Come unto me, all ye that labour and are heavy laden, and I will give you rest."
+      },
+      {
+        "n": 29,
+        "text": "Take my yoke upon you, and learn of me; for I am meek and lowly in heart: and ye shall find rest unto your souls."
+      },
+      {
+        "n": 30,
+        "text": "For my yoke is easy, and my burden is light."
+      }
+    ],
+    "Psalm 2:1-12": [
+      {
+        "n": 1,
+        "text": "Why do the heathen rage, and the people imagine a vain thing?"
+      },
+      {
+        "n": 2,
+        "text": "The kings of the earth set themselves, and the rulers take counsel together, against the LORD, and against his anointed, saying,"
+      },
+      {
+        "n": 3,
+        "text": "Let us break their bands asunder, and cast away their cords from us."
+      },
+      {
+        "n": 4,
+        "text": "He that sitteth in the heavens shall laugh: the Lord shall have them in derision."
+      },
+      {
+        "n": 5,
+        "text": "Then shall he speak unto them in his wrath, and vex them in his sore displeasure."
+      },
+      {
+        "n": 6,
+        "text": "Yet have I set my king upon my holy hill of Zion."
+      },
+      {
+        "n": 7,
+        "text": "I will declare the decree: the LORD hath said unto me, Thou art my Son; this day have I begotten thee."
+      },
+      {
+        "n": 8,
+        "text": "Ask of me, and I shall give thee the heathen for thine inheritance, and the uttermost parts of the earth for thy possession."
+      },
+      {
+        "n": 9,
+        "text": "Thou shalt break them with a rod of iron; thou shalt dash them in pieces like a potter’s vessel."
+      },
+      {
+        "n": 10,
+        "text": "Be wise now therefore, O ye kings: be instructed, ye judges of the earth."
+      },
+      {
+        "n": 11,
+        "text": "Serve the LORD with fear, and rejoice with trembling."
+      },
+      {
+        "n": 12,
+        "text": "Kiss the Son, lest he be angry, and ye perish from the way, when his wrath is kindled but a little. Blessed are all they that put their trust in him."
+      }
+    ],
+    "Matthew 14:33": [
+      {
+        "n": 33,
+        "text": "Then they that were in the ship came and worshipped him, saying, Of a truth thou art the Son of God."
+      }
+    ],
+    "Isaiah 9:6-7": [
+      {
+        "n": 6,
+        "text": "For unto us a child is born, unto us a son is given: and the government shall be upon his shoulder: and his name shall be called Wonderful, Counsellor, The mighty God, The everlasting Father, The Prince of Peace."
+      },
+      {
+        "n": 7,
+        "text": "Of the increase of his government and peace there shall be no end, upon the throne of David, and upon his kingdom, to order it, and to establish it with judgment and with justice from henceforth even for ever. The zeal of the LORD of hosts will perform this."
+      }
+    ],
+    "John 10:30": [
+      {
+        "n": 30,
+        "text": "I and my Father are one."
+      }
+    ],
+    "John 20:27-29": [
+      {
+        "n": 27,
+        "text": "Then saith he to Thomas, Reach hither thy finger, and behold my hands; and reach hither thy hand, and thrust it into my side: and be not faithless, but believing."
+      },
+      {
+        "n": 28,
+        "text": "And Thomas answered and said unto him, My Lord and my God."
+      },
+      {
+        "n": 29,
+        "text": "Jesus saith unto him, Thomas, because thou hast seen me, thou hast believed: blessed are they that have not seen, and yet have believed."
+      }
+    ],
+    "Zechariah 9:9": [
+      {
+        "n": 9,
+        "text": "Rejoice greatly, O daughter of Zion; shout, O daughter of Jerusalem: behold, thy King cometh unto thee: he is just, and having salvation; lowly, and riding upon an ass, and upon a colt the foal of an ass."
+      }
+    ],
+    "Matthew 21:6-9": [
+      {
+        "n": 6,
+        "text": "And the disciples went, and did as Jesus commanded them,"
+      },
+      {
+        "n": 7,
+        "text": "And brought the ass, and the colt, and put on them their clothes, and they set him thereon."
+      },
+      {
+        "n": 8,
+        "text": "And a very great multitude spread their garments in the way; others cut down branches from the trees, and strawed them in the way."
+      },
+      {
+        "n": 9,
+        "text": "And the multitudes that went before, and that followed, cried, saying, Hosanna to the Son of David: Blessed is he that cometh in the name of the Lord; Hosanna in the highest."
+      }
+    ],
+    "Jeremiah 31:31-34": [
+      {
+        "n": 31,
+        "text": "Behold, the days come, saith the LORD, that I will make a new covenant with the house of Israel, and with the house of Judah:"
+      },
+      {
+        "n": 32,
+        "text": "Not according to the covenant that I made with their fathers in the day that I took them by the hand to bring them out of the land of Egypt; which my covenant they brake, although I was an husband unto them, saith the LORD:"
+      },
+      {
+        "n": 33,
+        "text": "But this shall be the covenant that I will make with the house of Israel; After those days, saith the LORD, I will put my law in their inward parts, and write it in their hearts; and will be their God, and they shall be my people."
+      },
+      {
+        "n": 34,
+        "text": "And they shall teach no more every man his neighbour, and every man his brother, saying, Know the LORD: for they shall all know me, from the least of them unto the greatest of them, saith the LORD: for I will forgive their iniquity, and I will remember their sin no more."
+      }
+    ],
+    "Hebrews 8": [
+      {
+        "n": 1,
+        "text": "Now of the things which we have spoken this is the sum: We have such an high priest, who is set on the right hand of the throne of the Majesty in the heavens;"
+      },
+      {
+        "n": 2,
+        "text": "A minister of the sanctuary, and of the true tabernacle, which the Lord pitched, and not man."
+      },
+      {
+        "n": 3,
+        "text": "For every high priest is ordained to offer gifts and sacrifices: wherefore it is of necessity that this man have somewhat also to offer."
+      },
+      {
+        "n": 4,
+        "text": "For if he were on earth, he should not be a priest, seeing that there are priests that offer gifts according to the law:"
+      },
+      {
+        "n": 5,
+        "text": "Who serve unto the example and shadow of heavenly things, as Moses was admonished of God when he was about to make the tabernacle: for, See, saith he, that thou make all things according to the pattern shewed to thee in the mount."
+      },
+      {
+        "n": 6,
+        "text": "But now hath he obtained a more excellent ministry, by how much also he is the mediator of a better covenant, which was established upon better promises."
+      },
+      {
+        "n": 7,
+        "text": "For if that first covenant had been faultless, then should no place have been sought for the second."
+      },
+      {
+        "n": 8,
+        "text": "For finding fault with them, he saith, Behold, the days come, saith the Lord, when I will make a new covenant with the house of Israel and with the house of Judah:"
+      },
+      {
+        "n": 9,
+        "text": "Not according to the covenant that I made with their fathers in the day when I took them by the hand to lead them out of the land of Egypt; because they continued not in my covenant, and I regarded them not, saith the Lord."
+      },
+      {
+        "n": 10,
+        "text": "For this is the covenant that I will make with the house of Israel after those days, saith the Lord; I will put my laws into their mind, and write them in their hearts: and I will be to them a God, and they shall be to me a people:"
+      },
+      {
+        "n": 11,
+        "text": "And they shall not teach every man his neighbour, and every man his brother, saying, Know the Lord: for all shall know me, from the least to the greatest."
+      },
+      {
+        "n": 12,
+        "text": "For I will be merciful to their unrighteousness, and their sins and their iniquities will I remember no more."
+      },
+      {
+        "n": 13,
+        "text": "In that he saith, A new covenant, he hath made the first old. Now that which decayeth and waxeth old is ready to vanish away."
+      }
+    ],
+    "Psalm 41": [
+      {
+        "n": 1,
+        "text": "Blessed is he that considereth the poor: the LORD will deliver him in time of trouble."
+      },
+      {
+        "n": 2,
+        "text": "The LORD will preserve him, and keep him alive; and he shall be blessed upon the earth: and thou wilt not deliver him unto the will of his enemies."
+      },
+      {
+        "n": 3,
+        "text": "The LORD will strengthen him upon the bed of languishing: thou wilt make all his bed in his sickness."
+      },
+      {
+        "n": 4,
+        "text": "I said, LORD, be merciful unto me: heal my soul; for I have sinned against thee."
+      },
+      {
+        "n": 5,
+        "text": "Mine enemies speak evil of me, When shall he die, and his name perish?"
+      },
+      {
+        "n": 6,
+        "text": "And if he come to see me, he speaketh vanity: his heart gathereth iniquity to itself; when he goeth abroad, he telleth it."
+      },
+      {
+        "n": 7,
+        "text": "All that hate me whisper together against me: against me do they devise my hurt."
+      },
+      {
+        "n": 8,
+        "text": "An evil disease, say they, cleaveth fast unto him: and now that he lieth he shall rise up no more."
+      },
+      {
+        "n": 9,
+        "text": "Yea, mine own familiar friend, in whom I trusted, which did eat of my bread, hath lifted up his heel against me."
+      },
+      {
+        "n": 10,
+        "text": "But thou, O LORD, be merciful unto me, and raise me up, that I may requite them."
+      },
+      {
+        "n": 11,
+        "text": "By this I know that thou favourest me, because mine enemy doth not triumph over me."
+      },
+      {
+        "n": 12,
+        "text": "And as for me, thou upholdest me in mine integrity, and settest me before thy face for ever."
+      },
+      {
+        "n": 13,
+        "text": "Blessed be the LORD God of Israel from everlasting, and to everlasting. Amen, and Amen."
+      }
+    ],
+    "John 13:18": [
+      {
+        "n": 18,
+        "text": "I speak not of you all: I know whom I have chosen: but that the scripture may be fulfilled, He that eateth bread with me hath lifted up his heel against me."
+      }
+    ],
+    "Psalm 22:6": [
+      {
+        "n": 6,
+        "text": "But I am a worm, and no man; a reproach of men, and despised of the people."
+      }
+    ],
+    "Luke 23:21-23": [
+      {
+        "n": 21,
+        "text": "But they cried, saying, Crucify him, crucify him."
+      },
+      {
+        "n": 22,
+        "text": "And he said unto them the third time, Why, what evil hath he done? I have found no cause of death in him: I will therefore chastise him, and let him go."
+      },
+      {
+        "n": 23,
+        "text": "And they were instant with loud voices, requiring that he might be crucified. And the voices of them and of the chief priests prevailed."
+      }
+    ],
+    "Psalm 118:22-24": [
+      {
+        "n": 22,
+        "text": "The stone which the builders refused is become the head stone of the corner."
+      },
+      {
+        "n": 23,
+        "text": "This is the LORD’s doing; it is marvellous in our eyes."
+      },
+      {
+        "n": 24,
+        "text": "This is the day which the LORD hath made; we will rejoice and be glad in it."
+      }
+    ],
+    "Matthew 21:42-43": [
+      {
+        "n": 42,
+        "text": "Jesus saith unto them, Did ye never read in the scriptures, The stone which the builders rejected, the same is become the head of the corner: this is the Lord’s doing, and it is marvellous in our eyes?"
+      },
+      {
+        "n": 43,
+        "text": "Therefore say I unto you, The kingdom of God shall be taken from you, and given to a nation bringing forth the fruits thereof."
+      }
+    ],
+    "Isaiah 53:1-3": [
+      {
+        "n": 1,
+        "text": "Who hath believed our report? and to whom is the arm of the LORD revealed?"
+      },
+      {
+        "n": 2,
+        "text": "For he shall grow up before him as a tender plant, and as a root out of a dry ground: he hath no form nor comeliness; and when we shall see him, there is no beauty that we should desire him."
+      },
+      {
+        "n": 3,
+        "text": "He is despised and rejected of men; a man of sorrows, and acquainted with grief: and we hid as it were our faces from him; he was despised, and we esteemed him not."
+      }
+    ],
+    "Matthew 27:21-23": [
+      {
+        "n": 21,
+        "text": "The governor answered and said unto them, Whether of the twain will ye that I release unto you? They said, Barabbas."
+      },
+      {
+        "n": 22,
+        "text": "Pilate saith unto them, What shall I do then with Jesus which is called Christ? They all say unto him, Let him be crucified."
+      },
+      {
+        "n": 23,
+        "text": "And the governor said, Why, what evil hath he done? But they cried out the more, saying, Let him be crucified."
+      }
+    ],
+    "Mark 15:1-15": [
+      {
+        "n": 1,
+        "text": "And straightway in the morning the chief priests held a consultation with the elders and scribes and the whole council, and bound Jesus, and carried him away, and delivered him to Pilate."
+      },
+      {
+        "n": 2,
+        "text": "And Pilate asked him, Art thou the King of the Jews? And he answering said unto him, Thou sayest it."
+      },
+      {
+        "n": 3,
+        "text": "And the chief priests accused him of many things: but he answered nothing."
+      },
+      {
+        "n": 4,
+        "text": "And Pilate asked him again, saying, Answerest thou nothing? behold how many things they witness against thee."
+      },
+      {
+        "n": 5,
+        "text": "But Jesus yet answered nothing; so that Pilate marvelled."
+      },
+      {
+        "n": 6,
+        "text": "Now at that feast he released unto them one prisoner, whomsoever they desired."
+      },
+      {
+        "n": 7,
+        "text": "And there was one named Barabbas, which lay bound with them that had made insurrection with him, who had committed murder in the insurrection."
+      },
+      {
+        "n": 8,
+        "text": "And the multitude crying aloud began to desire him to do as he had ever done unto them."
+      },
+      {
+        "n": 9,
+        "text": "But Pilate answered them, saying, Will ye that I release unto you the King of the Jews?"
+      },
+      {
+        "n": 10,
+        "text": "For he knew that the chief priests had delivered him for envy."
+      },
+      {
+        "n": 11,
+        "text": "But the chief priests moved the people, that he should rather release Barabbas unto them."
+      },
+      {
+        "n": 12,
+        "text": "And Pilate answered and said again unto them, What will ye then that I shall do unto him whom ye call the King of the Jews?"
+      },
+      {
+        "n": 13,
+        "text": "And they cried out again, Crucify him."
+      },
+      {
+        "n": 14,
+        "text": "Then Pilate said unto them, Why, what evil hath he done? And they cried out the more exceedingly, Crucify him."
+      },
+      {
+        "n": 15,
+        "text": "And so Pilate, willing to content the people, released Barabbas unto them, and delivered Jesus, when he had scourged him, to be crucified."
+      }
+    ],
+    "Isaiah 53:7": [
+      {
+        "n": 7,
+        "text": "He was oppressed, and he was afflicted, yet he opened not his mouth: he is brought as a lamb to the slaughter, and as a sheep before her shearers is dumb, so he openeth not his mouth."
+      }
+    ],
+    "Matthew 27:27-31": [
+      {
+        "n": 27,
+        "text": "Then the soldiers of the governor took Jesus into the common hall, and gathered unto him the whole band of soldiers."
+      },
+      {
+        "n": 28,
+        "text": "And they stripped him, and put on him a scarlet robe."
+      },
+      {
+        "n": 29,
+        "text": "And when they had platted a crown of thorns, they put it upon his head, and a reed in his right hand: and they bowed the knee before him, and mocked him, saying, Hail, King of the Jews!"
+      },
+      {
+        "n": 30,
+        "text": "And they spit upon him, and took the reed, and smote him on the head."
+      },
+      {
+        "n": 31,
+        "text": "And after that they had mocked him, they took the robe off from him, and put his own raiment on him, and led him away to crucify him."
+      }
+    ],
+    "Matthew 27:12-14": [
+      {
+        "n": 12,
+        "text": "And when he was accused of the chief priests and elders, he answered nothing."
+      },
+      {
+        "n": 13,
+        "text": "Then said Pilate unto him, Hearest thou not how many things they witness against thee?"
+      },
+      {
+        "n": 14,
+        "text": "And he answered him to never a word; insomuch that the governor marvelled greatly."
+      }
+    ],
+    "Isaiah 50:6-7": [
+      {
+        "n": 6,
+        "text": "I gave my back to the smiters, and my cheeks to them that plucked off the hair: I hid not my face from shame and spitting."
+      },
+      {
+        "n": 7,
+        "text": "For the Lord GOD will help me; therefore shall I not be confounded: therefore have I set my face like a flint, and I know that I shall not be ashamed."
+      }
+    ],
+    "Matthew 26:67": [
+      {
+        "n": 67,
+        "text": "Then did they spit in his face, and buffeted him; and others smote him with the palms of their hands,"
+      }
+    ],
+    "Matthew 27:30": [
+      {
+        "n": 30,
+        "text": "And they spit upon him, and took the reed, and smote him on the head."
+      }
+    ],
+    "Psalm 35:19": [
+      {
+        "n": 19,
+        "text": "Let not them that are mine enemies wrongfully rejoice over me: neither let them wink with the eye that hate me without a cause."
+      }
+    ],
+    "Psalm 69:4": [
+      {
+        "n": 4,
+        "text": "They that hate me without a cause are more than the hairs of mine head: they that would destroy me, being mine enemies wrongfully, are mighty: then I restored that which I took not away."
+      }
+    ],
+    "John 15:25": [
+      {
+        "n": 25,
+        "text": "But this cometh to pass, that the word might be fulfilled that is written in their law, They hated me without a cause."
+      }
+    ],
+    "Isaiah 53:12": [
+      {
+        "n": 12,
+        "text": "Therefore will I divide him a portion with the great, and he shall divide the spoil with the strong; because he hath poured out his soul unto death: and he was numbered with the transgressors; and he bare the sin of many, and made intercession for the transgressors."
+      }
+    ],
+    "Luke 22:37": [
+      {
+        "n": 37,
+        "text": "For I say unto you, that this that is written must yet be accomplished in me, And he was reckoned among the transgressors: for the things concerning me have an end."
+      }
+    ],
+    "Luke 23:32": [
+      {
+        "n": 32,
+        "text": "And there were also two other, malefactors, led with him to be put to death."
+      }
+    ],
+    "Isaiah 50:4-10": [
+      {
+        "n": 4,
+        "text": "The Lord GOD hath given me the tongue of the learned, that I should know how to speak a word in season to him that is weary: he wakeneth morning by morning, he wakeneth mine ear to hear as the learned."
+      },
+      {
+        "n": 5,
+        "text": "The Lord GOD hath opened mine ear, and I was not rebellious, neither turned away back."
+      },
+      {
+        "n": 6,
+        "text": "I gave my back to the smiters, and my cheeks to them that plucked off the hair: I hid not my face from shame and spitting."
+      },
+      {
+        "n": 7,
+        "text": "For the Lord GOD will help me; therefore shall I not be confounded: therefore have I set my face like a flint, and I know that I shall not be ashamed."
+      },
+      {
+        "n": 8,
+        "text": "He is near that justifieth me; who will contend with me? let us stand together: who is mine adversary? let him come near to me."
+      },
+      {
+        "n": 9,
+        "text": "Behold, the Lord GOD will help me; who is he that shall condemn me? lo, they all shall wax old as a garment; the moth shall eat them up."
+      },
+      {
+        "n": 10,
+        "text": "Who is among you that feareth the LORD, that obeyeth the voice of his servant, that walketh in darkness, and hath no light? let him trust in the name of the LORD, and stay upon his God."
+      }
+    ],
+    "Matthew 26:39": [
+      {
+        "n": 39,
+        "text": "And he went a little further, and fell on his face, and prayed, saying, O my Father, if it be possible, let this cup pass from me: nevertheless not as I will, but as thou wilt."
+      }
+    ],
+    "John 8:28": [
+      {
+        "n": 28,
+        "text": "Then said Jesus unto them, When ye have lifted up the Son of man, then shall ye know that I am he, and that I do nothing of myself; but as my Father hath taught me, I speak these things."
+      }
+    ],
+    "Matthew 26:47-56": [
+      {
+        "n": 47,
+        "text": "And while he yet spake, lo, Judas, one of the twelve, came, and with him a great multitude with swords and staves, from the chief priests and elders of the people."
+      },
+      {
+        "n": 48,
+        "text": "Now he that betrayed him gave them a sign, saying, Whomsoever I shall kiss, that same is he: hold him fast."
+      },
+      {
+        "n": 49,
+        "text": "And forthwith he came to Jesus, and said, Hail, master; and kissed him."
+      },
+      {
+        "n": 50,
+        "text": "And Jesus said unto him, Friend, wherefore art thou come? Then came they, and laid hands on Jesus, and took him."
+      },
+      {
+        "n": 51,
+        "text": "And, behold, one of them which were with Jesus stretched out his hand, and drew his sword, and struck a servant of the high priest’s, and smote off his ear."
+      },
+      {
+        "n": 52,
+        "text": "Then said Jesus unto him, Put up again thy sword into his place: for all they that take the sword shall perish with the sword."
+      },
+      {
+        "n": 53,
+        "text": "Thinkest thou that I cannot now pray to my Father, and he shall presently give me more than twelve legions of angels?"
+      },
+      {
+        "n": 54,
+        "text": "But how then shall the scriptures be fulfilled, that thus it must be?"
+      },
+      {
+        "n": 55,
+        "text": "In that same hour said Jesus to the multitudes, Are ye come out as against a thief with swords and staves for to take me? I sat daily with you teaching in the temple, and ye laid no hold on me."
+      },
+      {
+        "n": 56,
+        "text": "But all this was done, that the scriptures of the prophets might be fulfilled. Then all the disciples forsook him, and fled."
+      }
+    ],
+    "Genesis 22:1-18": [
+      {
+        "n": 1,
+        "text": "And it came to pass after these things, that God did tempt Abraham, and said unto him, Abraham: and he said, Behold, here I am."
+      },
+      {
+        "n": 2,
+        "text": "And he said, Take now thy son, thine only son Isaac, whom thou lovest, and get thee into the land of Moriah; and offer him there for a burnt offering upon one of the mountains which I will tell thee of."
+      },
+      {
+        "n": 3,
+        "text": "And Abraham rose up early in the morning, and saddled his ass, and took two of his young men with him, and Isaac his son, and clave the wood for the burnt offering, and rose up, and went unto the place of which God had told him."
+      },
+      {
+        "n": 4,
+        "text": "Then on the third day Abraham lifted up his eyes, and saw the place afar off."
+      },
+      {
+        "n": 5,
+        "text": "And Abraham said unto his young men, Abide ye here with the ass; and I and the lad will go yonder and worship, and come again to you."
+      },
+      {
+        "n": 6,
+        "text": "And Abraham took the wood of the burnt offering, and laid it upon Isaac his son; and he took the fire in his hand, and a knife; and they went both of them together."
+      },
+      {
+        "n": 7,
+        "text": "And Isaac spake unto Abraham his father, and said, My father: and he said, Here am I, my son. And he said, Behold the fire and the wood: but where is the lamb for a burnt offering?"
+      },
+      {
+        "n": 8,
+        "text": "And Abraham said, My son, God will provide himself a lamb for a burnt offering: so they went both of them together."
+      },
+      {
+        "n": 9,
+        "text": "And they came to the place which God had told him of; and Abraham built an altar there, and laid the wood in order, and bound Isaac his son, and laid him on the altar upon the wood."
+      },
+      {
+        "n": 10,
+        "text": "And Abraham stretched forth his hand, and took the knife to slay his son."
+      },
+      {
+        "n": 11,
+        "text": "And the angel of the LORD called unto him out of heaven, and said, Abraham, Abraham: and he said, Here am I."
+      },
+      {
+        "n": 12,
+        "text": "And he said, Lay not thine hand upon the lad, neither do thou any thing unto him: for now I know that thou fearest God, seeing thou hast not withheld thy son, thine only son from me."
+      },
+      {
+        "n": 13,
+        "text": "And Abraham lifted up his eyes, and looked, and behold behind him a ram caught in a thicket by his horns: and Abraham went and took the ram, and offered him up for a burnt offering in the stead of his son."
+      },
+      {
+        "n": 14,
+        "text": "And Abraham called the name of that place Jehovah-jireh: as it is said to this day, In the mount of the LORD it shall be seen."
+      },
+      {
+        "n": 15,
+        "text": "And the angel of the LORD called unto Abraham out of heaven the second time,"
+      },
+      {
+        "n": 16,
+        "text": "And said, By myself have I sworn, saith the LORD, for because thou hast done this thing, and hast not withheld thy son, thine only son:"
+      },
+      {
+        "n": 17,
+        "text": "That in blessing I will bless thee, and in multiplying I will multiply thy seed as the stars of the heaven, and as the sand which is upon the sea shore; and thy seed shall possess the gate of his enemies;"
+      },
+      {
+        "n": 18,
+        "text": "And in thy seed shall all the nations of the earth be blessed; because thou hast obeyed my voice."
+      }
+    ],
+    "John 19:1-37": [
+      {
+        "n": 1,
+        "text": "Then Pilate therefore took Jesus, and scourged him."
+      },
+      {
+        "n": 2,
+        "text": "And the soldiers platted a crown of thorns, and put it on his head, and they put on him a purple robe,"
+      },
+      {
+        "n": 3,
+        "text": "And said, Hail, King of the Jews! and they smote him with their hands."
+      },
+      {
+        "n": 4,
+        "text": "Pilate therefore went forth again, and saith unto them, Behold, I bring him forth to you, that ye may know that I find no fault in him."
+      },
+      {
+        "n": 5,
+        "text": "Then came Jesus forth, wearing the crown of thorns, and the purple robe. And Pilate saith unto them, Behold the man!"
+      },
+      {
+        "n": 6,
+        "text": "When the chief priests therefore and officers saw him, they cried out, saying, Crucify him, crucify him. Pilate saith unto them, Take ye him, and crucify him: for I find no fault in him."
+      },
+      {
+        "n": 7,
+        "text": "The Jews answered him, We have a law, and by our law he ought to die, because he made himself the Son of God."
+      },
+      {
+        "n": 8,
+        "text": "When Pilate therefore heard that saying, he was the more afraid;"
+      },
+      {
+        "n": 9,
+        "text": "And went again into the judgment hall, and saith unto Jesus, Whence art thou? But Jesus gave him no answer."
+      },
+      {
+        "n": 10,
+        "text": "Then saith Pilate unto him, Speakest thou not unto me? knowest thou not that I have power to crucify thee, and have power to release thee?"
+      },
+      {
+        "n": 11,
+        "text": "Jesus answered, Thou couldest have no power at all against me, except it were given thee from above: therefore he that delivered me unto thee hath the greater sin."
+      },
+      {
+        "n": 12,
+        "text": "And from thenceforth Pilate sought to release him: but the Jews cried out, saying, If thou let this man go, thou art not Cæsar’s friend: whosoever maketh himself a king speaketh against Cæsar."
+      },
+      {
+        "n": 13,
+        "text": "When Pilate therefore heard that saying, he brought Jesus forth, and sat down in the judgment seat in a place that is called the Pavement, but in the Hebrew, Gabbatha."
+      },
+      {
+        "n": 14,
+        "text": "And it was the preparation of the passover, and about the sixth hour: and he saith unto the Jews, Behold your King!"
+      },
+      {
+        "n": 15,
+        "text": "But they cried out, Away with him, away with him, crucify him. Pilate saith unto them, Shall I crucify your King? The chief priests answered, We have no king but Cæsar."
+      },
+      {
+        "n": 16,
+        "text": "Then delivered he him therefore unto them to be crucified. And they took Jesus, and led him away."
+      },
+      {
+        "n": 17,
+        "text": "And he bearing his cross went forth into a place called the place of a skull, which is called in the Hebrew Golgotha:"
+      },
+      {
+        "n": 18,
+        "text": "Where they crucified him, and two other with him, on either side one, and Jesus in the midst."
+      },
+      {
+        "n": 19,
+        "text": "And Pilate wrote a title, and put it on the cross. And the writing was, JESUS OF NAZARETH THE KING OF THE JEWS."
+      },
+      {
+        "n": 20,
+        "text": "This title then read many of the Jews: for the place where Jesus was crucified was nigh to the city: and it was written in Hebrew, and Greek, and Latin."
+      },
+      {
+        "n": 21,
+        "text": "Then said the chief priests of the Jews to Pilate, Write not, The King of the Jews; but that he said, I am King of the Jews."
+      },
+      {
+        "n": 22,
+        "text": "Pilate answered, What I have written I have written."
+      },
+      {
+        "n": 23,
+        "text": "Then the soldiers, when they had crucified Jesus, took his garments, and made four parts, to every soldier a part; and also his coat: now the coat was without seam, woven from the top throughout."
+      },
+      {
+        "n": 24,
+        "text": "They said therefore among themselves, Let us not rend it, but cast lots for it, whose it shall be: that the scripture might be fulfilled, which saith, They parted my raiment among them, and for my vesture they did cast lots. These things therefore the soldiers did."
+      },
+      {
+        "n": 25,
+        "text": "Now there stood by the cross of Jesus his mother, and his mother’s sister, Mary the wife of Cleophas, and Mary Magdalene."
+      },
+      {
+        "n": 26,
+        "text": "When Jesus therefore saw his mother, and the disciple standing by, whom he loved, he saith unto his mother, Woman, behold thy son!"
+      },
+      {
+        "n": 27,
+        "text": "Then saith he to the disciple, Behold thy mother! And from that hour that disciple took her unto his own home."
+      },
+      {
+        "n": 28,
+        "text": "After this, Jesus knowing that all things were now accomplished, that the scripture might be fulfilled, saith, I thirst."
+      },
+      {
+        "n": 29,
+        "text": "Now there was set a vessel full of vinegar: and they filled a spunge with vinegar, and put it upon hyssop, and put it to his mouth."
+      },
+      {
+        "n": 30,
+        "text": "When Jesus therefore had received the vinegar, he said, It is finished: and he bowed his head, and gave up the ghost."
+      },
+      {
+        "n": 31,
+        "text": "The Jews therefore, because it was the preparation, that the bodies should not remain upon the cross on the sabbath day, (for that sabbath day was an high day,) besought Pilate that their legs might be broken, and that they might be taken away."
+      },
+      {
+        "n": 32,
+        "text": "Then came the soldiers, and brake the legs of the first, and of the other which was crucified with him."
+      },
+      {
+        "n": 33,
+        "text": "But when they came to Jesus, and saw that he was dead already, they brake not his legs:"
+      },
+      {
+        "n": 34,
+        "text": "But one of the soldiers with a spear pierced his side, and forthwith came there out blood and water."
+      },
+      {
+        "n": 35,
+        "text": "And he that saw it bare record, and his record is true: and he knoweth that he saith true, that ye might believe."
+      },
+      {
+        "n": 36,
+        "text": "For these things were done, that the scripture should be fulfilled, A bone of him shall not be broken."
+      },
+      {
+        "n": 37,
+        "text": "And again another scripture saith, They shall look on him whom they pierced."
+      }
+    ],
+    "Psalm 22": [
+      {
+        "n": 1,
+        "text": "My God, my God, why hast thou forsaken me? why art thou so far from helping me, and from the words of my roaring?"
+      },
+      {
+        "n": 2,
+        "text": "O my God, I cry in the daytime, but thou hearest not; and in the night season, and am not silent."
+      },
+      {
+        "n": 3,
+        "text": "But thou art holy, O thou that inhabitest the praises of Israel."
+      },
+      {
+        "n": 4,
+        "text": "Our fathers trusted in thee: they trusted, and thou didst deliver them."
+      },
+      {
+        "n": 5,
+        "text": "They cried unto thee, and were delivered: they trusted in thee, and were not confounded."
+      },
+      {
+        "n": 6,
+        "text": "But I am a worm, and no man; a reproach of men, and despised of the people."
+      },
+      {
+        "n": 7,
+        "text": "All they that see me laugh me to scorn: they shoot out the lip, they shake the head, saying,"
+      },
+      {
+        "n": 8,
+        "text": "He trusted on the LORD that he would deliver him: let him deliver him, seeing he delighted in him."
+      },
+      {
+        "n": 9,
+        "text": "But thou art he that took me out of the womb: thou didst make me hope when I was upon my mother’s breasts."
+      },
+      {
+        "n": 10,
+        "text": "I was cast upon thee from the womb: thou art my God from my mother’s belly."
+      },
+      {
+        "n": 11,
+        "text": "Be not far from me; for trouble is near; for there is none to help."
+      },
+      {
+        "n": 12,
+        "text": "Many bulls have compassed me: strong bulls of Bashan have beset me round."
+      },
+      {
+        "n": 13,
+        "text": "They gaped upon me with their mouths, as a ravening and a roaring lion."
+      },
+      {
+        "n": 14,
+        "text": "I am poured out like water, and all my bones are out of joint: my heart is like wax; it is melted in the midst of my bowels."
+      },
+      {
+        "n": 15,
+        "text": "My strength is dried up like a potsherd; and my tongue cleaveth to my jaws; and thou hast brought me into the dust of death."
+      },
+      {
+        "n": 16,
+        "text": "For dogs have compassed me: the assembly of the wicked have inclosed me: they pierced my hands and my feet."
+      },
+      {
+        "n": 17,
+        "text": "I may tell all my bones: they look and stare upon me."
+      },
+      {
+        "n": 18,
+        "text": "They part my garments among them, and cast lots upon my vesture."
+      },
+      {
+        "n": 19,
+        "text": "But be not thou far from me, O LORD: O my strength, haste thee to help me."
+      },
+      {
+        "n": 20,
+        "text": "Deliver my soul from the sword; my darling from the power of the dog."
+      },
+      {
+        "n": 21,
+        "text": "Save me from the lion’s mouth: for thou hast heard me from the horns of the unicorns."
+      },
+      {
+        "n": 22,
+        "text": "I will declare thy name unto my brethren: in the midst of the congregation will I praise thee."
+      },
+      {
+        "n": 23,
+        "text": "Ye that fear the LORD, praise him; all ye the seed of Jacob, glorify him; and fear him, all ye the seed of Israel."
+      },
+      {
+        "n": 24,
+        "text": "For he hath not despised nor abhorred the affliction of the afflicted; neither hath he hid his face from him; but when he cried unto him, he heard."
+      },
+      {
+        "n": 25,
+        "text": "My praise shall be of thee in the great congregation: I will pay my vows before them that fear him."
+      },
+      {
+        "n": 26,
+        "text": "The meek shall eat and be satisfied: they shall praise the LORD that seek him: your heart shall live for ever."
+      },
+      {
+        "n": 27,
+        "text": "All the ends of the world shall remember and turn unto the LORD: and all the kindreds of the nations shall worship before thee."
+      },
+      {
+        "n": 28,
+        "text": "For the kingdom is the LORD’s: and he is the governor among the nations."
+      },
+      {
+        "n": 29,
+        "text": "All they that be fat upon earth shall eat and worship: all they that go down to the dust shall bow before him: and none can keep alive his own soul."
+      },
+      {
+        "n": 30,
+        "text": "A seed shall serve him; it shall be accounted to the Lord for a generation."
+      },
+      {
+        "n": 31,
+        "text": "They shall come, and shall declare his righteousness unto a people that shall be born, that he hath done this."
+      }
+    ],
+    "Matthew 27:32-44": [
+      {
+        "n": 32,
+        "text": "And as they came out, they found a man of Cyrene, Simon by name: him they compelled to bear his cross."
+      },
+      {
+        "n": 33,
+        "text": "And when they were come unto a place called Golgotha, that is to say, a place of a skull,"
+      },
+      {
+        "n": 34,
+        "text": "They gave him vinegar to drink mingled with gall: and when he had tasted thereof, he would not drink."
+      },
+      {
+        "n": 35,
+        "text": "And they crucified him, and parted his garments, casting lots: that it might be fulfilled which was spoken by the prophet, They parted my garments among them, and upon my vesture did they cast lots."
+      },
+      {
+        "n": 36,
+        "text": "And sitting down they watched him there;"
+      },
+      {
+        "n": 37,
+        "text": "And set up over his head his accusation written, THIS IS JESUS THE KING OF THE JEWS."
+      },
+      {
+        "n": 38,
+        "text": "Then were there two thieves crucified with him, one on the right hand, and another on the left."
+      },
+      {
+        "n": 39,
+        "text": "And they that passed by reviled him, wagging their heads,"
+      },
+      {
+        "n": 40,
+        "text": "And saying, Thou that destroyest the temple, and buildest it in three days, save thyself. If thou be the Son of God, come down from the cross."
+      },
+      {
+        "n": 41,
+        "text": "Likewise also the chief priests mocking him, with the scribes and elders, said,"
+      },
+      {
+        "n": 42,
+        "text": "He saved others; himself he cannot save. If he be the King of Israel, let him now come down from the cross, and we will believe him."
+      },
+      {
+        "n": 43,
+        "text": "He trusted in God; let him deliver him now, if he will have him: for he said, I am the Son of God."
+      },
+      {
+        "n": 44,
+        "text": "The thieves also, which were crucified with him, cast the same in his teeth."
+      }
+    ],
+    "John 20:27": [
+      {
+        "n": 27,
+        "text": "Then saith he to Thomas, Reach hither thy finger, and behold my hands; and reach hither thy hand, and thrust it into my side: and be not faithless, but believing."
+      }
+    ],
+    "Psalm 22:8": [
+      {
+        "n": 8,
+        "text": "He trusted on the LORD that he would deliver him: let him deliver him, seeing he delighted in him."
+      }
+    ],
+    "Matthew 27:39": [
+      {
+        "n": 39,
+        "text": "And they that passed by reviled him, wagging their heads,"
+      }
+    ],
+    "Matthew 27:43": [
+      {
+        "n": 43,
+        "text": "He trusted in God; let him deliver him now, if he will have him: for he said, I am the Son of God."
+      }
+    ],
+    "Psalm 22:17-18": [
+      {
+        "n": 17,
+        "text": "I may tell all my bones: they look and stare upon me."
+      },
+      {
+        "n": 18,
+        "text": "They part my garments among them, and cast lots upon my vesture."
+      }
+    ],
+    "Luke 23:34-35": [
+      {
+        "n": 34,
+        "text": "Then said Jesus, Father, forgive them; for they know not what they do. And they parted his raiment, and cast lots."
+      },
+      {
+        "n": 35,
+        "text": "And the people stood beholding. And the rulers also with them derided him, saying, He saved others; let him save himself, if he be Christ, the chosen of God."
+      }
+    ],
+    "Psalm 22:18": [
+      {
+        "n": 18,
+        "text": "They part my garments among them, and cast lots upon my vesture."
+      }
+    ],
+    "Matthew 27:35": [
+      {
+        "n": 35,
+        "text": "And they crucified him, and parted his garments, casting lots: that it might be fulfilled which was spoken by the prophet, They parted my garments among them, and upon my vesture did they cast lots."
+      }
+    ],
+    "Luke 23:34": [
+      {
+        "n": 34,
+        "text": "Then said Jesus, Father, forgive them; for they know not what they do. And they parted his raiment, and cast lots."
+      }
+    ],
+    "John 19:23": [
+      {
+        "n": 23,
+        "text": "Then the soldiers, when they had crucified Jesus, took his garments, and made four parts, to every soldier a part; and also his coat: now the coat was without seam, woven from the top throughout."
+      }
+    ],
+    "Psalm 22:16": [
+      {
+        "n": 16,
+        "text": "For dogs have compassed me: the assembly of the wicked have inclosed me: they pierced my hands and my feet."
+      }
+    ],
+    "John 19:37": [
+      {
+        "n": 37,
+        "text": "And again another scripture saith, They shall look on him whom they pierced."
+      }
+    ],
+    "Psalm 22:15": [
+      {
+        "n": 15,
+        "text": "My strength is dried up like a potsherd; and my tongue cleaveth to my jaws; and thou hast brought me into the dust of death."
+      }
+    ],
+    "John 19:28": [
+      {
+        "n": 28,
+        "text": "After this, Jesus knowing that all things were now accomplished, that the scripture might be fulfilled, saith, I thirst."
+      }
+    ],
+    "Psalm 22:1": [
+      {
+        "n": 1,
+        "text": "My God, my God, why hast thou forsaken me? why art thou so far from helping me, and from the words of my roaring?"
+      }
+    ],
+    "Matthew 27:46": [
+      {
+        "n": 46,
+        "text": "And about the ninth hour Jesus cried with a loud voice, saying, Eli, Eli, lama sabachthani? that is to say, My God, my God, why hast thou forsaken me?"
+      }
+    ],
+    "Zechariah 12:10": [
+      {
+        "n": 10,
+        "text": "And I will pour upon the house of David, and upon the inhabitants of Jerusalem, the spirit of grace and of supplications: and they shall look upon me whom they have pierced, and they shall mourn for him, as one mourneth for his only son, and shall be in bitterness for him, as one that is in bitterness for his firstborn."
+      }
+    ],
+    "John 19:34-37": [
+      {
+        "n": 34,
+        "text": "But one of the soldiers with a spear pierced his side, and forthwith came there out blood and water."
+      },
+      {
+        "n": 35,
+        "text": "And he that saw it bare record, and his record is true: and he knoweth that he saith true, that ye might believe."
+      },
+      {
+        "n": 36,
+        "text": "For these things were done, that the scripture should be fulfilled, A bone of him shall not be broken."
+      },
+      {
+        "n": 37,
+        "text": "And again another scripture saith, They shall look on him whom they pierced."
+      }
+    ],
+    "Matthew 10:32": [
+      {
+        "n": 32,
+        "text": "Whosoever therefore shall confess me before men, him will I confess also before my Father which is in heaven."
+      }
+    ],
+    "Romans 8:34": [
+      {
+        "n": 34,
+        "text": "Who is he that condemneth? It is Christ that died, yea rather, that is risen again, who is even at the right hand of God, who also maketh intercession for us."
+      }
+    ],
+    "Isaiah 53:4-9": [
+      {
+        "n": 4,
+        "text": "Surely he hath borne our griefs, and carried our sorrows: yet we did esteem him stricken, smitten of God, and afflicted."
+      },
+      {
+        "n": 5,
+        "text": "But he was wounded for our transgressions, he was bruised for our iniquities: the chastisement of our peace was upon him; and with his stripes we are healed."
+      },
+      {
+        "n": 6,
+        "text": "All we like sheep have gone astray; we have turned every one to his own way; and the LORD hath laid on him the iniquity of us all."
+      },
+      {
+        "n": 7,
+        "text": "He was oppressed, and he was afflicted, yet he opened not his mouth: he is brought as a lamb to the slaughter, and as a sheep before her shearers is dumb, so he openeth not his mouth."
+      },
+      {
+        "n": 8,
+        "text": "He was taken from prison and from judgment: and who shall declare his generation? for he was cut off out of the land of the living: for the transgression of my people was he stricken."
+      },
+      {
+        "n": 9,
+        "text": "And he made his grave with the wicked, and with the rich in his death; because he had done no violence, neither was any deceit in his mouth."
+      }
+    ],
+    "2 Corinthians 5:21": [
+      {
+        "n": 21,
+        "text": "For he hath made him to be sin for us, who knew no sin; that we might be made the righteousness of God in him."
+      }
+    ],
+    "1 John 4:10": [
+      {
+        "n": 10,
+        "text": "Herein is love, not that we loved God, but that he loved us, and sent his Son to be the propitiation for our sins."
+      }
+    ],
+    "Isaiah 53:8-9": [
+      {
+        "n": 8,
+        "text": "He was taken from prison and from judgment: and who shall declare his generation? for he was cut off out of the land of the living: for the transgression of my people was he stricken."
+      },
+      {
+        "n": 9,
+        "text": "And he made his grave with the wicked, and with the rich in his death; because he had done no violence, neither was any deceit in his mouth."
+      }
+    ],
+    "Daniel 9:24": [
+      {
+        "n": 24,
+        "text": "Seventy weeks are determined upon thy people and upon thy holy city, to finish the transgression, and to make an end of sins, and to make reconciliation for iniquity, and to bring in everlasting righteousness, and to seal up the vision and prophecy, and to anoint the most Holy."
+      }
+    ],
+    "Galatians 1:3-5": [
+      {
+        "n": 3,
+        "text": "Grace be to you and peace from God the Father, and from our Lord Jesus Christ,"
+      },
+      {
+        "n": 4,
+        "text": "Who gave himself for our sins, that he might deliver us from this present evil world, according to the will of God and our Father:"
+      },
+      {
+        "n": 5,
+        "text": "To whom be glory for ever and ever. Amen."
+      }
+    ],
+    "Isaiah 53:9": [
+      {
+        "n": 9,
+        "text": "And he made his grave with the wicked, and with the rich in his death; because he had done no violence, neither was any deceit in his mouth."
+      }
+    ],
+    "Matthew 27:57-61": [
+      {
+        "n": 57,
+        "text": "When the even was come, there came a rich man of Arimathæa, named Joseph, who also himself was Jesus’ disciple:"
+      },
+      {
+        "n": 58,
+        "text": "He went to Pilate, and begged the body of Jesus. Then Pilate commanded the body to be delivered."
+      },
+      {
+        "n": 59,
+        "text": "And when Joseph had taken the body, he wrapped it in a clean linen cloth,"
+      },
+      {
+        "n": 60,
+        "text": "And laid it in his own new tomb, which he had hewn out in the rock: and he rolled a great stone to the door of the sepulchre, and departed."
+      },
+      {
+        "n": 61,
+        "text": "And there was Mary Magdalene, and the other Mary, sitting over against the sepulchre."
+      }
+    ],
+    "Psalm 16:8-11": [
+      {
+        "n": 8,
+        "text": "I have set the LORD always before me: because he is at my right hand, I shall not be moved."
+      },
+      {
+        "n": 9,
+        "text": "Therefore my heart is glad, and my glory rejoiceth: my flesh also shall rest in hope."
+      },
+      {
+        "n": 10,
+        "text": "For thou wilt not leave my soul in hell; neither wilt thou suffer thine Holy One to see corruption."
+      },
+      {
+        "n": 11,
+        "text": "Thou wilt shew me the path of life: in thy presence is fulness of joy; at thy right hand there are pleasures for evermore."
+      }
+    ],
+    "John 20:1-18": [
+      {
+        "n": 1,
+        "text": "The first day of the week cometh Mary Magdalene early, when it was yet dark, unto the sepulchre, and seeth the stone taken away from the sepulchre."
+      },
+      {
+        "n": 2,
+        "text": "Then she runneth, and cometh to Simon Peter, and to the other disciple, whom Jesus loved, and saith unto them, They have taken away the Lord out of the sepulchre, and we know not where they have laid him."
+      },
+      {
+        "n": 3,
+        "text": "Peter therefore went forth, and that other disciple, and came to the sepulchre."
+      },
+      {
+        "n": 4,
+        "text": "So they ran both together: and the other disciple did outrun Peter, and came first to the sepulchre."
+      },
+      {
+        "n": 5,
+        "text": "And he stooping down, and looking in, saw the linen clothes lying; yet went he not in."
+      },
+      {
+        "n": 6,
+        "text": "Then cometh Simon Peter following him, and went into the sepulchre, and seeth the linen clothes lie,"
+      },
+      {
+        "n": 7,
+        "text": "And the napkin, that was about his head, not lying with the linen clothes, but wrapped together in a place by itself."
+      },
+      {
+        "n": 8,
+        "text": "Then went in also that other disciple, which came first to the sepulchre, and he saw, and believed."
+      },
+      {
+        "n": 9,
+        "text": "For as yet they knew not the scripture, that he must rise again from the dead."
+      },
+      {
+        "n": 10,
+        "text": "Then the disciples went away again unto their own home."
+      },
+      {
+        "n": 11,
+        "text": "But Mary stood without at the sepulchre weeping: and as she wept, she stooped down, and looked into the sepulchre,"
+      },
+      {
+        "n": 12,
+        "text": "And seeth two angels in white sitting, the one at the head, and the other at the feet, where the body of Jesus had lain."
+      },
+      {
+        "n": 13,
+        "text": "And they say unto her, Woman, why weepest thou? She saith unto them, Because they have taken away my Lord, and I know not where they have laid him."
+      },
+      {
+        "n": 14,
+        "text": "And when she had thus said, she turned herself back, and saw Jesus standing, and knew not that it was Jesus."
+      },
+      {
+        "n": 15,
+        "text": "Jesus saith unto her, Woman, why weepest thou? whom seekest thou? She, supposing him to be the gardener, saith unto him, Sir, if thou have borne him hence, tell me where thou hast laid him, and I will take him away."
+      },
+      {
+        "n": 16,
+        "text": "Jesus saith unto her, Mary. She turned herself, and saith unto him, Rabboni; which is to say, Master."
+      },
+      {
+        "n": 17,
+        "text": "Jesus saith unto her, Touch me not; for I am not yet ascended to my Father: but go to my brethren, and say unto them, I ascend unto my Father, and your Father; and to my God, and your God."
+      },
+      {
+        "n": 18,
+        "text": "Mary Magdalene came and told the disciples that she had seen the Lord, and that he had spoken these things unto her."
+      }
+    ],
+    "Acts 2:29-32": [
+      {
+        "n": 29,
+        "text": "Men and brethren, let me freely speak unto you of the patriarch David, that he is both dead and buried, and his sepulchre is with us unto this day."
+      },
+      {
+        "n": 30,
+        "text": "Therefore being a prophet, and knowing that God had sworn with an oath to him, that of the fruit of his loins, according to the flesh, he would raise up Christ to sit on his throne;"
+      },
+      {
+        "n": 31,
+        "text": "He seeing this before spake of the resurrection of Christ, that his soul was not left in hell, neither his flesh did see corruption."
+      },
+      {
+        "n": 32,
+        "text": "This Jesus hath God raised up, whereof we all are witnesses."
+      }
+    ],
+    "Acts 13:32-37": [
+      {
+        "n": 32,
+        "text": "And we declare unto you glad tidings, how that the promise which was made unto the fathers,"
+      },
+      {
+        "n": 33,
+        "text": "God hath fulfilled the same unto us their children, in that he hath raised up Jesus again; as it is also written in the second psalm, Thou art my Son, this day have I begotten thee."
+      },
+      {
+        "n": 34,
+        "text": "And as concerning that he raised him up from the dead, now no more to return to corruption, he said on this wise, I will give you the sure mercies of David."
+      },
+      {
+        "n": 35,
+        "text": "Wherefore he saith also in another psalm, Thou shalt not suffer thine Holy One to see corruption."
+      },
+      {
+        "n": 36,
+        "text": "For David, after he had served his own generation by the will of God, fell on sleep, and was laid unto his fathers, and saw corruption:"
+      },
+      {
+        "n": 37,
+        "text": "But he, whom God raised again, saw no corruption."
+      }
+    ],
+    "1 Corinthians 15": [
+      {
+        "n": 1,
+        "text": "Moreover, brethren, I declare unto you the gospel which I preached unto you, which also ye have received, and wherein ye stand;"
+      },
+      {
+        "n": 2,
+        "text": "By which also ye are saved, if ye keep in memory what I preached unto you, unless ye have believed in vain."
+      },
+      {
+        "n": 3,
+        "text": "For I delivered unto you first of all that which I also received, how that Christ died for our sins according to the scriptures;"
+      },
+      {
+        "n": 4,
+        "text": "And that he was buried, and that he rose again the third day according to the scriptures:"
+      },
+      {
+        "n": 5,
+        "text": "And that he was seen of Cephas, then of the twelve:"
+      },
+      {
+        "n": 6,
+        "text": "After that, he was seen of above five hundred brethren at once; of whom the greater part remain unto this present, but some are fallen asleep."
+      },
+      {
+        "n": 7,
+        "text": "After that, he was seen of James; then of all the apostles."
+      },
+      {
+        "n": 8,
+        "text": "And last of all he was seen of me also, as of one born out of due time."
+      },
+      {
+        "n": 9,
+        "text": "For I am the least of the apostles, that am not meet to be called an apostle, because I persecuted the church of God."
+      },
+      {
+        "n": 10,
+        "text": "But by the grace of God I am what I am: and his grace which was bestowed upon me was not in vain; but I laboured more abundantly than they all: yet not I, but the grace of God which was with me."
+      },
+      {
+        "n": 11,
+        "text": "Therefore whether it were I or they, so we preach, and so ye believed."
+      },
+      {
+        "n": 12,
+        "text": "Now if Christ be preached that he rose from the dead, how say some among you that there is no resurrection of the dead?"
+      },
+      {
+        "n": 13,
+        "text": "But if there be no resurrection of the dead, then is Christ not risen:"
+      },
+      {
+        "n": 14,
+        "text": "And if Christ be not risen, then is our preaching vain, and your faith is also vain."
+      },
+      {
+        "n": 15,
+        "text": "Yea, and we are found false witnesses of God; because we have testified of God that he raised up Christ: whom he raised not up, if so be that the dead rise not."
+      },
+      {
+        "n": 16,
+        "text": "For if the dead rise not, then is not Christ raised:"
+      },
+      {
+        "n": 17,
+        "text": "And if Christ be not raised, your faith is vain; ye are yet in your sins."
+      },
+      {
+        "n": 18,
+        "text": "Then they also which are fallen asleep in Christ are perished."
+      },
+      {
+        "n": 19,
+        "text": "If in this life only we have hope in Christ, we are of all men most miserable."
+      },
+      {
+        "n": 20,
+        "text": "But now is Christ risen from the dead, and become the firstfruits of them that slept."
+      },
+      {
+        "n": 21,
+        "text": "For since by man came death, by man came also the resurrection of the dead."
+      },
+      {
+        "n": 22,
+        "text": "For as in Adam all die, even so in Christ shall all be made alive."
+      },
+      {
+        "n": 23,
+        "text": "But every man in his own order: Christ the firstfruits; afterward they that are Christ’s at his coming."
+      },
+      {
+        "n": 24,
+        "text": "Then cometh the end, when he shall have delivered up the kingdom to God, even the Father; when he shall have put down all rule and all authority and power."
+      },
+      {
+        "n": 25,
+        "text": "For he must reign, till he hath put all enemies under his feet."
+      },
+      {
+        "n": 26,
+        "text": "The last enemy that shall be destroyed is death."
+      },
+      {
+        "n": 27,
+        "text": "For he hath put all things under his feet. But when he saith all things are put under him, it is manifest that he is excepted, which did put all things under him."
+      },
+      {
+        "n": 28,
+        "text": "And when all things shall be subdued unto him, then shall the Son also himself be subject unto him that put all things under him, that God may be all in all."
+      },
+      {
+        "n": 29,
+        "text": "Else what shall they do which are baptized for the dead, if the dead rise not at all? why are they then baptized for the dead?"
+      },
+      {
+        "n": 30,
+        "text": "And why stand we in jeopardy every hour?"
+      },
+      {
+        "n": 31,
+        "text": "I protest by your rejoicing which I have in Christ Jesus our Lord, I die daily."
+      },
+      {
+        "n": 32,
+        "text": "If after the manner of men I have fought with beasts at Ephesus, what advantageth it me, if the dead rise not? let us eat and drink; for to morrow we die."
+      },
+      {
+        "n": 33,
+        "text": "Be not deceived: evil communications corrupt good manners."
+      },
+      {
+        "n": 34,
+        "text": "Awake to righteousness, and sin not; for some have not the knowledge of God: I speak this to your shame."
+      },
+      {
+        "n": 35,
+        "text": "But some man will say, How are the dead raised up? and with what body do they come?"
+      },
+      {
+        "n": 36,
+        "text": "Thou fool, that which thou sowest is not quickened, except it die:"
+      },
+      {
+        "n": 37,
+        "text": "And that which thou sowest, thou sowest not that body that shall be, but bare grain, it may chance of wheat, or of some other grain:"
+      },
+      {
+        "n": 38,
+        "text": "But God giveth it a body as it hath pleased him, and to every seed his own body."
+      },
+      {
+        "n": 39,
+        "text": "All flesh is not the same flesh: but there is one kind of flesh of men, another flesh of beasts, another of fishes, and another of birds."
+      },
+      {
+        "n": 40,
+        "text": "There are also celestial bodies, and bodies terrestrial: but the glory of the celestial is one, and the glory of the terrestrial is another."
+      },
+      {
+        "n": 41,
+        "text": "There is one glory of the sun, and another glory of the moon, and another glory of the stars: for one star differeth from another star in glory."
+      },
+      {
+        "n": 42,
+        "text": "So also is the resurrection of the dead. It is sown in corruption; it is raised in incorruption:"
+      },
+      {
+        "n": 43,
+        "text": "It is sown in dishonour; it is raised in glory: it is sown in weakness; it is raised in power:"
+      },
+      {
+        "n": 44,
+        "text": "It is sown a natural body; it is raised a spiritual body. There is a natural body, and there is a spiritual body."
+      },
+      {
+        "n": 45,
+        "text": "And so it is written, The first man Adam was made a living soul; the last Adam was made a quickening spirit."
+      },
+      {
+        "n": 46,
+        "text": "Howbeit that was not first which is spiritual, but that which is natural; and afterward that which is spiritual."
+      },
+      {
+        "n": 47,
+        "text": "The first man is of the earth, earthy: the second man is the Lord from heaven."
+      },
+      {
+        "n": 48,
+        "text": "As is the earthy, such are they also that are earthy: and as is the heavenly, such are they also that are heavenly."
+      },
+      {
+        "n": 49,
+        "text": "And as we have borne the image of the earthy, we shall also bear the image of the heavenly."
+      },
+      {
+        "n": 50,
+        "text": "Now this I say, brethren, that flesh and blood cannot inherit the kingdom of God; neither doth corruption inherit incorruption."
+      },
+      {
+        "n": 51,
+        "text": "Behold, I shew you a mystery; We shall not all sleep, but we shall all be changed,"
+      },
+      {
+        "n": 52,
+        "text": "In a moment, in the twinkling of an eye, at the last trump: for the trumpet shall sound, and the dead shall be raised incorruptible, and we shall be changed."
+      },
+      {
+        "n": 53,
+        "text": "For this corruptible must put on incorruption, and this mortal must put on immortality."
+      },
+      {
+        "n": 54,
+        "text": "So when this corruptible shall have put on incorruption, and this mortal shall have put on immortality, then shall be brought to pass the saying that is written, Death is swallowed up in victory."
+      },
+      {
+        "n": 55,
+        "text": "O death, where is thy sting? O grave, where is thy victory?"
+      },
+      {
+        "n": 56,
+        "text": "The sting of death is sin; and the strength of sin is the law."
+      },
+      {
+        "n": 57,
+        "text": "But thanks be to God, which giveth us the victory through our Lord Jesus Christ."
+      },
+      {
+        "n": 58,
+        "text": "Therefore, my beloved brethren, be ye stedfast, unmoveable, always abounding in the work of the Lord, forasmuch as ye know that your labour is not in vain in the Lord."
+      }
+    ],
+    "Isaiah 53:10-12": [
+      {
+        "n": 10,
+        "text": "Yet it pleased the LORD to bruise him; he hath put him to grief: when thou shalt make his soul an offering for sin, he shall see his seed, he shall prolong his days, and the pleasure of the LORD shall prosper in his hand."
+      },
+      {
+        "n": 11,
+        "text": "He shall see of the travail of his soul, and shall be satisfied: by his knowledge shall my righteous servant justify many; for he shall bear their iniquities."
+      },
+      {
+        "n": 12,
+        "text": "Therefore will I divide him a portion with the great, and he shall divide the spoil with the strong; because he hath poured out his soul unto death: and he was numbered with the transgressors; and he bare the sin of many, and made intercession for the transgressors."
+      }
+    ],
+    "Acts 1:8": [
+      {
+        "n": 8,
+        "text": "But ye shall receive power, after that the Holy Ghost is come upon you: and ye shall be witnesses unto me both in Jerusalem, and in all Judæa, and in Samaria, and unto the uttermost part of the earth."
+      }
+    ],
+    "Psalm 110": [
+      {
+        "n": 1,
+        "text": "The LORD said unto my Lord, Sit thou at my right hand, until I make thine enemies thy footstool."
+      },
+      {
+        "n": 2,
+        "text": "The LORD shall send the rod of thy strength out of Zion: rule thou in the midst of thine enemies."
+      },
+      {
+        "n": 3,
+        "text": "Thy people shall be willing in the day of thy power, in the beauties of holiness from the womb of the morning: thou hast the dew of thy youth."
+      },
+      {
+        "n": 4,
+        "text": "The LORD hath sworn, and will not repent, Thou art a priest for ever after the order of Melchizedek."
+      },
+      {
+        "n": 5,
+        "text": "The Lord at thy right hand shall strike through kings in the day of his wrath."
+      },
+      {
+        "n": 6,
+        "text": "He shall judge among the heathen, he shall fill the places with the dead bodies; he shall wound the heads over many countries."
+      },
+      {
+        "n": 7,
+        "text": "He shall drink of the brook in the way: therefore shall he lift up the head."
+      }
+    ],
+    "Matthew 26:64": [
+      {
+        "n": 64,
+        "text": "Jesus saith unto him, Thou hast said: nevertheless I say unto you, Hereafter shall ye see the Son of man sitting on the right hand of power, and coming in the clouds of heaven."
+      }
+    ],
+    "Luke 24:50-53": [
+      {
+        "n": 50,
+        "text": "And he led them out as far as to Bethany, and he lifted up his hands, and blessed them."
+      },
+      {
+        "n": 51,
+        "text": "And it came to pass, while he blessed them, he was parted from them, and carried up into heaven."
+      },
+      {
+        "n": 52,
+        "text": "And they worshipped him, and returned to Jerusalem with great joy:"
+      },
+      {
+        "n": 53,
+        "text": "And were continually in the temple, praising and blessing God. Amen."
+      }
+    ],
+    "John 20:17": [
+      {
+        "n": 17,
+        "text": "Jesus saith unto her, Touch me not; for I am not yet ascended to my Father: but go to my brethren, and say unto them, I ascend unto my Father, and your Father; and to my God, and your God."
+      }
+    ],
+    "Acts 1:1-12": [
+      {
+        "n": 1,
+        "text": "The former treatise have I made, O Theophilus, of all that Jesus began both to do and teach,"
+      },
+      {
+        "n": 2,
+        "text": "Until the day in which he was taken up, after that he through the Holy Ghost had given commandments unto the apostles whom he had chosen:"
+      },
+      {
+        "n": 3,
+        "text": "To whom also he shewed himself alive after his passion by many infallible proofs, being seen of them forty days, and speaking of the things pertaining to the kingdom of God:"
+      },
+      {
+        "n": 4,
+        "text": "And, being assembled together with them, commanded them that they should not depart from Jerusalem, but wait for the promise of the Father, which, saith he, ye have heard of me."
+      },
+      {
+        "n": 5,
+        "text": "For John truly baptized with water; but ye shall be baptized with the Holy Ghost not many days hence."
+      },
+      {
+        "n": 6,
+        "text": "When they therefore were come together, they asked of him, saying, Lord, wilt thou at this time restore again the kingdom to Israel?"
+      },
+      {
+        "n": 7,
+        "text": "And he said unto them, It is not for you to know the times or the seasons, which the Father hath put in his own power."
+      },
+      {
+        "n": 8,
+        "text": "But ye shall receive power, after that the Holy Ghost is come upon you: and ye shall be witnesses unto me both in Jerusalem, and in all Judæa, and in Samaria, and unto the uttermost part of the earth."
+      },
+      {
+        "n": 9,
+        "text": "And when he had spoken these things, while they beheld, he was taken up; and a cloud received him out of their sight."
+      },
+      {
+        "n": 10,
+        "text": "And while they looked stedfastly toward heaven as he went up, behold, two men stood by them in white apparel;"
+      },
+      {
+        "n": 11,
+        "text": "Which also said, Ye men of Galilee, why stand ye gazing up into heaven? this same Jesus, which is taken up from you into heaven, shall so come in like manner as ye have seen him go into heaven."
+      },
+      {
+        "n": 12,
+        "text": "Then returned they unto Jerusalem from the mount called Olivet, which is from Jerusalem a sabbath day’s journey."
+      }
+    ],
+    "Isaiah 11:10": [
+      {
+        "n": 10,
+        "text": "And in that day there shall be a root of Jesse, which shall stand for an ensign of the people; to it shall the Gentiles seek: and his rest shall be glorious."
+      }
+    ],
+    "Acts 13:47-48": [
+      {
+        "n": 47,
+        "text": "For so hath the Lord commanded us, saying, I have set thee to be a light of the Gentiles, that thou shouldest be for salvation unto the ends of the earth."
+      },
+      {
+        "n": 48,
+        "text": "And when the Gentiles heard this, they were glad, and glorified the word of the Lord: and as many as were ordained to eternal life believed."
+      }
+    ],
+    "Isaiah 42:1-4": [
+      {
+        "n": 1,
+        "text": "Behold my servant, whom I uphold; mine elect, in whom my soul delighteth; I have put my spirit upon him: he shall bring forth judgment to the Gentiles."
+      },
+      {
+        "n": 2,
+        "text": "He shall not cry, nor lift up, nor cause his voice to be heard in the street."
+      },
+      {
+        "n": 3,
+        "text": "A bruised reed shall he not break, and the smoking flax shall he not quench: he shall bring forth judgment unto truth."
+      },
+      {
+        "n": 4,
+        "text": "He shall not fail nor be discouraged, till he have set judgment in the earth: and the isles shall wait for his law."
+      }
+    ],
+    "Matthew 28:19-20": [
+      {
+        "n": 19,
+        "text": "Go ye therefore, and teach all nations, baptizing them in the name of the Father, and of the Son, and of the Holy Ghost:"
+      },
+      {
+        "n": 20,
+        "text": "Teaching them to observe all things whatsoever I have commanded you: and, lo, I am with you alway, even unto the end of the world. Amen."
+      }
+    ],
+    "John 12:18-21": [
+      {
+        "n": 18,
+        "text": "For this cause the people also met him, for that they heard that he had done this miracle."
+      },
+      {
+        "n": 19,
+        "text": "The Pharisees therefore said among themselves, Perceive ye how ye prevail nothing? behold, the world is gone after him."
+      },
+      {
+        "n": 20,
+        "text": "And there were certain Greeks among them that came up to worship at the feast:"
+      },
+      {
+        "n": 21,
+        "text": "The same came therefore to Philip, which was of Bethsaida of Galilee, and desired him, saying, Sir, we would see Jesus."
+      }
+    ],
+    "Isaiah 42:6": [
+      {
+        "n": 6,
+        "text": "I the LORD have called thee in righteousness, and will hold thine hand, and will keep thee, and give thee for a covenant of the people, for a light of the Gentiles;"
+      }
+    ],
+    "Luke 2:22-40": [
+      {
+        "n": 22,
+        "text": "And when the days of her purification according to the law of Moses were accomplished, they brought him to Jerusalem, to present him to the Lord;"
+      },
+      {
+        "n": 23,
+        "text": "(As it is written in the law of the Lord, Every male that openeth the womb shall be called holy to the Lord;)"
+      },
+      {
+        "n": 24,
+        "text": "And to offer a sacrifice according to that which is said in the law of the Lord, A pair of turtledoves, or two young pigeons."
+      },
+      {
+        "n": 25,
+        "text": "And, behold, there was a man in Jerusalem, whose name was Simeon; and the same man was just and devout, waiting for the consolation of Israel: and the Holy Ghost was upon him."
+      },
+      {
+        "n": 26,
+        "text": "And it was revealed unto him by the Holy Ghost, that he should not see death, before he had seen the Lord’s Christ."
+      },
+      {
+        "n": 27,
+        "text": "And he came by the Spirit into the temple: and when the parents brought in the child Jesus, to do for him after the custom of the law,"
+      },
+      {
+        "n": 28,
+        "text": "Then took he him up in his arms, and blessed God, and said,"
+      },
+      {
+        "n": 29,
+        "text": "Lord, now lettest thou thy servant depart in peace, according to thy word:"
+      },
+      {
+        "n": 30,
+        "text": "For mine eyes have seen thy salvation,"
+      },
+      {
+        "n": 31,
+        "text": "Which thou hast prepared before the face of all people;"
+      },
+      {
+        "n": 32,
+        "text": "A light to lighten the Gentiles, and the glory of thy people Israel."
+      },
+      {
+        "n": 33,
+        "text": "And Joseph and his mother marvelled at those things which were spoken of him."
+      },
+      {
+        "n": 34,
+        "text": "And Simeon blessed them, and said unto Mary his mother, Behold, this child is set for the fall and rising again of many in Israel; and for a sign which shall be spoken against;"
+      },
+      {
+        "n": 35,
+        "text": "(Yea, a sword shall pierce through thy own soul also,) that the thoughts of many hearts may be revealed."
+      },
+      {
+        "n": 36,
+        "text": "And there was one Anna, a prophetess, the daughter of Phanuel, of the tribe of Aser: she was of a great age, and had lived with an husband seven years from her virginity;"
+      },
+      {
+        "n": 37,
+        "text": "And she was a widow of about fourscore and four years, which departed not from the temple, but served God with fastings and prayers night and day."
+      },
+      {
+        "n": 38,
+        "text": "And she coming in that instant gave thanks likewise unto the Lord, and spake of him to all them that looked for redemption in Jerusalem."
+      },
+      {
+        "n": 39,
+        "text": "And when they had performed all things according to the law of the Lord, they returned into Galilee, to their own city Nazareth."
+      },
+      {
+        "n": 40,
+        "text": "And the child grew, and waxed strong in spirit, filled with wisdom: and the grace of God was upon him."
+      }
+    ],
+    "Zechariah 9:9-11": [
+      {
+        "n": 9,
+        "text": "Rejoice greatly, O daughter of Zion; shout, O daughter of Jerusalem: behold, thy King cometh unto thee: he is just, and having salvation; lowly, and riding upon an ass, and upon a colt the foal of an ass."
+      },
+      {
+        "n": 10,
+        "text": "And I will cut off the chariot from Ephraim, and the horse from Jerusalem, and the battle bow shall be cut off: and he shall speak peace unto the heathen: and his dominion shall be from sea even to sea, and from the river even to the ends of the earth."
+      },
+      {
+        "n": 11,
+        "text": "As for thee also, by the blood of thy covenant I have sent forth thy prisoners out of the pit wherein is no water."
+      }
+    ],
+    "Isaiah 49:6": [
+      {
+        "n": 6,
+        "text": "And he said, It is a light thing that thou shouldest be my servant to raise up the tribes of Jacob, and to restore the preserved of Israel: I will also give thee for a light to the Gentiles, that thou mayest be my salvation unto the end of the earth."
+      }
+    ],
+    "Daniel 7:13-14": [
+      {
+        "n": 13,
+        "text": "I saw in the night visions, and, behold, one like the Son of man came with the clouds of heaven, and came to the Ancient of days, and they brought him near before him."
+      },
+      {
+        "n": 14,
+        "text": "And there was given him dominion, and glory, and a kingdom, that all people, nations, and languages, should serve him: his dominion is an everlasting dominion, which shall not pass away, and his kingdom that which shall not be destroyed."
+      }
+    ],
+    "Daniel 12:1-2": [
+      {
+        "n": 1,
+        "text": "And at that time shall Michael stand up, the great prince which standeth for the children of thy people: and there shall be a time of trouble, such as never was since there was a nation even to that same time: and at that time thy people shall be delivered, every one that shall be found written in the book."
+      },
+      {
+        "n": 2,
+        "text": "And many of them that sleep in the dust of the earth shall awake, some to everlasting life, and some to shame and everlasting contempt."
+      }
+    ],
+    "Luke 1:31-33": [
+      {
+        "n": 31,
+        "text": "And, behold, thou shalt conceive in thy womb, and bring forth a son, and shalt call his name JESUS."
+      },
+      {
+        "n": 32,
+        "text": "He shall be great, and shall be called the Son of the Highest: and the Lord God shall give unto him the throne of his father David:"
+      },
+      {
+        "n": 33,
+        "text": "And he shall reign over the house of Jacob for ever; and of his kingdom there shall be no end."
+      }
+    ]
+  },
+  "items": [
+    {
+      "id": "1",
+      "summary": "When sin first enters the world, God promises a savior -- the Messiah -- to resolve the problem of sin and reconcile people with God",
+      "note": null,
+      "infoUrl": "https://www.aboutbibleprophecy.com/genesis_3_15a.htm",
+      "sources": [
+        {
+          "book": "Genesis",
+          "reference": "Genesis 3:15",
+          "testament": "OT"
+        }
+      ],
+      "targets": [
+        {
+          "book": "Galatians",
+          "reference": "Galatians 4:4-5",
+          "testament": "NT"
+        },
+        {
+          "book": "Matthew",
+          "reference": "Matthew 1:18",
+          "testament": "NT"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "summary": "The Messiah would be born of a woman -- he would be a human, as opposed to an angel or other type of being",
+      "note": null,
+      "infoUrl": "https://www.aboutbibleprophecy.com/genesis_3_15b.htm",
+      "sources": [
+        {
+          "book": "Genesis",
+          "reference": "Genesis 3:15",
+          "testament": "OT"
+        }
+      ],
+      "targets": [
+        {
+          "book": "Galatians",
+          "reference": "Galatians 4:4-5",
+          "testament": "NT"
+        },
+        {
+          "book": "Matthew",
+          "reference": "Matthew 1:18",
+          "testament": "NT"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "summary": "The Messiah would be a descendant of Abraham, because of Abraham's great faith",
+      "note": null,
+      "infoUrl": "https://www.aboutbibleprophecy.com/genesis_22_18.htm",
+      "sources": [
+        {
+          "book": "Genesis",
+          "reference": "Genesis 22:18",
+          "testament": "OT"
+        }
+      ],
+      "targets": [
+        {
+          "book": "Matthew",
+          "reference": "Matthew 1:1",
+          "testament": "NT"
+        },
+        {
+          "book": "Luke",
+          "reference": "Luke 3:34",
+          "testament": "NT"
+        },
+        {
+          "book": "Romans",
+          "reference": "Romans 4:13",
+          "testament": "NT"
+        },
+        {
+          "book": "Galatians",
+          "reference": "Galatians 3:7",
+          "testament": "NT"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "summary": "The Messiah would be a descendant of Abraham's son Isaac",
+      "note": null,
+      "infoUrl": "https://www.aboutbibleprophecy.com/genesis_26_2_5.htm",
+      "sources": [
+        {
+          "book": "Genesis",
+          "reference": "Genesis 26:1-5",
+          "testament": "OT"
+        }
+      ],
+      "targets": [
+        {
+          "book": "Romans",
+          "reference": "Romans 9:7",
+          "testament": "NT"
+        },
+        {
+          "book": "Hebrews",
+          "reference": "Hebrews 11:18",
+          "testament": "NT"
+        },
+        {
+          "book": "Matthew",
+          "reference": "Matthew 1:2",
+          "testament": "NT"
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "summary": "The Messiah would be a descendant of Abraham's grandson Jacob (He would be an Israelite)",
+      "note": null,
+      "infoUrl": "https://www.aboutbibleprophecy.com/genesis_28_10.htm",
+      "sources": [
+        {
+          "book": "Genesis",
+          "reference": "Genesis 28:10-14",
+          "testament": "OT"
+        }
+      ],
+      "targets": [
+        {
+          "book": "Matthew",
+          "reference": "Matthew 1:2",
+          "testament": "NT"
+        },
+        {
+          "book": "Luke",
+          "reference": "Luke 3:34",
+          "testament": "NT"
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "summary": "The Messiah would be a descendant of Abraham's great-grandson Judah (He would be a Jew)",
+      "note": null,
+      "infoUrl": "https://www.aboutbibleprophecy.com/genesis_49_10.htm",
+      "sources": [
+        {
+          "book": "Genesis",
+          "reference": "Genesis 49:10",
+          "testament": "OT"
+        }
+      ],
+      "targets": [
+        {
+          "book": "Matthew",
+          "reference": "Matthew 1:3",
+          "testament": "NT"
+        },
+        {
+          "book": "Luke",
+          "reference": "Luke 3:33",
+          "testament": "NT"
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "summary": "The Messiah would be a descendant of Jesse, who is a descendant of Judah",
+      "note": null,
+      "infoUrl": "https://www.aboutbibleprophecy.com/isaiah_11_1.htm",
+      "sources": [
+        {
+          "book": "Isaiah",
+          "reference": "Isaiah 11:1-10",
+          "testament": "OT"
+        }
+      ],
+      "targets": [
+        {
+          "book": "Matthew",
+          "reference": "Matthew 1:6",
+          "testament": "NT"
+        },
+        {
+          "book": "Luke",
+          "reference": "Luke 3:32",
+          "testament": "NT"
+        }
+      ]
+    },
+    {
+      "id": "8",
+      "summary": "The Messiah would be a descendant of King David, who is a son of Jesse",
+      "note": null,
+      "infoUrl": "https://www.aboutbibleprophecy.com/2_samuel_7_14.htm",
+      "sources": [
+        {
+          "book": "2 Samuel",
+          "reference": "2 Samuel 7:12-16",
+          "testament": "OT"
+        }
+      ],
+      "targets": [
+        {
+          "book": "Matthew",
+          "reference": "Matthew 1:6",
+          "testament": "NT"
+        },
+        {
+          "book": "Luke",
+          "reference": "Luke 3:31",
+          "testament": "NT"
+        }
+      ]
+    },
+    {
+      "id": "9",
+      "summary": "The Messiah would appear after a great devastation for Jesse's descendants (Babylonian conquest)",
+      "note": "History: The Babylonians destroyed the Kingdom of Judah and forced many Jews into exile and captivity (about 2,600 years ago).",
+      "infoUrl": "https://www.aboutbibleprophecy.com/isaiah_11_1.htm",
+      "sources": [
+        {
+          "book": "Isaiah",
+          "reference": "Isaiah 11:1",
+          "testament": "OT"
+        }
+      ],
+      "targets": [
+        {
+          "book": "Luke",
+          "reference": "Luke 3:1-23",
+          "testament": "NT"
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "summary": "The Messiah would appear after the regathering of exiles",
+      "note": "History: Jews began returning to their homeland after the fall of the Neo-Babylonian Empire (about 2,500 years ago).",
+      "infoUrl": "https://www.aboutbibleprophecy.com/jeremiah_23_3.htm",
+      "sources": [
+        {
+          "book": "Jeremiah",
+          "reference": "Jeremiah 23:3-6",
+          "testament": "OT"
+        }
+      ],
+      "targets": [
+        {
+          "book": "Luke",
+          "reference": "Luke 3:1-23",
+          "testament": "NT"
+        }
+      ]
+    },
+    {
+      "id": "11",
+      "summary": "The Messiah would appear after the rebuilding of Jerusalem",
+      "note": "History: Jerusalem was fully rebuilt when Jesus arrived as the Messiah about 2,000 years ago.",
+      "infoUrl": "https://www.aboutbibleprophecy.com/daniel_9_24c.htm",
+      "sources": [
+        {
+          "book": "Daniel",
+          "reference": "Daniel 9:24-26",
+          "testament": "OT"
+        }
+      ],
+      "targets": [
+        {
+          "book": "Luke",
+          "reference": "Luke 3:1-23",
+          "testament": "NT"
+        }
+      ]
+    },
+    {
+      "id": "12",
+      "summary": "The Messiah would appear after a succession of rulers from the Tribe of Judah",
+      "note": "History: Herod the Great became the first foreigner to reign from Jerusalem as king over the Jews in Israel. Jesus was born during his reign.",
+      "infoUrl": "https://www.aboutbibleprophecy.com/genesis_49_10.htm",
+      "sources": [
+        {
+          "book": "Genesis",
+          "reference": "Genesis 49:10",
+          "testament": "OT"
+        }
+      ],
+      "targets": [
+        {
+          "book": "Matthew",
+          "reference": "Matthew 2",
+          "testament": "NT"
+        }
+      ]
+    },
+    {
+      "id": "13",
+      "summary": "The Messiah would appear after a disruption to the succession of Davidic kings, who were members of the Tribe of Judah",
+      "note": "History: Zedekiah, who lived during the time of Ezekiel, was the last Davidic king until Jesus was born.",
+      "infoUrl": null,
+      "sources": [
+        {
+          "book": "Ezekiel",
+          "reference": "Ezekiel 21:26-27",
+          "testament": "OT"
+        }
+      ],
+      "targets": [
+        {
+          "book": "Matthew",
+          "reference": "Matthew 2",
+          "testament": "NT"
+        }
+      ]
+    },
+    {
+      "id": "14",
+      "summary": "The Messiah would be born in Bethlehem",
+      "note": null,
+      "infoUrl": "https://www.aboutbibleprophecy.com/micah_5_2.htm",
+      "sources": [
+        {
+          "book": "Micah",
+          "reference": "Micah 5:1-2",
+          "testament": "OT"
+        }
+      ],
+      "targets": [
+        {
+          "book": "Matthew",
+          "reference": "Matthew 2:1-12",
+          "testament": "NT"
+        },
+        {
+          "book": "Luke",
+          "reference": "Luke 2:1-21",
+          "testament": "NT"
+        }
+      ]
+    },
+    {
+      "id": "15",
+      "summary": "The predicted miraculous birth of Isaac foreshadows the predicted miraculous birth of Jesus",
+      "note": "Both births were the result of miracles and the fulfillment of prophecy.",
+      "infoUrl": null,
+      "sources": [
+        {
+          "book": "Genesis",
+          "reference": "Genesis 17:15-21",
+          "testament": "OT"
+        }
+      ],
+      "targets": [
+        {
+          "book": "Matthew",
+          "reference": "Matthew 1:18-25",
+          "testament": "NT"
+        },
+        {
+          "book": "Luke",
+          "reference": "Luke 1:26-38",
+          "testament": "NT"
+        }
+      ]
+    },
+    {
+      "id": "16",
+      "summary": "Isaiah foretold the miraculous virgin birth of Jesus and The original Christmas story",
+      "note": null,
+      "infoUrl": "https://www.aboutbibleprophecy.com/isaiah_7_14.htm",
+      "sources": [
+        {
+          "book": "Isaiah",
+          "reference": "Isaiah 7:13-14",
+          "testament": "OT"
+        }
+      ],
+      "targets": [
+        {
+          "book": "Matthew",
+          "reference": "Matthew 1:18-25",
+          "testament": "NT"
+        },
+        {
+          "book": "Luke",
+          "reference": "Luke 1:26-38",
+          "testament": "NT"
+        }
+      ]
+    },
+    {
+      "id": "17",
+      "summary": "The Messiah would be called Immanuel (God with us)",
+      "note": null,
+      "infoUrl": "https://www.aboutbibleprophecy.com/isaiah_7_14.htm",
+      "sources": [
+        {
+          "book": "Isaiah",
+          "reference": "Isaiah 7:14",
+          "testament": "OT"
+        }
+      ],
+      "targets": [
+        {
+          "book": "Matthew",
+          "reference": "Matthew 1:23",
+          "testament": "NT"
+        }
+      ]
+    },
+    {
+      "id": "18",
+      "summary": "The Messiah would arrive before the (Roman) destruction of Jerusalem",
+      "note": "History: The Romans destroyed Jerusalem in AD 70. Jesus appeared as the Messiah in about AD 30.",
+      "infoUrl": "https://www.aboutbibleprophecy.com/daniel_9_24b.htm",
+      "sources": [
+        {
+          "book": "Daniel",
+          "reference": "Daniel 9:26",
+          "testament": "OT"
+        }
+      ],
+      "targets": [
+        {
+          "book": "Luke",
+          "reference": "Luke 3:1-23",
+          "testament": "NT"
+        }
+      ]
+    },
+    {
+      "id": "19",
+      "summary": "The Messiah would arrive at a time when there was a Temple in Jerusalem",
+      "note": "History: The Temple was destroyed AD 70, about 2,000 years ago, and has never been rebuilt.",
+      "infoUrl": "https://www.aboutbibleprophecy.com/malachi_3_1.htm",
+      "sources": [
+        {
+          "book": "Malachi",
+          "reference": "Malachi 3:1",
+          "testament": "OT"
+        }
+      ],
+      "targets": [
+        {
+          "book": "Matthew",
+          "reference": "Matthew 21:12",
+          "testament": "NT"
+        }
+      ]
+    },
+    {
+      "id": "20",
+      "summary": "The Messiah would be preceded by a forerunner",
+      "note": null,
+      "infoUrl": "https://www.aboutbibleprophecy.com/isaiah_40_1.htm",
+      "sources": [
+        {
+          "book": "Isaiah",
+          "reference": "Isaiah 40:1-9",
+          "testament": "OT"
+        }
+      ],
+      "targets": [
+        {
+          "book": "Matthew",
+          "reference": "Matthew 3:1-4",
+          "testament": "NT"
+        }
+      ]
+    },
+    {
+      "id": "21",
+      "summary": "A messenger would prepare the way for the Lord",
+      "note": null,
+      "infoUrl": "https://www.aboutbibleprophecy.com/malachi_3_1.htm",
+      "sources": [
+        {
+          "book": "Malachi",
+          "reference": "Malachi 3:1",
+          "testament": "OT"
+        }
+      ],
+      "targets": [
+        {
+          "book": "Mark",
+          "reference": "Mark 1:1-11",
+          "testament": "NT"
+        }
+      ]
+    },
+    {
+      "id": "22",
+      "summary": "The Messiah would arrive 483 years after a call to restore and to build Jerusalem",
+      "note": "History: Artaxerxes began giving permission to restore and rebuild Jerusalem in 457 BC. Jesus began his public ministy in AD 26.",
+      "infoUrl": "https://www.aboutbibleprophecy.com/daniel_9_24c.htm",
+      "sources": [
+        {
+          "book": "Daniel",
+          "reference": "Daniel 9:24-27",
+          "testament": "OT"
+        }
+      ],
+      "targets": [
+        {
+          "book": "John",
+          "reference": "John 1:29-34",
+          "testament": "NT"
+        }
+      ]
+    },
+    {
+      "id": "23",
+      "summary": "The public ministry of Jesus is foreshadowed by Isaiah",
+      "note": null,
+      "infoUrl": "https://www.aboutbibleprophecy.com/isaiah_61_1.htm",
+      "sources": [
+        {
+          "book": "Isaiah",
+          "reference": "Isaiah 61:1-2",
+          "testament": "OT"
+        }
+      ],
+      "targets": [
+        {
+          "book": "Luke",
+          "reference": "Luke 4:14-30",
+          "testament": "NT"
+        }
+      ]
+    },
+    {
+      "id": "24",
+      "summary": "The Messiah would have a ministry in Galilee and be a light to Gentiles",
+      "note": null,
+      "infoUrl": "https://www.aboutbibleprophecy.com/isaiah_9_1.htm",
+      "sources": [
+        {
+          "book": "Isaiah",
+          "reference": "Isaiah 9:1-2",
+          "testament": "OT"
+        }
+      ],
+      "targets": [
+        {
+          "book": "Matthew",
+          "reference": "Matthew 4:12-17",
+          "testament": "NT"
+        }
+      ]
+    },
+    {
+      "id": "25",
+      "summary": "The Messiah would perform miracles",
+      "note": "Jesus performed miracles on 50 occasions, according to Jesus the Miracle Worker",
+      "infoUrl": "https://www.aboutbibleprophecy.com/isaiah_35_4.htm",
+      "sources": [
+        {
+          "book": "Isaiah",
+          "reference": "Isaiah 35:4-6",
+          "testament": "OT"
+        }
+      ],
+      "targets": [
+        {
+          "book": "Matthew",
+          "reference": "Matthew 4:23-25",
+          "testament": "NT"
+        }
+      ]
+    },
+    {
+      "id": "26",
+      "summary": "The Messiah would teach in parables",
+      "note": null,
+      "infoUrl": "https://www.aboutbibleprophecy.com/psalm_78_1.htm",
+      "sources": [
+        {
+          "book": "Psalms",
+          "reference": "Psalm 78:1-2",
+          "testament": "OT"
+        }
+      ],
+      "targets": [
+        {
+          "book": "Matthew",
+          "reference": "Matthew 13:3",
+          "testament": "NT"
+        },
+        {
+          "book": "Matthew",
+          "reference": "Matthew 13:13-15",
+          "testament": "NT"
+        }
+      ]
+    },
+    {
+      "id": "27",
+      "summary": "The Messiah would be like Moses, who was a prophet, leader, intermediary, deliverer and miracle worker",
+      "note": null,
+      "infoUrl": "https://www.aboutbibleprophecy.com/deuteronomy_18_15.htm",
+      "sources": [
+        {
+          "book": "Deuteronomy",
+          "reference": "Deuteronomy 18:15-18",
+          "testament": "OT"
+        }
+      ],
+      "targets": [
+        {
+          "book": "John",
+          "reference": "John 5:45-47",
+          "testament": "NT"
+        },
+        {
+          "book": "John",
+          "reference": "John 6:14",
+          "testament": "NT"
+        }
+      ]
+    },
+    {
+      "id": "28",
+      "summary": "The Messiah would be humble and meek",
+      "note": null,
+      "infoUrl": "https://www.aboutbibleprophecy.com/isaiah_42_1.htm",
+      "sources": [
+        {
+          "book": "Isaiah",
+          "reference": "Isaiah 42:1-9",
+          "testament": "OT"
+        }
+      ],
+      "targets": [
+        {
+          "book": "Matthew",
+          "reference": "Matthew 11:28-30",
+          "testament": "NT"
+        }
+      ]
+    },
+    {
+      "id": "29",
+      "summary": "The Messiah would have a father-son relationship with God",
+      "note": null,
+      "infoUrl": "https://www.aboutbibleprophecy.com/psalm_2_7.htm",
+      "sources": [
+        {
+          "book": "Psalms",
+          "reference": "Psalm 2:1-12",
+          "testament": "OT"
+        }
+      ],
+      "targets": [
+        {
+          "book": "Matthew",
+          "reference": "Matthew 14:33",
+          "testament": "NT"
+        }
+      ]
+    },
+    {
+      "id": "30",
+      "summary": "The Messiah would be a son who would be called Mighty God",
+      "note": null,
+      "infoUrl": "https://www.aboutbibleprophecy.com/isaiah_9_6.htm",
+      "sources": [
+        {
+          "book": "Isaiah",
+          "reference": "Isaiah 9:6-7",
+          "testament": "OT"
+        }
+      ],
+      "targets": [
+        {
+          "book": "Matthew",
+          "reference": "Matthew 1:23",
+          "testament": "NT"
+        },
+        {
+          "book": "John",
+          "reference": "John 10:30",
+          "testament": "NT"
+        },
+        {
+          "book": "John",
+          "reference": "John 20:27-29",
+          "testament": "NT"
+        }
+      ]
+    },
+    {
+      "id": "31",
+      "summary": "He would humbly announce himself publicly as the Messiah by riding a lowly donkey into Jerusalem",
+      "note": null,
+      "infoUrl": "https://www.aboutbibleprophecy.com/zechariah_9_9.htm",
+      "sources": [
+        {
+          "book": "Zechariah",
+          "reference": "Zechariah 9:9",
+          "testament": "OT"
+        }
+      ],
+      "targets": [
+        {
+          "book": "Matthew",
+          "reference": "Matthew 21:6-9",
+          "testament": "NT"
+        }
+      ]
+    },
+    {
+      "id": "32",
+      "summary": "The Messiah would be associated with a \"new covenant\" involving forgiveness of sin",
+      "note": null,
+      "infoUrl": "https://www.aboutbibleprophecy.com/jeremiah_31_31.htm",
+      "sources": [
+        {
+          "book": "Jeremiah",
+          "reference": "Jeremiah 31:31-34",
+          "testament": "OT"
+        }
+      ],
+      "targets": [
+        {
+          "book": "Hebrews",
+          "reference": "Hebrews 8",
+          "testament": "NT"
+        }
+      ]
+    },
+    {
+      "id": "33",
+      "summary": "Psalm 41 foreshadowed the betrayal of Jesus",
+      "note": null,
+      "infoUrl": "https://www.aboutbibleprophecy.com/psalm_41_9.htm",
+      "sources": [
+        {
+          "book": "Psalms",
+          "reference": "Psalm 41",
+          "testament": "OT"
+        }
+      ],
+      "targets": [
+        {
+          "book": "John",
+          "reference": "John 13:18",
+          "testament": "NT"
+        }
+      ]
+    },
+    {
+      "id": "34",
+      "summary": "The Messiah would be despised",
+      "note": null,
+      "infoUrl": "https://www.aboutbibleprophecy.com/psalm_22_1.htm",
+      "sources": [
+        {
+          "book": "Psalms",
+          "reference": "Psalm 22:6",
+          "testament": "OT"
+        }
+      ],
+      "targets": [
+        {
+          "book": "Luke",
+          "reference": "Luke 23:21-23",
+          "testament": "NT"
+        }
+      ]
+    },
+    {
+      "id": "35",
+      "summary": "The Messiah would be rejected even though he is the cornerstone of a plan from God",
+      "note": null,
+      "infoUrl": null,
+      "sources": [
+        {
+          "book": "Psalms",
+          "reference": "Psalm 118:22-24",
+          "testament": "OT"
+        }
+      ],
+      "targets": [
+        {
+          "book": "Matthew",
+          "reference": "Matthew 21:42-43",
+          "testament": "NT"
+        }
+      ]
+    },
+    {
+      "id": "36",
+      "summary": "The Messiah would be despised and rejected",
+      "note": null,
+      "infoUrl": "https://www.aboutbibleprophecy.com/isaiah_53_1.htm",
+      "sources": [
+        {
+          "book": "Isaiah",
+          "reference": "Isaiah 53:1-3",
+          "testament": "OT"
+        }
+      ],
+      "targets": [
+        {
+          "book": "Matthew",
+          "reference": "Matthew 27:21-23",
+          "testament": "NT"
+        }
+      ]
+    },
+    {
+      "id": "37",
+      "summary": "Daniel predicted the timing of when the Messiah would be rejected",
+      "note": null,
+      "infoUrl": "https://www.aboutbibleprophecy.com/daniel_9_24b.htm",
+      "sources": [
+        {
+          "book": "Daniel",
+          "reference": "Daniel 9:24-26",
+          "testament": "OT"
+        }
+      ],
+      "targets": [
+        {
+          "book": "Mark",
+          "reference": "Mark 15:1-15",
+          "testament": "NT"
+        }
+      ]
+    },
+    {
+      "id": "38",
+      "summary": "The Messiah would be persecuted",
+      "note": null,
+      "infoUrl": "https://www.aboutbibleprophecy.com/isaiah_53_7.htm",
+      "sources": [
+        {
+          "book": "Isaiah",
+          "reference": "Isaiah 53:7",
+          "testament": "OT"
+        }
+      ],
+      "targets": [
+        {
+          "book": "Matthew",
+          "reference": "Matthew 27:27-31",
+          "testament": "NT"
+        }
+      ]
+    },
+    {
+      "id": "39",
+      "summary": "The Messiah would be silent before his accusers",
+      "note": null,
+      "infoUrl": "https://www.aboutbibleprophecy.com/isaiah_53_7.htm",
+      "sources": [
+        {
+          "book": "Isaiah",
+          "reference": "Isaiah 53:7",
+          "testament": "OT"
+        }
+      ],
+      "targets": [
+        {
+          "book": "Matthew",
+          "reference": "Matthew 27:12-14",
+          "testament": "NT"
+        }
+      ]
+    },
+    {
+      "id": "40",
+      "summary": "The Messiah would be spat upon and beaten",
+      "note": null,
+      "infoUrl": "https://www.aboutbibleprophecy.com/isaiah_50_6.htm",
+      "sources": [
+        {
+          "book": "Isaiah",
+          "reference": "Isaiah 50:6-7",
+          "testament": "OT"
+        }
+      ],
+      "targets": [
+        {
+          "book": "Matthew",
+          "reference": "Matthew 26:67",
+          "testament": "NT"
+        },
+        {
+          "book": "Matthew",
+          "reference": "Matthew 27:30",
+          "testament": "NT"
+        }
+      ]
+    },
+    {
+      "id": "41",
+      "summary": "The Messiah would be hated without reason or cause",
+      "note": null,
+      "infoUrl": null,
+      "sources": [
+        {
+          "book": "Psalms",
+          "reference": "Psalm 35:19",
+          "testament": "OT"
+        },
+        {
+          "book": "Psalms",
+          "reference": "Psalm 69:4",
+          "testament": "OT"
+        }
+      ],
+      "targets": [
+        {
+          "book": "John",
+          "reference": "John 15:25",
+          "testament": "NT"
+        }
+      ]
+    },
+    {
+      "id": "42",
+      "summary": "The Messiah would be 'numbered with the transgressors'",
+      "note": null,
+      "infoUrl": "https://www.aboutbibleprophecy.com/isaiah_53_12.htm",
+      "sources": [
+        {
+          "book": "Isaiah",
+          "reference": "Isaiah 53:12",
+          "testament": "OT"
+        }
+      ],
+      "targets": [
+        {
+          "book": "Luke",
+          "reference": "Luke 22:37",
+          "testament": "NT"
+        },
+        {
+          "book": "Luke",
+          "reference": "Luke 23:32",
+          "testament": "NT"
+        }
+      ]
+    },
+    {
+      "id": "43",
+      "summary": "The Messiah would serve God with perfect obedience",
+      "note": null,
+      "infoUrl": null,
+      "sources": [
+        {
+          "book": "Isaiah",
+          "reference": "Isaiah 50:4-10",
+          "testament": "OT"
+        }
+      ],
+      "targets": [
+        {
+          "book": "Matthew",
+          "reference": "Matthew 26:39",
+          "testament": "NT"
+        },
+        {
+          "book": "John",
+          "reference": "John 8:28",
+          "testament": "NT"
+        }
+      ]
+    },
+    {
+      "id": "44",
+      "summary": "The Messiah would willingly submit to the will of God and the abuse of people",
+      "note": null,
+      "infoUrl": null,
+      "sources": [
+        {
+          "book": "Isaiah",
+          "reference": "Isaiah 50:4-10",
+          "testament": "OT"
+        }
+      ],
+      "targets": [
+        {
+          "book": "Matthew",
+          "reference": "Matthew 26:47-56",
+          "testament": "NT"
+        }
+      ]
+    },
+    {
+      "id": "45",
+      "summary": "The near-sacrifice of Isaac foreshadows the sacrifice of Jesus",
+      "note": null,
+      "infoUrl": "https://www.aboutbibleprophecy.com/genesis_22_1_14.htm",
+      "sources": [
+        {
+          "book": "Genesis",
+          "reference": "Genesis 22:1-18",
+          "testament": "OT"
+        }
+      ],
+      "targets": [
+        {
+          "book": "John",
+          "reference": "John 19:1-37",
+          "testament": "NT"
+        }
+      ]
+    },
+    {
+      "id": "46",
+      "summary": "Psalm 22 foreshadows the crucifixion of Jesus",
+      "note": null,
+      "infoUrl": "https://www.aboutbibleprophecy.com/psalm_22_1.htm",
+      "sources": [
+        {
+          "book": "Psalms",
+          "reference": "Psalm 22",
+          "testament": "OT"
+        }
+      ],
+      "targets": [
+        {
+          "book": "Matthew",
+          "reference": "Matthew 27:32-44",
+          "testament": "NT"
+        },
+        {
+          "book": "John",
+          "reference": "John 19:1-37",
+          "testament": "NT"
+        },
+        {
+          "book": "John",
+          "reference": "John 20:27",
+          "testament": "NT"
+        }
+      ]
+    },
+    {
+      "id": "47",
+      "summary": "The Messiah would be mocked for his faith in God",
+      "note": null,
+      "infoUrl": "https://www.aboutbibleprophecy.com/psalm_22_1.htm",
+      "sources": [
+        {
+          "book": "Psalms",
+          "reference": "Psalm 22:8",
+          "testament": "OT"
+        }
+      ],
+      "targets": [
+        {
+          "book": "Matthew",
+          "reference": "Matthew 27:39",
+          "testament": "NT"
+        },
+        {
+          "book": "Matthew",
+          "reference": "Matthew 27:43",
+          "testament": "NT"
+        }
+      ]
+    },
+    {
+      "id": "48",
+      "summary": "The Messiah would be stripped of his clothing",
+      "note": null,
+      "infoUrl": "https://www.aboutbibleprophecy.com/psalm_22_1.htm",
+      "sources": [
+        {
+          "book": "Psalms",
+          "reference": "Psalm 22:17-18",
+          "testament": "OT"
+        }
+      ],
+      "targets": [
+        {
+          "book": "Luke",
+          "reference": "Luke 23:34-35",
+          "testament": "NT"
+        }
+      ]
+    },
+    {
+      "id": "49",
+      "summary": "Onlookers would cast lots for his clothing",
+      "note": null,
+      "infoUrl": "https://www.aboutbibleprophecy.com/psalm_22_1.htm",
+      "sources": [
+        {
+          "book": "Psalms",
+          "reference": "Psalm 22:18",
+          "testament": "OT"
+        }
+      ],
+      "targets": [
+        {
+          "book": "Matthew",
+          "reference": "Matthew 27:35",
+          "testament": "NT"
+        },
+        {
+          "book": "Luke",
+          "reference": "Luke 23:34",
+          "testament": "NT"
+        },
+        {
+          "book": "John",
+          "reference": "John 19:23",
+          "testament": "NT"
+        }
+      ]
+    },
+    {
+      "id": "50",
+      "summary": "The Messiah's hands and feet would be pierced",
+      "note": null,
+      "infoUrl": "https://www.aboutbibleprophecy.com/psalm_22_1.htm",
+      "sources": [
+        {
+          "book": "Psalms",
+          "reference": "Psalm 22:16",
+          "testament": "OT"
+        }
+      ],
+      "targets": [
+        {
+          "book": "John",
+          "reference": "John 19:37",
+          "testament": "NT"
+        },
+        {
+          "book": "John",
+          "reference": "John 20:27",
+          "testament": "NT"
+        }
+      ]
+    },
+    {
+      "id": "51",
+      "summary": "The Messiah's suffering would include thirst",
+      "note": null,
+      "infoUrl": "https://www.aboutbibleprophecy.com/psalm_22_1.htm",
+      "sources": [
+        {
+          "book": "Psalms",
+          "reference": "Psalm 22:15",
+          "testament": "OT"
+        }
+      ],
+      "targets": [
+        {
+          "book": "John",
+          "reference": "John 19:28",
+          "testament": "NT"
+        }
+      ]
+    },
+    {
+      "id": "52",
+      "summary": "The Messiah would cry out to God",
+      "note": null,
+      "infoUrl": "https://www.aboutbibleprophecy.com/psalm_22_1.htm",
+      "sources": [
+        {
+          "book": "Psalms",
+          "reference": "Psalm 22:1",
+          "testament": "OT"
+        }
+      ],
+      "targets": [
+        {
+          "book": "Matthew",
+          "reference": "Matthew 27:46",
+          "testament": "NT"
+        }
+      ]
+    },
+    {
+      "id": "53",
+      "summary": "Zechariah foreshadows the piercing of Jesus",
+      "note": null,
+      "infoUrl": "https://www.aboutbibleprophecy.com/zechariah_12_10.htm",
+      "sources": [
+        {
+          "book": "Zechariah",
+          "reference": "Zechariah 12:10",
+          "testament": "OT"
+        }
+      ],
+      "targets": [
+        {
+          "book": "John",
+          "reference": "John 19:34-37",
+          "testament": "NT"
+        }
+      ]
+    },
+    {
+      "id": "54",
+      "summary": "The Messiah would intercede for sinners",
+      "note": null,
+      "infoUrl": null,
+      "sources": [
+        {
+          "book": "Isaiah",
+          "reference": "Isaiah 53:12",
+          "testament": "OT"
+        }
+      ],
+      "targets": [
+        {
+          "book": "Matthew",
+          "reference": "Matthew 10:32",
+          "testament": "NT"
+        },
+        {
+          "book": "Luke",
+          "reference": "Luke 23:34",
+          "testament": "NT"
+        },
+        {
+          "book": "Romans",
+          "reference": "Romans 8:34",
+          "testament": "NT"
+        }
+      ]
+    },
+    {
+      "id": "55",
+      "summary": "The Messiah would suffer and die for the sins of others",
+      "note": null,
+      "infoUrl": "https://www.aboutbibleprophecy.com/isaiah_53_4.htm",
+      "sources": [
+        {
+          "book": "Isaiah",
+          "reference": "Isaiah 53:4-9",
+          "testament": "OT"
+        }
+      ],
+      "targets": [
+        {
+          "book": "John",
+          "reference": "John 19:1-37",
+          "testament": "NT"
+        },
+        {
+          "book": "2 Corinthians",
+          "reference": "2 Corinthians 5:21",
+          "testament": "NT"
+        },
+        {
+          "book": "1 John",
+          "reference": "1 John 4:10",
+          "testament": "NT"
+        }
+      ]
+    },
+    {
+      "id": "56",
+      "summary": "The Messiah would be \"cut off out of the land of the living\" (executed)",
+      "note": null,
+      "infoUrl": null,
+      "sources": [
+        {
+          "book": "Isaiah",
+          "reference": "Isaiah 53:8-9",
+          "testament": "OT"
+        }
+      ],
+      "targets": [
+        {
+          "book": "John",
+          "reference": "John 19:1-37",
+          "testament": "NT"
+        }
+      ]
+    },
+    {
+      "id": "57",
+      "summary": "The Messiah would be \"cut off\" (executed)",
+      "note": null,
+      "infoUrl": null,
+      "sources": [
+        {
+          "book": "Daniel",
+          "reference": "Daniel 9:26",
+          "testament": "OT"
+        }
+      ],
+      "targets": [
+        {
+          "book": "John",
+          "reference": "John 19:1-37",
+          "testament": "NT"
+        }
+      ]
+    },
+    {
+      "id": "58",
+      "summary": "The Messiah's sacrificial death would bring an end to the problem of sin",
+      "note": null,
+      "infoUrl": null,
+      "sources": [
+        {
+          "book": "Daniel",
+          "reference": "Daniel 9:24",
+          "testament": "OT"
+        }
+      ],
+      "targets": [
+        {
+          "book": "Galatians",
+          "reference": "Galatians 1:3-5",
+          "testament": "NT"
+        }
+      ]
+    },
+    {
+      "id": "59",
+      "summary": "The Messiah would defeat evil at his own expense",
+      "note": null,
+      "infoUrl": "https://www.aboutbibleprophecy.com/genesis_3_15a.htm",
+      "sources": [
+        {
+          "book": "Genesis",
+          "reference": "Genesis 3:15",
+          "testament": "OT"
+        }
+      ],
+      "targets": [
+        {
+          "book": "John",
+          "reference": "John 19:1-37",
+          "testament": "NT"
+        },
+        {
+          "book": "2 Corinthians",
+          "reference": "2 Corinthians 5:21",
+          "testament": "NT"
+        },
+        {
+          "book": "1 John",
+          "reference": "1 John 4:10",
+          "testament": "NT"
+        }
+      ]
+    },
+    {
+      "id": "60",
+      "summary": "The Messiah would be buried in a rich man's grave",
+      "note": null,
+      "infoUrl": "https://www.aboutbibleprophecy.com/isaiah_53_9.htm",
+      "sources": [
+        {
+          "book": "Isaiah",
+          "reference": "Isaiah 53:9",
+          "testament": "OT"
+        }
+      ],
+      "targets": [
+        {
+          "book": "Matthew",
+          "reference": "Matthew 27:57-61",
+          "testament": "NT"
+        }
+      ]
+    },
+    {
+      "id": "61",
+      "summary": "God's holy one (the Messiah) would be resurrected",
+      "note": null,
+      "infoUrl": "https://www.aboutbibleprophecy.com/psalm_16_8.htm",
+      "sources": [
+        {
+          "book": "Psalms",
+          "reference": "Psalm 16:8-11",
+          "testament": "OT"
+        }
+      ],
+      "targets": [
+        {
+          "book": "John",
+          "reference": "John 20:1-18",
+          "testament": "NT"
+        },
+        {
+          "book": "Acts",
+          "reference": "Acts 2:29-32",
+          "testament": "NT"
+        },
+        {
+          "book": "Acts",
+          "reference": "Acts 13:32-37",
+          "testament": "NT"
+        },
+        {
+          "book": "1 Corinthians",
+          "reference": "1 Corinthians 15",
+          "testament": "NT"
+        }
+      ]
+    },
+    {
+      "id": "62",
+      "summary": "The Messiah would be resurrected and see the results of his atoning death",
+      "note": null,
+      "infoUrl": null,
+      "sources": [
+        {
+          "book": "Isaiah",
+          "reference": "Isaiah 53:10-12",
+          "testament": "OT"
+        }
+      ],
+      "targets": [
+        {
+          "book": "John",
+          "reference": "John 20:1-18",
+          "testament": "NT"
+        },
+        {
+          "book": "Acts",
+          "reference": "Acts 1:8",
+          "testament": "NT"
+        }
+      ]
+    },
+    {
+      "id": "63",
+      "summary": "The Messiah would be seated at the right hand of God the Father, meaning he would ascend into heaven",
+      "note": "Jesus ascended 40 days after his resurrection.",
+      "infoUrl": "https://www.aboutbibleprophecy.com/psalm_110_1.htm",
+      "sources": [
+        {
+          "book": "Psalms",
+          "reference": "Psalm 110",
+          "testament": "OT"
+        }
+      ],
+      "targets": [
+        {
+          "book": "Matthew",
+          "reference": "Matthew 26:64",
+          "testament": "NT"
+        },
+        {
+          "book": "Luke",
+          "reference": "Luke 24:50-53",
+          "testament": "NT"
+        },
+        {
+          "book": "John",
+          "reference": "John 20:17",
+          "testament": "NT"
+        },
+        {
+          "book": "Acts",
+          "reference": "Acts 1:1-12",
+          "testament": "NT"
+        }
+      ]
+    },
+    {
+      "id": "64",
+      "summary": "The Messiah would appeal to Gentiles",
+      "note": "History: Christianity is the world's largest religion.",
+      "infoUrl": "https://www.aboutbibleprophecy.com/isaiah_11_1.htm",
+      "sources": [
+        {
+          "book": "Isaiah",
+          "reference": "Isaiah 11:10",
+          "testament": "OT"
+        }
+      ],
+      "targets": [
+        {
+          "book": "Acts",
+          "reference": "Acts 1:8",
+          "testament": "NT"
+        },
+        {
+          "book": "Acts",
+          "reference": "Acts 13:47-48",
+          "testament": "NT"
+        }
+      ]
+    },
+    {
+      "id": "65",
+      "summary": "The Messiah would affect people throughout the world",
+      "note": null,
+      "infoUrl": "https://www.aboutbibleprophecy.com/isaiah_42_1.htm",
+      "sources": [
+        {
+          "book": "Isaiah",
+          "reference": "Isaiah 42:1-4",
+          "testament": "OT"
+        }
+      ],
+      "targets": [
+        {
+          "book": "Matthew",
+          "reference": "Matthew 28:19-20",
+          "testament": "NT"
+        },
+        {
+          "book": "John",
+          "reference": "John 12:18-21",
+          "testament": "NT"
+        }
+      ]
+    },
+    {
+      "id": "66",
+      "summary": "The Messiah would be a light to people around the world",
+      "note": null,
+      "infoUrl": "https://www.aboutbibleprophecy.com/isaiah_42_1.htm",
+      "sources": [
+        {
+          "book": "Isaiah",
+          "reference": "Isaiah 42:6",
+          "testament": "OT"
+        }
+      ],
+      "targets": [
+        {
+          "book": "Luke",
+          "reference": "Luke 2:22-40",
+          "testament": "NT"
+        }
+      ]
+    },
+    {
+      "id": "67",
+      "summary": "The Messiah would have a worldwide impact",
+      "note": null,
+      "infoUrl": null,
+      "sources": [
+        {
+          "book": "Zechariah",
+          "reference": "Zechariah 9:9-11",
+          "testament": "OT"
+        }
+      ],
+      "targets": [
+        {
+          "book": "Acts",
+          "reference": "Acts 1:8",
+          "testament": "NT"
+        },
+        {
+          "book": "Acts",
+          "reference": "Acts 13:47-48",
+          "testament": "NT"
+        }
+      ]
+    },
+    {
+      "id": "68",
+      "summary": "The Messiah would bring salvation to the ends of the earth",
+      "note": "History: Christianity is the world's most widespread religion.",
+      "infoUrl": "https://www.aboutbibleprophecy.com/isaiah_49_6.htm",
+      "sources": [
+        {
+          "book": "Isaiah",
+          "reference": "Isaiah 49:6",
+          "testament": "OT"
+        }
+      ],
+      "targets": [
+        {
+          "book": "Acts",
+          "reference": "Acts 13:47-48",
+          "testament": "NT"
+        }
+      ]
+    },
+    {
+      "id": "69",
+      "summary": "The Messiah will return to preside over Judgment Day",
+      "note": "To be fulfilled in the future when Jesus returns.",
+      "infoUrl": "https://www.aboutbibleprophecy.com/psalm_110_1.htm",
+      "sources": [
+        {
+          "book": "Psalms",
+          "reference": "Psalm 110",
+          "testament": "OT"
+        }
+      ],
+      "targets": [
+        {
+          "book": "Daniel",
+          "reference": "Daniel 7:13-14",
+          "testament": "OT",
+          "plot": false
+        },
+        {
+          "book": "Daniel",
+          "reference": "Daniel 12:1-2",
+          "testament": "OT",
+          "plot": false
+        }
+      ]
+    },
+    {
+      "id": "70",
+      "summary": "The Messiah will reign eternally over the Kingdom of God, also known as the Kingdom of Heaven",
+      "note": null,
+      "infoUrl": "https://www.aboutbibleprophecy.com/daniel_7_13.htm",
+      "sources": [
+        {
+          "book": "Daniel",
+          "reference": "Daniel 7:13-14",
+          "testament": "OT"
+        }
+      ],
+      "targets": [
+        {
+          "book": "Luke",
+          "reference": "Luke 1:31-33",
+          "testament": "NT"
+        }
+      ]
+    }
+  ]
+}

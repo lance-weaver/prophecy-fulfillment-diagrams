@@ -1,0 +1,114 @@
+{
+  "id": "messianic-prophecies",
+  "title": "Prophecies of the Messiah",
+  "subtitle": "Seventy major Old Testament prophecies, and the New Testament books that record their fulfillment.",
+  "hint": "Hover a curve or a book to read the summary and the King James text. Click, or tap on a phone, to keep the full passage open below the chart. Tap the background to clear.",
+  "kicker": "Old Testament prediction  ·  New Testament fulfillment",
+  "leftColumn": {
+    "label": "Old Testament",
+    "sublabel": "Prediction"
+  },
+  "rightColumn": {
+    "label": "New Testament",
+    "sublabel": "Fulfillment"
+  },
+  "sourceHeading": "Old Testament",
+  "targetHeading": "New Testament",
+  "legendLabel": "Fulfillment books",
+  "dotsNote": "Each dot is one entry. Curves connect that Old Testament book to every New Testament book cited as a fulfillment. Color matches the fulfillment book. Select a book in the legend to show only those curves, and select it again to show all.",
+  "footnote": "One entry — “The Messiah will return to preside over Judgment Day” (Psalm 110) — cites Daniel 7 and 12 for a future fulfillment rather than a New Testament book. Select Psalms to read it. No curve is drawn for that entry.",
+  "credit": {
+    "before": "Summaries and pairings from ",
+    "linkText": "Ray Konig’s chart at about-jesus.org",
+    "href": "https://www.about-jesus.org/complete-chart-prophecies-jesus.htm",
+    "after": ". Verse text is the King James Version (public domain), included in the data file."
+  },
+  "strings": {
+    "clear": "Clear",
+    "entry": "entry",
+    "entries": "entries",
+    "openFull": "Click or tap for the full passage below the chart.",
+    "loading": "Loading chart…",
+    "error": "The chart could not be loaded."
+  },
+  "infoLinkLabel": "Chart note",
+  "colorBy": "target",
+  "colors": {
+    "Matthew": "#6C4AB6",
+    "Mark": "#6E8B3D",
+    "Luke": "#0E7C86",
+    "John": "#D1493D",
+    "Acts": "#B08958",
+    "Romans": "#2C5282",
+    "1 Corinthians": "#C47B12",
+    "2 Corinthians": "#7C3AED",
+    "Galatians": "#1F7A4D",
+    "Hebrews": "#A15C38",
+    "1 John": "#3F6473"
+  },
+  "shortLabels": {
+    "Deuteronomy": "Deut.",
+    "Zechariah": "Zech.",
+    "Lamentations": "Lam.",
+    "Ecclesiastes": "Eccl.",
+    "1 Corinthians": "1 Cor.",
+    "2 Corinthians": "2 Cor.",
+    "1 Thessalonians": "1 Thess.",
+    "2 Thessalonians": "2 Thess.",
+    "1 Chronicles": "1 Chr.",
+    "2 Chronicles": "2 Chr.",
+    "Song of Solomon": "Song",
+    "Philippians": "Phil."
+  },
+  "bookOrder": {
+    "left": [
+      "Genesis",
+      "Deuteronomy",
+      "2 Samuel",
+      "Psalms",
+      "Isaiah",
+      "Jeremiah",
+      "Ezekiel",
+      "Daniel",
+      "Micah",
+      "Zechariah",
+      "Malachi"
+    ],
+    "right": [
+      "Matthew",
+      "Mark",
+      "Luke",
+      "John",
+      "Acts",
+      "Romans",
+      "1 Corinthians",
+      "2 Corinthians",
+      "Galatians",
+      "Hebrews",
+      "1 John"
+    ]
+  },
+  "callouts": [
+    {
+      "itemId": "35",
+      "label": "Rejected by his own people",
+      "citation": "Psalm 118:22"
+    },
+    {
+      "itemId": "55",
+      "label": "Would die as a sacrifice for sin",
+      "citation": "Isaiah 53:4–9"
+    },
+    {
+      "itemId": "14",
+      "label": "Born in Bethlehem",
+      "citation": "Micah 5:2"
+    },
+    {
+      "itemId": "50",
+      "label": "Hands and feet would be pierced",
+      "citation": "Psalm 22:16"
+    }
+  ],
+  "chartLabel": "Connection chart"
+}
