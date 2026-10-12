@@ -13,8 +13,9 @@
  *     }[]
  *   }
  *
- * Targets with plot: false are listed in the detail view and are not drawn.
- * A link is drawn for every source-book × plotted target-book pair on an item.
+ * Each axis row is one scripture reference. A link is drawn for every source
+ * reference paired with a target reference on the same item. A reference may
+ * include url; a click on that label opens it.
  *
  * Config (all optional) supplies title, column labels, colors, book order,
  * callouts, legend, and UI strings. Domain language stays in the config.
@@ -95,6 +96,8 @@
     var changeHandlers = [];
     var disposed = false;
     var panelSelection = null;
+    var hoverRef = null;
+    var tipPinned = false;
     var filterBook = null;
     var lastWidth = -1;
     var drawTimer = 0;
@@ -124,7 +127,6 @@
         if (sourceFallback.indexOf(ref.book) === -1) sourceFallback.push(ref.book);
       });
       (item.targets || []).forEach(function (ref) {
-        if (ref.plot === false) return;
         if (targetFallback.indexOf(ref.book) === -1) targetFallback.push(ref.book);
       });
     });
@@ -138,22 +140,34 @@
       targetFallback
     );
 
-    var links = [];
+    var linkMap = new Map();
     items.forEach(function (item) {
-      var sources = uniqueBooks(item.sources || []);
-      var targets = uniqueBooks((item.targets || []).filter(function (ref) { return ref.plot !== false; }));
-      sources.forEach(function (sourceBook) {
-        targets.forEach(function (targetBook) {
-          links.push({
-            id: item.id + "|" + sourceBook + "|" + targetBook,
-            itemId: String(item.id),
-            sourceBook: sourceBook,
-            targetBook: targetBook,
-            item: item
-          });
+      var sources = item.sources || [];
+      var targets = item.targets || [];
+      sources.forEach(function (source) {
+        targets.forEach(function (target) {
+          var id = source.reference + "→" + target.reference;
+          var existing = linkMap.get(id);
+          if (!existing) {
+            existing = {
+              id: id,
+              itemId: String(item.id),
+              sourceBook: source.book,
+              targetBook: target.book,
+              sourceRef: source.reference,
+              targetRef: target.reference,
+              source: source,
+              target: target,
+              items: [],
+              item: item
+            };
+            linkMap.set(id, existing);
+          }
+          existing.items.push(item);
         });
       });
     });
+    var links = Array.from(linkMap.values());
 
     function colorForBook(book) {
       if (cfg.colors && cfg.colors[book]) return cfg.colors[book];
@@ -284,6 +298,13 @@
 
     function itemsFor(selection) {
       if (!selection) return [];
+      if (selection.type === "link") {
+        var match = null;
+        for (var i = 0; i < links.length; i++) {
+          if (links[i].id === selection.linkId) match = links[i];
+        }
+        if (match && match.items && match.items.length) return match.items;
+      }
       if (selection.type === "item" || selection.type === "link") {
         var one = itemById(selection.itemId);
         return one ? [one] : [];
@@ -305,6 +326,9 @@
 
     function headingFor(selection, list) {
       if (!selection) return "";
+      if (selection.type === "link" && selection.sourceRef && selection.targetRef) {
+        return selection.sourceRef + "  →  " + selection.targetRef;
+      }
       if (selection.type === "book") return selection.book;
       if (list.length === 1) {
         var sources = uniqueBooks(list[0].sources || []).join(", ");
@@ -357,7 +381,11 @@
       var html = '<div class="pfd-refblock"><h4>' + esc(heading) + "</h4>";
       refs.forEach(function (ref) {
           var color = allowUnplotted ? colorForBook(ref.book) : "#1c1917";
-          html += '<p class="pfd-refname" style="color:' + esc(color) + '">' + esc(ref.reference) + "</p>";
+          var label = esc(ref.reference);
+          if (ref.url) {
+            label = '<a href="' + esc(ref.url) + '" target="_blank" rel="noopener noreferrer">' + label + "</a>";
+          }
+          html += '<p class="pfd-refname" style="color:' + esc(color) + '">' + label + "</p>";
           var verses = versesOf(data, ref);
           if (verses.length) {
             html += '<p class="pfd-passage">' + passageHtml(verses) + "</p>";
@@ -367,41 +395,53 @@
       return html;
     }
 
-    function showTip(link, event) {
-      if (!finePointer.matches || !link) {
-        tip.hidden = true;
-        return;
-      }
-      var item = link.item;
-      var budget = 20;
+    function passageBlock(ref, budget) {
+      var verses = versesOf(data, ref);
+      var html = '<p class="pfd-tip-ref" style="color:' + esc(colorForBook(ref.book)) + '">' + esc(ref.reference) + "</p>";
+      if (!verses.length) return { html: html, truncated: false, used: 0 };
+      var slice = verses;
       var truncated = false;
-      var html = '<p class="pfd-tip-summary">' + esc(item.summary || "") + "</p>";
-      function section(title, refs) {
-        if (!refs.length) return;
-        html += '<p class="pfd-tip-kicker">' + esc(title) + "</p>";
-        refs.forEach(function (ref) {
-          var refColor = title === (cfg.targetHeading || "Target") ? colorForBook(ref.book) : "#1c1917";
-          html += '<p class="pfd-tip-ref" style="color:' + esc(refColor) + '">' + esc(ref.reference) + "</p>";
-          var verses = versesOf(data, ref);
-          if (!verses.length) return;
-          if (budget <= 0) {
-            truncated = true;
-            return;
-          }
-          var slice = verses;
-          if (verses.length > budget) {
-            slice = verses.slice(0, budget);
-            truncated = true;
-            budget = 0;
-          } else {
-            budget -= verses.length;
-          }
-          html += '<p class="pfd-tip-passage">' + passageHtml(slice) + "</p>";
-        });
+      if (budget != null && verses.length > budget) {
+        slice = verses.slice(0, budget);
+        truncated = true;
       }
-      section(cfg.sourceHeading || "Source", item.sources || []);
-      section(cfg.targetHeading || "Target", item.targets || []);
-      if (truncated) html += '<p class="pfd-tip-more">' + esc(strings.openFull || "Open the full passage below the chart.") + "</p>";
+      html += '<p class="pfd-tip-passage">' + passageHtml(slice) + "</p>";
+      if (truncated) {
+        html += '<p class="pfd-tip-more">' + esc(strings.moreVerses || "Open the reference to read the full passage.") + "</p>";
+      }
+      return { html: html, truncated: truncated, used: slice.length };
+    }
+
+    function openLinkHtml(ref) {
+      if (!ref || !ref.url) return "";
+      return '<p class="pfd-tip-more"><a class="pfd-open" href="' + esc(ref.url) + '" target="_blank" rel="noopener noreferrer">' +
+        esc(strings.openScripture || "Open on lds.org") + "</a></p>";
+    }
+
+    function showRefTip(ref, event, pin) {
+      if (!ref) return;
+      var block = passageBlock(ref, 12);
+      var html = block.html + openLinkHtml(ref);
+      tipPinned = !!pin;
+      tip.classList.toggle("is-pinned", tipPinned);
+      tip.innerHTML = html;
+      tip.hidden = false;
+      if (event) placeTip(event);
+    }
+
+    function showTip(link, event) {
+      if (!finePointer.matches || !link || tipPinned) return;
+      var summaries = (link.items || [link.item]).map(function (item) { return item.summary; }).filter(Boolean);
+      var html = '<p class="pfd-tip-summary">' + esc(summaries[0] || "") + "</p>";
+      if (summaries.length > 1) {
+        html += '<p class="pfd-tip-more">' + summaries.length + " " + esc(strings.entries || "entries") + "</p>";
+      }
+      html += '<p class="pfd-tip-kicker">' + esc(cfg.sourceHeading || "Source") + "</p>";
+      html += passageBlock(link.source, 8).html;
+      html += '<p class="pfd-tip-kicker">' + esc(cfg.targetHeading || "Target") + "</p>";
+      html += passageBlock(link.target, 8).html;
+      tipPinned = false;
+      tip.classList.remove("is-pinned");
       tip.innerHTML = html;
       tip.hidden = false;
       placeTip(event);
@@ -421,11 +461,17 @@
       tip.style.top = Math.round(y) + "px";
     }
 
-    function hideTip() { tip.hidden = true; }
+    function hideTip(force) {
+      if (tipPinned && !force) return;
+      tipPinned = false;
+      tip.classList.remove("is-pinned");
+      tip.hidden = true;
+    }
 
     function clearSelection() {
       panelSelection = null;
-      hideTip();
+      hoverRef = null;
+      hideTip(true);
       renderPanel();
       draw(true);
       notify();
@@ -460,7 +506,13 @@
     }
 
     function selectLink(link, scroll) {
-      panelSelection = { type: "link", itemId: link.itemId, linkId: link.id };
+      panelSelection = {
+        type: "link",
+        itemId: link.itemId,
+        linkId: link.id,
+        sourceRef: link.sourceRef,
+        targetRef: link.targetRef
+      };
       hideTip();
       renderPanel();
       draw(true);
@@ -474,6 +526,12 @@
 
     function linkState(link) {
       if (!passesFilter(link)) return "dim";
+      if (hoverRef) {
+        var hit = hoverRef.side === "source"
+          ? link.sourceRef === hoverRef.reference
+          : link.targetRef === hoverRef.reference;
+        return hit ? "hot" : "dim";
+      }
       if (!panelSelection) return "idle";
       if (panelSelection.type === "link") {
         if (link.id === panelSelection.linkId) return "hot";
@@ -491,35 +549,67 @@
       return "idle";
     }
 
-    function layoutColumn(dotMap, order, pitch, bookGap, minSection) {
-      var y = 0;
-      var sections = [];
-      order.forEach(function (book) {
-        var dots = dotMap.get(book) || [];
-        if (!dots.length) return;
-        var inner = Math.max(minSection, (dots.length - 1) * pitch);
-        var section = { book: book, y: y, h: inner, dots: [] };
-        var start = y + (inner - (dots.length - 1) * pitch) / 2;
-        dots.forEach(function (dot, index) {
-          section.dots.push({
-            itemId: dot.itemId,
-            book: book,
-            y: start + index * pitch
-          });
-        });
-        sections.push(section);
-        y += inner + bookGap;
-      });
-      return { sections: sections, height: Math.max(0, y - bookGap) };
+    function refSortValue(ref, bookOrder) {
+      var bookIndex = bookOrder.indexOf(ref.book);
+      if (bookIndex < 0) bookIndex = 800;
+      var chapter = ref.chapter || 0;
+      var verse = ref.verseStart || 0;
+      if (!chapter) {
+        var match = String(ref.reference).match(/(\d+)(?::(\d+))?/);
+        if (match) {
+          chapter = Number(match[1]) || 0;
+          verse = Number(match[2]) || verse;
+        }
+      }
+      return bookIndex * 1000000 + chapter * 1000 + verse;
     }
 
-    function scaleLayout(layout, target) {
-      if (!layout.sections.length || layout.height <= 0 || target <= layout.height + 0.5) return;
-      var scale = target / layout.height;
+    function uniqueRefs(list, bookOrder) {
+      var map = new Map();
+      list.forEach(function (ref) {
+        if (!map.has(ref.reference)) map.set(ref.reference, ref);
+      });
+      return Array.from(map.values()).sort(function (a, b) {
+        return refSortValue(a, bookOrder) - refSortValue(b, bookOrder);
+      });
+    }
+
+    function layoutRefs(refs, rowH, headH, bookGap) {
+      var y = 4;
+      var sections = [];
+      var index = new Map();
+      var section = null;
+      refs.forEach(function (ref) {
+        if (!section || section.book !== ref.book) {
+          if (section) y += bookGap;
+          section = { book: ref.book, y: y, rows: [] };
+          sections.push(section);
+          y += headH;
+        }
+        var rowY = y + rowH / 2;
+        section.rows.push({ ref: ref, y: rowY });
+        index.set(ref.reference, rowY);
+        y += rowH;
+      });
+      return { sections: sections, height: y, index: index };
+    }
+
+    function spreadLayout(layout, target) {
+      var extra = target - layout.height;
+      if (extra <= 1 || layout.sections.length < 2) {
+        layout.height = Math.max(layout.height, target);
+        return;
+      }
+      var add = extra / (layout.sections.length - 1);
+      var shift = 0;
+      layout.sections.forEach(function (section, i) {
+        section.y += shift;
+        section.rows.forEach(function (row) { row.y += shift; });
+        if (i < layout.sections.length - 1) shift += add;
+      });
+      layout.index = new Map();
       layout.sections.forEach(function (section) {
-        section.y *= scale;
-        section.h *= scale;
-        section.dots.forEach(function (dot) { dot.y *= scale; });
+        section.rows.forEach(function (row) { layout.index.set(row.ref.reference, row.y); });
       });
       layout.height = target;
     }
@@ -535,11 +625,20 @@
       return width;
     }
 
-    function displayLabel(book, maxText, size, upper) {
-      var full = upper ? book.toUpperCase() : book;
-      if (textWidth(full, size, upper ? "0.04em" : 0) <= maxText) return full;
+    function referenceLabel(ref, maxText, size) {
+      if (textWidth(ref.reference, size, 0) <= maxText) return ref.reference;
+      var shortBook = (cfg.shortLabels && cfg.shortLabels[ref.book]) || ref.book;
+      if (ref.book === "Psalms") shortBook = "Ps.";
+      var versePart = String(ref.reference).replace(/^[1-3]?\s?[A-Za-z]+\.?\s+/, "");
+      var compact = (shortBook + " " + versePart).trim();
+      return textWidth(compact, size, 0) <= maxText ? compact : compact;
+    }
+
+    function bookHeading(book, maxText, size) {
+      var upper = book.toUpperCase();
+      if (textWidth(upper, size, "0.06em") <= maxText) return upper;
       var short = (cfg.shortLabels && cfg.shortLabels[book]) || book;
-      return upper ? String(short).toUpperCase() : short;
+      return String(short).toUpperCase();
     }
 
     function draw(force) {
@@ -548,69 +647,46 @@
       if (width < 40) return;
       if (!force && width === lastWidth) return;
       lastWidth = width;
-      var narrow = width < 720;
-      var fontSize = narrow ? 14 : 13;
-      var pitch = narrow ? 16 : 12;
-      var bookGap = narrow ? 20 : 16;
-      var minSection = narrow ? 22 : 16;
-      var upper = !narrow;
-      var cap = narrow ? 108 : 176;
-      var maxText = cap - 26;
-      var leftLabels = {};
-      var rightLabels = {};
-      var widest = 48;
-      leftOrder.forEach(function (book) {
-        leftLabels[book] = displayLabel(book, maxText, fontSize, upper);
-        widest = Math.max(widest, textWidth(leftLabels[book], fontSize, upper ? "0.04em" : 0));
+      var narrow = width < 760;
+      var fontSize = narrow ? 13.5 : 13;
+      var headSize = narrow ? 11 : 11;
+      var rowH = narrow ? 26 : 22;
+      var headH = narrow ? 18 : 16;
+      var bookGap = narrow ? 12 : 14;
+      var cap = narrow ? 142 : 230;
+      var maxText = cap - 18;
+
+      var leftRefs = uniqueRefs(items.reduce(function (all, item) {
+        return all.concat(item.sources || []);
+      }, []), leftOrder);
+      var rightRefs = uniqueRefs(items.reduce(function (all, item) {
+        return all.concat(item.targets || []);
+      }, []), rightOrder);
+
+      var widest = 72;
+      leftRefs.concat(rightRefs).forEach(function (ref) {
+        widest = Math.max(widest, textWidth(referenceLabel(ref, maxText, fontSize), fontSize, 0));
       });
-      rightOrder.forEach(function (book) {
-        rightLabels[book] = displayLabel(book, maxText, fontSize, upper);
-        widest = Math.max(widest, textWidth(rightLabels[book], fontSize, upper ? "0.04em" : 0));
+      leftOrder.concat(rightOrder).forEach(function (book) {
+        widest = Math.max(widest, textWidth(bookHeading(book, maxText, headSize), headSize, "0.06em"));
       });
-      var labelW = Math.min(cap, Math.max(narrow ? 78 : 112, Math.ceil(widest + 30)));
+      var labelW = Math.min(cap, Math.max(narrow ? 108 : 150, Math.ceil(widest + 20)));
       root.style.setProperty("--label", labelW + "px");
 
-      var leftDots = new Map(leftOrder.map(function (book) { return [book, []]; }));
-      var rightDots = new Map(rightOrder.map(function (book) { return [book, []]; }));
-      items.forEach(function (item) {
-        uniqueBooks(item.sources || []).forEach(function (book) {
-          if (leftDots.has(book)) leftDots.get(book).push({ itemId: String(item.id) });
-        });
-        uniqueBooks((item.targets || []).filter(function (ref) { return ref.plot !== false; })).forEach(function (book) {
-          if (rightDots.has(book)) rightDots.get(book).push({ itemId: String(item.id) });
-        });
-      });
-
-      var left = layoutColumn(leftDots, leftOrder, pitch, bookGap, minSection);
-      var right = layoutColumn(rightDots, rightOrder, pitch, bookGap, minSection);
+      var left = layoutRefs(leftRefs, rowH, headH, bookGap);
+      var right = layoutRefs(rightRefs, rowH, headH, bookGap);
       var natural = Math.max(left.height, right.height, 40);
-      scaleLayout(left, natural);
-      scaleLayout(right, natural);
-      var top = 8;
-      [left, right].forEach(function (layout) {
-        layout.sections.forEach(function (section) {
-          section.y += top;
-          section.dots.forEach(function (dot) { dot.y += top; });
-        });
-      });
-      var height = Math.ceil(natural + top + 10);
-
-      var leftIndex = new Map();
-      var rightIndex = new Map();
-      left.sections.forEach(function (section) {
-        section.dots.forEach(function (dot) { leftIndex.set(dot.itemId + "|" + dot.book, dot.y); });
-      });
-      right.sections.forEach(function (section) {
-        section.dots.forEach(function (dot) { rightIndex.set(dot.itemId + "|" + dot.book, dot.y); });
-      });
-
+      spreadLayout(left, natural);
+      spreadLayout(right, natural);
+      var height = Math.ceil(natural + 8);
       var x1 = labelW - 2;
       var x2 = width - labelW + 2;
+
       var ranked = links.map(function (link) {
         return {
           link: link,
           state: linkState(link),
-          d: curve(x1, leftIndex.get(link.itemId + "|" + link.sourceBook), x2, rightIndex.get(link.itemId + "|" + link.targetBook))
+          d: curve(x1, left.index.get(link.sourceRef), x2, right.index.get(link.targetRef))
         };
       }).filter(function (row) { return row.d; });
       var order = { dim: 0, idle: 1, warm: 2, hot: 3 };
@@ -631,14 +707,15 @@
       var linkLayer = svg.append("g").attr("class", "pfd-links");
       ranked.forEach(function (row) {
         var group = linkLayer.append("g")
+          .datum(row.link)
           .attr("class", "pfd-link is-" + row.state)
           .style("cursor", "pointer");
         var widthByState = row.state === "hot" ? 2.6 : row.state === "warm" ? 2.1 : 1.45;
-        var opacity = row.state === "dim" ? 0.06 : row.state === "hot" ? 1 : row.state === "warm" ? 0.9 : (filterBook ? 0.8 : 0.5);
+        var opacity = row.state === "dim" ? 0.06 : row.state === "hot" ? 1 : row.state === "warm" ? 0.9 : (filterBook ? 0.8 : 0.48);
         group.append("path")
           .attr("class", "halo")
           .attr("d", row.d)
-          .attr("stroke-width", row.state === "hot" || row.state === "warm" ? 6 : 0)
+          .attr("stroke-width", row.state === "hot" || row.state === "warm" ? 5 : 0)
           .attr("opacity", row.state === "dim" ? 0 : 0.95);
         group.append("path")
           .attr("class", "line")
@@ -649,14 +726,16 @@
         var hit = group.append("path")
           .attr("class", "hit")
           .attr("d", row.d)
-          .attr("stroke-width", narrow ? 18 : 12);
-        hit.append("title").text(row.link.item.summary || "");
+          .attr("stroke-width", narrow ? 16 : 10);
+        hit.append("title").text((row.link.items && row.link.items[0] && row.link.items[0].summary) || "");
         hit.on("pointerenter", function (event) {
-          if (!finePointer.matches) return;
+          if (!finePointer.matches || tipPinned) return;
+          hoverRef = null;
+          restyle();
           showTip(row.link, event);
         });
         hit.on("pointermove", function (event) {
-          if (!finePointer.matches || tip.hidden) return;
+          if (!finePointer.matches || tip.hidden || tipPinned) return;
           placeTip(event);
         });
         hit.on("pointerleave", function () { hideTip(); });
@@ -666,110 +745,105 @@
         });
       });
 
-      drawBooks(svg, left.sections, "source", x1, labelW, fontSize, upper, leftLabels, true);
-      drawBooks(svg, right.sections, "target", x2, labelW, fontSize, upper, rightLabels, false);
+      drawReferences(left.sections, "source", x1, labelW, fontSize, headSize, maxText, true);
+      drawReferences(right.sections, "target", x2, labelW, fontSize, headSize, maxText, false);
+      restyle();
 
-      if (!narrow && width >= 860 && !filterBook) drawCallouts(width, x1, x2, leftIndex, rightIndex);
+      if (!narrow && width >= 980 && !filterBook) drawCallouts(x1, x2, left.index, right.index);
       renderChips();
     }
 
-    function bookIsDim(side, book) {
-      var any = false;
-      var visible = false;
-      links.forEach(function (link) {
-        var touch = side === "source" ? link.sourceBook === book : link.targetBook === book;
-        if (!touch) return;
-        any = true;
-        if (linkState(link) !== "dim") visible = true;
+    function restyle() {
+      svg.selectAll(".pfd-link").each(function (link) {
+        var state = linkState(link);
+        var node = d3.select(this);
+        node.attr("class", "pfd-link is-" + state);
+        var widthByState = state === "hot" ? 2.6 : state === "warm" ? 2.1 : 1.45;
+        var opacity = state === "dim" ? 0.06 : state === "hot" ? 1 : state === "warm" ? 0.9 : (filterBook ? 0.8 : 0.48);
+        node.select(".line").attr("stroke-width", widthByState).attr("opacity", opacity);
+        node.select(".halo")
+          .attr("stroke-width", state === "hot" || state === "warm" ? 5 : 0)
+          .attr("opacity", state === "dim" ? 0 : 0.95);
       });
-      return any && !visible;
+      svg.selectAll(".pfd-ref").each(function (row) {
+        var hot = hoverRef && hoverRef.side === row.side && hoverRef.reference === row.ref.reference;
+        var connected = links.some(function (link) {
+          var touch = row.side === "source" ? link.sourceRef === row.ref.reference : link.targetRef === row.ref.reference;
+          return touch && linkState(link) !== "dim";
+        });
+        var dim = (hoverRef || panelSelection || filterBook) && !connected;
+        d3.select(this).select("text")
+          .attr("opacity", dim ? 0.28 : 1)
+          .attr("font-weight", hot ? 750 : 600);
+      });
     }
 
-    function bookIsHot(side, book) {
-      if (!panelSelection) return false;
-      if (panelSelection.type === "book") return panelSelection.side === side && panelSelection.book === book;
-      if (panelSelection.type === "link" || panelSelection.type === "item") {
-        var item = itemById(panelSelection.itemId);
-        if (!item) return false;
-        var refs = side === "source" ? (item.sources || []) : (item.targets || []);
-        return refs.some(function (ref) { return ref.book === book && (side === "source" || ref.plot !== false); });
-      }
-      return false;
-    }
-
-    function drawBooks(svgSel, sections, side, dotX, labelW, fontSize, upper, labels, isLeft) {
-      var layer = svgSel.append("g").attr("class", "pfd-books");
+    function drawReferences(sections, side, dotX, labelW, fontSize, headSize, maxText, isLeft) {
+      var layer = svg.append("g").attr("class", "pfd-books");
       sections.forEach(function (section) {
-        var hot = bookIsHot(side, section.book);
-        var dim = bookIsDim(side, section.book);
-        var group = layer.append("g")
-          .attr("class", "pfd-book")
-          .attr("role", "button")
-          .attr("tabindex", 0)
-          .attr("aria-label", section.book + ", " + section.dots.length)
-          .attr("aria-pressed", hot ? "true" : "false");
-        var hit = group.append("rect")
-          .attr("x", isLeft ? 0 : dotX - 8)
-          .attr("y", section.y - 4)
-          .attr("width", isLeft ? dotX + 10 : labelW + 8)
-          .attr("height", Math.max(28, section.h + 8))
-          .attr("fill", "transparent");
-        var fill = side === "target" ? colorForBook(section.book) : "#1c1917";
-        if (dim) fill = "#d6d3d1";
-        group.append("text")
+        layer.append("text")
+          .attr("class", "pfd-book-label")
           .attr("x", isLeft ? dotX - 12 : dotX + 12)
-          .attr("y", section.y + section.h / 2)
+          .attr("y", section.y + 11)
           .attr("text-anchor", isLeft ? "end" : "start")
-          .attr("dominant-baseline", "middle")
-          .attr("font-size", fontSize)
-          .attr("font-weight", hot ? 750 : 650)
-          .attr("letter-spacing", upper ? "0.04em" : "0")
-          .attr("fill", fill)
-          .text(labels[section.book] || section.book);
-        section.dots.forEach(function (dot) {
-          var dotDim = false;
-          if (panelSelection || filterBook) {
-            var touched = links.some(function (link) {
-              if (link.itemId !== dot.itemId) return false;
-              if (side === "source" && link.sourceBook !== dot.book) return false;
-              if (side === "target" && link.targetBook !== dot.book) return false;
-              return true;
-            });
-            var bookSelected = panelSelection && panelSelection.type === "book" &&
-              panelSelection.side === side && panelSelection.book === dot.book;
-            if (!touched) {
-              dotDim = !bookSelected;
-            } else {
-              dotDim = !links.some(function (link) {
-                if (link.itemId !== dot.itemId) return false;
-                if (side === "source" && link.sourceBook !== dot.book) return false;
-                if (side === "target" && link.targetBook !== dot.book) return false;
-                return linkState(link) !== "dim";
-              });
-            }
-          }
-          group.append("circle")
+          .attr("font-size", headSize)
+          .attr("font-weight", 700)
+          .attr("letter-spacing", "0.08em")
+          .attr("fill", "#a8a29e")
+          .text(bookHeading(section.book, maxText, headSize));
+        section.rows.forEach(function (row) {
+          var ref = row.ref;
+          var group = layer.append("g")
+            .datum({ ref: ref, side: side, reference: ref.reference })
+            .attr("class", "pfd-ref");
+          var anchor = ref.url
+            ? group.append("a").attr("href", ref.url).attr("target", "_blank").attr("rel", "noopener noreferrer")
+            : group.append("g");
+          anchor.append("text")
+            .attr("x", isLeft ? dotX - 12 : dotX + 12)
+            .attr("y", row.y)
+            .attr("text-anchor", isLeft ? "end" : "start")
+            .attr("dominant-baseline", "middle")
+            .attr("font-size", fontSize)
+            .attr("font-weight", 600)
+            .attr("fill", side === "target" ? colorForBook(ref.book) : "#1c1917")
+            .text(referenceLabel(ref, maxText, fontSize));
+          anchor.append("circle")
             .attr("cx", dotX)
-            .attr("cy", dot.y)
-            .attr("r", hot && !dotDim ? 3.4 : 2.5)
-            .attr("fill", side === "target" ? colorForBook(section.book) : "#1c1917")
-            .attr("opacity", dotDim ? 0.18 : 0.9)
+            .attr("cy", row.y)
+            .attr("r", 2.6)
+            .attr("fill", side === "target" ? colorForBook(ref.book) : "#1c1917")
             .style("pointer-events", "none");
-        });
-        function activate(event) {
-          if (event) event.stopPropagation();
-          selectBook(side, section.book, !finePointer.matches);
-        }
-        group.on("click", activate);
-        group.on("keydown", function (event) {
-          if (event.key === "Enter" || event.key === " ") {
-            event.preventDefault();
-            activate(event);
+          function focus(event, pin) {
+            hoverRef = { reference: ref.reference, side: side };
+            restyle();
+            showRefTip(ref, event, pin);
           }
+          anchor.on("pointerenter", function (event) {
+            if (!finePointer.matches) return;
+            focus(event, false);
+          });
+          anchor.on("pointermove", function (event) {
+            if (!finePointer.matches || tip.hidden || tipPinned) return;
+            placeTip(event);
+          });
+          anchor.on("pointerleave", function () {
+            if (tipPinned) return;
+            hoverRef = null;
+            restyle();
+            hideTip();
+          });
+          anchor.on("click", function (event) {
+            event.stopPropagation();
+            if (!finePointer.matches) {
+              event.preventDefault();
+              focus(event, true);
+            }
+          });
         });
-        hit.on("pointerenter", function () { hideTip(); });
       });
     }
+
 
     function curve(x1, y1, x2, y2) {
       if (y1 == null || y2 == null) return null;
@@ -787,16 +861,19 @@
       };
     }
 
-    function drawCallouts(width, x1, x2, leftIndex, rightIndex) {
+    function drawCallouts(x1, x2, leftIndex, rightIndex) {
       var placed = [];
       (cfg.callouts || []).forEach(function (callout) {
         var match = null;
         for (var i = 0; i < links.length; i++) {
-          if (links[i].itemId === String(callout.itemId)) { match = links[i]; break; }
+          if (links[i].items.some(function (item) { return String(item.id) === String(callout.itemId); })) {
+            match = links[i];
+            break;
+          }
         }
         if (!match) return;
-        var y1 = leftIndex.get(match.itemId + "|" + match.sourceBook);
-        var y2 = rightIndex.get(match.itemId + "|" + match.targetBook);
+        var y1 = leftIndex.get(match.sourceRef);
+        var y2 = rightIndex.get(match.targetRef);
         if (y1 == null || y2 == null) return;
         var at = pointOnCurve(0.36, x1, y1, x2, y2);
         var boxW = Math.min(220, Math.max(168, (callout.label || "").length * 6.6));

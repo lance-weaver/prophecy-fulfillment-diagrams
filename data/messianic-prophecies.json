@@ -3129,6 +3129,10 @@
         {
           "book": "Genesis",
           "reference": "Genesis 3:15",
+          "chapter": 3,
+          "verseStart": 15,
+          "verseEnd": 15,
+          "url": "https://www.lds.org/scriptures/ot/gen/3.15?lang=eng",
           "testament": "OT"
         }
       ],
@@ -3136,11 +3140,19 @@
         {
           "book": "Galatians",
           "reference": "Galatians 4:4-5",
+          "chapter": 4,
+          "verseStart": 4,
+          "verseEnd": 5,
+          "url": "https://www.lds.org/scriptures/nt/gal/4.4-5?lang=eng",
           "testament": "NT"
         },
         {
           "book": "Matthew",
           "reference": "Matthew 1:18",
+          "chapter": 1,
+          "verseStart": 18,
+          "verseEnd": 18,
+          "url": "https://www.lds.org/scriptures/nt/matt/1.18?lang=eng",
           "testament": "NT"
         }
       ]
@@ -3154,6 +3166,10 @@
         {
           "book": "Genesis",
           "reference": "Genesis 3:15",
+          "chapter": 3,
+          "verseStart": 15,
+          "verseEnd": 15,
+          "url": "https://www.lds.org/scriptures/ot/gen/3.15?lang=eng",
           "testament": "OT"
         }
       ],
@@ -3161,11 +3177,19 @@
         {
           "book": "Galatians",
           "reference": "Galatians 4:4-5",
+          "chapter": 4,
+          "verseStart": 4,
+          "verseEnd": 5,
+          "url": "https://www.lds.org/scriptures/nt/gal/4.4-5?lang=eng",
           "testament": "NT"
         },
         {
           "book": "Matthew",
           "reference": "Matthew 1:18",
+          "chapter": 1,
+          "verseStart": 18,
+          "verseEnd": 18,
+          "url": "https://www.lds.org/scriptures/nt/matt/1.18?lang=eng",
           "testament": "NT"
         }
       ]
@@ -3179,6 +3203,10 @@
         {
           "book": "Genesis",
           "reference": "Genesis 22:18",
+          "chapter": 22,
+          "verseStart": 18,
+          "verseEnd": 18,
+          "url": "https://www.lds.org/scriptures/ot/gen/22.18?lang=eng",
           "testament": "OT"
         }
       ],
@@ -3186,21 +3214,37 @@
         {
           "book": "Matthew",
           "reference": "Matthew 1:1",
+          "chapter": 1,
+          "verseStart": 1,
+          "verseEnd": 1,
+          "url": "https://www.lds.org/scriptures/nt/matt/1.1?lang=eng",
           "testament": "NT"
         },
         {
           "book": "Luke",
           "reference": "Luke 3:34",
+          "chapter": 3,
+          "verseStart": 34,
+          "verseEnd": 34,
+          "url": "https://www.lds.org/scriptures/nt/luke/3.34?lang=eng",
           "testament": "NT"
         },
         {
           "book": "Romans",
           "reference": "Romans 4:13",
+          "chapter": 4,
+          "verseStart": 13,
+          "verseEnd": 13,
+          "url": "https://www.lds.org/scriptures/nt/rom/4.13?lang=eng",
           "testament": "NT"
         },
         {
           "book": "Galatians",
           "reference": "Galatians 3:7",
+          "chapter": 3,
+          "verseStart": 7,
+          "verseEnd": 7,
+          "url": "https://www.lds.org/scriptures/nt/gal/3.7?lang=eng",
           "testament": "NT"
         }
       ]
@@ -3214,6 +3258,10 @@
         {
           "book": "Genesis",
           "reference": "Genesis 26:1-5",
+          "chapter": 26,
+          "verseStart": 1,
+          "verseEnd": 5,
+          "url": "https://www.lds.org/scriptures/ot/gen/26.1-5?lang=eng",
           "testament": "OT"
         }
       ],
@@ -3221,16 +3269,28 @@
         {
           "book": "Romans",
           "reference": "Romans 9:7",
+          "chapter": 9,
+          "verseStart": 7,
+          "verseEnd": 7,
+          "url": "https://www.lds.org/scriptures/nt/rom/9.7?lang=eng",
           "testament": "NT"
         },
         {
           "book": "Hebrews",
           "reference": "Hebrews 11:18",
+          "chapter": 11,
+          "verseStart": 18,
+          "verseEnd": 18,
+          "url": "https://www.lds.org/scriptures/nt/heb/11.18?lang=eng",
           "testament": "NT"
         },
         {
           "book": "Matthew",
           "reference": "Matthew 1:2",
+          "chapter": 1,
+          "verseStart": 2,
+          "verseEnd": 2,
+          "url": "https://www.lds.org/scriptures/nt/matt/1.2?lang=eng",
           "testament": "NT"
         }
       ]
@@ -3244,6 +3304,10 @@
         {
           "book": "Genesis",
           "reference": "Genesis 28:10-14",
+          "chapter": 28,
+          "verseStart": 10,
+          "verseEnd": 14,
+          "url": "https://www.lds.org/scriptures/ot/gen/28.10-14?lang=eng",
           "testament": "OT"
         }
       ],
@@ -3251,11 +3315,19 @@
         {
           "book": "Matthew",
           "reference": "Matthew 1:2",
+          "chapter": 1,
+          "verseStart": 2,
+          "verseEnd": 2,
+          "url": "https://www.lds.org/scriptures/nt/matt/1.2?lang=eng",
           "testament": "NT"
         },
         {
           "book": "Luke",
           "reference": "Luke 3:34",
+          "chapter": 3,
+          "verseStart": 34,
+          "verseEnd": 34,
+          "url": "https://www.lds.org/scriptures/nt/luke/3.34?lang=eng",
           "testament": "NT"
         }
       ]
@@ -3269,6 +3341,10 @@
         {
           "book": "Genesis",
           "reference": "Genesis 49:10",
+          "chapter": 49,
+          "verseStart": 10,
+          "verseEnd": 10,
+          "url": "https://www.lds.org/scriptures/ot/gen/49.10?lang=eng",
           "testament": "OT"
         }
       ],
@@ -3276,11 +3352,19 @@
         {
           "book": "Matthew",
           "reference": "Matthew 1:3",
+          "chapter": 1,
+          "verseStart": 3,
+          "verseEnd": 3,
+          "url": "https://www.lds.org/scriptures/nt/matt/1.3?lang=eng",
           "testament": "NT"
         },
         {
           "book": "Luke",
           "reference": "Luke 3:33",
+          "chapter": 3,
+          "verseStart": 33,
+          "verseEnd": 33,
+          "url": "https://www.lds.org/scriptures/nt/luke/3.33?lang=eng",
           "testament": "NT"
         }
       ]
@@ -3294,6 +3378,10 @@
         {
           "book": "Isaiah",
           "reference": "Isaiah 11:1-10",
+          "chapter": 11,
+          "verseStart": 1,
+          "verseEnd": 10,
+          "url": "https://www.lds.org/scriptures/ot/isa/11.1-10?lang=eng",
           "testament": "OT"
         }
       ],
@@ -3301,11 +3389,19 @@
         {
           "book": "Matthew",
           "reference": "Matthew 1:6",
+          "chapter": 1,
+          "verseStart": 6,
+          "verseEnd": 6,
+          "url": "https://www.lds.org/scriptures/nt/matt/1.6?lang=eng",
           "testament": "NT"
         },
         {
           "book": "Luke",
           "reference": "Luke 3:32",
+          "chapter": 3,
+          "verseStart": 32,
+          "verseEnd": 32,
+          "url": "https://www.lds.org/scriptures/nt/luke/3.32?lang=eng",
           "testament": "NT"
         }
       ]
@@ -3319,6 +3415,10 @@
         {
           "book": "2 Samuel",
           "reference": "2 Samuel 7:12-16",
+          "chapter": 7,
+          "verseStart": 12,
+          "verseEnd": 16,
+          "url": "https://www.lds.org/scriptures/ot/2-sam/7.12-16?lang=eng",
           "testament": "OT"
         }
       ],
@@ -3326,11 +3426,19 @@
         {
           "book": "Matthew",
           "reference": "Matthew 1:6",
+          "chapter": 1,
+          "verseStart": 6,
+          "verseEnd": 6,
+          "url": "https://www.lds.org/scriptures/nt/matt/1.6?lang=eng",
           "testament": "NT"
         },
         {
           "book": "Luke",
           "reference": "Luke 3:31",
+          "chapter": 3,
+          "verseStart": 31,
+          "verseEnd": 31,
+          "url": "https://www.lds.org/scriptures/nt/luke/3.31?lang=eng",
           "testament": "NT"
         }
       ]
@@ -3344,6 +3452,10 @@
         {
           "book": "Isaiah",
           "reference": "Isaiah 11:1",
+          "chapter": 11,
+          "verseStart": 1,
+          "verseEnd": 1,
+          "url": "https://www.lds.org/scriptures/ot/isa/11.1?lang=eng",
           "testament": "OT"
         }
       ],
@@ -3351,6 +3463,10 @@
         {
           "book": "Luke",
           "reference": "Luke 3:1-23",
+          "chapter": 3,
+          "verseStart": 1,
+          "verseEnd": 23,
+          "url": "https://www.lds.org/scriptures/nt/luke/3.1-23?lang=eng",
           "testament": "NT"
         }
       ]
@@ -3364,6 +3480,10 @@
         {
           "book": "Jeremiah",
           "reference": "Jeremiah 23:3-6",
+          "chapter": 23,
+          "verseStart": 3,
+          "verseEnd": 6,
+          "url": "https://www.lds.org/scriptures/ot/jer/23.3-6?lang=eng",
           "testament": "OT"
         }
       ],
@@ -3371,6 +3491,10 @@
         {
           "book": "Luke",
           "reference": "Luke 3:1-23",
+          "chapter": 3,
+          "verseStart": 1,
+          "verseEnd": 23,
+          "url": "https://www.lds.org/scriptures/nt/luke/3.1-23?lang=eng",
           "testament": "NT"
         }
       ]
@@ -3384,6 +3508,10 @@
         {
           "book": "Daniel",
           "reference": "Daniel 9:24-26",
+          "chapter": 9,
+          "verseStart": 24,
+          "verseEnd": 26,
+          "url": "https://www.lds.org/scriptures/ot/dan/9.24-26?lang=eng",
           "testament": "OT"
         }
       ],
@@ -3391,6 +3519,10 @@
         {
           "book": "Luke",
           "reference": "Luke 3:1-23",
+          "chapter": 3,
+          "verseStart": 1,
+          "verseEnd": 23,
+          "url": "https://www.lds.org/scriptures/nt/luke/3.1-23?lang=eng",
           "testament": "NT"
         }
       ]
@@ -3404,6 +3536,10 @@
         {
           "book": "Genesis",
           "reference": "Genesis 49:10",
+          "chapter": 49,
+          "verseStart": 10,
+          "verseEnd": 10,
+          "url": "https://www.lds.org/scriptures/ot/gen/49.10?lang=eng",
           "testament": "OT"
         }
       ],
@@ -3411,6 +3547,10 @@
         {
           "book": "Matthew",
           "reference": "Matthew 2",
+          "chapter": 2,
+          "verseStart": null,
+          "verseEnd": null,
+          "url": "https://www.lds.org/scriptures/nt/matt/2?lang=eng",
           "testament": "NT"
         }
       ]
@@ -3424,6 +3564,10 @@
         {
           "book": "Ezekiel",
           "reference": "Ezekiel 21:26-27",
+          "chapter": 21,
+          "verseStart": 26,
+          "verseEnd": 27,
+          "url": "https://www.lds.org/scriptures/ot/ezek/21.26-27?lang=eng",
           "testament": "OT"
         }
       ],
@@ -3431,6 +3575,10 @@
         {
           "book": "Matthew",
           "reference": "Matthew 2",
+          "chapter": 2,
+          "verseStart": null,
+          "verseEnd": null,
+          "url": "https://www.lds.org/scriptures/nt/matt/2?lang=eng",
           "testament": "NT"
         }
       ]
@@ -3444,6 +3592,10 @@
         {
           "book": "Micah",
           "reference": "Micah 5:1-2",
+          "chapter": 5,
+          "verseStart": 1,
+          "verseEnd": 2,
+          "url": "https://www.lds.org/scriptures/ot/micah/5.1-2?lang=eng",
           "testament": "OT"
         }
       ],
@@ -3451,11 +3603,19 @@
         {
           "book": "Matthew",
           "reference": "Matthew 2:1-12",
+          "chapter": 2,
+          "verseStart": 1,
+          "verseEnd": 12,
+          "url": "https://www.lds.org/scriptures/nt/matt/2.1-12?lang=eng",
           "testament": "NT"
         },
         {
           "book": "Luke",
           "reference": "Luke 2:1-21",
+          "chapter": 2,
+          "verseStart": 1,
+          "verseEnd": 21,
+          "url": "https://www.lds.org/scriptures/nt/luke/2.1-21?lang=eng",
           "testament": "NT"
         }
       ]
@@ -3469,6 +3629,10 @@
         {
           "book": "Genesis",
           "reference": "Genesis 17:15-21",
+          "chapter": 17,
+          "verseStart": 15,
+          "verseEnd": 21,
+          "url": "https://www.lds.org/scriptures/ot/gen/17.15-21?lang=eng",
           "testament": "OT"
         }
       ],
@@ -3476,11 +3640,19 @@
         {
           "book": "Matthew",
           "reference": "Matthew 1:18-25",
+          "chapter": 1,
+          "verseStart": 18,
+          "verseEnd": 25,
+          "url": "https://www.lds.org/scriptures/nt/matt/1.18-25?lang=eng",
           "testament": "NT"
         },
         {
           "book": "Luke",
           "reference": "Luke 1:26-38",
+          "chapter": 1,
+          "verseStart": 26,
+          "verseEnd": 38,
+          "url": "https://www.lds.org/scriptures/nt/luke/1.26-38?lang=eng",
           "testament": "NT"
         }
       ]
@@ -3494,6 +3666,10 @@
         {
           "book": "Isaiah",
           "reference": "Isaiah 7:13-14",
+          "chapter": 7,
+          "verseStart": 13,
+          "verseEnd": 14,
+          "url": "https://www.lds.org/scriptures/ot/isa/7.13-14?lang=eng",
           "testament": "OT"
         }
       ],
@@ -3501,11 +3677,19 @@
         {
           "book": "Matthew",
           "reference": "Matthew 1:18-25",
+          "chapter": 1,
+          "verseStart": 18,
+          "verseEnd": 25,
+          "url": "https://www.lds.org/scriptures/nt/matt/1.18-25?lang=eng",
           "testament": "NT"
         },
         {
           "book": "Luke",
           "reference": "Luke 1:26-38",
+          "chapter": 1,
+          "verseStart": 26,
+          "verseEnd": 38,
+          "url": "https://www.lds.org/scriptures/nt/luke/1.26-38?lang=eng",
           "testament": "NT"
         }
       ]
@@ -3519,6 +3703,10 @@
         {
           "book": "Isaiah",
           "reference": "Isaiah 7:14",
+          "chapter": 7,
+          "verseStart": 14,
+          "verseEnd": 14,
+          "url": "https://www.lds.org/scriptures/ot/isa/7.14?lang=eng",
           "testament": "OT"
         }
       ],
@@ -3526,6 +3714,10 @@
         {
           "book": "Matthew",
           "reference": "Matthew 1:23",
+          "chapter": 1,
+          "verseStart": 23,
+          "verseEnd": 23,
+          "url": "https://www.lds.org/scriptures/nt/matt/1.23?lang=eng",
           "testament": "NT"
         }
       ]
@@ -3539,6 +3731,10 @@
         {
           "book": "Daniel",
           "reference": "Daniel 9:26",
+          "chapter": 9,
+          "verseStart": 26,
+          "verseEnd": 26,
+          "url": "https://www.lds.org/scriptures/ot/dan/9.26?lang=eng",
           "testament": "OT"
         }
       ],
@@ -3546,6 +3742,10 @@
         {
           "book": "Luke",
           "reference": "Luke 3:1-23",
+          "chapter": 3,
+          "verseStart": 1,
+          "verseEnd": 23,
+          "url": "https://www.lds.org/scriptures/nt/luke/3.1-23?lang=eng",
           "testament": "NT"
         }
       ]
@@ -3559,6 +3759,10 @@
         {
           "book": "Malachi",
           "reference": "Malachi 3:1",
+          "chapter": 3,
+          "verseStart": 1,
+          "verseEnd": 1,
+          "url": "https://www.lds.org/scriptures/ot/mal/3.1?lang=eng",
           "testament": "OT"
         }
       ],
@@ -3566,6 +3770,10 @@
         {
           "book": "Matthew",
           "reference": "Matthew 21:12",
+          "chapter": 21,
+          "verseStart": 12,
+          "verseEnd": 12,
+          "url": "https://www.lds.org/scriptures/nt/matt/21.12?lang=eng",
           "testament": "NT"
         }
       ]
@@ -3579,6 +3787,10 @@
         {
           "book": "Isaiah",
           "reference": "Isaiah 40:1-9",
+          "chapter": 40,
+          "verseStart": 1,
+          "verseEnd": 9,
+          "url": "https://www.lds.org/scriptures/ot/isa/40.1-9?lang=eng",
           "testament": "OT"
         }
       ],
@@ -3586,6 +3798,10 @@
         {
           "book": "Matthew",
           "reference": "Matthew 3:1-4",
+          "chapter": 3,
+          "verseStart": 1,
+          "verseEnd": 4,
+          "url": "https://www.lds.org/scriptures/nt/matt/3.1-4?lang=eng",
           "testament": "NT"
         }
       ]
@@ -3599,6 +3815,10 @@
         {
           "book": "Malachi",
           "reference": "Malachi 3:1",
+          "chapter": 3,
+          "verseStart": 1,
+          "verseEnd": 1,
+          "url": "https://www.lds.org/scriptures/ot/mal/3.1?lang=eng",
           "testament": "OT"
         }
       ],
@@ -3606,6 +3826,10 @@
         {
           "book": "Mark",
           "reference": "Mark 1:1-11",
+          "chapter": 1,
+          "verseStart": 1,
+          "verseEnd": 11,
+          "url": "https://www.lds.org/scriptures/nt/mark/1.1-11?lang=eng",
           "testament": "NT"
         }
       ]
@@ -3619,6 +3843,10 @@
         {
           "book": "Daniel",
           "reference": "Daniel 9:24-27",
+          "chapter": 9,
+          "verseStart": 24,
+          "verseEnd": 27,
+          "url": "https://www.lds.org/scriptures/ot/dan/9.24-27?lang=eng",
           "testament": "OT"
         }
       ],
@@ -3626,6 +3854,10 @@
         {
           "book": "John",
           "reference": "John 1:29-34",
+          "chapter": 1,
+          "verseStart": 29,
+          "verseEnd": 34,
+          "url": "https://www.lds.org/scriptures/nt/john/1.29-34?lang=eng",
           "testament": "NT"
         }
       ]
@@ -3639,6 +3871,10 @@
         {
           "book": "Isaiah",
           "reference": "Isaiah 61:1-2",
+          "chapter": 61,
+          "verseStart": 1,
+          "verseEnd": 2,
+          "url": "https://www.lds.org/scriptures/ot/isa/61.1-2?lang=eng",
           "testament": "OT"
         }
       ],
@@ -3646,6 +3882,10 @@
         {
           "book": "Luke",
           "reference": "Luke 4:14-30",
+          "chapter": 4,
+          "verseStart": 14,
+          "verseEnd": 30,
+          "url": "https://www.lds.org/scriptures/nt/luke/4.14-30?lang=eng",
           "testament": "NT"
         }
       ]
@@ -3659,6 +3899,10 @@
         {
           "book": "Isaiah",
           "reference": "Isaiah 9:1-2",
+          "chapter": 9,
+          "verseStart": 1,
+          "verseEnd": 2,
+          "url": "https://www.lds.org/scriptures/ot/isa/9.1-2?lang=eng",
           "testament": "OT"
         }
       ],
@@ -3666,6 +3910,10 @@
         {
           "book": "Matthew",
           "reference": "Matthew 4:12-17",
+          "chapter": 4,
+          "verseStart": 12,
+          "verseEnd": 17,
+          "url": "https://www.lds.org/scriptures/nt/matt/4.12-17?lang=eng",
           "testament": "NT"
         }
       ]
@@ -3679,6 +3927,10 @@
         {
           "book": "Isaiah",
           "reference": "Isaiah 35:4-6",
+          "chapter": 35,
+          "verseStart": 4,
+          "verseEnd": 6,
+          "url": "https://www.lds.org/scriptures/ot/isa/35.4-6?lang=eng",
           "testament": "OT"
         }
       ],
@@ -3686,6 +3938,10 @@
         {
           "book": "Matthew",
           "reference": "Matthew 4:23-25",
+          "chapter": 4,
+          "verseStart": 23,
+          "verseEnd": 25,
+          "url": "https://www.lds.org/scriptures/nt/matt/4.23-25?lang=eng",
           "testament": "NT"
         }
       ]
@@ -3699,6 +3955,10 @@
         {
           "book": "Psalms",
           "reference": "Psalm 78:1-2",
+          "chapter": 78,
+          "verseStart": 1,
+          "verseEnd": 2,
+          "url": "https://www.lds.org/scriptures/ot/ps/78.1-2?lang=eng",
           "testament": "OT"
         }
       ],
@@ -3706,11 +3966,19 @@
         {
           "book": "Matthew",
           "reference": "Matthew 13:3",
+          "chapter": 13,
+          "verseStart": 3,
+          "verseEnd": 3,
+          "url": "https://www.lds.org/scriptures/nt/matt/13.3?lang=eng",
           "testament": "NT"
         },
         {
           "book": "Matthew",
           "reference": "Matthew 13:13-15",
+          "chapter": 13,
+          "verseStart": 13,
+          "verseEnd": 15,
+          "url": "https://www.lds.org/scriptures/nt/matt/13.13-15?lang=eng",
           "testament": "NT"
         }
       ]
@@ -3724,6 +3992,10 @@
         {
           "book": "Deuteronomy",
           "reference": "Deuteronomy 18:15-18",
+          "chapter": 18,
+          "verseStart": 15,
+          "verseEnd": 18,
+          "url": "https://www.lds.org/scriptures/ot/deut/18.15-18?lang=eng",
           "testament": "OT"
         }
       ],
@@ -3731,11 +4003,19 @@
         {
           "book": "John",
           "reference": "John 5:45-47",
+          "chapter": 5,
+          "verseStart": 45,
+          "verseEnd": 47,
+          "url": "https://www.lds.org/scriptures/nt/john/5.45-47?lang=eng",
           "testament": "NT"
         },
         {
           "book": "John",
           "reference": "John 6:14",
+          "chapter": 6,
+          "verseStart": 14,
+          "verseEnd": 14,
+          "url": "https://www.lds.org/scriptures/nt/john/6.14?lang=eng",
           "testament": "NT"
         }
       ]
@@ -3749,6 +4029,10 @@
         {
           "book": "Isaiah",
           "reference": "Isaiah 42:1-9",
+          "chapter": 42,
+          "verseStart": 1,
+          "verseEnd": 9,
+          "url": "https://www.lds.org/scriptures/ot/isa/42.1-9?lang=eng",
           "testament": "OT"
         }
       ],
@@ -3756,6 +4040,10 @@
         {
           "book": "Matthew",
           "reference": "Matthew 11:28-30",
+          "chapter": 11,
+          "verseStart": 28,
+          "verseEnd": 30,
+          "url": "https://www.lds.org/scriptures/nt/matt/11.28-30?lang=eng",
           "testament": "NT"
         }
       ]
@@ -3769,6 +4057,10 @@
         {
           "book": "Psalms",
           "reference": "Psalm 2:1-12",
+          "chapter": 2,
+          "verseStart": 1,
+          "verseEnd": 12,
+          "url": "https://www.lds.org/scriptures/ot/ps/2.1-12?lang=eng",
           "testament": "OT"
         }
       ],
@@ -3776,6 +4068,10 @@
         {
           "book": "Matthew",
           "reference": "Matthew 14:33",
+          "chapter": 14,
+          "verseStart": 33,
+          "verseEnd": 33,
+          "url": "https://www.lds.org/scriptures/nt/matt/14.33?lang=eng",
           "testament": "NT"
         }
       ]
@@ -3789,6 +4085,10 @@
         {
           "book": "Isaiah",
           "reference": "Isaiah 9:6-7",
+          "chapter": 9,
+          "verseStart": 6,
+          "verseEnd": 7,
+          "url": "https://www.lds.org/scriptures/ot/isa/9.6-7?lang=eng",
           "testament": "OT"
         }
       ],
@@ -3796,16 +4096,28 @@
         {
           "book": "Matthew",
           "reference": "Matthew 1:23",
+          "chapter": 1,
+          "verseStart": 23,
+          "verseEnd": 23,
+          "url": "https://www.lds.org/scriptures/nt/matt/1.23?lang=eng",
           "testament": "NT"
         },
         {
           "book": "John",
           "reference": "John 10:30",
+          "chapter": 10,
+          "verseStart": 30,
+          "verseEnd": 30,
+          "url": "https://www.lds.org/scriptures/nt/john/10.30?lang=eng",
           "testament": "NT"
         },
         {
           "book": "John",
           "reference": "John 20:27-29",
+          "chapter": 20,
+          "verseStart": 27,
+          "verseEnd": 29,
+          "url": "https://www.lds.org/scriptures/nt/john/20.27-29?lang=eng",
           "testament": "NT"
         }
       ]
@@ -3819,6 +4131,10 @@
         {
           "book": "Zechariah",
           "reference": "Zechariah 9:9",
+          "chapter": 9,
+          "verseStart": 9,
+          "verseEnd": 9,
+          "url": "https://www.lds.org/scriptures/ot/zech/9.9?lang=eng",
           "testament": "OT"
         }
       ],
@@ -3826,6 +4142,10 @@
         {
           "book": "Matthew",
           "reference": "Matthew 21:6-9",
+          "chapter": 21,
+          "verseStart": 6,
+          "verseEnd": 9,
+          "url": "https://www.lds.org/scriptures/nt/matt/21.6-9?lang=eng",
           "testament": "NT"
         }
       ]
@@ -3839,6 +4159,10 @@
         {
           "book": "Jeremiah",
           "reference": "Jeremiah 31:31-34",
+          "chapter": 31,
+          "verseStart": 31,
+          "verseEnd": 34,
+          "url": "https://www.lds.org/scriptures/ot/jer/31.31-34?lang=eng",
           "testament": "OT"
         }
       ],
@@ -3846,6 +4170,10 @@
         {
           "book": "Hebrews",
           "reference": "Hebrews 8",
+          "chapter": 8,
+          "verseStart": null,
+          "verseEnd": null,
+          "url": "https://www.lds.org/scriptures/nt/heb/8?lang=eng",
           "testament": "NT"
         }
       ]
@@ -3859,6 +4187,10 @@
         {
           "book": "Psalms",
           "reference": "Psalm 41",
+          "chapter": 41,
+          "verseStart": null,
+          "verseEnd": null,
+          "url": "https://www.lds.org/scriptures/ot/ps/41?lang=eng",
           "testament": "OT"
         }
       ],
@@ -3866,6 +4198,10 @@
         {
           "book": "John",
           "reference": "John 13:18",
+          "chapter": 13,
+          "verseStart": 18,
+          "verseEnd": 18,
+          "url": "https://www.lds.org/scriptures/nt/john/13.18?lang=eng",
           "testament": "NT"
         }
       ]
@@ -3879,6 +4215,10 @@
         {
           "book": "Psalms",
           "reference": "Psalm 22:6",
+          "chapter": 22,
+          "verseStart": 6,
+          "verseEnd": 6,
+          "url": "https://www.lds.org/scriptures/ot/ps/22.6?lang=eng",
           "testament": "OT"
         }
       ],
@@ -3886,6 +4226,10 @@
         {
           "book": "Luke",
           "reference": "Luke 23:21-23",
+          "chapter": 23,
+          "verseStart": 21,
+          "verseEnd": 23,
+          "url": "https://www.lds.org/scriptures/nt/luke/23.21-23?lang=eng",
           "testament": "NT"
         }
       ]
@@ -3899,6 +4243,10 @@
         {
           "book": "Psalms",
           "reference": "Psalm 118:22-24",
+          "chapter": 118,
+          "verseStart": 22,
+          "verseEnd": 24,
+          "url": "https://www.lds.org/scriptures/ot/ps/118.22-24?lang=eng",
           "testament": "OT"
         }
       ],
@@ -3906,6 +4254,10 @@
         {
           "book": "Matthew",
           "reference": "Matthew 21:42-43",
+          "chapter": 21,
+          "verseStart": 42,
+          "verseEnd": 43,
+          "url": "https://www.lds.org/scriptures/nt/matt/21.42-43?lang=eng",
           "testament": "NT"
         }
       ]
@@ -3919,6 +4271,10 @@
         {
           "book": "Isaiah",
           "reference": "Isaiah 53:1-3",
+          "chapter": 53,
+          "verseStart": 1,
+          "verseEnd": 3,
+          "url": "https://www.lds.org/scriptures/ot/isa/53.1-3?lang=eng",
           "testament": "OT"
         }
       ],
@@ -3926,6 +4282,10 @@
         {
           "book": "Matthew",
           "reference": "Matthew 27:21-23",
+          "chapter": 27,
+          "verseStart": 21,
+          "verseEnd": 23,
+          "url": "https://www.lds.org/scriptures/nt/matt/27.21-23?lang=eng",
           "testament": "NT"
         }
       ]
@@ -3939,6 +4299,10 @@
         {
           "book": "Daniel",
           "reference": "Daniel 9:24-26",
+          "chapter": 9,
+          "verseStart": 24,
+          "verseEnd": 26,
+          "url": "https://www.lds.org/scriptures/ot/dan/9.24-26?lang=eng",
           "testament": "OT"
         }
       ],
@@ -3946,6 +4310,10 @@
         {
           "book": "Mark",
           "reference": "Mark 15:1-15",
+          "chapter": 15,
+          "verseStart": 1,
+          "verseEnd": 15,
+          "url": "https://www.lds.org/scriptures/nt/mark/15.1-15?lang=eng",
           "testament": "NT"
         }
       ]
@@ -3959,6 +4327,10 @@
         {
           "book": "Isaiah",
           "reference": "Isaiah 53:7",
+          "chapter": 53,
+          "verseStart": 7,
+          "verseEnd": 7,
+          "url": "https://www.lds.org/scriptures/ot/isa/53.7?lang=eng",
           "testament": "OT"
         }
       ],
@@ -3966,6 +4338,10 @@
         {
           "book": "Matthew",
           "reference": "Matthew 27:27-31",
+          "chapter": 27,
+          "verseStart": 27,
+          "verseEnd": 31,
+          "url": "https://www.lds.org/scriptures/nt/matt/27.27-31?lang=eng",
           "testament": "NT"
         }
       ]
@@ -3979,6 +4355,10 @@
         {
           "book": "Isaiah",
           "reference": "Isaiah 53:7",
+          "chapter": 53,
+          "verseStart": 7,
+          "verseEnd": 7,
+          "url": "https://www.lds.org/scriptures/ot/isa/53.7?lang=eng",
           "testament": "OT"
         }
       ],
@@ -3986,6 +4366,10 @@
         {
           "book": "Matthew",
           "reference": "Matthew 27:12-14",
+          "chapter": 27,
+          "verseStart": 12,
+          "verseEnd": 14,
+          "url": "https://www.lds.org/scriptures/nt/matt/27.12-14?lang=eng",
           "testament": "NT"
         }
       ]
@@ -3999,6 +4383,10 @@
         {
           "book": "Isaiah",
           "reference": "Isaiah 50:6-7",
+          "chapter": 50,
+          "verseStart": 6,
+          "verseEnd": 7,
+          "url": "https://www.lds.org/scriptures/ot/isa/50.6-7?lang=eng",
           "testament": "OT"
         }
       ],
@@ -4006,11 +4394,19 @@
         {
           "book": "Matthew",
           "reference": "Matthew 26:67",
+          "chapter": 26,
+          "verseStart": 67,
+          "verseEnd": 67,
+          "url": "https://www.lds.org/scriptures/nt/matt/26.67?lang=eng",
           "testament": "NT"
         },
         {
           "book": "Matthew",
           "reference": "Matthew 27:30",
+          "chapter": 27,
+          "verseStart": 30,
+          "verseEnd": 30,
+          "url": "https://www.lds.org/scriptures/nt/matt/27.30?lang=eng",
           "testament": "NT"
         }
       ]
@@ -4024,11 +4420,19 @@
         {
           "book": "Psalms",
           "reference": "Psalm 35:19",
+          "chapter": 35,
+          "verseStart": 19,
+          "verseEnd": 19,
+          "url": "https://www.lds.org/scriptures/ot/ps/35.19?lang=eng",
           "testament": "OT"
         },
         {
           "book": "Psalms",
           "reference": "Psalm 69:4",
+          "chapter": 69,
+          "verseStart": 4,
+          "verseEnd": 4,
+          "url": "https://www.lds.org/scriptures/ot/ps/69.4?lang=eng",
           "testament": "OT"
         }
       ],
@@ -4036,6 +4440,10 @@
         {
           "book": "John",
           "reference": "John 15:25",
+          "chapter": 15,
+          "verseStart": 25,
+          "verseEnd": 25,
+          "url": "https://www.lds.org/scriptures/nt/john/15.25?lang=eng",
           "testament": "NT"
         }
       ]
@@ -4049,6 +4457,10 @@
         {
           "book": "Isaiah",
           "reference": "Isaiah 53:12",
+          "chapter": 53,
+          "verseStart": 12,
+          "verseEnd": 12,
+          "url": "https://www.lds.org/scriptures/ot/isa/53.12?lang=eng",
           "testament": "OT"
         }
       ],
@@ -4056,11 +4468,19 @@
         {
           "book": "Luke",
           "reference": "Luke 22:37",
+          "chapter": 22,
+          "verseStart": 37,
+          "verseEnd": 37,
+          "url": "https://www.lds.org/scriptures/nt/luke/22.37?lang=eng",
           "testament": "NT"
         },
         {
           "book": "Luke",
           "reference": "Luke 23:32",
+          "chapter": 23,
+          "verseStart": 32,
+          "verseEnd": 32,
+          "url": "https://www.lds.org/scriptures/nt/luke/23.32?lang=eng",
           "testament": "NT"
         }
       ]
@@ -4074,6 +4494,10 @@
         {
           "book": "Isaiah",
           "reference": "Isaiah 50:4-10",
+          "chapter": 50,
+          "verseStart": 4,
+          "verseEnd": 10,
+          "url": "https://www.lds.org/scriptures/ot/isa/50.4-10?lang=eng",
           "testament": "OT"
         }
       ],
@@ -4081,11 +4505,19 @@
         {
           "book": "Matthew",
           "reference": "Matthew 26:39",
+          "chapter": 26,
+          "verseStart": 39,
+          "verseEnd": 39,
+          "url": "https://www.lds.org/scriptures/nt/matt/26.39?lang=eng",
           "testament": "NT"
         },
         {
           "book": "John",
           "reference": "John 8:28",
+          "chapter": 8,
+          "verseStart": 28,
+          "verseEnd": 28,
+          "url": "https://www.lds.org/scriptures/nt/john/8.28?lang=eng",
           "testament": "NT"
         }
       ]
@@ -4099,6 +4531,10 @@
         {
           "book": "Isaiah",
           "reference": "Isaiah 50:4-10",
+          "chapter": 50,
+          "verseStart": 4,
+          "verseEnd": 10,
+          "url": "https://www.lds.org/scriptures/ot/isa/50.4-10?lang=eng",
           "testament": "OT"
         }
       ],
@@ -4106,6 +4542,10 @@
         {
           "book": "Matthew",
           "reference": "Matthew 26:47-56",
+          "chapter": 26,
+          "verseStart": 47,
+          "verseEnd": 56,
+          "url": "https://www.lds.org/scriptures/nt/matt/26.47-56?lang=eng",
           "testament": "NT"
         }
       ]
@@ -4119,6 +4559,10 @@
         {
           "book": "Genesis",
           "reference": "Genesis 22:1-18",
+          "chapter": 22,
+          "verseStart": 1,
+          "verseEnd": 18,
+          "url": "https://www.lds.org/scriptures/ot/gen/22.1-18?lang=eng",
           "testament": "OT"
         }
       ],
@@ -4126,6 +4570,10 @@
         {
           "book": "John",
           "reference": "John 19:1-37",
+          "chapter": 19,
+          "verseStart": 1,
+          "verseEnd": 37,
+          "url": "https://www.lds.org/scriptures/nt/john/19.1-37?lang=eng",
           "testament": "NT"
         }
       ]
@@ -4139,6 +4587,10 @@
         {
           "book": "Psalms",
           "reference": "Psalm 22",
+          "chapter": 22,
+          "verseStart": null,
+          "verseEnd": null,
+          "url": "https://www.lds.org/scriptures/ot/ps/22?lang=eng",
           "testament": "OT"
         }
       ],
@@ -4146,16 +4598,28 @@
         {
           "book": "Matthew",
           "reference": "Matthew 27:32-44",
+          "chapter": 27,
+          "verseStart": 32,
+          "verseEnd": 44,
+          "url": "https://www.lds.org/scriptures/nt/matt/27.32-44?lang=eng",
           "testament": "NT"
         },
         {
           "book": "John",
           "reference": "John 19:1-37",
+          "chapter": 19,
+          "verseStart": 1,
+          "verseEnd": 37,
+          "url": "https://www.lds.org/scriptures/nt/john/19.1-37?lang=eng",
           "testament": "NT"
         },
         {
           "book": "John",
           "reference": "John 20:27",
+          "chapter": 20,
+          "verseStart": 27,
+          "verseEnd": 27,
+          "url": "https://www.lds.org/scriptures/nt/john/20.27?lang=eng",
           "testament": "NT"
         }
       ]
@@ -4169,6 +4633,10 @@
         {
           "book": "Psalms",
           "reference": "Psalm 22:8",
+          "chapter": 22,
+          "verseStart": 8,
+          "verseEnd": 8,
+          "url": "https://www.lds.org/scriptures/ot/ps/22.8?lang=eng",
           "testament": "OT"
         }
       ],
@@ -4176,11 +4644,19 @@
         {
           "book": "Matthew",
           "reference": "Matthew 27:39",
+          "chapter": 27,
+          "verseStart": 39,
+          "verseEnd": 39,
+          "url": "https://www.lds.org/scriptures/nt/matt/27.39?lang=eng",
           "testament": "NT"
         },
         {
           "book": "Matthew",
           "reference": "Matthew 27:43",
+          "chapter": 27,
+          "verseStart": 43,
+          "verseEnd": 43,
+          "url": "https://www.lds.org/scriptures/nt/matt/27.43?lang=eng",
           "testament": "NT"
         }
       ]
@@ -4194,6 +4670,10 @@
         {
           "book": "Psalms",
           "reference": "Psalm 22:17-18",
+          "chapter": 22,
+          "verseStart": 17,
+          "verseEnd": 18,
+          "url": "https://www.lds.org/scriptures/ot/ps/22.17-18?lang=eng",
           "testament": "OT"
         }
       ],
@@ -4201,6 +4681,10 @@
         {
           "book": "Luke",
           "reference": "Luke 23:34-35",
+          "chapter": 23,
+          "verseStart": 34,
+          "verseEnd": 35,
+          "url": "https://www.lds.org/scriptures/nt/luke/23.34-35?lang=eng",
           "testament": "NT"
         }
       ]
@@ -4214,6 +4698,10 @@
         {
           "book": "Psalms",
           "reference": "Psalm 22:18",
+          "chapter": 22,
+          "verseStart": 18,
+          "verseEnd": 18,
+          "url": "https://www.lds.org/scriptures/ot/ps/22.18?lang=eng",
           "testament": "OT"
         }
       ],
@@ -4221,16 +4709,28 @@
         {
           "book": "Matthew",
           "reference": "Matthew 27:35",
+          "chapter": 27,
+          "verseStart": 35,
+          "verseEnd": 35,
+          "url": "https://www.lds.org/scriptures/nt/matt/27.35?lang=eng",
           "testament": "NT"
         },
         {
           "book": "Luke",
           "reference": "Luke 23:34",
+          "chapter": 23,
+          "verseStart": 34,
+          "verseEnd": 34,
+          "url": "https://www.lds.org/scriptures/nt/luke/23.34?lang=eng",
           "testament": "NT"
         },
         {
           "book": "John",
           "reference": "John 19:23",
+          "chapter": 19,
+          "verseStart": 23,
+          "verseEnd": 23,
+          "url": "https://www.lds.org/scriptures/nt/john/19.23?lang=eng",
           "testament": "NT"
         }
       ]
@@ -4244,6 +4744,10 @@
         {
           "book": "Psalms",
           "reference": "Psalm 22:16",
+          "chapter": 22,
+          "verseStart": 16,
+          "verseEnd": 16,
+          "url": "https://www.lds.org/scriptures/ot/ps/22.16?lang=eng",
           "testament": "OT"
         }
       ],
@@ -4251,11 +4755,19 @@
         {
           "book": "John",
           "reference": "John 19:37",
+          "chapter": 19,
+          "verseStart": 37,
+          "verseEnd": 37,
+          "url": "https://www.lds.org/scriptures/nt/john/19.37?lang=eng",
           "testament": "NT"
         },
         {
           "book": "John",
           "reference": "John 20:27",
+          "chapter": 20,
+          "verseStart": 27,
+          "verseEnd": 27,
+          "url": "https://www.lds.org/scriptures/nt/john/20.27?lang=eng",
           "testament": "NT"
         }
       ]
@@ -4269,6 +4781,10 @@
         {
           "book": "Psalms",
           "reference": "Psalm 22:15",
+          "chapter": 22,
+          "verseStart": 15,
+          "verseEnd": 15,
+          "url": "https://www.lds.org/scriptures/ot/ps/22.15?lang=eng",
           "testament": "OT"
         }
       ],
@@ -4276,6 +4792,10 @@
         {
           "book": "John",
           "reference": "John 19:28",
+          "chapter": 19,
+          "verseStart": 28,
+          "verseEnd": 28,
+          "url": "https://www.lds.org/scriptures/nt/john/19.28?lang=eng",
           "testament": "NT"
         }
       ]
@@ -4289,6 +4809,10 @@
         {
           "book": "Psalms",
           "reference": "Psalm 22:1",
+          "chapter": 22,
+          "verseStart": 1,
+          "verseEnd": 1,
+          "url": "https://www.lds.org/scriptures/ot/ps/22.1?lang=eng",
           "testament": "OT"
         }
       ],
@@ -4296,6 +4820,10 @@
         {
           "book": "Matthew",
           "reference": "Matthew 27:46",
+          "chapter": 27,
+          "verseStart": 46,
+          "verseEnd": 46,
+          "url": "https://www.lds.org/scriptures/nt/matt/27.46?lang=eng",
           "testament": "NT"
         }
       ]
@@ -4309,6 +4837,10 @@
         {
           "book": "Zechariah",
           "reference": "Zechariah 12:10",
+          "chapter": 12,
+          "verseStart": 10,
+          "verseEnd": 10,
+          "url": "https://www.lds.org/scriptures/ot/zech/12.10?lang=eng",
           "testament": "OT"
         }
       ],
@@ -4316,6 +4848,10 @@
         {
           "book": "John",
           "reference": "John 19:34-37",
+          "chapter": 19,
+          "verseStart": 34,
+          "verseEnd": 37,
+          "url": "https://www.lds.org/scriptures/nt/john/19.34-37?lang=eng",
           "testament": "NT"
         }
       ]
@@ -4329,6 +4865,10 @@
         {
           "book": "Isaiah",
           "reference": "Isaiah 53:12",
+          "chapter": 53,
+          "verseStart": 12,
+          "verseEnd": 12,
+          "url": "https://www.lds.org/scriptures/ot/isa/53.12?lang=eng",
           "testament": "OT"
         }
       ],
@@ -4336,16 +4876,28 @@
         {
           "book": "Matthew",
           "reference": "Matthew 10:32",
+          "chapter": 10,
+          "verseStart": 32,
+          "verseEnd": 32,
+          "url": "https://www.lds.org/scriptures/nt/matt/10.32?lang=eng",
           "testament": "NT"
         },
         {
           "book": "Luke",
           "reference": "Luke 23:34",
+          "chapter": 23,
+          "verseStart": 34,
+          "verseEnd": 34,
+          "url": "https://www.lds.org/scriptures/nt/luke/23.34?lang=eng",
           "testament": "NT"
         },
         {
           "book": "Romans",
           "reference": "Romans 8:34",
+          "chapter": 8,
+          "verseStart": 34,
+          "verseEnd": 34,
+          "url": "https://www.lds.org/scriptures/nt/rom/8.34?lang=eng",
           "testament": "NT"
         }
       ]
@@ -4359,6 +4911,10 @@
         {
           "book": "Isaiah",
           "reference": "Isaiah 53:4-9",
+          "chapter": 53,
+          "verseStart": 4,
+          "verseEnd": 9,
+          "url": "https://www.lds.org/scriptures/ot/isa/53.4-9?lang=eng",
           "testament": "OT"
         }
       ],
@@ -4366,16 +4922,28 @@
         {
           "book": "John",
           "reference": "John 19:1-37",
+          "chapter": 19,
+          "verseStart": 1,
+          "verseEnd": 37,
+          "url": "https://www.lds.org/scriptures/nt/john/19.1-37?lang=eng",
           "testament": "NT"
         },
         {
           "book": "2 Corinthians",
           "reference": "2 Corinthians 5:21",
+          "chapter": 5,
+          "verseStart": 21,
+          "verseEnd": 21,
+          "url": "https://www.lds.org/scriptures/nt/2-cor/5.21?lang=eng",
           "testament": "NT"
         },
         {
           "book": "1 John",
           "reference": "1 John 4:10",
+          "chapter": 4,
+          "verseStart": 10,
+          "verseEnd": 10,
+          "url": "https://www.lds.org/scriptures/nt/1-jn/4.10?lang=eng",
           "testament": "NT"
         }
       ]
@@ -4389,6 +4957,10 @@
         {
           "book": "Isaiah",
           "reference": "Isaiah 53:8-9",
+          "chapter": 53,
+          "verseStart": 8,
+          "verseEnd": 9,
+          "url": "https://www.lds.org/scriptures/ot/isa/53.8-9?lang=eng",
           "testament": "OT"
         }
       ],
@@ -4396,6 +4968,10 @@
         {
           "book": "John",
           "reference": "John 19:1-37",
+          "chapter": 19,
+          "verseStart": 1,
+          "verseEnd": 37,
+          "url": "https://www.lds.org/scriptures/nt/john/19.1-37?lang=eng",
           "testament": "NT"
         }
       ]
@@ -4409,6 +4985,10 @@
         {
           "book": "Daniel",
           "reference": "Daniel 9:26",
+          "chapter": 9,
+          "verseStart": 26,
+          "verseEnd": 26,
+          "url": "https://www.lds.org/scriptures/ot/dan/9.26?lang=eng",
           "testament": "OT"
         }
       ],
@@ -4416,6 +4996,10 @@
         {
           "book": "John",
           "reference": "John 19:1-37",
+          "chapter": 19,
+          "verseStart": 1,
+          "verseEnd": 37,
+          "url": "https://www.lds.org/scriptures/nt/john/19.1-37?lang=eng",
           "testament": "NT"
         }
       ]
@@ -4429,6 +5013,10 @@
         {
           "book": "Daniel",
           "reference": "Daniel 9:24",
+          "chapter": 9,
+          "verseStart": 24,
+          "verseEnd": 24,
+          "url": "https://www.lds.org/scriptures/ot/dan/9.24?lang=eng",
           "testament": "OT"
         }
       ],
@@ -4436,6 +5024,10 @@
         {
           "book": "Galatians",
           "reference": "Galatians 1:3-5",
+          "chapter": 1,
+          "verseStart": 3,
+          "verseEnd": 5,
+          "url": "https://www.lds.org/scriptures/nt/gal/1.3-5?lang=eng",
           "testament": "NT"
         }
       ]
@@ -4449,6 +5041,10 @@
         {
           "book": "Genesis",
           "reference": "Genesis 3:15",
+          "chapter": 3,
+          "verseStart": 15,
+          "verseEnd": 15,
+          "url": "https://www.lds.org/scriptures/ot/gen/3.15?lang=eng",
           "testament": "OT"
         }
       ],
@@ -4456,16 +5052,28 @@
         {
           "book": "John",
           "reference": "John 19:1-37",
+          "chapter": 19,
+          "verseStart": 1,
+          "verseEnd": 37,
+          "url": "https://www.lds.org/scriptures/nt/john/19.1-37?lang=eng",
           "testament": "NT"
         },
         {
           "book": "2 Corinthians",
           "reference": "2 Corinthians 5:21",
+          "chapter": 5,
+          "verseStart": 21,
+          "verseEnd": 21,
+          "url": "https://www.lds.org/scriptures/nt/2-cor/5.21?lang=eng",
           "testament": "NT"
         },
         {
           "book": "1 John",
           "reference": "1 John 4:10",
+          "chapter": 4,
+          "verseStart": 10,
+          "verseEnd": 10,
+          "url": "https://www.lds.org/scriptures/nt/1-jn/4.10?lang=eng",
           "testament": "NT"
         }
       ]
@@ -4479,6 +5087,10 @@
         {
           "book": "Isaiah",
           "reference": "Isaiah 53:9",
+          "chapter": 53,
+          "verseStart": 9,
+          "verseEnd": 9,
+          "url": "https://www.lds.org/scriptures/ot/isa/53.9?lang=eng",
           "testament": "OT"
         }
       ],
@@ -4486,6 +5098,10 @@
         {
           "book": "Matthew",
           "reference": "Matthew 27:57-61",
+          "chapter": 27,
+          "verseStart": 57,
+          "verseEnd": 61,
+          "url": "https://www.lds.org/scriptures/nt/matt/27.57-61?lang=eng",
           "testament": "NT"
         }
       ]
@@ -4499,6 +5115,10 @@
         {
           "book": "Psalms",
           "reference": "Psalm 16:8-11",
+          "chapter": 16,
+          "verseStart": 8,
+          "verseEnd": 11,
+          "url": "https://www.lds.org/scriptures/ot/ps/16.8-11?lang=eng",
           "testament": "OT"
         }
       ],
@@ -4506,21 +5126,37 @@
         {
           "book": "John",
           "reference": "John 20:1-18",
+          "chapter": 20,
+          "verseStart": 1,
+          "verseEnd": 18,
+          "url": "https://www.lds.org/scriptures/nt/john/20.1-18?lang=eng",
           "testament": "NT"
         },
         {
           "book": "Acts",
           "reference": "Acts 2:29-32",
+          "chapter": 2,
+          "verseStart": 29,
+          "verseEnd": 32,
+          "url": "https://www.lds.org/scriptures/nt/acts/2.29-32?lang=eng",
           "testament": "NT"
         },
         {
           "book": "Acts",
           "reference": "Acts 13:32-37",
+          "chapter": 13,
+          "verseStart": 32,
+          "verseEnd": 37,
+          "url": "https://www.lds.org/scriptures/nt/acts/13.32-37?lang=eng",
           "testament": "NT"
         },
         {
           "book": "1 Corinthians",
           "reference": "1 Corinthians 15",
+          "chapter": 15,
+          "verseStart": null,
+          "verseEnd": null,
+          "url": "https://www.lds.org/scriptures/nt/1-cor/15?lang=eng",
           "testament": "NT"
         }
       ]
@@ -4534,6 +5170,10 @@
         {
           "book": "Isaiah",
           "reference": "Isaiah 53:10-12",
+          "chapter": 53,
+          "verseStart": 10,
+          "verseEnd": 12,
+          "url": "https://www.lds.org/scriptures/ot/isa/53.10-12?lang=eng",
           "testament": "OT"
         }
       ],
@@ -4541,11 +5181,19 @@
         {
           "book": "John",
           "reference": "John 20:1-18",
+          "chapter": 20,
+          "verseStart": 1,
+          "verseEnd": 18,
+          "url": "https://www.lds.org/scriptures/nt/john/20.1-18?lang=eng",
           "testament": "NT"
         },
         {
           "book": "Acts",
           "reference": "Acts 1:8",
+          "chapter": 1,
+          "verseStart": 8,
+          "verseEnd": 8,
+          "url": "https://www.lds.org/scriptures/nt/acts/1.8?lang=eng",
           "testament": "NT"
         }
       ]
@@ -4559,6 +5207,10 @@
         {
           "book": "Psalms",
           "reference": "Psalm 110",
+          "chapter": 110,
+          "verseStart": null,
+          "verseEnd": null,
+          "url": "https://www.lds.org/scriptures/ot/ps/110?lang=eng",
           "testament": "OT"
         }
       ],
@@ -4566,21 +5218,37 @@
         {
           "book": "Matthew",
           "reference": "Matthew 26:64",
+          "chapter": 26,
+          "verseStart": 64,
+          "verseEnd": 64,
+          "url": "https://www.lds.org/scriptures/nt/matt/26.64?lang=eng",
           "testament": "NT"
         },
         {
           "book": "Luke",
           "reference": "Luke 24:50-53",
+          "chapter": 24,
+          "verseStart": 50,
+          "verseEnd": 53,
+          "url": "https://www.lds.org/scriptures/nt/luke/24.50-53?lang=eng",
           "testament": "NT"
         },
         {
           "book": "John",
           "reference": "John 20:17",
+          "chapter": 20,
+          "verseStart": 17,
+          "verseEnd": 17,
+          "url": "https://www.lds.org/scriptures/nt/john/20.17?lang=eng",
           "testament": "NT"
         },
         {
           "book": "Acts",
           "reference": "Acts 1:1-12",
+          "chapter": 1,
+          "verseStart": 1,
+          "verseEnd": 12,
+          "url": "https://www.lds.org/scriptures/nt/acts/1.1-12?lang=eng",
           "testament": "NT"
         }
       ]
@@ -4594,6 +5262,10 @@
         {
           "book": "Isaiah",
           "reference": "Isaiah 11:10",
+          "chapter": 11,
+          "verseStart": 10,
+          "verseEnd": 10,
+          "url": "https://www.lds.org/scriptures/ot/isa/11.10?lang=eng",
           "testament": "OT"
         }
       ],
@@ -4601,11 +5273,19 @@
         {
           "book": "Acts",
           "reference": "Acts 1:8",
+          "chapter": 1,
+          "verseStart": 8,
+          "verseEnd": 8,
+          "url": "https://www.lds.org/scriptures/nt/acts/1.8?lang=eng",
           "testament": "NT"
         },
         {
           "book": "Acts",
           "reference": "Acts 13:47-48",
+          "chapter": 13,
+          "verseStart": 47,
+          "verseEnd": 48,
+          "url": "https://www.lds.org/scriptures/nt/acts/13.47-48?lang=eng",
           "testament": "NT"
         }
       ]
@@ -4619,6 +5299,10 @@
         {
           "book": "Isaiah",
           "reference": "Isaiah 42:1-4",
+          "chapter": 42,
+          "verseStart": 1,
+          "verseEnd": 4,
+          "url": "https://www.lds.org/scriptures/ot/isa/42.1-4?lang=eng",
           "testament": "OT"
         }
       ],
@@ -4626,11 +5310,19 @@
         {
           "book": "Matthew",
           "reference": "Matthew 28:19-20",
+          "chapter": 28,
+          "verseStart": 19,
+          "verseEnd": 20,
+          "url": "https://www.lds.org/scriptures/nt/matt/28.19-20?lang=eng",
           "testament": "NT"
         },
         {
           "book": "John",
           "reference": "John 12:18-21",
+          "chapter": 12,
+          "verseStart": 18,
+          "verseEnd": 21,
+          "url": "https://www.lds.org/scriptures/nt/john/12.18-21?lang=eng",
           "testament": "NT"
         }
       ]
@@ -4644,6 +5336,10 @@
         {
           "book": "Isaiah",
           "reference": "Isaiah 42:6",
+          "chapter": 42,
+          "verseStart": 6,
+          "verseEnd": 6,
+          "url": "https://www.lds.org/scriptures/ot/isa/42.6?lang=eng",
           "testament": "OT"
         }
       ],
@@ -4651,6 +5347,10 @@
         {
           "book": "Luke",
           "reference": "Luke 2:22-40",
+          "chapter": 2,
+          "verseStart": 22,
+          "verseEnd": 40,
+          "url": "https://www.lds.org/scriptures/nt/luke/2.22-40?lang=eng",
           "testament": "NT"
         }
       ]
@@ -4664,6 +5364,10 @@
         {
           "book": "Zechariah",
           "reference": "Zechariah 9:9-11",
+          "chapter": 9,
+          "verseStart": 9,
+          "verseEnd": 11,
+          "url": "https://www.lds.org/scriptures/ot/zech/9.9-11?lang=eng",
           "testament": "OT"
         }
       ],
@@ -4671,11 +5375,19 @@
         {
           "book": "Acts",
           "reference": "Acts 1:8",
+          "chapter": 1,
+          "verseStart": 8,
+          "verseEnd": 8,
+          "url": "https://www.lds.org/scriptures/nt/acts/1.8?lang=eng",
           "testament": "NT"
         },
         {
           "book": "Acts",
           "reference": "Acts 13:47-48",
+          "chapter": 13,
+          "verseStart": 47,
+          "verseEnd": 48,
+          "url": "https://www.lds.org/scriptures/nt/acts/13.47-48?lang=eng",
           "testament": "NT"
         }
       ]
@@ -4689,6 +5401,10 @@
         {
           "book": "Isaiah",
           "reference": "Isaiah 49:6",
+          "chapter": 49,
+          "verseStart": 6,
+          "verseEnd": 6,
+          "url": "https://www.lds.org/scriptures/ot/isa/49.6?lang=eng",
           "testament": "OT"
         }
       ],
@@ -4696,6 +5412,10 @@
         {
           "book": "Acts",
           "reference": "Acts 13:47-48",
+          "chapter": 13,
+          "verseStart": 47,
+          "verseEnd": 48,
+          "url": "https://www.lds.org/scriptures/nt/acts/13.47-48?lang=eng",
           "testament": "NT"
         }
       ]
@@ -4709,6 +5429,10 @@
         {
           "book": "Psalms",
           "reference": "Psalm 110",
+          "chapter": 110,
+          "verseStart": null,
+          "verseEnd": null,
+          "url": "https://www.lds.org/scriptures/ot/ps/110?lang=eng",
           "testament": "OT"
         }
       ],
@@ -4716,12 +5440,20 @@
         {
           "book": "Daniel",
           "reference": "Daniel 7:13-14",
+          "chapter": 7,
+          "verseStart": 13,
+          "verseEnd": 14,
+          "url": "https://www.lds.org/scriptures/ot/dan/7.13-14?lang=eng",
           "testament": "OT",
           "plot": false
         },
         {
           "book": "Daniel",
           "reference": "Daniel 12:1-2",
+          "chapter": 12,
+          "verseStart": 1,
+          "verseEnd": 2,
+          "url": "https://www.lds.org/scriptures/ot/dan/12.1-2?lang=eng",
           "testament": "OT",
           "plot": false
         }
@@ -4736,6 +5468,10 @@
         {
           "book": "Daniel",
           "reference": "Daniel 7:13-14",
+          "chapter": 7,
+          "verseStart": 13,
+          "verseEnd": 14,
+          "url": "https://www.lds.org/scriptures/ot/dan/7.13-14?lang=eng",
           "testament": "OT"
         }
       ],
@@ -4743,6 +5479,10 @@
         {
           "book": "Luke",
           "reference": "Luke 1:31-33",
+          "chapter": 1,
+          "verseStart": 31,
+          "verseEnd": 33,
+          "url": "https://www.lds.org/scriptures/nt/luke/1.31-33?lang=eng",
           "testament": "NT"
         }
       ]

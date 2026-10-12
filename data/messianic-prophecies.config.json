@@ -1,8 +1,8 @@
 {
   "id": "messianic-prophecies",
   "title": "Prophecies of the Messiah",
-  "subtitle": "Seventy major Old Testament prophecies, and the New Testament books that record their fulfillment.",
-  "hint": "Hover a curve or a book to read the summary and the King James text. Click, or tap on a phone, to keep the full passage open below the chart. Tap the background to clear.",
+  "subtitle": "Seventy major Old Testament prophecies, each connected to the New Testament passage that records its fulfillment.",
+  "hint": "Hover a scripture reference to read it. Click a reference to open it on lds.org. On a phone, tap a reference to read it, then tap Open on lds.org. Hover a curve to see the prophecy that ties the two passages together.",
   "kicker": "Old Testament prediction  ·  New Testament fulfillment",
   "leftColumn": {
     "label": "Old Testament",
@@ -15,8 +15,8 @@
   "sourceHeading": "Old Testament",
   "targetHeading": "New Testament",
   "legendLabel": "Fulfillment books",
-  "dotsNote": "Each dot is one entry. Curves connect that Old Testament book to every New Testament book cited as a fulfillment. Color matches the fulfillment book. Select a book in the legend to show only those curves, and select it again to show all.",
-  "footnote": "One entry — “The Messiah will return to preside over Judgment Day” (Psalm 110) — cites Daniel 7 and 12 for a future fulfillment rather than a New Testament book. Select Psalms to read it. No curve is drawn for that entry.",
+  "dotsNote": "Every label is a scripture passage, in canonical order. A curve connects an Old Testament passage to each fulfillment passage cited for it. Color matches the fulfillment book. Select a book in the legend to show only those curves.",
+  "footnote": "Psalm 110, “The Messiah will return to preside over Judgment Day,” is cited to Daniel 7:13–14 and Daniel 12:1–2 as a future fulfillment. Those Daniel passages are listed at the bottom of the fulfillment column.",
   "credit": {
     "before": "Summaries and pairings from ",
     "linkText": "Ray Konig’s chart at about-jesus.org",
@@ -28,6 +28,8 @@
     "entry": "entry",
     "entries": "entries",
     "openFull": "Click or tap for the full passage below the chart.",
+    "openScripture": "Open on lds.org",
+    "moreVerses": "Open the reference on lds.org to read the rest of the passage.",
     "loading": "Loading chart…",
     "error": "The chart could not be loaded."
   },
@@ -44,7 +46,8 @@
     "2 Corinthians": "#7C3AED",
     "Galatians": "#1F7A4D",
     "Hebrews": "#A15C38",
-    "1 John": "#3F6473"
+    "1 John": "#3F6473",
+    "Daniel": "#64748B"
   },
   "shortLabels": {
     "Deuteronomy": "Deut.",
