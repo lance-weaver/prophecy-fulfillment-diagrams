@@ -2,7 +2,7 @@
   "id": "messianic-prophecies",
   "title": "Prophecies of the Messiah",
   "subtitle": "Seventy major Old Testament prophecies, each connected to the New Testament passage that records its fulfillment.",
-  "hint": "Hover a scripture reference to read it. Click a reference to open it on lds.org. On a phone, tap a reference to read it, then tap Open on lds.org. Hover a curve to see the prophecy that ties the two passages together.",
+  "hint": "Hover a scripture reference or curve to read both passages. Click a reference to open it on lds.org. On a phone, tap a reference or a curve to keep the popup open, then scroll it or tap Open on lds.org.",
   "kicker": "Old Testament prediction  ·  New Testament fulfillment",
   "leftColumn": {
     "label": "Old Testament",
@@ -50,18 +50,28 @@
     "Daniel": "#64748B"
   },
   "shortLabels": {
+    "Genesis": "Gen.",
     "Deuteronomy": "Deut.",
+    "2 Samuel": "2 Sam.",
+    "Psalms": "Ps.",
+    "Isaiah": "Isa.",
+    "Jeremiah": "Jer.",
+    "Ezekiel": "Ezek.",
+    "Daniel": "Dan.",
+    "Micah": "Mic.",
     "Zechariah": "Zech.",
-    "Lamentations": "Lam.",
-    "Ecclesiastes": "Eccl.",
+    "Malachi": "Mal.",
+    "Matthew": "Matt.",
+    "Mark": "Mark",
+    "Luke": "Luke",
+    "John": "John",
+    "Acts": "Acts",
+    "Romans": "Rom.",
     "1 Corinthians": "1 Cor.",
     "2 Corinthians": "2 Cor.",
-    "1 Thessalonians": "1 Thess.",
-    "2 Thessalonians": "2 Thess.",
-    "1 Chronicles": "1 Chr.",
-    "2 Chronicles": "2 Chr.",
-    "Song of Solomon": "Song",
-    "Philippians": "Phil."
+    "Galatians": "Gal.",
+    "Hebrews": "Heb.",
+    "1 John": "1 John"
   },
   "bookOrder": {
     "left": [

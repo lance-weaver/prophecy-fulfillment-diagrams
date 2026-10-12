@@ -2,7 +2,7 @@
 
 An interactive, two-column connection chart for embedding in a WordPress post. The first diagram is **Prophecies of the Messiah**: Old Testament books on the left, New Testament books on the right, and a curve for every prophecy that links them.
 
-Each axis lists every scripture passage, not just the book. Hover a reference to read the King James text in a popup. Click it to open that passage on [lds.org](https://www.lds.org/scriptures). Hover a curve to see the prophecy that connects the two passages, and click the curve to keep that entry open below the chart. The page posts its document height to the parent window as `{ source: "prophecy-charts", type: "resize", height }`, so a cross-origin iframe on [gatheredin.one](https://gatheredin.one) (or www.gatheredin.one) can grow with the chart instead of scrolling inside the frame.
+Each axis lists every scripture passage, not just the book. Hover a reference or a curve to read both connected King James passages in a popup. Click a reference to open it on [lds.org](https://www.lds.org/scriptures). On a phone, tap a reference or a curve to pin that popup so it stays open, can be scrolled, and can be used to open lds.org. Click a curve on a desktop to keep that entry open below the chart. On viewports 759px and narrower, axis book names use SBL-style abbreviations (Isaiah → Isa., Genesis → Gen.). Desktop keeps the full names. The page posts its document height to the parent window as `{ source: "prophecy-charts", type: "resize", height }`, so a cross-origin iframe on [gatheredin.one](https://gatheredin.one) (or www.gatheredin.one) can grow with the chart instead of scrolling inside the frame.
 
 The chart module itself is generic. A new diagram is a data file plus a config file. Words such as “prophecy” and “Messiah” live in those files, not in the drawing code.
 
@@ -130,7 +130,7 @@ Use that URL as the iframe `src`. Give the config its own `id`, and set the ifra
 { "itemId": "14", "label": "Born in Bethlehem", "citation": "Micah 5:2" }
 ```
 
-`shortLabels` supplies compact book names when the column is too narrow for the full name.
+`shortLabels` overrides the built-in SBL-style book abbreviations. Those short names are used on viewports 759px and narrower, and as a fallback when a desktop column cannot fit the full name.
 
 ## What’s in the messianic dataset
 
