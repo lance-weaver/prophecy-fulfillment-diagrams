@@ -175,6 +175,10 @@
       return !finePointer.matches;
     }
 
+    function preferPin(event) {
+      return isTouchLike(event) || !finePointer.matches || compactNames.matches;
+    }
+
     function wasTap(event) {
       if (!pointerDownAt || pointerDownAt.id !== event.pointerId) return true;
       var dx = event.clientX - pointerDownAt.x;
@@ -945,7 +949,7 @@
             if (event.cancelable) event.preventDefault();
             return;
           }
-          if (isTouchLike(event) || !finePointer.matches) {
+          if (preferPin(event)) {
             if (event.cancelable) event.preventDefault();
             if (!wasTap(event)) return;
             hoverRef = null;
@@ -1050,7 +1054,7 @@
           });
           anchor.on("click", function (event) {
             event.stopPropagation();
-            if (Date.now() - lastTouchPin < 500 || isTouchLike(event) || !finePointer.matches) {
+            if (Date.now() - lastTouchPin < 500 || preferPin(event)) {
               if (event.cancelable) event.preventDefault();
               if (Date.now() - lastTouchPin < 500) return;
               if (!wasTap(event)) return;
@@ -1145,7 +1149,7 @@
           .on("click", function (event) {
             event.stopPropagation();
             if (Date.now() - lastTouchPin < 500) return;
-            if (isTouchLike(event) || !finePointer.matches) {
+            if (preferPin(event)) {
               if (!wasTap(event)) return;
               showTip(match, event, true);
               lastTouchPin = Date.now();
