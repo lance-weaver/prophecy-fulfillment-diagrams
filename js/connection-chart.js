@@ -105,6 +105,12 @@
     var drawTimer = 0;
     var finePointer = global.matchMedia("(hover: hover) and (pointer: fine)");
 
+    function allowHoverPreview(event) {
+      var type = event && event.pointerType;
+      if (type === "touch") return false;
+      return finePointer.matches || type === "mouse" || type === "pen" || type == null || type === "";
+    }
+
     container.replaceChildren();
     var root = document.createElement("div");
     root.className = "pfd";
@@ -503,7 +509,7 @@
 
     function showTip(link, event, pin) {
       if (!link) return;
-      if (!pin && (!finePointer.matches || tipPinned)) return;
+      if (!pin && (tipPinned || !allowHoverPreview(event))) return;
       fillTip(linkTipHtml(link), event, pin);
     }
 
@@ -813,9 +819,8 @@
           .attr("class", "hit")
           .attr("d", row.d)
           .attr("stroke-width", narrow ? 16 : 10);
-        hit.append("title").text((row.link.items && row.link.items[0] && row.link.items[0].summary) || "");
         hit.on("pointerenter", function (event) {
-          if (!finePointer.matches || tipPinned) return;
+          if (!allowHoverPreview(event) || tipPinned) return;
           hoverRef = null;
           restyle();
           showTip(row.link, event);
@@ -902,7 +907,7 @@
             showRefTip(ref, side, event, pin);
           }
           anchor.on("pointerenter", function (event) {
-            if (!finePointer.matches) return;
+            if (!allowHoverPreview(event)) return;
             focus(event, false);
           });
           anchor.on("pointerleave", function () {
@@ -989,7 +994,7 @@
           .attr("fill", "transparent")
           .style("cursor", "pointer")
           .on("pointerenter", function (event) {
-            if (!finePointer.matches) return;
+            if (!allowHoverPreview(event)) return;
             showTip(match, event);
           })
           .on("pointerleave", function () { scheduleHide(); })
