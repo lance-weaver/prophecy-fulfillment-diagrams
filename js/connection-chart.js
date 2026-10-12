@@ -50,41 +50,71 @@
     return seen;
   }
 
+  function documentHeight() {
+    var body = document.body;
+    var html = document.documentElement;
+    var app = document.getElementById("app");
+    var values = [
+      app ? app.scrollHeight : 0,
+      app ? app.offsetHeight : 0,
+      body ? body.scrollHeight : 0,
+      body ? body.offsetHeight : 0,
+      html ? html.scrollHeight : 0,
+      html ? html.offsetHeight : 0
+    ];
+    var height = 0;
+    for (var i = 0; i < values.length; i++) {
+      if (values[i] > height) height = values[i];
+    }
+    return Math.ceil(height);
+  }
+
   function watchHeight(options) {
-    var type = (options && options.type) || "pfd:resize";
+    var source = (options && options.source) || "prophecy-charts";
+    var type = (options && options.type) || "resize";
     var getId = (options && options.getId) || function () { return (options && options.id) || ""; };
     var last = -1;
     var timer = 0;
 
-    function measure() {
-      var app = document.getElementById("app");
-      var height = app ? app.offsetHeight : document.body.offsetHeight;
-      return Math.ceil(height) + 2;
-    }
-
-    function send() {
-      var height = measure();
-      if (height === last) return;
+    function send(force) {
+      var height = documentHeight();
+      if (!force && height === last) return;
       last = height;
       if (global.parent && global.parent !== global) {
-        global.parent.postMessage({ type: type, height: height, id: getId() || "" }, "*");
+        // "*" lets both gatheredin.one and www.gatheredin.one receive the
+        // message; the parent must check event.origin itself.
+        global.parent.postMessage({
+          source: source,
+          type: type,
+          height: height,
+          id: getId() || ""
+        }, "*");
       }
     }
 
     function report() {
       global.clearTimeout(timer);
-      timer = global.setTimeout(send, 40);
+      timer = global.setTimeout(function () { send(false); }, 40);
+    }
+
+    function onParentMessage(event) {
+      var data = event.data;
+      if (!data || typeof data !== "object") return;
+      if (data.source !== source) return;
+      if (data.type !== "request-height") return;
+      send(true);
     }
 
     if (typeof ResizeObserver === "function") {
       var observer = new ResizeObserver(report);
-      observer.observe(document.body);
-      observer.observe(document.documentElement);
+      if (document.documentElement) observer.observe(document.documentElement);
+      if (document.body) observer.observe(document.body);
       var appNow = document.getElementById("app");
       if (appNow) observer.observe(appNow);
     }
     global.addEventListener("load", report);
     global.addEventListener("resize", report);
+    global.addEventListener("message", onParentMessage);
     report();
     return report;
   }
