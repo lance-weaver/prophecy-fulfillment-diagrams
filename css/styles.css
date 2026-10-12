@@ -226,16 +226,21 @@ button, a { font-family: inherit; }
 }
 
 .pfd-tooltip {
-  position: absolute;
-  z-index: 5;
-  width: min(420px, calc(100% - 16px));
+  position: fixed;
+  z-index: 20;
+  width: min(420px, calc(100vw - 16px));
+  max-height: calc(100vh - 16px);
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
   background: #fff;
   color: var(--ink);
   border: 1px solid #d6d3d1;
   border-radius: 14px;
   box-shadow: 0 16px 40px rgba(28, 25, 23, 0.14);
   padding: 12px 14px 10px;
-  pointer-events: none;
+  pointer-events: auto;
 }
 
 .pfd-tooltip.is-pinned { pointer-events: auto; }
