@@ -2,7 +2,7 @@
 
 An interactive, two-column connection chart for embedding in a WordPress post. The first diagram is **Prophecies of the Messiah**: Old Testament books on the left, New Testament books on the right, and a curve for every prophecy that links them.
 
-Hover a curve (desktop) to read the summary and the King James text. Click or tap to keep the full passage open below the chart. The page reports its height to the parent window, so an iframe on [gatheredin.one](https://gatheredin.one) can grow with the reading instead of scrolling inside the frame.
+Each axis lists every scripture passage, not just the book. Hover a reference to read the King James text in a popup. Click it to open that passage on [lds.org](https://www.lds.org/scriptures). Hover a curve to see the prophecy that connects the two passages, and click the curve to keep that entry open below the chart. The page reports its height to the parent window, so an iframe on [gatheredin.one](https://gatheredin.one) can grow with the reading instead of scrolling inside the frame.
 
 The chart module itself is generic. A new diagram is a data file plus a config file. Words such as “prophecy” and “Messiah” live in those files, not in the drawing code.
 
@@ -95,8 +95,9 @@ Use that URL as the iframe `src`. Give the config its own `id`, and set the ifra
 }
 ```
 
-- One curve is drawn for each source book paired with each target book on the same item.
-- A target with `"plot": false` is still shown in the detail view and does not get a curve. The Judgment Day entry does this: Psalm 110 is cited to Daniel, which is not a New Testament book.
+- One curve is drawn for each source passage paired with each fulfillment passage on the same item. The axis label is the full reference (`Isaiah 53:4-9`), grouped under its book.
+- Each reference can include a `url`. On this chart that URL is the passage on lds.org. Hovering the label shows the verse text; clicking it opens `url` in a new tab.
+- A target with `"plot": false` is still a fulfillment citation. This chart draws it: Psalm 110’s future-fulfillment entry cites Daniel 7:13–14 and Daniel 12:1–2, which appear at the bottom of the fulfillment column.
 - Verse text can live in `passages` (shared) or inline on a reference as `"verses": [{ "n": 1, "text": "…" }]`.
 - Book order in `books.source` / `books.target` is the fallback when the config does not set `bookOrder`.
 
@@ -120,11 +121,7 @@ Regenerate it from the repo root (this downloads the chart and a public-domain K
 python3 scripts/build_dataset.py
 ```
 
-Every row on that chart parsed. One row does not become a curve:
-
-| Entry | Summary | Why there is no curve |
-| --- | --- | --- |
-| 69 | The Messiah will return to preside over Judgment Day | The chart cites Daniel 7:13–14 and Daniel 12:1–2 as a future fulfillment, not a New Testament book. Select **Psalms** to read the summary, the note, and the King James text. |
+Every row on that chart parsed. Entry 69, “The Messiah will return to preside over Judgment Day,” cites Daniel 7:13–14 and Daniel 12:1–2 rather than a New Testament book. Those Daniel passages are still drawn, at the bottom of the fulfillment column, and each one opens on lds.org.
 
 ## Local development
 
