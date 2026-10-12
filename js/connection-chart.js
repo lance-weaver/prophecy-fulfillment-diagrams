@@ -23,6 +23,29 @@
 (function (global) {
   var PALETTE = ["#6C4AB6", "#6E8B3D", "#0E7C86", "#D1493D", "#B08958", "#2C5282", "#C47B12", "#7C3AED", "#1F7A4D", "#A15C38", "#3F6473"];
 
+  // SBL Handbook of Style abbreviations (Protestant canon). Short names
+  // already 4 letters or fewer stay as-is (Mark, Luke, John, Acts, Job).
+  var BOOK_ABBREV = {
+    Genesis: "Gen.", Exodus: "Exod.", Leviticus: "Lev.", Numbers: "Num.",
+    Deuteronomy: "Deut.", Joshua: "Josh.", Judges: "Judg.", Ruth: "Ruth",
+    "1 Samuel": "1 Sam.", "2 Samuel": "2 Sam.", "1 Kings": "1 Kgs.", "2 Kings": "2 Kgs.",
+    "1 Chronicles": "1 Chr.", "2 Chronicles": "2 Chr.", Ezra: "Ezra", Nehemiah: "Neh.",
+    Esther: "Esth.", Job: "Job", Psalms: "Ps.", Psalm: "Ps.", Proverbs: "Prov.",
+    Ecclesiastes: "Eccl.", "Song of Solomon": "Song", "Song of Songs": "Song",
+    Isaiah: "Isa.", Jeremiah: "Jer.", Lamentations: "Lam.", Ezekiel: "Ezek.",
+    Daniel: "Dan.", Hosea: "Hos.", Joel: "Joel", Amos: "Amos", Obadiah: "Obad.",
+    Jonah: "Jonah", Micah: "Mic.", Nahum: "Nah.", Habakkuk: "Hab.",
+    Zephaniah: "Zeph.", Haggai: "Hag.", Zechariah: "Zech.", Malachi: "Mal.",
+    Matthew: "Matt.", Mark: "Mark", Luke: "Luke", John: "John", Acts: "Acts",
+    Romans: "Rom.", "1 Corinthians": "1 Cor.", "2 Corinthians": "2 Cor.",
+    Galatians: "Gal.", Ephesians: "Eph.", Philippians: "Phil.", Colossians: "Col.",
+    "1 Thessalonians": "1 Thess.", "2 Thessalonians": "2 Thess.",
+    "1 Timothy": "1 Tim.", "2 Timothy": "2 Tim.", Titus: "Titus", Philemon: "Phlm.",
+    Hebrews: "Heb.", James: "Jas.", "1 Peter": "1 Pet.", "2 Peter": "2 Pet.",
+    "1 John": "1 John", "2 John": "2 John", "3 John": "3 John", Jude: "Jude",
+    Revelation: "Rev."
+  };
+
   function esc(value) {
     return String(value == null ? "" : value).replace(/[&<>"']/g, function (ch) {
       return ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[ch];
@@ -132,13 +155,51 @@
     var hideTimer = 0;
     var filterBook = null;
     var lastWidth = -1;
+    var lastCompact = null;
     var drawTimer = 0;
+    var lastTouchPin = 0;
+    var pointerDownAt = null;
     var finePointer = global.matchMedia("(hover: hover) and (pointer: fine)");
+    var compactNames = global.matchMedia("(max-width: 759px)");
 
     function allowHoverPreview(event) {
       var type = event && event.pointerType;
       if (type === "touch") return false;
       return finePointer.matches || type === "mouse" || type === "pen" || type == null || type === "";
+    }
+
+    function isTouchLike(event) {
+      var type = event && event.pointerType;
+      if (type === "touch") return true;
+      if (type === "mouse" || type === "pen") return false;
+      return !finePointer.matches;
+    }
+
+    function wasTap(event) {
+      if (!pointerDownAt || pointerDownAt.id !== event.pointerId) return true;
+      var dx = event.clientX - pointerDownAt.x;
+      var dy = event.clientY - pointerDownAt.y;
+      return (dx * dx + dy * dy) <= 100;
+    }
+
+    function markPointerDown(event) {
+      pointerDownAt = { x: event.clientX, y: event.clientY, id: event.pointerId };
+    }
+
+    function bookAbbrev(book) {
+      if (cfg.shortLabels && cfg.shortLabels[book]) return cfg.shortLabels[book];
+      return BOOK_ABBREV[book] || book;
+    }
+
+    function shortReference(ref) {
+      var book = ref.book;
+      var shortBook = bookAbbrev(book);
+      var text = String(ref.reference || "");
+      if (book && text.indexOf(book) === 0) {
+        return (shortBook + text.slice(book.length)).trim();
+      }
+      var versePart = text.replace(/^[1-3]?\s?[A-Za-z]+\.?\s+/, "");
+      return (shortBook + " " + versePart).trim();
     }
 
     container.replaceChildren();
@@ -433,11 +494,11 @@
       return html;
     }
 
-    function passageBlock(ref) {
+    function passageBlock(ref, withOpen) {
       var verses = versesOf(data, ref);
       var html = '<p class="pfd-tip-ref" style="color:' + esc(colorForBook(ref.book)) + '">' + esc(ref.reference) + "</p>";
-      if (!verses.length) return { html: html, truncated: false, used: 0 };
-      html += '<p class="pfd-tip-passage">' + passageHtml(verses) + "</p>";
+      if (verses.length) html += '<p class="pfd-tip-passage">' + passageHtml(verses) + "</p>";
+      if (withOpen) html += openLinkHtml(ref);
       return { html: html, truncated: false, used: verses.length };
     }
 
@@ -453,7 +514,7 @@
       list.push(value);
     }
 
-    function pairTipHtml(sources, targets, items, extra) {
+    function pairTipHtml(sources, targets, items, withOpen) {
       var summaries = [];
       var seenSummary = {};
       (items || []).forEach(function (item) {
@@ -464,15 +525,14 @@
         html += '<p class="pfd-tip-more">' + summaries.length + " " + esc(strings.entries || "entries") + "</p>";
       }
       html += '<p class="pfd-tip-kicker">' + esc(cfg.sourceHeading || "Source") + "</p>";
-      sources.forEach(function (source) { html += passageBlock(source).html; });
+      sources.forEach(function (source) { html += passageBlock(source, withOpen).html; });
       html += '<p class="pfd-tip-kicker">' + esc(cfg.targetHeading || "Target") + "</p>";
-      targets.forEach(function (target) { html += passageBlock(target).html; });
-      html += extra || "";
+      targets.forEach(function (target) { html += passageBlock(target, withOpen).html; });
       return html;
     }
 
-    function linkTipHtml(link, extra) {
-      return pairTipHtml([link.source], [link.target], link.items || [link.item], extra);
+    function linkTipHtml(link, withOpen) {
+      return pairTipHtml([link.source], [link.target], link.items || [link.item], withOpen);
     }
 
     function linksForRef(ref, side) {
@@ -481,12 +541,12 @@
       });
     }
 
-    function refPairTipHtml(ref, side, extra) {
+    function refPairTipHtml(ref, side, withOpen) {
       var connected = linksForRef(ref, side);
       if (!connected.length) {
         var sources = side === "source" ? [ref] : [];
         var targets = side === "target" ? [ref] : [];
-        return pairTipHtml(sources, targets, [], extra);
+        return pairTipHtml(sources, targets, [], withOpen);
       }
       var sources = [];
       var targets = [];
@@ -502,7 +562,7 @@
           appendUnique(items, seenItem, String(item.id), item);
         });
       });
-      return pairTipHtml(sources, targets, items, extra);
+      return pairTipHtml(sources, targets, items, withOpen);
     }
 
     function cancelHide() {
@@ -533,14 +593,13 @@
 
     function showRefTip(ref, side, event, pin) {
       if (!ref) return;
-      var extra = pin ? openLinkHtml(ref) : "";
-      fillTip(refPairTipHtml(ref, side, extra), event, pin);
+      fillTip(refPairTipHtml(ref, side, pin), event, pin);
     }
 
     function showTip(link, event, pin) {
       if (!link) return;
       if (!pin && (tipPinned || !allowHoverPreview(event))) return;
-      fillTip(linkTipHtml(link), event, pin);
+      fillTip(linkTipHtml(link, pin), event, pin);
     }
 
     function viewportSize() {
@@ -589,6 +648,22 @@
     tip.addEventListener("wheel", function (event) {
       event.stopPropagation();
     }, { passive: true });
+    tip.addEventListener("pointerdown", function (event) {
+      event.stopPropagation();
+    });
+    tip.addEventListener("touchstart", function (event) {
+      event.stopPropagation();
+    }, { passive: true });
+
+    function onDocPointerDown(event) {
+      if (!tipPinned || tip.hidden) return;
+      if (tip.contains(event.target)) return;
+      var el = event.target;
+      if (el && el.closest && el.closest(".pfd-ref, .pfd-link, .pfd-callout-hit")) return;
+      hideTip(true);
+      hoverRef = null;
+      restyle();
+    }
 
     function clearSelection() {
       panelSelection = null;
@@ -747,28 +822,27 @@
       return width;
     }
 
-    function referenceLabel(ref, maxText, size) {
+    function referenceLabel(ref, maxText, size, useShort) {
+      if (useShort) return shortReference(ref);
       if (textWidth(ref.reference, size, 0) <= maxText) return ref.reference;
-      var shortBook = (cfg.shortLabels && cfg.shortLabels[ref.book]) || ref.book;
-      if (ref.book === "Psalms") shortBook = "Ps.";
-      var versePart = String(ref.reference).replace(/^[1-3]?\s?[A-Za-z]+\.?\s+/, "");
-      var compact = (shortBook + " " + versePart).trim();
-      return textWidth(compact, size, 0) <= maxText ? compact : compact;
+      return shortReference(ref);
     }
 
-    function bookHeading(book, maxText, size) {
-      var upper = book.toUpperCase();
-      if (textWidth(upper, size, "0.06em") <= maxText) return upper;
-      var short = (cfg.shortLabels && cfg.shortLabels[book]) || book;
-      return String(short).toUpperCase();
+    function bookHeading(book, maxText, size, useShort) {
+      var label = useShort ? bookAbbrev(book) : book;
+      var upper = String(label).toUpperCase();
+      if (useShort || textWidth(upper, size, "0.06em") <= maxText) return upper;
+      return String(bookAbbrev(book)).toUpperCase();
     }
 
     function draw(force) {
       if (disposed || !global.d3) return;
       var width = Math.floor(stage.clientWidth);
       if (width < 40) return;
-      if (!force && width === lastWidth) return;
+      var useShort = compactNames.matches;
+      if (!force && width === lastWidth && useShort === lastCompact) return;
       lastWidth = width;
+      lastCompact = useShort;
       var narrow = width < 760;
       var fontSize = narrow ? 13.5 : 13;
       var headSize = narrow ? 11 : 11;
@@ -787,10 +861,10 @@
 
       var widest = 72;
       leftRefs.concat(rightRefs).forEach(function (ref) {
-        widest = Math.max(widest, textWidth(referenceLabel(ref, maxText, fontSize), fontSize, 0));
+        widest = Math.max(widest, textWidth(referenceLabel(ref, maxText, fontSize, useShort), fontSize, 0));
       });
       leftOrder.concat(rightOrder).forEach(function (book) {
-        widest = Math.max(widest, textWidth(bookHeading(book, maxText, headSize), headSize, "0.06em"));
+        widest = Math.max(widest, textWidth(bookHeading(book, maxText, headSize, useShort), headSize, "0.06em"));
       });
       var labelW = Math.min(cap, Math.max(narrow ? 108 : 150, Math.ceil(widest + 20)));
       root.style.setProperty("--label", labelW + "px");
@@ -856,14 +930,36 @@
           showTip(row.link, event);
         });
         hit.on("pointerleave", function () { scheduleHide(); });
+        hit.on("pointerdown", markPointerDown);
+        hit.on("pointerup", function (event) {
+          if (!isTouchLike(event) || !wasTap(event)) return;
+          event.stopPropagation();
+          hoverRef = null;
+          restyle();
+          showTip(row.link, event, true);
+          lastTouchPin = Date.now();
+        });
         hit.on("click", function (event) {
           event.stopPropagation();
-          selectLink(row.link, !finePointer.matches);
+          if (Date.now() - lastTouchPin < 500) {
+            if (event.cancelable) event.preventDefault();
+            return;
+          }
+          if (isTouchLike(event) || !finePointer.matches) {
+            if (event.cancelable) event.preventDefault();
+            if (!wasTap(event)) return;
+            hoverRef = null;
+            restyle();
+            showTip(row.link, event, true);
+            lastTouchPin = Date.now();
+            return;
+          }
+          selectLink(row.link, false);
         });
       });
 
-      drawReferences(left.sections, "source", x1, labelW, fontSize, headSize, maxText, true);
-      drawReferences(right.sections, "target", x2, labelW, fontSize, headSize, maxText, false);
+      drawReferences(left.sections, "source", x1, labelW, fontSize, headSize, maxText, true, useShort);
+      drawReferences(right.sections, "target", x2, labelW, fontSize, headSize, maxText, false, useShort);
       restyle();
 
       if (!narrow && width >= 980 && !filterBook) drawCallouts(x1, x2, left.index, right.index);
@@ -895,7 +991,7 @@
       });
     }
 
-    function drawReferences(sections, side, dotX, labelW, fontSize, headSize, maxText, isLeft) {
+    function drawReferences(sections, side, dotX, labelW, fontSize, headSize, maxText, isLeft, useShort) {
       var layer = svg.append("g").attr("class", "pfd-books");
       sections.forEach(function (section) {
         layer.append("text")
@@ -907,7 +1003,7 @@
           .attr("font-weight", 700)
           .attr("letter-spacing", "0.08em")
           .attr("fill", "#a8a29e")
-          .text(bookHeading(section.book, maxText, headSize));
+          .text(bookHeading(section.book, maxText, headSize, useShort));
         section.rows.forEach(function (row) {
           var ref = row.ref;
           var group = layer.append("g")
@@ -924,7 +1020,7 @@
             .attr("font-size", fontSize)
             .attr("font-weight", 600)
             .attr("fill", side === "target" ? colorForBook(ref.book) : "#1c1917")
-            .text(referenceLabel(ref, maxText, fontSize));
+            .text(referenceLabel(ref, maxText, fontSize, useShort));
           anchor.append("circle")
             .attr("cx", dotX)
             .attr("cy", row.y)
@@ -944,11 +1040,22 @@
             if (tipPinned) return;
             scheduleHide();
           });
+          anchor.on("pointerdown", markPointerDown);
+          anchor.on("pointerup", function (event) {
+            if (!isTouchLike(event) || !wasTap(event)) return;
+            if (event.cancelable) event.preventDefault();
+            event.stopPropagation();
+            focus(event, true);
+            lastTouchPin = Date.now();
+          });
           anchor.on("click", function (event) {
             event.stopPropagation();
-            if (!finePointer.matches) {
-              event.preventDefault();
+            if (Date.now() - lastTouchPin < 500 || isTouchLike(event) || !finePointer.matches) {
+              if (event.cancelable) event.preventDefault();
+              if (Date.now() - lastTouchPin < 500) return;
+              if (!wasTap(event)) return;
               focus(event, true);
+              lastTouchPin = Date.now();
             }
           });
         });
@@ -1028,8 +1135,22 @@
             showTip(match, event);
           })
           .on("pointerleave", function () { scheduleHide(); })
+          .on("pointerdown", markPointerDown)
+          .on("pointerup", function (event) {
+            if (!isTouchLike(event) || !wasTap(event)) return;
+            event.stopPropagation();
+            showTip(match, event, true);
+            lastTouchPin = Date.now();
+          })
           .on("click", function (event) {
             event.stopPropagation();
+            if (Date.now() - lastTouchPin < 500) return;
+            if (isTouchLike(event) || !finePointer.matches) {
+              if (!wasTap(event)) return;
+              showTip(match, event, true);
+              lastTouchPin = Date.now();
+              return;
+            }
             selectItem(callout.itemId, true);
           });
       });
@@ -1039,12 +1160,18 @@
       if (event.key === "Escape") clearSelection();
     }
     document.addEventListener("keydown", onKey);
+    document.addEventListener("pointerdown", onDocPointerDown);
 
     var resizeObserver = null;
     function scheduleDraw() {
       global.clearTimeout(drawTimer);
       drawTimer = global.setTimeout(function () { draw(false); notify(); }, 60);
     }
+    function onCompactChange() {
+      scheduleDraw();
+    }
+    if (compactNames.addEventListener) compactNames.addEventListener("change", onCompactChange);
+    else if (compactNames.addListener) compactNames.addListener(onCompactChange);
     if (typeof ResizeObserver === "function") {
       resizeObserver = new ResizeObserver(function () { scheduleDraw(); });
       resizeObserver.observe(stage);
@@ -1064,7 +1191,10 @@
         disposed = true;
         cancelHide();
         document.removeEventListener("keydown", onKey);
+        document.removeEventListener("pointerdown", onDocPointerDown);
         global.removeEventListener("resize", scheduleDraw);
+        if (compactNames.removeEventListener) compactNames.removeEventListener("change", onCompactChange);
+        else if (compactNames.removeListener) compactNames.removeListener(onCompactChange);
         if (resizeObserver) resizeObserver.disconnect();
       }
     };

@@ -230,10 +230,12 @@ button, a { font-family: inherit; }
   z-index: 20;
   width: min(420px, calc(100vw - 16px));
   max-height: calc(100vh - 16px);
+  max-height: calc(100dvh - 16px);
   overflow-x: hidden;
   overflow-y: auto;
   overscroll-behavior: contain;
   -webkit-overflow-scrolling: touch;
+  touch-action: pan-y;
   background: #fff;
   color: var(--ink);
   border: 1px solid #d6d3d1;
