@@ -129,8 +129,9 @@ button, a { font-family: inherit; }
 .pfd-link .hit { fill: none; stroke: transparent; stroke-linecap: round; }
 
 .pfd-book { cursor: pointer; }
-.pfd-book:focus { outline: none; }
-.pfd-book:focus text { text-decoration: underline; text-underline-offset: 3px; }
+.pfd-ref text { cursor: pointer; }
+.pfd-ref:hover text { text-decoration: underline; text-underline-offset: 3px; }
+.pfd-svg a { cursor: pointer; }
 
 .pfd-bubble {
   background: #fff;
@@ -236,6 +237,17 @@ button, a { font-family: inherit; }
   padding: 12px 14px 10px;
   pointer-events: none;
 }
+
+.pfd-tooltip.is-pinned { pointer-events: auto; }
+
+.pfd-open {
+  display: inline-block;
+  margin-top: 4px;
+  font-weight: 700;
+  color: #1d4e89;
+}
+
+.pfd-refname a { color: inherit; }
 
 .pfd-tooltip[hidden] { display: none; }
 

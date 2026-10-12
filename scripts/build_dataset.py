@@ -243,6 +243,87 @@ def match_book(fragment: str) -> tuple[str | None, str]:
     return None, fragment
 
 
+# lds.org scripture paths. They redirect to the Church scripture study pages.
+SCRIPTURE_SLUGS = {
+    "Genesis": ("ot", "gen"),
+    "Exodus": ("ot", "ex"),
+    "Leviticus": ("ot", "lev"),
+    "Numbers": ("ot", "num"),
+    "Deuteronomy": ("ot", "deut"),
+    "Joshua": ("ot", "josh"),
+    "Judges": ("ot", "judg"),
+    "Ruth": ("ot", "ruth"),
+    "1 Samuel": ("ot", "1-sam"),
+    "2 Samuel": ("ot", "2-sam"),
+    "1 Kings": ("ot", "1-kgs"),
+    "2 Kings": ("ot", "2-kgs"),
+    "1 Chronicles": ("ot", "1-chr"),
+    "2 Chronicles": ("ot", "2-chr"),
+    "Ezra": ("ot", "ezra"),
+    "Nehemiah": ("ot", "neh"),
+    "Esther": ("ot", "esth"),
+    "Job": ("ot", "job"),
+    "Psalms": ("ot", "ps"),
+    "Proverbs": ("ot", "prov"),
+    "Ecclesiastes": ("ot", "eccl"),
+    "Song of Solomon": ("ot", "song"),
+    "Isaiah": ("ot", "isa"),
+    "Jeremiah": ("ot", "jer"),
+    "Lamentations": ("ot", "lam"),
+    "Ezekiel": ("ot", "ezek"),
+    "Daniel": ("ot", "dan"),
+    "Hosea": ("ot", "hosea"),
+    "Joel": ("ot", "joel"),
+    "Amos": ("ot", "amos"),
+    "Obadiah": ("ot", "obad"),
+    "Jonah": ("ot", "jonah"),
+    "Micah": ("ot", "micah"),
+    "Nahum": ("ot", "nahum"),
+    "Habakkuk": ("ot", "hab"),
+    "Zephaniah": ("ot", "zeph"),
+    "Haggai": ("ot", "hag"),
+    "Zechariah": ("ot", "zech"),
+    "Malachi": ("ot", "mal"),
+    "Matthew": ("nt", "matt"),
+    "Mark": ("nt", "mark"),
+    "Luke": ("nt", "luke"),
+    "John": ("nt", "john"),
+    "Acts": ("nt", "acts"),
+    "Romans": ("nt", "rom"),
+    "1 Corinthians": ("nt", "1-cor"),
+    "2 Corinthians": ("nt", "2-cor"),
+    "Galatians": ("nt", "gal"),
+    "Ephesians": ("nt", "eph"),
+    "Philippians": ("nt", "philip"),
+    "Colossians": ("nt", "col"),
+    "1 Thessalonians": ("nt", "1-thes"),
+    "2 Thessalonians": ("nt", "2-thes"),
+    "1 Timothy": ("nt", "1-tim"),
+    "2 Timothy": ("nt", "2-tim"),
+    "Titus": ("nt", "titus"),
+    "Philemon": ("nt", "philem"),
+    "Hebrews": ("nt", "heb"),
+    "James": ("nt", "james"),
+    "1 Peter": ("nt", "1-pet"),
+    "2 Peter": ("nt", "2-pet"),
+    "1 John": ("nt", "1-jn"),
+    "2 John": ("nt", "2-jn"),
+    "3 John": ("nt", "3-jn"),
+    "Jude": ("nt", "jude"),
+    "Revelation": ("nt", "rev"),
+}
+
+
+def scripture_url(book: str, chapter: int, start: int | None, end: int | None) -> str:
+    collection, slug = SCRIPTURE_SLUGS[book]
+    base = f"https://www.lds.org/scriptures/{collection}/{slug}/{chapter}"
+    if start is None:
+        return f"{base}?lang=eng"
+    if end is None or end == start:
+        return f"{base}.{start}?lang=eng"
+    return f"{base}.{start}-{end}?lang=eng"
+
+
 def citation_book(book: str) -> str:
     # English citations use "Psalm 23" even though the book name is Psalms.
     if book == "Psalms":
@@ -364,7 +445,14 @@ def attach_verses(ref: dict, books, passages: dict) -> dict:
     key = ref["reference"]
     if key not in passages:
         passages[key] = verse_list(books, ref["book"], ref["chapter"], ref["verseStart"], ref["verseEnd"])
-    out = {"book": ref["book"], "reference": key}
+    out = {
+        "book": ref["book"],
+        "reference": key,
+        "chapter": ref["chapter"],
+        "verseStart": ref["verseStart"],
+        "verseEnd": ref["verseEnd"],
+        "url": scripture_url(ref["book"], ref["chapter"], ref["verseStart"], ref["verseEnd"]),
+    }
     if CANON_INDEX[ref["book"]] >= OT_COUNT:
         out["testament"] = "NT"
     else:
