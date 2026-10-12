@@ -98,10 +98,18 @@
     var panelSelection = null;
     var hoverRef = null;
     var tipPinned = false;
+    var tipOver = false;
+    var hideTimer = 0;
     var filterBook = null;
     var lastWidth = -1;
     var drawTimer = 0;
     var finePointer = global.matchMedia("(hover: hover) and (pointer: fine)");
+
+    function allowHoverPreview(event) {
+      var type = event && event.pointerType;
+      if (type === "touch") return false;
+      return finePointer.matches || type === "mouse" || type === "pen" || type == null || type === "";
+    }
 
     container.replaceChildren();
     var root = document.createElement("div");
@@ -395,21 +403,12 @@
       return html;
     }
 
-    function passageBlock(ref, budget) {
+    function passageBlock(ref) {
       var verses = versesOf(data, ref);
       var html = '<p class="pfd-tip-ref" style="color:' + esc(colorForBook(ref.book)) + '">' + esc(ref.reference) + "</p>";
       if (!verses.length) return { html: html, truncated: false, used: 0 };
-      var slice = verses;
-      var truncated = false;
-      if (budget != null && verses.length > budget) {
-        slice = verses.slice(0, budget);
-        truncated = true;
-      }
-      html += '<p class="pfd-tip-passage">' + passageHtml(slice) + "</p>";
-      if (truncated) {
-        html += '<p class="pfd-tip-more">' + esc(strings.moreVerses || "Open the reference to read the full passage.") + "</p>";
-      }
-      return { html: html, truncated: truncated, used: slice.length };
+      html += '<p class="pfd-tip-passage">' + passageHtml(verses) + "</p>";
+      return { html: html, truncated: false, used: verses.length };
     }
 
     function openLinkHtml(ref) {
@@ -418,10 +417,83 @@
         esc(strings.openScripture || "Open on lds.org") + "</a></p>";
     }
 
-    function showRefTip(ref, event, pin) {
-      if (!ref) return;
-      var block = passageBlock(ref, 12);
-      var html = block.html + openLinkHtml(ref);
+    function appendUnique(list, seen, key, value) {
+      if (!value || seen[key]) return;
+      seen[key] = true;
+      list.push(value);
+    }
+
+    function pairTipHtml(sources, targets, items, extra) {
+      var summaries = [];
+      var seenSummary = {};
+      (items || []).forEach(function (item) {
+        appendUnique(summaries, seenSummary, item.summary, item.summary);
+      });
+      var html = '<p class="pfd-tip-summary">' + esc(summaries[0] || "") + "</p>";
+      if (summaries.length > 1) {
+        html += '<p class="pfd-tip-more">' + summaries.length + " " + esc(strings.entries || "entries") + "</p>";
+      }
+      html += '<p class="pfd-tip-kicker">' + esc(cfg.sourceHeading || "Source") + "</p>";
+      sources.forEach(function (source) { html += passageBlock(source).html; });
+      html += '<p class="pfd-tip-kicker">' + esc(cfg.targetHeading || "Target") + "</p>";
+      targets.forEach(function (target) { html += passageBlock(target).html; });
+      html += extra || "";
+      return html;
+    }
+
+    function linkTipHtml(link, extra) {
+      return pairTipHtml([link.source], [link.target], link.items || [link.item], extra);
+    }
+
+    function linksForRef(ref, side) {
+      return links.filter(function (link) {
+        return side === "source" ? link.sourceRef === ref.reference : link.targetRef === ref.reference;
+      });
+    }
+
+    function refPairTipHtml(ref, side, extra) {
+      var connected = linksForRef(ref, side);
+      if (!connected.length) {
+        var sources = side === "source" ? [ref] : [];
+        var targets = side === "target" ? [ref] : [];
+        return pairTipHtml(sources, targets, [], extra);
+      }
+      var sources = [];
+      var targets = [];
+      var items = [];
+      var seenSource = {};
+      var seenTarget = {};
+      var seenItem = {};
+      connected.forEach(function (link) {
+        appendUnique(sources, seenSource, link.sourceRef, link.source);
+        appendUnique(targets, seenTarget, link.targetRef, link.target);
+        (link.items || [link.item]).forEach(function (item) {
+          if (!item) return;
+          appendUnique(items, seenItem, String(item.id), item);
+        });
+      });
+      return pairTipHtml(sources, targets, items, extra);
+    }
+
+    function cancelHide() {
+      global.clearTimeout(hideTimer);
+      hideTimer = 0;
+    }
+
+    function scheduleHide() {
+      if (tipPinned) return;
+      cancelHide();
+      hideTimer = global.setTimeout(function () {
+        hideTimer = 0;
+        if (tipPinned || tipOver) return;
+        hoverRef = null;
+        restyle();
+        hideTip();
+      }, 320);
+    }
+
+    function fillTip(html, event, pin) {
+      cancelHide();
       tipPinned = !!pin;
       tip.classList.toggle("is-pinned", tipPinned);
       tip.innerHTML = html;
@@ -429,44 +501,64 @@
       if (event) placeTip(event);
     }
 
-    function showTip(link, event) {
-      if (!finePointer.matches || !link || tipPinned) return;
-      var summaries = (link.items || [link.item]).map(function (item) { return item.summary; }).filter(Boolean);
-      var html = '<p class="pfd-tip-summary">' + esc(summaries[0] || "") + "</p>";
-      if (summaries.length > 1) {
-        html += '<p class="pfd-tip-more">' + summaries.length + " " + esc(strings.entries || "entries") + "</p>";
-      }
-      html += '<p class="pfd-tip-kicker">' + esc(cfg.sourceHeading || "Source") + "</p>";
-      html += passageBlock(link.source, 8).html;
-      html += '<p class="pfd-tip-kicker">' + esc(cfg.targetHeading || "Target") + "</p>";
-      html += passageBlock(link.target, 8).html;
-      tipPinned = false;
-      tip.classList.remove("is-pinned");
-      tip.innerHTML = html;
-      tip.hidden = false;
-      placeTip(event);
+    function showRefTip(ref, side, event, pin) {
+      if (!ref) return;
+      var extra = pin ? openLinkHtml(ref) : "";
+      fillTip(refPairTipHtml(ref, side, extra), event, pin);
+    }
+
+    function showTip(link, event, pin) {
+      if (!link) return;
+      if (!pin && (tipPinned || !allowHoverPreview(event))) return;
+      fillTip(linkTipHtml(link), event, pin);
+    }
+
+    function viewportSize() {
+      var view = global.visualViewport;
+      return {
+        width: (view && view.width) || global.innerWidth || document.documentElement.clientWidth,
+        height: (view && view.height) || global.innerHeight || document.documentElement.clientHeight
+      };
     }
 
     function placeTip(event) {
-      var bounds = stage.getBoundingClientRect();
-      var x = event.clientX - bounds.left + 14;
-      var y = event.clientY - bounds.top + 16;
+      var pad = 8;
+      var view = viewportSize();
+      tip.style.maxHeight = Math.max(160, view.height - pad * 2) + "px";
       tip.style.left = "0px";
       tip.style.top = "0px";
       var width = tip.offsetWidth;
       var height = tip.offsetHeight;
-      if (x + width > bounds.width - 8) x = Math.max(8, event.clientX - bounds.left - width - 16);
-      if (y + height > bounds.height - 8) y = Math.max(8, bounds.height - height - 8);
+      var x = event.clientX + 14;
+      var y = event.clientY + 16;
+      if (x + width > view.width - pad) x = Math.max(pad, event.clientX - width - 16);
+      if (x < pad) x = pad;
+      if (y + height > view.height - pad) y = Math.max(pad, view.height - height - pad);
+      if (y < pad) y = pad;
       tip.style.left = Math.round(x) + "px";
       tip.style.top = Math.round(y) + "px";
     }
 
     function hideTip(force) {
       if (tipPinned && !force) return;
+      cancelHide();
       tipPinned = false;
+      tipOver = false;
       tip.classList.remove("is-pinned");
       tip.hidden = true;
     }
+
+    tip.addEventListener("pointerenter", function () {
+      tipOver = true;
+      cancelHide();
+    });
+    tip.addEventListener("pointerleave", function () {
+      tipOver = false;
+      scheduleHide();
+    });
+    tip.addEventListener("wheel", function (event) {
+      event.stopPropagation();
+    }, { passive: true });
 
     function clearSelection() {
       panelSelection = null;
@@ -727,18 +819,13 @@
           .attr("class", "hit")
           .attr("d", row.d)
           .attr("stroke-width", narrow ? 16 : 10);
-        hit.append("title").text((row.link.items && row.link.items[0] && row.link.items[0].summary) || "");
         hit.on("pointerenter", function (event) {
-          if (!finePointer.matches || tipPinned) return;
+          if (!allowHoverPreview(event) || tipPinned) return;
           hoverRef = null;
           restyle();
           showTip(row.link, event);
         });
-        hit.on("pointermove", function (event) {
-          if (!finePointer.matches || tip.hidden || tipPinned) return;
-          placeTip(event);
-        });
-        hit.on("pointerleave", function () { hideTip(); });
+        hit.on("pointerleave", function () { scheduleHide(); });
         hit.on("click", function (event) {
           event.stopPropagation();
           selectLink(row.link, !finePointer.matches);
@@ -817,21 +904,15 @@
           function focus(event, pin) {
             hoverRef = { reference: ref.reference, side: side };
             restyle();
-            showRefTip(ref, event, pin);
+            showRefTip(ref, side, event, pin);
           }
           anchor.on("pointerenter", function (event) {
-            if (!finePointer.matches) return;
+            if (!allowHoverPreview(event)) return;
             focus(event, false);
-          });
-          anchor.on("pointermove", function (event) {
-            if (!finePointer.matches || tip.hidden || tipPinned) return;
-            placeTip(event);
           });
           anchor.on("pointerleave", function () {
             if (tipPinned) return;
-            hoverRef = null;
-            restyle();
-            hideTip();
+            scheduleHide();
           });
           anchor.on("click", function (event) {
             event.stopPropagation();
@@ -913,10 +994,10 @@
           .attr("fill", "transparent")
           .style("cursor", "pointer")
           .on("pointerenter", function (event) {
-            if (!finePointer.matches) return;
+            if (!allowHoverPreview(event)) return;
             showTip(match, event);
           })
-          .on("pointerleave", function () { hideTip(); })
+          .on("pointerleave", function () { scheduleHide(); })
           .on("click", function (event) {
             event.stopPropagation();
             selectItem(callout.itemId, true);
@@ -951,6 +1032,7 @@
       clear: clearSelection,
       destroy: function () {
         disposed = true;
+        cancelHide();
         document.removeEventListener("keydown", onKey);
         global.removeEventListener("resize", scheduleDraw);
         if (resizeObserver) resizeObserver.disconnect();
