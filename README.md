@@ -2,7 +2,7 @@
 
 An interactive, two-column connection chart for embedding in a WordPress post. The first diagram is **Prophecies of the Messiah**: Old Testament books on the left, New Testament books on the right, and a curve for every prophecy that links them.
 
-Each axis lists every scripture passage, not just the book. Hover a reference to read the King James text in a popup. Click it to open that passage on [lds.org](https://www.lds.org/scriptures). Hover a curve to see the prophecy that connects the two passages, and click the curve to keep that entry open below the chart. The page reports its height to the parent window, so an iframe on [gatheredin.one](https://gatheredin.one) can grow with the reading instead of scrolling inside the frame.
+Each axis lists every scripture passage, not just the book. Hover a reference to read the King James text in a popup. Click it to open that passage on [lds.org](https://www.lds.org/scriptures). Hover a curve to see the prophecy that connects the two passages, and click the curve to keep that entry open below the chart. The page posts its document height to the parent window as `{ source: "prophecy-charts", type: "resize", height }`, so a cross-origin iframe on [gatheredin.one](https://gatheredin.one) (or www.gatheredin.one) can grow with the chart instead of scrolling inside the frame.
 
 The chart module itself is generic. A new diagram is a data file plus a config file. Words such as “prophecy” and “Messiah” live in those files, not in the drawing code.
 
@@ -18,24 +18,45 @@ A parent-page demo that iframes the chart and shows the resize message:
 
 ## Embed in WordPress
 
-Add a Custom HTML block with an iframe and the small resize script. The placeholder height is replaced as soon as the chart loads.
+Live chart: **https://utahgeology.com/bin/prophecy_charts/**
+
+Add a Custom HTML block on [gatheredin.one](https://gatheredin.one). The placeholder height is replaced as soon as the chart reports its document height. The listener accepts messages only from `https://utahgeology.com` and asks the child for a height on load.
 
 ```html
 <iframe
-  id="prophecies-of-the-messiah"
-  data-pfd-id="messianic-prophecies"
+  id="prophecy-charts"
   title="Prophecies of the Messiah"
-  src="https://lance-weaver.github.io/prophecy-fulfillment-diagrams/"
+  src="https://utahgeology.com/bin/prophecy_charts/"
   scrolling="no"
   style="width:100%;border:0;overflow:hidden;height:720px;background:#fff;display:block;"
 ></iframe>
-<script
-  src="https://lance-weaver.github.io/prophecy-fulfillment-diagrams/embed.js"
-  data-origin="https://lance-weaver.github.io"
-></script>
+<script>
+(function () {
+  var frame = document.getElementById("prophecy-charts");
+  var allowedOrigin = "https://utahgeology.com";
+
+  window.addEventListener("message", function (event) {
+    if (event.origin !== allowedOrigin) return;
+    var data = event.data;
+    if (!data || data.source !== "prophecy-charts" || data.type !== "resize") return;
+    if (typeof data.height !== "number" || !isFinite(data.height) || data.height < 1) return;
+    if (event.source !== frame.contentWindow) return;
+    frame.style.height = Math.ceil(data.height) + "px";
+  });
+
+  frame.addEventListener("load", function () {
+    frame.contentWindow.postMessage(
+      { source: "prophecy-charts", type: "request-height" },
+      allowedOrigin
+    );
+  });
+})();
+</script>
 ```
 
-`embed.js` listens for `{ type: "pfd:resize", height, id }`, checks that the message came from that iframe, and sets the iframe’s height. `data-origin` is optional. Set it to the chart’s origin so messages from other sites are ignored. `data-pfd-id` on the iframe should match the `id` in the chart config (`messianic-prophecies`).
+The child page posts `{ source: "prophecy-charts", type: "resize", height }` with `parent.postMessage(..., "*")` so both `gatheredin.one` and `www.gatheredin.one` receive it. The parent must check `event.origin` as shown above.
+
+`embed.js` is an optional helper if you prefer not to inline the listener. It accepts the same payload (and the older `{ type: "pfd:resize" }` shape). Set `data-origin` to `https://utahgeology.com`. `data-pfd-id` on the iframe should match the `id` in the chart config (`messianic-prophecies`) when you use that helper.
 
 The chart page does not send `X-Frame-Options` or a frame-blocking Content-Security-Policy. The iframe should not show its own scrollbar: the frame is `scrolling="no"` and its height follows the content.
 
@@ -49,7 +70,7 @@ The chart page already includes [iframe-resizer](https://github.com/davidjbradsh
 <iframe
   id="prophecies-of-the-messiah"
   title="Prophecies of the Messiah"
-  src="https://lance-weaver.github.io/prophecy-fulfillment-diagrams/"
+  src="https://utahgeology.com/bin/prophecy_charts/"
   style="width:100%;border:0;background:#fff;"
 ></iframe>
 <script src="https://cdn.jsdelivr.net/npm/iframe-resizer@4.3.11/js/iframeResizer.min.js"></script>

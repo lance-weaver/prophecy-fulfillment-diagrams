@@ -6,7 +6,8 @@
   var chartId = params.get("id") || "";
 
   var report = ConnectionChart.watchHeight({
-    type: "pfd:resize",
+    source: "prophecy-charts",
+    type: "resize",
     getId: function () { return chartId; }
   });
 
