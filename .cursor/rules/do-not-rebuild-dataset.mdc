@@ -1,0 +1,18 @@
+---
+description: Do not regenerate messianic-prophecies.json; it is now hand-edited
+alwaysApply: true
+---
+
+# Do not rebuild the dataset
+
+Never run `python scripts/build_dataset.py` or `python3 scripts/build_dataset.py`.
+
+`data/messianic-prophecies.json` is the source of truth. It has been edited by hand:
+
+- Duplicate Konig rows were dropped
+- Verse `text` may include `__underline__` markup
+- Verse `text` may be shortened with `…`
+
+The build script overwrites that file from the live chart plus KJV and would wipe those edits.
+
+Edit `data/messianic-prophecies.json` (and `data/messianic-prophecies.config.json`) directly. Only run the build script if the user explicitly asks and accepts that hand edits will be lost.

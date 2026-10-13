@@ -6,6 +6,7 @@
  *     credit?: { translation?: string },
  *     books?: { source?: string[], target?: string[], left?: string[], right?: string[] },
  *     passages?: { [reference: string]: { n: number, text: string }[] },
+ *     Wrap a phrase in __double underscores__ to underline it in popups.
  *     items: {
  *       id, summary, note?, infoUrl?,
  *       sources: { book, reference, verses?, plot? }[],
@@ -58,10 +59,14 @@
     return (ref && table[ref.reference]) || [];
   }
 
+  function formatVerseText(text) {
+    return esc(text).replace(/__([\s\S]+?)__/g, '<span class="pfd-mark">$1</span>');
+  }
+
   function passageHtml(verses) {
     if (!verses.length) return "";
     return verses.map(function (verse) {
-      return '<span class="vn">' + esc(verse.n) + "</span>" + esc(verse.text) + " ";
+      return '<span class="vn">' + esc(verse.n) + "</span>" + formatVerseText(verse.text) + " ";
     }).join("");
   }
 
@@ -206,9 +211,18 @@
       return (shortBook + " " + versePart).trim();
     }
 
+    function isEmbedded() {
+      try {
+        return global.self !== global.top;
+      } catch (err) {
+        return true;
+      }
+    }
+
     container.replaceChildren();
     var root = document.createElement("div");
-    root.className = "pfd";
+    var embedded = isEmbedded();
+    root.className = embedded ? "pfd is-embedded" : "pfd";
     container.appendChild(root);
 
     function notify() {
@@ -294,17 +308,21 @@
     function header() {
       var html = '<header class="pfd-header">';
       if (cfg.kicker) html += '<p class="pfd-kicker">' + esc(cfg.kicker) + "</p>";
-      html += "<h1 class=\"pfd-title\">" + esc(cfg.title || "") + "</h1>";
-      if (cfg.subtitle) html += '<p class="pfd-subtitle">' + esc(cfg.subtitle) + "</p>";
-      if (cfg.credit && cfg.credit.href) {
-        html += '<p class="pfd-credit">' + esc(cfg.credit.before || "") +
-          '<a href="' + esc(cfg.credit.href) + '" target="_blank" rel="noopener noreferrer">' +
-          esc(cfg.credit.linkText || cfg.credit.href) + "</a>" +
-          esc(cfg.credit.after || "") + "</p>";
+      if (!embedded && cfg.title) {
+        html += "<h1 class=\"pfd-title\">" + esc(cfg.title) + "</h1>";
       }
+      if (cfg.subtitle) html += '<p class="pfd-subtitle">' + esc(cfg.subtitle) + "</p>";
       if (cfg.hint) html += '<p class="pfd-hint">' + esc(cfg.hint) + "</p>";
       html += "</header>";
       return html;
+    }
+
+    function creditHtml() {
+      if (!cfg.credit || !cfg.credit.href) return "";
+      return esc(cfg.credit.before || "") +
+        '<a href="' + esc(cfg.credit.href) + '" target="_blank" rel="noopener noreferrer">' +
+        esc(cfg.credit.linkText || cfg.credit.href) + "</a>" +
+        esc(cfg.credit.after || "");
     }
 
     root.innerHTML = header() +
@@ -313,6 +331,7 @@
       '<div class="pfd-legend"></div>' +
       '<p class="pfd-note"></p>' +
       '<p class="pfd-footnote"></p>' +
+      '<p class="pfd-credit"></p>' +
       '<section class="pfd-detail" hidden></section>';
 
     var columnsEl = root.querySelector(".pfd-columns");
@@ -323,12 +342,15 @@
     var legendEl = root.querySelector(".pfd-legend");
     var noteEl = root.querySelector(".pfd-note");
     var footEl = root.querySelector(".pfd-footnote");
+    var creditEl = root.querySelector(".pfd-credit");
     var detailEl = root.querySelector(".pfd-detail");
 
     if (cfg.chartLabel || cfg.title) svgNode.setAttribute("aria-label", cfg.chartLabel || cfg.title);
     noteEl.textContent = cfg.dotsNote || "";
     footEl.textContent = cfg.footnote || "";
     if (!cfg.footnote) footEl.hidden = true;
+    creditEl.innerHTML = creditHtml();
+    if (!creditEl.innerHTML) creditEl.hidden = true;
 
     function columnHeads() {
       var left = cfg.leftColumn || {};

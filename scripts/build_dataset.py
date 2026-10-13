@@ -8,9 +8,11 @@ https://github.com/thiagobodruk/bible (file json/en_kjv.json). The packaged
 text is the classic King James Version; book names in that file are
 Portuguese labels and are ignored in favor of canonical order.
 
-Re-run from the repo root:
+Do not run this script: data/messianic-prophecies.json is hand-edited
+(dropped rows, __underline__ markup, shortened verses). Regenerating
+overwrites those edits. If you are sure, pass --force:
 
-    python3 scripts/build_dataset.py
+    python3 scripts/build_dataset.py --force
 
 The chart page itself is not fetched automatically. Pass --html if you have a
 fresh copy, or the script will download it.
@@ -464,7 +466,18 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--html", type=Path, help="local copy of the source chart")
     parser.add_argument("--kjv", type=Path, help="local en_kjv.json")
+    parser.add_argument(
+        "--force",
+        action="store_true",
+        help="overwrite data/messianic-prophecies.json (destroys hand edits)",
+    )
     args = parser.parse_args()
+    if not args.force:
+        raise SystemExit(
+            "Refusing to overwrite data/messianic-prophecies.json. "
+            "That file is hand-edited (underlines, shortened verses, dropped rows). "
+            "Pass --force only if you mean to replace it."
+        )
 
     html = args.html.read_text(encoding="utf-8", errors="replace") if args.html else fetch(HTML_URL).decode("utf-8", "replace")
     rows = parse_rows(html)
