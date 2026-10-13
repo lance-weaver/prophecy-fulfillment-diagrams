@@ -134,13 +134,9 @@ Use that URL as the iframe `src`. Give the config its own `id`, and set the ifra
 
 ## What’s in the messianic dataset
 
-The 70 entries come from Ray Konig’s [Chart of Old Testament prophecies fulfilled by Jesus](https://www.about-jesus.org/complete-chart-prophecies-jesus.htm) (retrieved 11 October 2026). The page gives a summary and references, not the verse text. The King James Version text (public domain) was copied into the data file when it was built. It is not requested from a Bible API when someone views the chart.
+The 67 entries are drawn from Ray Konig’s 70-row [Chart of Old Testament prophecies fulfilled by Jesus](https://www.about-jesus.org/complete-chart-prophecies-jesus.htm) (retrieved 11 October 2026). The page gives a summary and references, not the verse text. The King James Version text (public domain) was copied into the data file when it was built. It is not requested from a Bible API when someone views the chart.
 
-Regenerate it from the repo root (this downloads the chart and a public-domain KJV JSON):
-
-```bash
-python3 scripts/build_dataset.py
-```
+Do **not** regenerate the JSON with `python scripts/build_dataset.py`. That file is now hand-edited (dropped duplicate rows, `__underline__` markup, shortened verses). Running the script overwrites those edits. Only use `--force` if you are deliberately replacing the dataset.
 
 Every row on that chart parsed. Entry 69, “The Messiah will return to preside over Judgment Day,” cites Daniel 7:13–14 and Daniel 12:1–2 rather than a New Testament book. Those Daniel passages are still drawn, at the bottom of the fulfillment column, and each one opens on lds.org.
 

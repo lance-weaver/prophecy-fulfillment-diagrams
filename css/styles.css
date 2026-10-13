@@ -32,6 +32,14 @@ button, a { font-family: inherit; }
   margin: 0 auto;
 }
 
+.pfd.is-embedded {
+  padding-top: 10px;
+}
+
+.pfd.is-embedded .pfd-header {
+  margin-bottom: 12px;
+}
+
 .pfd-header { text-align: center; margin-bottom: 18px; }
 
 .pfd-kicker {
@@ -58,16 +66,6 @@ button, a { font-family: inherit; }
   font-size: 1.02rem;
   line-height: 1.45;
 }
-
-.pfd-credit {
-  margin: 10px auto 0;
-  max-width: 42rem;
-  color: var(--faint);
-  font-size: 0.82rem;
-  line-height: 1.45;
-}
-
-.pfd-credit a { color: #44403c; }
 
 .pfd-hint {
   margin: 14px auto 0;
@@ -211,13 +209,20 @@ button, a { font-family: inherit; }
   font-weight: 700;
 }
 
-.pfd-note, .pfd-footnote {
+.pfd-note, .pfd-footnote, .pfd-credit {
   margin: 10px 0 0;
   color: var(--muted);
   font-size: 0.86rem;
   line-height: 1.45;
   max-width: 48rem;
 }
+
+.pfd-credit {
+  color: var(--faint);
+  font-size: 0.82rem;
+}
+
+.pfd-credit a { color: #44403c; }
 
 .pfd-tooltip {
   position: fixed;
@@ -294,6 +299,12 @@ button, a { font-family: inherit; }
   font-weight: 650;
   margin-right: 0.28em;
   letter-spacing: 0;
+}
+
+.pfd-mark {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: from-font;
 }
 
 .pfd-detail { margin-top: 22px; }

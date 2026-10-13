@@ -38,7 +38,7 @@
     ]
   },
   "build": {
-    "itemCount": 70,
+    "itemCount": 67,
     "passageCount": 148,
     "unparsed": [],
     "unplotted": [
@@ -57,7 +57,7 @@
     "Genesis 3:15": [
       {
         "n": 15,
-        "text": "And I will put enmity between thee and the woman, and between thy seed and her seed; it shall bruise thy head, and thou shalt bruise his heel."
+        "text": "And I will put enmity between thee and the woman, and __between thy seed and her seed__; it shall bruise thy head, and thou shalt bruise his heel."
       }
     ],
     "Galatians 4:4-5": [
@@ -3158,43 +3158,6 @@
       ]
     },
     {
-      "id": "2",
-      "summary": "The Messiah would be born of a woman -- he would be a human, as opposed to an angel or other type of being",
-      "note": null,
-      "infoUrl": "https://www.aboutbibleprophecy.com/genesis_3_15b.htm",
-      "sources": [
-        {
-          "book": "Genesis",
-          "reference": "Genesis 3:15",
-          "chapter": 3,
-          "verseStart": 15,
-          "verseEnd": 15,
-          "url": "https://www.lds.org/scriptures/ot/gen/3.15?lang=eng",
-          "testament": "OT"
-        }
-      ],
-      "targets": [
-        {
-          "book": "Galatians",
-          "reference": "Galatians 4:4-5",
-          "chapter": 4,
-          "verseStart": 4,
-          "verseEnd": 5,
-          "url": "https://www.lds.org/scriptures/nt/gal/4.4-5?lang=eng",
-          "testament": "NT"
-        },
-        {
-          "book": "Matthew",
-          "reference": "Matthew 1:18",
-          "chapter": 1,
-          "verseStart": 18,
-          "verseEnd": 18,
-          "url": "https://www.lds.org/scriptures/nt/matt/1.18?lang=eng",
-          "testament": "NT"
-        }
-      ]
-    },
-    {
       "id": "3",
       "summary": "The Messiah would be a descendant of Abraham, because of Abraham's great faith",
       "note": null,
@@ -3523,34 +3486,6 @@
           "verseStart": 1,
           "verseEnd": 23,
           "url": "https://www.lds.org/scriptures/nt/luke/3.1-23?lang=eng",
-          "testament": "NT"
-        }
-      ]
-    },
-    {
-      "id": "12",
-      "summary": "The Messiah would appear after a succession of rulers from the Tribe of Judah",
-      "note": "History: Herod the Great became the first foreigner to reign from Jerusalem as king over the Jews in Israel. Jesus was born during his reign.",
-      "infoUrl": "https://www.aboutbibleprophecy.com/genesis_49_10.htm",
-      "sources": [
-        {
-          "book": "Genesis",
-          "reference": "Genesis 49:10",
-          "chapter": 49,
-          "verseStart": 10,
-          "verseEnd": 10,
-          "url": "https://www.lds.org/scriptures/ot/gen/49.10?lang=eng",
-          "testament": "OT"
-        }
-      ],
-      "targets": [
-        {
-          "book": "Matthew",
-          "reference": "Matthew 2",
-          "chapter": 2,
-          "verseStart": null,
-          "verseEnd": null,
-          "url": "https://www.lds.org/scriptures/nt/matt/2?lang=eng",
           "testament": "NT"
         }
       ]
@@ -5028,52 +4963,6 @@
           "verseStart": 3,
           "verseEnd": 5,
           "url": "https://www.lds.org/scriptures/nt/gal/1.3-5?lang=eng",
-          "testament": "NT"
-        }
-      ]
-    },
-    {
-      "id": "59",
-      "summary": "The Messiah would defeat evil at his own expense",
-      "note": null,
-      "infoUrl": "https://www.aboutbibleprophecy.com/genesis_3_15a.htm",
-      "sources": [
-        {
-          "book": "Genesis",
-          "reference": "Genesis 3:15",
-          "chapter": 3,
-          "verseStart": 15,
-          "verseEnd": 15,
-          "url": "https://www.lds.org/scriptures/ot/gen/3.15?lang=eng",
-          "testament": "OT"
-        }
-      ],
-      "targets": [
-        {
-          "book": "John",
-          "reference": "John 19:1-37",
-          "chapter": 19,
-          "verseStart": 1,
-          "verseEnd": 37,
-          "url": "https://www.lds.org/scriptures/nt/john/19.1-37?lang=eng",
-          "testament": "NT"
-        },
-        {
-          "book": "2 Corinthians",
-          "reference": "2 Corinthians 5:21",
-          "chapter": 5,
-          "verseStart": 21,
-          "verseEnd": 21,
-          "url": "https://www.lds.org/scriptures/nt/2-cor/5.21?lang=eng",
-          "testament": "NT"
-        },
-        {
-          "book": "1 John",
-          "reference": "1 John 4:10",
-          "chapter": 4,
-          "verseStart": 10,
-          "verseEnd": 10,
-          "url": "https://www.lds.org/scriptures/nt/1-jn/4.10?lang=eng",
           "testament": "NT"
         }
       ]
