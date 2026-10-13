@@ -309,7 +309,6 @@
 
     root.innerHTML = header() +
       '<div class="pfd-columns"></div>' +
-      '<div class="pfd-callouts"></div>' +
       '<div class="pfd-stage"><svg class="pfd-svg" role="group"></svg><div class="pfd-tooltip" hidden></div></div>' +
       '<div class="pfd-legend"></div>' +
       '<p class="pfd-note"></p>' +
@@ -317,7 +316,6 @@
       '<section class="pfd-detail" hidden></section>';
 
     var columnsEl = root.querySelector(".pfd-columns");
-    var chipsEl = root.querySelector(".pfd-callouts");
     var stage = root.querySelector(".pfd-stage");
     var svg = d3.select(root.querySelector(".pfd-svg"));
     var svgNode = root.querySelector(".pfd-svg");
@@ -341,21 +339,6 @@
         '<div class="pfd-colhead right"><strong>' + esc(right.label || "Target") + "</strong><span>" + esc(right.sublabel || "") + "</span></div>";
     }
     columnHeads();
-
-    function renderChips() {
-      chipsEl.replaceChildren();
-      (cfg.callouts || []).forEach(function (callout) {
-        var button = document.createElement("button");
-        button.type = "button";
-        button.className = "pfd-chip";
-        button.textContent = callout.label;
-        button.setAttribute("aria-pressed", panelSelection && panelSelection.itemId === String(callout.itemId) ? "true" : "false");
-        button.addEventListener("click", function () {
-          selectItem(callout.itemId, true);
-        });
-        chipsEl.appendChild(button);
-      });
-    }
 
     function renderLegend() {
       legendEl.replaceChildren();
@@ -447,7 +430,6 @@
       if (!panelSelection || !list.length) {
         detailEl.hidden = true;
         detailEl.replaceChildren();
-        renderChips();
         return;
       }
       detailEl.hidden = false;
@@ -476,7 +458,6 @@
       detailEl.querySelector(".pfd-clear").addEventListener("click", function () {
         clearSelection();
       });
-      renderChips();
     }
 
     function refBlock(heading, refs, allowUnplotted) {
@@ -871,6 +852,11 @@
         widest = Math.max(widest, textWidth(bookHeading(book, maxText, headSize, useShort), headSize, "0.06em"));
       });
       var labelW = Math.min(cap, Math.max(narrow ? 108 : 150, Math.ceil(widest + 20)));
+      if (!filterBook && (cfg.callouts || []).length) {
+        var minGap = narrow ? 96 : 220;
+        var maxLabel = Math.floor((width - minGap) / 2);
+        if (maxLabel < labelW) labelW = Math.max(narrow ? 72 : 110, maxLabel);
+      }
       root.style.setProperty("--label", labelW + "px");
 
       var left = layoutRefs(leftRefs, rowH, headH, bookGap);
@@ -966,8 +952,7 @@
       drawReferences(right.sections, "target", x2, labelW, fontSize, headSize, maxText, false, useShort);
       restyle();
 
-      if (!narrow && width >= 980 && !filterBook) drawCallouts(x1, x2, left.index, right.index);
-      renderChips();
+      if (!filterBook) drawCallouts(x1, x2, left.index, right.index);
     }
 
     function restyle() {
@@ -1085,6 +1070,10 @@
 
     function drawCallouts(x1, x2, leftIndex, rightIndex) {
       var placed = [];
+      var span = Math.max(0, x2 - x1);
+      var scale = Math.max(0.72, Math.min(1, span / 220));
+      var pad = Math.max(3, Math.round(8 * scale));
+      var available = Math.max(88, span - pad * 2);
       (cfg.callouts || []).forEach(function (callout) {
         var match = null;
         for (var i = 0; i < links.length; i++) {
@@ -1098,12 +1087,18 @@
         var y2 = rightIndex.get(match.targetRef);
         if (y1 == null || y2 == null) return;
         var at = pointOnCurve(0.36, x1, y1, x2, y2);
-        var boxW = Math.min(220, Math.max(168, (callout.label || "").length * 6.6));
-        var boxH = (callout.label || "").length > 26 ? 64 : 50;
+        var fontPx = Math.max(9, 12.5 * scale);
+        var labelLen = (callout.label || "").length;
+        var idealW = Math.min(220, Math.max(148, labelLen * 6.4));
+        var boxW = Math.min(available, Math.max(104, idealW * Math.max(scale, 0.82)));
+        var innerW = Math.max(24, boxW - fontPx * 1.6);
+        var charsPerLine = Math.max(6, Math.floor(innerW / (fontPx * 0.52)));
+        var labelLines = Math.max(1, Math.ceil(labelLen / charsPerLine));
+        var boxH = Math.ceil(fontPx * (1.2 + labelLines * 1.25 + 1.2));
         var x = at.x - boxW / 2;
-        var y = at.y - boxH - 10;
-        if (x < x1 + 8) x = x1 + 8;
-        if (x + boxW > x2 - 8) x = x2 - boxW - 8;
+        var y = at.y - boxH - Math.max(5, 10 * scale);
+        if (x < x1 + pad) x = x1 + pad;
+        if (x + boxW > x2 - pad) x = x2 - boxW - pad;
         for (var guard = 0; guard < 8; guard++) {
           var collision = placed.some(function (box) {
             return !(x + boxW < box.x || box.x + box.w < x || y + boxH < box.y || box.y + box.h < y);
@@ -1112,19 +1107,29 @@
           y -= boxH + 6;
         }
         if (y < 4) y = at.y + 12;
-        placed.push({ x: x, y: y, w: boxW, h: boxH });
         var citeColor = linkColor(match);
         var fo = svg.append("foreignObject")
           .attr("class", "pfd-callout")
           .attr("x", x)
           .attr("y", y)
           .attr("width", boxW)
-          .attr("height", boxH + 8)
+          .attr("height", boxH + 24)
           .style("pointer-events", "none");
-        fo.append("xhtml:div")
+        var bubble = fo.append("xhtml:div")
           .attr("xmlns", "http://www.w3.org/1999/xhtml")
           .attr("class", "pfd-bubble")
+          .style("font-size", fontPx + "px")
           .html('<div class="pfd-bubble-label">' + esc(callout.label || "") + '</div><div class="pfd-bubble-cite" style="color:' + esc(citeColor) + '">' + esc(callout.citation || "") + "</div>");
+        var measured = bubble.node() && bubble.node().offsetHeight;
+        if (measured && measured > boxH) {
+          y -= measured - boxH;
+          if (y < 4) y = at.y + 12;
+          boxH = measured;
+          fo.attr("y", y).attr("height", boxH + 4);
+        } else {
+          fo.attr("height", boxH + 4);
+        }
+        placed.push({ x: x, y: y, w: boxW, h: boxH });
         svg.append("rect")
           .attr("class", "pfd-callout-hit")
           .attr("x", x)
@@ -1183,7 +1188,6 @@
     global.addEventListener("resize", scheduleDraw);
 
     renderLegend();
-    renderChips();
     draw(true);
     renderPanel();
 

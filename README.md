@@ -124,7 +124,7 @@ Use that URL as the iframe `src`. Give the config its own `id`, and set the ifra
 
 ### Config file
 
-`data/messianic-prophecies.config.json` holds the title, subtitle, column headings, colors, legend, callouts, footnote, and credit line. `colorBy` is `"target"` (color each curve by the right-hand book) or `"source"`. `callouts` are the short labels drawn on wide screens and shown as buttons on narrow ones:
+`data/messianic-prophecies.config.json` holds the title, subtitle, column headings, colors, legend, callouts, footnote, and credit line. `colorBy` is `"target"` (color each curve by the right-hand book) or `"source"`. `callouts` are the featured labels drawn between the columns. On narrower screens the bubbles stay in place and the type gets smaller:
 
 ```json
 { "itemId": "14", "label": "Born in Bethlehem", "citation": "Micah 5:2" }
