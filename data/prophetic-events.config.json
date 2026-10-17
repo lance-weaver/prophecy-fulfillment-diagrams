@@ -1,0 +1,46 @@
+{
+  "id": "prophetic-events",
+  "title": "Chronological Outline of Scripture Prophecy",
+  "subtitle": "A collapsible timeline of 1st, 2nd, and 3rd order events, each connected to the scriptures that describe it.",
+  "kicker": "Timeline of events  ·  Canonical scripture",
+  "hint": "Use the buttons above the chart to expand or collapse the outline. Hover an event or a scripture to read the description and verses. On a phone, tap to keep the popup open.",
+  "leftColumn": {
+    "label": "Events",
+    "sublabel": "Timeline"
+  },
+  "rightColumn": {
+    "label": "Scripture",
+    "sublabel": "Canonical order"
+  },
+  "laterDecision": "Look at event popups and decide whether verse text should sit in an expand/collapse under the description instead of always showing.",
+  "dotsNote": "The left column is the outline. Reorder objects in data/prophetic-events.json to rearrange it. Verse text is looked up from data/scriptures.json. Collapsing an outline level also hides scriptures that are only cited by hidden events.",
+  "footnote": "First draft from the chronological outline. The left rail is sequential with millennial tick marks interpolated from 1st-order dates, not a fully proportional scale. Bible verses are the public-domain King James text. Restoration verses are the official LDS text for the passages cited on this chart.",
+  "credit": {
+    "before": "Outline drafted in ",
+    "linkText": "Chronological Outline of Scripture Prophecy",
+    "href": "https://docs.google.com/document/d/1JfbUUxFfaNYI-VHYBnBKuzrjP8cUriOJPMBA1hNBG5Q/",
+    "after": ". Bible verse text is the King James Version (public domain). Restoration verse text is from the official LDS scriptures for cited passages. Also see ",
+    "alsoLinkText": "Prophecies of the Messiah",
+    "alsoHref": "index.html",
+    "alsoAfter": "."
+  },
+  "strings": {
+    "depth1": "1st Order Events Only",
+    "depth2": "2nd Order Events",
+    "depth3": "Expand All",
+    "openScripture": "Open on churchofjesuschrist.org",
+    "readScripture": "Read on churchofjesuschrist.org",
+    "loading": "Loading timeline…",
+    "error": "The timeline could not be loaded.",
+    "noVerses": "No public-domain text is stored here for this source.",
+    "login": "login",
+    "logout": "logout",
+    "enter": "enter",
+    "download": "download json",
+    "revert": "revert",
+    "editing": "editing — drag to move, double-click to rename",
+    "wrongPass": "That passphrase did not match."
+  },
+  "editorPassphrase": "edit",
+  "colorBy": "target"
+}
