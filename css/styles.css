@@ -82,9 +82,125 @@ button, a { font-family: inherit; }
   margin-bottom: 4px;
 }
 
+.pfd-timeline-app .pfd-columns {
+  grid-template-columns: var(--event, 280px) 1fr var(--scripture, 150px);
+}
+
+.pfd-depth {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin: 0 0 16px;
+}
+
+.pfd-depth .pfd-key {
+  font-weight: 650;
+  padding: 9px 16px;
+}
+
+.pfd-depth .pfd-key[aria-pressed="true"] {
+  background: var(--ink);
+  color: #fff;
+  border-color: var(--ink);
+  box-shadow: none;
+}
+
+.pfd-event { cursor: pointer; }
+.pfd-event:hover text { text-decoration: underline; text-underline-offset: 3px; }
+.pfd-timeline-app.is-editing .pfd-event { cursor: grab; }
+.pfd-timeline-app.is-editing .pfd-event:hover text { text-decoration: none; }
+.pfd-timeline-app.is-dragging .pfd-event { cursor: grabbing; }
+.pfd-timeline-app.is-dragging { user-select: none; }
+
+.pfd-drop-line {
+  position: absolute;
+  left: 0;
+  height: 2px;
+  width: var(--event, 280px);
+  background: #1c1917;
+  pointer-events: none;
+  z-index: 6;
+}
+
+.pfd-inline-form {
+  position: absolute;
+  z-index: 8;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  background: #fff;
+  padding: 4px;
+  border-radius: 6px;
+  box-shadow: 0 8px 24px rgba(28, 25, 23, 0.12);
+}
+
+.pfd-inline-edit {
+  font: 650 12px var(--sans);
+  border: 1px solid #1c1917;
+  border-radius: 4px;
+  padding: 3px 6px;
+  background: #fff;
+  color: var(--ink);
+  box-sizing: border-box;
+}
+
+.pfd-inline-edit.time {
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+}
+
+.pfd-login {
+  margin: 22px 0 0;
+  font-size: 0.75rem;
+  color: var(--faint);
+  line-height: 1.6;
+}
+
+.pfd-login button {
+  appearance: none;
+  background: none;
+  border: 0;
+  padding: 0;
+  color: var(--faint);
+  font: inherit;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.pfd-login button:hover { color: var(--muted); }
+
+.pfd-login-form {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.pfd-login-form[hidden],
+.pfd-login-tools[hidden] { display: none; }
+
+.pfd-login-form input {
+  font: inherit;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 2px 7px;
+  width: 9.5rem;
+  color: var(--ink);
+}
+
+.pfd-login-tools { color: var(--faint); }
+
 .pfd-colhead { padding-bottom: 6px; }
 
 .pfd-colhead.left { text-align: right; padding-right: 16px; }
+.pfd-timeline-app .pfd-colhead.left {
+  text-align: left;
+  padding-left: var(--event-indent, 18px);
+  padding-right: 0;
+}
 .pfd-colhead.right { text-align: left; padding-left: 16px; }
 
 .pfd-colhead strong {

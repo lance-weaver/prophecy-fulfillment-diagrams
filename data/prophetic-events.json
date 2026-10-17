@@ -1,0 +1,1912 @@
+{
+  "howToEdit": "This file is the outline, in Google Doc BODY order (ignore the table of contents at the top of that doc). Reorder objects in events[] (and nested children[]) to rearrange the chart. Put scripture references on an event as strings; verse text is looked up from scriptures.json and is never stored here. time is the label drawn at the start of a 1st-order epoch. Leave children as [] when a heading has no nested events.",
+  "title": "Chronological Outline of Scripture Prophecy",
+  "events": [
+    {
+      "id": "1",
+      "title": "MOSAIC DISPENSATIONAL PATTERN & 490-YEAR PROPHECY CYCLES",
+      "time": "c. 1500 BC",
+      "summary": "Moses institutes the divine sevenfold pattern of chastisement, scattering, and gathering of Israel, establishing the 490-year prophetic cycle.",
+      "scriptures": [
+        "Leviticus 26:18-28",
+        "Daniel 9:24-27"
+      ],
+      "children": [
+        {
+          "id": "1.1",
+          "title": "Establishment of the Seven Dispensations of Scattering and Gathering",
+          "time": null,
+          "summary": "",
+          "scriptures": [],
+          "children": [
+            {
+              "id": "1.1.1",
+              "title": "The 'Seven Times' Covenant Penalty",
+              "time": null,
+              "summary": "Moses declares that Israel will be punished 'seven times' for disobedience, prefiguring seven historical cycles of captivity and restoration.",
+              "scriptures": [
+                "Leviticus 26:18, 21, 24, 28"
+              ],
+              "children": []
+            },
+            {
+              "id": "1.1.2",
+              "title": "The 490-Year Sabbatical Precession Framework",
+              "time": null,
+              "summary": "Integration of 70 sabbatical weeks (70 × 7 = 490 years) connecting the jubilee calendar with celestial cycles.",
+              "scriptures": [
+                "Daniel 9:24",
+                "2 Chronicles 36:21"
+              ],
+              "children": []
+            },
+            {
+              "id": "1.1.3",
+              "title": "Typological Archetype of Egyptian Bondage",
+              "time": null,
+              "summary": "Israel's 215/430-year captivity in Egypt set as the historical pattern for latter-day gentile sojourns.",
+              "scriptures": [
+                "Exodus 12:40",
+                "Genesis 15:13"
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "1.2",
+          "title": "The Sabbatical Jubilee and Intercalary Probation Cycles",
+          "time": null,
+          "summary": "",
+          "scriptures": [],
+          "children": [
+            {
+              "id": "1.2.1",
+              "title": "The 49-Year Jubilee Proclamation",
+              "time": null,
+              "summary": "The sounding of the trumpet of the jubilee on the Day of Atonement, freeing captives and returning land inheritances.",
+              "scriptures": [
+                "Leviticus 25:9-10"
+              ],
+              "children": []
+            },
+            {
+              "id": "1.2.2",
+              "title": "The 40-Year Probationary Offset",
+              "time": null,
+              "summary": "The recurrent 40-year window between decree and ultimate destruction/deliverance throughout Israelite history.",
+              "scriptures": [
+                "Numbers 14:34",
+                "Ezekiel 4:6"
+              ],
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "title": "THE DAVIDIC COVENANT & THE ROYAL MESSIANIC LINEAGE",
+      "time": "c. 1000 BC",
+      "summary": "Establishment of the Davidic dynasty with the solemn prophetic decree that the eternal Messiah and King would emerge through the lineage of David.",
+      "scriptures": [
+        "2 Samuel 7:12-16",
+        "Psalms 2, 16, 22, 110",
+        "Isaiah 11:1-10"
+      ],
+      "children": [
+        {
+          "id": "2.1",
+          "title": "The Dynastic Promise of an Everlasting Throne",
+          "time": null,
+          "summary": "",
+          "scriptures": [],
+          "children": [
+            {
+              "id": "2.1.1",
+              "title": "Prophecy of the Eternal King",
+              "time": null,
+              "summary": "Nathan foretells that David's throne and seed will be established forever before God.",
+              "scriptures": [
+                "2 Samuel 7:13, 16"
+              ],
+              "children": []
+            },
+            {
+              "id": "2.1.2",
+              "title": "The Rod from the Stem of Jesse",
+              "time": null,
+              "summary": "Isaiah foretells the Branch emerging from the roots of Jesse with wisdom and power.",
+              "scriptures": [
+                "Isaiah 11:1-5"
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "2.2",
+          "title": "The Suffering and Exaltation of David's Seed",
+          "time": null,
+          "summary": "",
+          "scriptures": [],
+          "children": [
+            {
+              "id": "2.2.1",
+              "title": "The Psalm of Crucifixion",
+              "time": null,
+              "summary": "Prophetic detail of piercing hands and feet, casting lots for vesture, and intense thirst.",
+              "scriptures": [
+                "Psalms 22:1, 16-18"
+              ],
+              "children": []
+            },
+            {
+              "id": "2.2.2",
+              "title": "The Royal Melchizedek Priest-King",
+              "time": null,
+              "summary": "The Lord sits at the right hand of God until enemies become His footstool.",
+              "scriptures": [
+                "Psalms 110:1-4"
+              ],
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "title": "DANIEL'S FOUR SUCCESSIVE WORLD EMPIRES & 70 WEEKS",
+      "time": "600 BC - 60 BC",
+      "summary": "Daniel interprets the Great Metallic Image and Four Great Beasts, mapping world history from Babylon to Rome and the prophetic timeline to the Messiah.",
+      "scriptures": [
+        "Daniel 2:31-45",
+        "Daniel 7:1-28",
+        "Daniel 8:1-27",
+        "Daniel 9:24-27",
+        "Daniel 11:1-45"
+      ],
+      "children": [
+        {
+          "id": "3.1",
+          "title": "The Succession of the Four Imperial World Beasts",
+          "time": null,
+          "summary": "",
+          "scriptures": [],
+          "children": [
+            {
+              "id": "3.1.1",
+              "title": "Babylonian Lion with Eagle Wings",
+              "time": null,
+              "summary": "The golden head and winged lion representing the Neo-Babylonian Empire (605-539 BC).",
+              "scriptures": [
+                "Daniel 2:32",
+                "Daniel 7:4"
+              ],
+              "children": []
+            },
+            {
+              "id": "3.1.2",
+              "title": "Medo-Persian Bear Raised on One Side",
+              "time": null,
+              "summary": "The silver chest and bear with three ribs in its mouth representing Medo-Persia (539-331 BC).",
+              "scriptures": [
+                "Daniel 2:32",
+                "Daniel 7:5",
+                "Daniel 8:20"
+              ],
+              "children": []
+            },
+            {
+              "id": "3.1.3",
+              "title": "Macedonian Four-Winged Leopard",
+              "time": null,
+              "summary": "The bronze belly and four-headed leopard representing Alexander's empire and division into four kingdoms.",
+              "scriptures": [
+                "Daniel 2:32",
+                "Daniel 7:6",
+                "Daniel 8:21-22"
+              ],
+              "children": []
+            },
+            {
+              "id": "3.1.4",
+              "title": "Roman Terrible Beast with Iron Teeth",
+              "time": null,
+              "summary": "The iron legs and ten-horned beast representing imperial Rome's shattering dominion.",
+              "scriptures": [
+                "Daniel 2:40",
+                "Daniel 7:7-8"
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "3.2",
+          "title": "Gabriel's Seventy Weeks Prophecy to Rebuild Jerusalem and Temple",
+          "time": null,
+          "summary": "",
+          "scriptures": [],
+          "children": [
+            {
+              "id": "3.2.1",
+              "title": "Decree to Restore and Rebuild Jerusalem",
+              "time": null,
+              "summary": "From Artaxerxes' decree (457 BC) seven weeks and threescore and two weeks (483 years) until Messiah.",
+              "scriptures": [
+                "Daniel 9:25",
+                "Ezra 7:11-26"
+              ],
+              "children": []
+            },
+            {
+              "id": "3.2.2",
+              "title": "Messiah Cut Off but Not for Himself",
+              "time": null,
+              "summary": "After 62 weeks the Anointed One is executed, leading to the sacking of the sanctuary.",
+              "scriptures": [
+                "Daniel 9:26"
+              ],
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "title": "FIRST COMING OF CHRIST: NATIVITY, MINISTRY, & MIRACLES",
+      "time": "3 BC - 30 AD",
+      "summary": "The mortal advent of Jesus Christ fulfilling hundreds of detailed prophecies regarding His miraculous birth, forerunner, baptism, and ministry.",
+      "scriptures": [
+        "Isaiah 7:14",
+        "Isaiah 9:6",
+        "Micah 5:2",
+        "1 Nephi 11:13-31",
+        "Matthew 1-4",
+        "Luke 1-3"
+      ],
+      "children": [
+        {
+          "id": "4.1",
+          "title": "The Virgin Birth and Messianic Nativity in Bethlehem",
+          "time": null,
+          "summary": "",
+          "scriptures": [],
+          "children": [
+            {
+              "id": "4.1.1",
+              "title": "Virgin Birth of Immanuel",
+              "time": null,
+              "summary": "Fulfillment of Isaiah's sign: a virgin conceiving and bearing a Son called Immanuel.",
+              "scriptures": [
+                "Isaiah 7:14",
+                "Matthew 1:22-23",
+                "1 Nephi 11:18-20"
+              ],
+              "children": []
+            },
+            {
+              "id": "4.1.2",
+              "title": "Ruler Out of Bethlehem Ephrathah",
+              "time": null,
+              "summary": "Birth in Bethlehem of Judea, fulfilling Micah's ancient geographical prophecy.",
+              "scriptures": [
+                "Micah 5:2",
+                "Matthew 2:1-6"
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "4.2",
+          "title": "The Forerunner and Mortal Ministry of Christ",
+          "time": null,
+          "summary": "",
+          "scriptures": [],
+          "children": [
+            {
+              "id": "4.2.1",
+              "title": "Mission of John the Baptist",
+              "time": null,
+              "summary": "Voice crying in the wilderness preparing the way of the Lord; baptism of Jesus in Jordan.",
+              "scriptures": [
+                "Isaiah 40:3",
+                "Malachi 3:1",
+                "1 Nephi 11:27"
+              ],
+              "children": []
+            },
+            {
+              "id": "4.2.2",
+              "title": "Calling of the Twelve Apostles and Healing Ministry",
+              "time": null,
+              "summary": "Ministry of healing, preaching the Gospel of the Kingdom, and opening blind eyes in Galilee.",
+              "scriptures": [
+                "Isaiah 35:5-6",
+                "Isaiah 61:1-2",
+                "1 Nephi 11:28-31"
+              ],
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "title": "ATONEMENT, CRUCIFIXION, & FIRSTFRUITS RESURRECTION",
+      "time": "33 AD",
+      "summary": "The infinite Atonement and sacrificial death of Christ, His burial, and His victorious resurrection as the Firstfruits of them that slept.",
+      "scriptures": [
+        "Isaiah 53:1-12",
+        "Psalms 22",
+        "Zenok",
+        "Neum",
+        "1 Nephi 19:10-12",
+        "Matthew 27-28"
+      ],
+      "children": [
+        {
+          "id": "5.1",
+          "title": "The Suffering, Rejection, and Crucifixion of the Messiah",
+          "time": null,
+          "summary": "",
+          "scriptures": [],
+          "children": [
+            {
+              "id": "5.1.1",
+              "title": "Wounded for Our Transgressions",
+              "time": null,
+              "summary": "The Suffering Servant despised, smitten, bruised for our iniquities, and led as a lamb to slaughter.",
+              "scriptures": [
+                "Isaiah 53:4-7",
+                "Mosiah 14"
+              ],
+              "children": []
+            },
+            {
+              "id": "5.1.2",
+              "title": "Crucifixion Witnessed by Ancient Prophets",
+              "time": null,
+              "summary": "Zenok and Neum foretell the lifted up Savior and His burial in a rock sepulchre.",
+              "scriptures": [
+                "1 Nephi 19:10",
+                "Zenok",
+                "Neum"
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "5.2",
+          "title": "Resurrection and Firstfruits of the Righteous Dead",
+          "time": null,
+          "summary": "",
+          "scriptures": [],
+          "children": [
+            {
+              "id": "5.2.1",
+              "title": "Opening of the Graves in Jerusalem",
+              "time": null,
+              "summary": "Righteous saints awake from the dust and appear to many in the holy city following Christ's resurrection.",
+              "scriptures": [
+                "Matthew 27:52-53",
+                "Doctrine and Covenants 133:55"
+              ],
+              "children": []
+            },
+            {
+              "id": "5.2.2",
+              "title": "Christ the Firstfruits",
+              "time": null,
+              "summary": "Conquest of death ensuring universal resurrection and the pattern of the first resurrection.",
+              "scriptures": [
+                "1 Corinthians 15:20-23",
+                "2 Nephi 2:8"
+              ],
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "title": "MINISTRY TO OTHER SHEEP & THREE GENERATIONS OF PEACE",
+      "time": "33 - 34 AD",
+      "summary": "Physical cataclysms across the Americas during the crucifixion, followed by Christ's personal post-resurrection ministry at the temple in Bountiful.",
+      "scriptures": [
+        "John 10:16",
+        "3 Nephi 11-28",
+        "1 Nephi 12:1-23",
+        "Amos 8:9"
+      ],
+      "children": [
+        {
+          "id": "6.1",
+          "title": "Three Days of Darkness and Devastating American Seismic Cataclysms",
+          "time": null,
+          "summary": "",
+          "scriptures": [],
+          "children": [
+            {
+              "id": "6.1.1",
+              "title": "Vapor of Darkness and Storms",
+              "time": null,
+              "summary": "Thunder, tempest, sinking and burning of wicked cities across the promised land.",
+              "scriptures": [
+                "3 Nephi 8:5-19",
+                "1 Nephi 12:4"
+              ],
+              "children": []
+            },
+            {
+              "id": "6.1.2",
+              "title": "Three Days of Thick Darkness",
+              "time": null,
+              "summary": "Total absence of light; no fires or candles can be kindled for three full days.",
+              "scriptures": [
+                "3 Nephi 8:20-23",
+                "1 Nephi 19:10"
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "6.2",
+          "title": "Christ's Personal Appearance at Bountiful and Golden Age of Peace",
+          "time": null,
+          "summary": "",
+          "scriptures": [],
+          "children": [
+            {
+              "id": "6.2.1",
+              "title": "Descent of the Resurrected Lord",
+              "time": null,
+              "summary": "Christ descends out of heaven, shows the prints of the nails, and establishes His Church.",
+              "scriptures": [
+                "3 Nephi 11:8-17"
+              ],
+              "children": []
+            },
+            {
+              "id": "6.2.2",
+              "title": "Three Generations of Righteous Peace",
+              "time": null,
+              "summary": "Two centuries of consecration, no rich or poor, no contentions, before the 4th generation apostasy.",
+              "scriptures": [
+                "4 Nephi 1:1-18",
+                "1 Nephi 12:11-23"
+              ],
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "title": "ROMAN DESTRUCTION OF JERUSALEM & THE FIRST TRIBULATION",
+      "time": "70 AD",
+      "summary": "Titus and the Roman legions destroy Jerusalem and the Second Temple, fulfilling the first Abomination of Desolation and scattering Israel into all nations.",
+      "scriptures": [
+        "JS-Matthew 1:9-18",
+        "Luke 21:20-24",
+        "Daniel 9:26"
+      ],
+      "children": [
+        {
+          "id": "7.1",
+          "title": "The Razing of the Second Temple and Sacking of Jerusalem",
+          "time": null,
+          "summary": "",
+          "scriptures": [],
+          "children": [
+            {
+              "id": "7.1.1",
+              "title": "Not One Stone Left Upon Another",
+              "time": null,
+              "summary": "Roman siege completely razes the temple sanctuary so no stone stands upon another.",
+              "scriptures": [
+                "JS-Matthew 1:2-3"
+              ],
+              "children": []
+            },
+            {
+              "id": "7.1.2",
+              "title": "First Fulfillment of Daniel's Abomination of Desolation",
+              "time": null,
+              "summary": "Idolatrous imperial Roman standards planted in the holy precincts.",
+              "scriptures": [
+                "JS-Matthew 1:12",
+                "Daniel 9:27"
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "7.2",
+          "title": "Flight to the Mountains and the Worldwide Jewish Diaspora",
+          "time": null,
+          "summary": "",
+          "scriptures": [],
+          "children": [
+            {
+              "id": "7.2.1",
+              "title": "Christian Flight to Pella",
+              "time": null,
+              "summary": "Disciples heed Christ's warning and flee into the mountains without returning for possessions.",
+              "scriptures": [
+                "JS-Matthew 1:13-15"
+              ],
+              "children": []
+            },
+            {
+              "id": "7.2.2",
+              "title": "Worldwide Dispersion Among the Gentiles",
+              "time": null,
+              "summary": "Surviving remnants led away captive into all nations, severed from the mother olive tree.",
+              "scriptures": [
+                "Luke 21:24",
+                "Jacob 5:14"
+              ],
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "8",
+      "title": "RISE OF THE GREAT & ABOMINABLE SYSTEM & WILDERNESS EXILE",
+      "time": "150 - 500 AD",
+      "summary": "Corrupted religious-political empires strip plain and precious truths from the scriptures; the true Church of the Lamb is driven into the wilderness.",
+      "scriptures": [
+        "1 Nephi 13:1-11",
+        "1 Nephi 14:9-17",
+        "Revelation 12:6, 14",
+        "Revelation 13:1-10",
+        "Doctrine and Covenants 86:3"
+      ],
+      "children": [
+        {
+          "id": "8.1",
+          "title": "The Whore Riding the Ten-Horned Imperial Beast",
+          "time": null,
+          "summary": "",
+          "scriptures": [],
+          "children": [
+            {
+              "id": "8.1.1",
+              "title": "Persecution of the Saints of God",
+              "time": null,
+              "summary": "Slaying of the apostles and suppression of pure doctrine under Roman authority.",
+              "scriptures": [
+                "Revelation 17:6",
+                "1 Nephi 13:5"
+              ],
+              "children": []
+            },
+            {
+              "id": "8.1.2",
+              "title": "Excising Plain and Precious Covenants",
+              "time": null,
+              "summary": "Deliberate removal of fundamental gospel truths from the biblical record.",
+              "scriptures": [
+                "1 Nephi 13:26-29"
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "8.2",
+          "title": "The 1,260-Year Wilderness Exile of the True Church",
+          "time": null,
+          "summary": "",
+          "scriptures": [],
+          "children": [
+            {
+              "id": "8.2.1",
+              "title": "The Woman Flees to the Wilderness",
+              "time": null,
+              "summary": "The spiritual authority and priesthood withdrawn for a symbolic 1,260 days/years.",
+              "scriptures": [
+                "Revelation 12:6",
+                "Doctrine and Covenants 86:3"
+              ],
+              "children": []
+            },
+            {
+              "id": "8.2.2",
+              "title": "Apostasy Across the Gentile Nations",
+              "time": null,
+              "summary": "Loss of direct revelation and universal fracturing into competing creeds.",
+              "scriptures": [
+                "1 Nephi 13:34",
+                "2 Nephi 28:3-9"
+              ],
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "9",
+      "title": "THE LONG DISPERSION & THE ERA OF TRIBULATION",
+      "time": "200 - 1800 AD",
+      "summary": "Centuries of spiritual darkness, persistent wars, rumors of wars, false Christs, and natural chastisements while Israel remains scattered.",
+      "scriptures": [
+        "JS-Matthew 1:9-22, 28-30",
+        "Doctrine and Covenants 43:25",
+        "Jacob 5"
+      ],
+      "children": [
+        {
+          "id": "9.1",
+          "title": "Persistent Social, Doctrinal, and Political Evils",
+          "time": null,
+          "summary": "",
+          "scriptures": [],
+          "children": [
+            {
+              "id": "9.1.1",
+              "title": "The Love of Many Waxes Cold",
+              "time": null,
+              "summary": "Iniquity abounds, and mankind declares that the Lord delayeth His coming.",
+              "scriptures": [
+                "JS-Matthew 1:10",
+                "Doctrine and Covenants 45:26"
+              ],
+              "children": []
+            },
+            {
+              "id": "9.1.2",
+              "title": "Proliferation of Deceivers and False Christs",
+              "time": null,
+              "summary": "Emergence of worldly philosophies and false messiahs leading millions astray.",
+              "scriptures": [
+                "JS-Matthew 1:9, 22"
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "9.2",
+          "title": "Voice of Nature and Global Pestilences Calling Men to Repent",
+          "time": null,
+          "summary": "",
+          "scriptures": [],
+          "children": [
+            {
+              "id": "9.2.1",
+              "title": "Earthquakes, Tempests, and Plagues",
+              "time": null,
+              "summary": "Divine warnings through lightnings, famines, and the voice of thunder.",
+              "scriptures": [
+                "Doctrine and Covenants 43:25",
+                "JS-Matthew 1:29"
+              ],
+              "children": []
+            },
+            {
+              "id": "9.2.2",
+              "title": "Wars and Rumors of Wars",
+              "time": null,
+              "summary": "Incessant empire clashes while the end is yet withheld.",
+              "scriptures": [
+                "JS-Matthew 1:28"
+              ],
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "title": "REDISCOVERY OF THE PROMISED LAND & BIRTH OF A FREE NATION",
+      "time": "1492 - 1776 AD",
+      "summary": "The Spirit of God leads explorers and pilgrims across the great waters to establish a land of liberty dedicated to the restoration of the covenant.",
+      "scriptures": [
+        "1 Nephi 13:12-19, 30",
+        "Ether 2:12",
+        "Ether 13:1-10"
+      ],
+      "children": [
+        {
+          "id": "10.1",
+          "title": "Voyages Across the Waters to the Choice Land",
+          "time": null,
+          "summary": "",
+          "scriptures": [],
+          "children": [
+            {
+              "id": "10.1.1",
+              "title": "The Man Among the Gentiles",
+              "time": null,
+              "summary": "Columbus and early voyagers wrought upon by the Spirit of the Lord to cross the ocean.",
+              "scriptures": [
+                "1 Nephi 13:12"
+              ],
+              "children": []
+            },
+            {
+              "id": "10.1.2",
+              "title": "Deliverance from Gentile Captivity",
+              "time": null,
+              "summary": "Pilgrims and settlers humbleness before God, preserved from European crowns.",
+              "scriptures": [
+                "1 Nephi 13:13-16"
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "10.2",
+          "title": "Establishment of the Constitutional Land of Liberty",
+          "time": null,
+          "summary": "",
+          "scriptures": [],
+          "children": [
+            {
+              "id": "10.2.1",
+              "title": "Divine Foundation of American Freedom",
+              "time": null,
+              "summary": "Gentiles delivered by the power of God out of the hands of all other nations in 1776.",
+              "scriptures": [
+                "1 Nephi 13:18-19"
+              ],
+              "children": []
+            },
+            {
+              "id": "10.2.2",
+              "title": "Preservation of Rights for Gospel Restoration",
+              "time": null,
+              "summary": "The Constitution established by wise men raised up for that very purpose.",
+              "scriptures": [
+                "Doctrine and Covenants 101:80",
+                "Doctrine and Covenants 98:5-8"
+              ],
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "11",
+      "title": "RESTORATION OF THE GOSPEL & OPENING OF THE TIMES OF GENTILES",
+      "time": "1830 AD",
+      "summary": "Heavenly visions to Joseph Smith, translation of the Book of Mormon, restoration of priesthood keys, and the gathering of Israel begins.",
+      "scriptures": [
+        "1 Nephi 14:7",
+        "Doctrine and Covenants 45:28",
+        "Doctrine and Covenants 88:84",
+        "Doctrine and Covenants 110",
+        "JS-History 1"
+      ],
+      "children": [
+        {
+          "id": "11.1",
+          "title": "The Great and Marvelous Work Commences",
+          "time": null,
+          "summary": "",
+          "scriptures": [],
+          "children": [
+            {
+              "id": "11.1.1",
+              "title": "First Vision and Angelic Ministrations",
+              "time": null,
+              "summary": "Father and Son appear to Joseph Smith; Moroni delivers ancient Nephite records.",
+              "scriptures": [
+                "JS-History 1:15-42"
+              ],
+              "children": []
+            },
+            {
+              "id": "11.1.2",
+              "title": "Translation of the Book of Mormon",
+              "time": null,
+              "summary": "Ancient record translated by the gift and power of God to convince Jew and Gentile that Jesus is the Christ.",
+              "scriptures": [
+                "Title Page of Book of Mormon",
+                "1 Nephi 13:38-40"
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "11.2",
+          "title": "Restoration of Priesthood Keys and the Times of the Gentiles",
+          "time": null,
+          "summary": "",
+          "scriptures": [],
+          "children": [
+            {
+              "id": "11.2.1",
+              "title": "Moses, Elias, and Elijah in Kirtland Temple",
+              "time": null,
+              "summary": "Commitment of keys for gathering Israel, the dispensation of Abraham, and turning hearts.",
+              "scriptures": [
+                "Doctrine and Covenants 110:11-16"
+              ],
+              "children": []
+            },
+            {
+              "id": "11.2.2",
+              "title": "Light Breaks Forth Among Those in Darkness",
+              "time": null,
+              "summary": "The Times of the Gentiles dualistically 'comes in' with the fullness of the gospel restored. Times of the Gentiles began at Israel's destruction in 70 AD.",
+              "scriptures": [
+                "Doctrine and Covenants 45:28",
+                "JS-Matthew 1:31"
+              ],
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "12",
+      "title": "MODERN INGATHERING OF JUDAH & 20TH-CENTURY GLOBAL CONFLICTS",
+      "time": "1917 - 1987 AD",
+      "summary": "World Wars I and II break imperial powers; Jewish remnants return to Palestine, establishing the State of Israel (1948) as the fig tree blossoms.",
+      "scriptures": [
+        "JS-Matthew 1:27",
+        "Luke 21:29-31",
+        "Ezekiel 37:1-14"
+      ],
+      "children": [
+        {
+          "id": "12.1",
+          "title": "World Wars and the Gathering to Palestine",
+          "time": null,
+          "summary": "",
+          "scriptures": [],
+          "children": [
+            {
+              "id": "12.1.1",
+              "title": "The Parable of the Fig Tree Fulfilled",
+              "time": null,
+              "summary": "Tender branches shoot forth in 1948 as Israel is reborn after nineteen centuries of dispersion.",
+              "scriptures": [
+                "JS-Matthew 1:37-38"
+              ],
+              "children": []
+            },
+            {
+              "id": "12.1.2",
+              "title": "Gathering of Jewish Exiles from the Four Quarters",
+              "time": null,
+              "summary": "Immigration waves return descendants of Judah to the mountains of their fathers.",
+              "scriptures": [
+                "Ezekiel 37:11-14",
+                "Jeremiah 23:3-8"
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "12.2",
+          "title": "Consolidation of the Modern First World Beast System",
+          "time": null,
+          "summary": "",
+          "scriptures": [],
+          "children": [
+            {
+              "id": "12.2.1",
+              "title": "Global Governance Consolidation",
+              "time": null,
+              "summary": "Post-WWII emergence of multilateral institutions exercising dominion across all nations.",
+              "scriptures": [
+                "Revelation 13:7"
+              ],
+              "children": []
+            },
+            {
+              "id": "12.2.2",
+              "title": "The 70-Year Hegemonic Cycle",
+              "time": null,
+              "summary": "Western and Soviet power blocks dominating global politics throughout the mid-20th century.",
+              "scriptures": [
+                "Daniel 7:23-25"
+              ],
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "13",
+      "title": "LATTER-DAY SCOURGES & REJECTION OF GOSPEL FULLNESS",
+      "time": "2019 - 2027 AD",
+      "summary": "Desolating sicknesses and pandemic scourges cover the earth; society rejects covenant foundations, setting the stage for Gentile judgment.",
+      "scriptures": [
+        "Doctrine and Covenants 45:28-31",
+        "Luke 21:26",
+        "Doctrine and Covenants 88:91"
+      ],
+      "children": [
+        {
+          "id": "13.1",
+          "title": "Desolating Sickness and the Overflowing Scourge",
+          "time": null,
+          "summary": "",
+          "scriptures": [],
+          "children": [
+            {
+              "id": "13.1.1",
+              "title": "Global Pandemic and Economic Commotion",
+              "time": null,
+              "summary": "Fulfillment of D&C 45:31: an overflowing scourge and desolating sickness covering the land.",
+              "scriptures": [
+                "Doctrine and Covenants 45:31"
+              ],
+              "children": []
+            },
+            {
+              "id": "13.1.2",
+              "title": "Men's Hearts Failing Them for Fear",
+              "time": null,
+              "summary": "Widespread societal anxiety and institutional breakdown across the nations.",
+              "scriptures": [
+                "Luke 21:26",
+                "Doctrine and Covenants 88:91"
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "13.2",
+          "title": "Rejection of the Light and Fulfilled Gentile Probation",
+          "time": null,
+          "summary": "",
+          "scriptures": [],
+          "children": [
+            {
+              "id": "13.2.1",
+              "title": "Turning Hearts from God Through Precepts of Men",
+              "time": null,
+              "summary": "Wickedness abounds as Gentile cultures fully reject gospel standards.",
+              "scriptures": [
+                "Doctrine and Covenants 45:29"
+              ],
+              "children": []
+            },
+            {
+              "id": "13.2.2",
+              "title": "The Times of the Gentiles Reaching Fullness",
+              "time": null,
+              "summary": "Probationary window begins closing, transitioning the gospel priority back to Israel.",
+              "scriptures": [
+                "Doctrine and Covenants 45:30",
+                "Romans 11:25"
+              ],
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "14",
+      "title": "THE 70TH HEBDOMAD & SECOND ABOMINATION OF DESOLATION (FULLNESS OF THE GENTILES)",
+      "time": "Final 7-Year Period (~2027-2034 AD)",
+      "summary": "The final week of Daniel: Jerusalem is besieged, the daily sacrifice taken away, holy places trampled for 42 months, and Two Witnesses minister in sackcloth.",
+      "scriptures": [
+        "Daniel 9:27",
+        "JS-Matthew 1:18, 32",
+        "Revelation 11:2-12",
+        "Zechariah 14:1-3"
+      ],
+      "children": [
+        {
+          "id": "14.1",
+          "title": "The Siege of Jerusalem and Fall of the City",
+          "time": null,
+          "summary": "",
+          "scriptures": [],
+          "children": [
+            {
+              "id": "14.1.1",
+              "title": "Second Fulfillment of Daniel's Abomination",
+              "time": null,
+              "summary": "Jerusalem besieged again with fierce tribulation upon the Jews.",
+              "scriptures": [
+                "JS-Matthew 1:32",
+                "Daniel 9:27"
+              ],
+              "children": []
+            },
+            {
+              "id": "14.1.2",
+              "title": "Trampling of the Holy City for Forty-Two Months",
+              "time": null,
+              "summary": "Half the city goes into exile while foreign armies occupy the temple courts for 3.5 years.",
+              "scriptures": [
+                "Revelation 11:2",
+                "Zechariah 14:2"
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "14.2",
+          "title": "Ministry and Resurrection of the Two Witnesses",
+          "time": null,
+          "summary": "",
+          "scriptures": [],
+          "children": [
+            {
+              "id": "14.2.1",
+              "title": "Prophesying in Sackcloth for 1,260 Days",
+              "time": null,
+              "summary": "Two prophets seal the heavens, turn water to blood, and smite the earth with plagues.",
+              "scriptures": [
+                "Revelation 11:3-6",
+                "Doctrine and Covenants 77:15"
+              ],
+              "children": []
+            },
+            {
+              "id": "14.2.2",
+              "title": "Death and Public Resurrection of the Witnesses",
+              "time": null,
+              "summary": "Slain in the streets of Jerusalem, lying unburied 3.5 days, then standing and ascending into heaven.",
+              "scriptures": [
+                "Revelation 11:7-12"
+              ],
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "15",
+      "title": "COALITION ATTACK OF GOG & MAGOG FROM SYRIA",
+      "time": "~2027-2034",
+      "summary": "Northern and Middle Eastern powers form a strategic military alliance encircling the mountains of Israel in preparation for the end-times siege.",
+      "scriptures": [
+        "Ezekiel 38:1-23",
+        "Zechariah 12:2-3",
+        "Revelation 20:7-8"
+      ],
+      "children": [
+        {
+          "id": "15.1",
+          "title": "The Strategic League of Northern and Regional Powers",
+          "time": null,
+          "summary": "",
+          "scriptures": [],
+          "children": [
+            {
+              "id": "15.1.1",
+              "title": "The Northern Chief Prince and Allies",
+              "time": null,
+              "summary": "Gog of Magog (northern power) allied with Persia (Iran), Cush (Ethiopia), and Put (Libya).",
+              "scriptures": [
+                "Ezekiel 38:2-5"
+              ],
+              "children": []
+            },
+            {
+              "id": "15.1.2",
+              "title": "Gomer and the House of Togarmah",
+              "time": null,
+              "summary": "Central Asian and Anatolian forces joining the coalition against unfortified Israeli settlements.",
+              "scriptures": [
+                "Ezekiel 38:6, 11"
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "15.2",
+          "title": "Jerusalem Made a Cup of Trembling and Heavy Stone",
+          "time": null,
+          "summary": "",
+          "scriptures": [],
+          "children": [
+            {
+              "id": "15.2.1",
+              "title": "Global Diplomatic Isolation of Israel",
+              "time": null,
+              "summary": "All surrounding nations and international bodies aligning against Jerusalem.",
+              "scriptures": [
+                "Zechariah 12:2-3"
+              ],
+              "children": []
+            },
+            {
+              "id": "15.2.2",
+              "title": "Withholding of Western Allied Protection",
+              "time": null,
+              "summary": "The great betrayal wherein traditional allies withhold effective defense during the crisis.",
+              "scriptures": [
+                "Zechariah 14:2"
+              ],
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "16",
+      "title": "ARM OF THE LORD BEGINS TO FALL ON GENTILE NATIONS & MISSIONARIES CALLED HOME",
+      "time": "Closing Gentile Era (2027-2047)",
+      "summary": "Judgment begins at the house of the Lord and strikes the Gentiles; missionaries are called home as economic totalitarianism and internal collapses spread.",
+      "scriptures": [
+        "Doctrine and Covenants 45:47",
+        "Doctrine and Covenants 112:25",
+        "Doctrine and Covenants 88:84-90",
+        "Revelation 13:11-18",
+        "3 Nephi 20:16"
+      ],
+      "children": [
+        {
+          "id": "16.1",
+          "title": "Missionaries Called Home and Sealing of the Law",
+          "time": null,
+          "summary": "",
+          "scriptures": [],
+          "children": [
+            {
+              "id": "16.1.1",
+              "title": "Elders Called Out of the Vineyard",
+              "time": null,
+              "summary": "Ministry among the Gentiles terminates as elders shake dust from their feet.",
+              "scriptures": [
+                "Doctrine and Covenants 88:84-85"
+              ],
+              "children": []
+            },
+            {
+              "id": "16.1.2",
+              "title": "Testimony Sealed by the Wrath of Nature",
+              "time": null,
+              "summary": "Earthquakes, tempests, and waves heaving beyond their bounds witness against the wicked.",
+              "scriptures": [
+                "Doctrine and Covenants 88:88-90"
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "16.2",
+          "title": "Rise of the Second Beast and American Fragmentation",
+          "time": null,
+          "summary": "",
+          "scriptures": [],
+          "children": [
+            {
+              "id": "16.2.1",
+              "title": "Totalitarian Commerce and Mark Enforcement",
+              "time": null,
+              "summary": "Second beast mandates allegiance to buy or sell, persecuting those who refuse.",
+              "scriptures": [
+                "Revelation 13:16-17"
+              ],
+              "children": []
+            },
+            {
+              "id": "16.2.2",
+              "title": "The Constitution Hanging by a Thread",
+              "time": null,
+              "summary": "National collapse of gentile governments while righteous elders uphold liberty in Zion.",
+              "scriptures": [
+                "Doctrine and Covenants 45:68",
+                "White Horse Prophecy"
+              ],
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "17",
+      "title": "WORLD WAR III (ARMAGEDDON) & OVERTHROW OF BABYLON/ BEAST SYSTEM?",
+      "time": "Culmination of Gentile Wars",
+      "summary": "World armies gather into the valley of Megiddo against Jerusalem; divine wrath descends, incinerating the beast, false prophet, and Babylon the Great.",
+      "scriptures": [
+        "Revelation 16:14-16",
+        "Revelation 18:1-24",
+        "Revelation 19:11-21",
+        "Doctrine and Covenants 29:21",
+        "Ezekiel 38:18-23"
+      ],
+      "children": [
+        {
+          "id": "17.1",
+          "title": "Gathering of Global Armies to the Valley of Decision",
+          "time": null,
+          "summary": "",
+          "scriptures": [],
+          "children": [
+            {
+              "id": "17.1.1",
+              "title": "Spirits of Devils Muster Earth's Kings",
+              "time": null,
+              "summary": "Armies numbering 200 million converge around the mountains of Israel for total conquest.",
+              "scriptures": [
+                "Revelation 9:16",
+                "Revelation 16:14"
+              ],
+              "children": []
+            },
+            {
+              "id": "17.1.2",
+              "title": "Final Distress and Siege of Jerusalem's Remnant",
+              "time": null,
+              "summary": "Israel's defense shattered, pushed to the brink of utter extermination.",
+              "scriptures": [
+                "Zechariah 12:2",
+                "Zechariah 14:2"
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "17.2",
+          "title": "Fall and Burning of Babylon the Great",
+          "time": null,
+          "summary": "",
+          "scriptures": [],
+          "children": [
+            {
+              "id": "17.2.1",
+              "title": "Destruction of the Great Whore by Fire",
+              "time": null,
+              "summary": "The corrupt world system collapsed in one hour, burned with devouring fire.",
+              "scriptures": [
+                "Revelation 18:10, 21",
+                "Doctrine and Covenants 29:21"
+              ],
+              "children": []
+            },
+            {
+              "id": "17.2.2",
+              "title": "Casting of the Beast and False Prophet into the Lake of Fire",
+              "time": null,
+              "summary": "Military and religious impostors destroyed without hand by divine power.",
+              "scriptures": [
+                "Revelation 19:20",
+                "Daniel 8:25"
+              ],
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "18",
+      "title": "PUBLIC ADVENT: CHRIST SYMBOLIC ENTRANCE THROUGH THE MOUNT OF OLIVES",
+      "time": "The Day of the Lord",
+      "summary": "Christ symbolically enters Jerusalem from the east; His foot touches the Mount of Olives, cleaving it in twain; the Jewish remnant recognizes their crucified Redeemer.",
+      "scriptures": [
+        "Zechariah 14:4-9",
+        "Doctrine and Covenants 45:48-53",
+        "Zechariah 12:10",
+        "Zechariah 13:6"
+      ],
+      "children": [
+        {
+          "id": "18.1",
+          "title": "The Cleaving of Mount Olivet and Valley of Refuge",
+          "time": null,
+          "summary": "",
+          "scriptures": [],
+          "children": [
+            {
+              "id": "18.1.1",
+              "title": "The Mount Cleaves East and West",
+              "time": null,
+              "summary": "Jews escape through Mount Olives, the mounts split (symbolically?) and Christ enters..",
+              "scriptures": [
+                "Zechariah 14:4-5",
+                "Doctrine and Covenants 45:48"
+              ],
+              "children": []
+            },
+            {
+              "id": "18.1.2",
+              "title": "The Lord Utters His Voice from Zion and Jerusalem",
+              "time": null,
+              "summary": "All ends of the earth hear His decree; mountains melt and continents quake.",
+              "scriptures": [
+                "Doctrine and Covenants 45:49",
+                "Joel 3:16"
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "18.2",
+          "title": "Recognition of the Messiah by the Jewish Remnant",
+          "time": null,
+          "summary": "",
+          "scriptures": [],
+          "children": [
+            {
+              "id": "18.2.1",
+              "title": "What Are These Wounds in Thine Hands?",
+              "time": null,
+              "summary": "Jews examine His pierced hands and feet, discovering He was wounded in the house of friends.",
+              "scriptures": [
+                "Zechariah 13:6",
+                "Doctrine and Covenants 45:51-52"
+              ],
+              "children": []
+            },
+            {
+              "id": "18.2.2",
+              "title": "Mourning and National Redemption of Israel",
+              "time": null,
+              "summary": "Bitterness of tears as the remnant realizes Jesus of Nazareth is their true King.",
+              "scriptures": [
+                "Zechariah 12:10",
+                "Doctrine and Covenants 45:53"
+              ],
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "19",
+      "title": "OPENING OF THE SEVENTH SEAL & CELESTIAL TERRORS",
+      "time": "Immediately After Tribulation (~March 2034 AD)",
+      "summary": "Immediately following the tribulation of Jerusalem: the sun is blackened, the moon bathed in blood, stars fall like figs, and kings hide in caves.",
+      "scriptures": [
+        "Revelation 6:12-17",
+        "JS-Matthew 1:33",
+        "Doctrine and Covenants 88:87",
+        "Doctrine and Covenants 29:14-16"
+      ],
+      "children": [
+        {
+          "id": "19.1",
+          "title": "Cosmic Disturbances and Solar-Lunar Eclipses",
+          "time": null,
+          "summary": "",
+          "scriptures": [],
+          "children": [
+            {
+              "id": "19.1.1",
+              "title": "Sun Darkened and Moon Bathed in Blood (Near-east eclipse March 2034)",
+              "time": null,
+              "summary": "The sun hides its face in shame; the moon turns to deep blood before the great day.",
+              "scriptures": [
+                "JS-Matthew 1:33",
+                "Doctrine and Covenants 88:87"
+              ],
+              "children": []
+            },
+            {
+              "id": "19.1.2",
+              "title": "Stars Falling as Ripe Figs, Wormwood/Apophis (April 2029/March 2036)",
+              "time": null,
+              "summary": "Meteorite storms and falling celestial debris shaking the stability of earth.",
+              "scriptures": [
+                "Revelation 6:13",
+                "Doctrine and Covenants 88:87"
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "19.2",
+          "title": "Worldwide Earthquakes and Terror Among Earth's Elites",
+          "time": null,
+          "summary": "",
+          "scriptures": [],
+          "children": [
+            {
+              "id": "19.2.1",
+              "title": "The Earth Reeling to and Fro (Major Solar flare begins earth expansion event ~40yrs)",
+              "time": null,
+              "summary": "Seismic waves shake continents; islands and mountains move out of their places.",
+              "scriptures": [
+                "Revelation 6:14",
+                "Doctrine and Covenants 88:87"
+              ],
+              "children": []
+            },
+            {
+              "id": "19.2.2",
+              "title": "Mighty Men Fleeing to Rocks and Caves",
+              "time": null,
+              "summary": "Captains, kings, and bondmen cry for the mountains to fall on them and hide them from the Lamb.",
+              "scriptures": [
+                "Revelation 6:15-16"
+              ],
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "20",
+      "title": "THE GREAT SIGN OF THE SON OF MAN & PRIVATE ADVENT IN CLOUDS",
+      "time": "Following Celestial Signs (~2034 AD)",
+      "summary": "The Great Sign of the Son of Man appears across the sky, visible to all humanity; Christ appears in glory to His watching saints afar off.",
+      "scriptures": [
+        "JS-Matthew 1:36",
+        "Doctrine and Covenants 88:92-94",
+        "Doctrine and Covenants 45:44",
+        "Matthew 24:30"
+      ],
+      "children": [
+        {
+          "id": "20.1",
+          "title": "The Global Celestial Ensign of the Coming Lord",
+          "time": null,
+          "summary": "",
+          "scriptures": [],
+          "children": [
+            {
+              "id": "20.1.1",
+              "title": "Great Sign in Heaven Seen Together",
+              "time": null,
+              "summary": "A glorious astronomical manifestation appearing like morning light shining from east to west.",
+              "scriptures": [
+                "Doctrine and Covenants 88:93",
+                "JS-Matthew 1:26"
+              ],
+              "children": []
+            },
+            {
+              "id": "20.1.2",
+              "title": "Mourning of the Unprepared Tribes",
+              "time": null,
+              "summary": "Inhabitants of the earth lament as the undeniable presence of the King draws near.",
+              "scriptures": [
+                "JS-Matthew 1:36",
+                "Doctrine and Covenants 45:49"
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "20.2",
+          "title": "Private Appearance in Glory to Watchers and Virgins",
+          "time": null,
+          "summary": "",
+          "scriptures": [],
+          "children": [
+            {
+              "id": "20.2.1",
+              "title": "Appearance to Those Who Watch and Wait",
+              "time": null,
+              "summary": "Christ reveals Himself in the clouds of heaven with holy angels to those who have oil in their lamps.",
+              "scriptures": [
+                "Doctrine and Covenants 45:44",
+                "Doctrine and Covenants 133:10-11"
+              ],
+              "children": []
+            },
+            {
+              "id": "20.2.2",
+              "title": "Cut Off Are Those Who Fell Asleep",
+              "time": null,
+              "summary": "The foolish virgins and careless disciples caught unprepared when the Bridegroom arrives.",
+              "scriptures": [
+                "Doctrine and Covenants 45:44, 56-57"
+              ],
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "21",
+      "title": "FIRST TRUMP & FIRSTFRUITS OF THE RESURRECTION",
+      "time": "Before Gentile Destruction (2034-2074)",
+      "summary": "The sounding of the first trump: righteous dead awake and rise from graves, and living faithful saints are quickened and caught up into the clouds.",
+      "scriptures": [
+        "Doctrine and Covenants 45:45-46",
+        "Doctrine and Covenants 88:96-99",
+        "1 Thessalonians 4:16-17",
+        "Doctrine and Covenants 29:13"
+      ],
+      "children": [
+        {
+          "id": "21.1",
+          "title": "The Resurrection of the Sleeping Saints",
+          "time": null,
+          "summary": "",
+          "scriptures": [],
+          "children": [
+            {
+              "id": "21.1.1",
+              "title": "The Trump Sounds on Mount Sinai",
+              "time": null,
+              "summary": "The angelic trumpet awakes those who died in the covenant to receive crowns of glory.",
+              "scriptures": [
+                "Doctrine and Covenants 29:13",
+                "Doctrine and Covenants 45:45"
+              ],
+              "children": []
+            },
+            {
+              "id": "21.1.2",
+              "title": "Emergence from Graves into the Cloud",
+              "time": null,
+              "summary": "Righteous dead ascend in the midst of the pillar of heaven to be with Christ.",
+              "scriptures": [
+                "Doctrine and Covenants 88:97",
+                "1 Thessalonians 4:16"
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "21.2",
+          "title": "Quickening and Catching Up of the Living Faithful",
+          "time": null,
+          "summary": "",
+          "scriptures": [],
+          "children": [
+            {
+              "id": "21.2.1",
+              "title": "Translation in the Twinkling of an Eye",
+              "time": null,
+              "summary": "Living righteous saints changed without tasting the lingering sting of death.",
+              "scriptures": [
+                "Doctrine and Covenants 101:31",
+                "1 Corinthians 15:52"
+              ],
+              "children": []
+            },
+            {
+              "id": "21.2.2",
+              "title": "Caught Up Together with the Saints",
+              "time": null,
+              "summary": "Saints caught up to meet the Lord in the air before judgment falls on the nations.",
+              "scriptures": [
+                "Doctrine and Covenants 88:96",
+                "1 Thessalonians 4:17"
+              ],
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "22",
+      "title": "DISPENSATION OF THE FULNESS OF TIMES & GATHERING TO ZION FOR SAFETY",
+      "time": "20-40 Year Period (2034-2074)",
+      "summary": "Heavenly silence for the space of half an hour; judgments stayed while the 144,000 are sealed and the righteous gather to Zion, the only nation at peace.",
+      "scriptures": [
+        "Revelation 8:1",
+        "Doctrine and Covenants 88:95",
+        "Doctrine and Covenants 29:8",
+        "Doctrine and Covenants 45:64-71",
+        "Doctrine and Covenants 77:11"
+      ],
+      "children": [
+        {
+          "id": "22.1",
+          "title": "The Heavenly Silence and Sealing of the 144,000",
+          "time": null,
+          "summary": "",
+          "scriptures": [],
+          "children": [
+            {
+              "id": "22.1.1",
+              "title": "Four Angels Holding the Four Winds",
+              "time": null,
+              "summary": "Destructions restrained across the sea and earth until servants are sealed in their foreheads.",
+              "scriptures": [
+                "Revelation 7:1-3",
+                "Doctrine and Covenants 77:9-10"
+              ],
+              "children": []
+            },
+            {
+              "id": "22.1.2",
+              "title": "Ordination of the 144,000 High Priests",
+              "time": null,
+              "summary": "High priests ordained from all tribes to minister the everlasting gospel and gather the elect.",
+              "scriptures": [
+                "Doctrine and Covenants 77:11",
+                "Revelation 14:1-5"
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "22.2",
+          "title": "Establishment and Refuge of the New Jerusalem (Zion)",
+          "time": null,
+          "summary": "",
+          "scriptures": [],
+          "children": [
+            {
+              "id": "22.2.1",
+              "title": "Decree to Gather to One Place",
+              "time": null,
+              "summary": "Saints called to purchase lands and build up Zion as a city of refuge and safety.",
+              "scriptures": [
+                "Doctrine and Covenants 45:64-66",
+                "Doctrine and Covenants 29:8"
+              ],
+              "children": []
+            },
+            {
+              "id": "22.2.2",
+              "title": "The Only Nation Not at War",
+              "time": null,
+              "summary": "Every man refusing to take arms against his neighbor must flee to Zion for defense.",
+              "scriptures": [
+                "Doctrine and Covenants 45:68-70"
+              ],
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "23",
+      "title": "'LITTLE SEASON' WICKEDNESS & FINAL CONFLICT OF GOG AND MAGOG",
+      "time": "End of the 1,000 Years",
+      "summary": "At the close of the Millennium, Satan is loosed for a little season; Michael leads heaven's hosts against hell's armies; the devil is cast out forever.",
+      "scriptures": [
+        "Revelation 20:7-10",
+        "Doctrine and Covenants 29:22",
+        "Doctrine and Covenants 88:111-115"
+      ],
+      "children": [
+        {
+          "id": "23.1",
+          "title": "Satan Loosed to Deceive the Nations Once More",
+          "time": null,
+          "summary": "",
+          "scriptures": [],
+          "children": [
+            {
+              "id": "23.1.1",
+              "title": "Men Begin Again to Deny God",
+              "time": null,
+              "summary": "Mortal probation produces a final contingent who reject the divine government.",
+              "scriptures": [
+                "Doctrine and Covenants 29:22"
+              ],
+              "children": []
+            },
+            {
+              "id": "23.1.2",
+              "title": "Muster of the Final Rebellious Host",
+              "time": null,
+              "summary": "Satan gathers his forces like the sand of the sea around the camp of the saints.",
+              "scriptures": [
+                "Revelation 20:8-9"
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "23.2",
+          "title": "Michael's Final Triumph and the Great White Throne",
+          "time": null,
+          "summary": "",
+          "scriptures": [],
+          "children": [
+            {
+              "id": "23.2.1",
+              "title": "Battle of the Great God",
+              "time": null,
+              "summary": "Michael the Archangel leads heavenly legions; hell's armies cast into outer darkness forever.",
+              "scriptures": [
+                "Doctrine and Covenants 88:112-114",
+                "Revelation 20:10"
+              ],
+              "children": []
+            },
+            {
+              "id": "23.2.2",
+              "title": "General Resurrection and Final Judgment",
+              "time": null,
+              "summary": "Rest of the dead awake; books are opened; every soul judged according to works.",
+              "scriptures": [
+                "Revelation 20:11-13",
+                "Doctrine and Covenants 29:26-27"
+              ],
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "24",
+      "title": "CLEANSING BY FIRE & INAUGURATION OF TERRESTRIAL EARTH",
+      "time": "Commencement of 1,000-Year Reign",
+      "summary": "God's presence melts mountains and boils waters; wicked consumed by plagues and fire; continents re-unite; Satan bound for a thousand years of peace.",
+      "scriptures": [
+        "Isaiah 64:1-2",
+        "Doctrine and Covenants 133:23-24, 40-44",
+        "Zechariah 14:12",
+        "Doctrine and Covenants 29:18-20",
+        "Doctrine and Covenants 101:23-34"
+      ],
+      "children": [
+        {
+          "id": "24.1",
+          "title": "Global Cleansing of Wickedness by Melting Fire",
+          "time": null,
+          "summary": "",
+          "scriptures": [],
+          "children": [
+            {
+              "id": "24.1.1",
+              "title": "Presence as a Melting Fire",
+              "time": null,
+              "summary": "Corruptible elements melt with fervent heat; proud and wicked burn as stubble.",
+              "scriptures": [
+                "Doctrine and Covenants 101:24-25",
+                "Malachi 4:1"
+              ],
+              "children": []
+            },
+            {
+              "id": "24.1.2",
+              "title": "Flesh-Consuming Plague Smashing Oppressors",
+              "time": null,
+              "summary": "Plague strikes enemy armies: eyes rot in sockets and tongues consume in mouths.",
+              "scriptures": [
+                "Zechariah 14:12",
+                "Doctrine and Covenants 29:18-19"
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "24.2",
+          "title": "Transfiguration to Terrestrial Glory and Satan Bound",
+          "time": null,
+          "summary": "",
+          "scriptures": [],
+          "children": [
+            {
+              "id": "24.2.1",
+              "title": "Satan Chained in the Bottomless Pit",
+              "time": null,
+              "summary": "The adversary bound so he can have no place in the hearts of men for 1,000 years.",
+              "scriptures": [
+                "Revelation 20:2-3",
+                "Doctrine and Covenants 101:28"
+              ],
+              "children": []
+            },
+            {
+              "id": "24.2.2",
+              "title": "Universal Harmony: No Death or Sorrow",
+              "time": null,
+              "summary": "Lion feeds with ox; infants live to the age of a tree and are changed in a twinkling.",
+              "scriptures": [
+                "Isaiah 11:6-9",
+                "Doctrine and Covenants 101:29-31"
+              ],
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "25",
+      "title": "NEW HEAVEN, NEW EARTH, & CELESTIAL GLORY",
+      "time": "Eternity",
+      "summary": "The temporal earth passes away as by fire and is resurrected into a celestial sphere like a sea of glass; New Jerusalem descends from God out of heaven.",
+      "scriptures": [
+        "Revelation 21:1-7",
+        "Doctrine and Covenants 29:23-25",
+        "Doctrine and Covenants 77:1",
+        "Doctrine and Covenants 130:9",
+        "Ether 13:2-10"
+      ],
+      "children": [
+        {
+          "id": "25.1",
+          "title": "Resurrection and Sanctification of the Globe",
+          "time": null,
+          "summary": "",
+          "scriptures": [],
+          "children": [
+            {
+              "id": "25.1.1",
+              "title": "The Earth Resurrected to Celestial Order",
+              "time": null,
+              "summary": "Earth abides the celestial law and is crowned with glory to become a great Urim and Thummim.",
+              "scriptures": [
+                "Doctrine and Covenants 88:25-26",
+                "Doctrine and Covenants 130:9"
+              ],
+              "children": []
+            },
+            {
+              "id": "25.1.2",
+              "title": "The Sea of Glass and Fire",
+              "time": null,
+              "summary": "Sanctified, immortal state where all things past, present, and future are manifest before God.",
+              "scriptures": [
+                "Doctrine and Covenants 77:1",
+                "Revelation 4:6",
+                "Revelation 15:2"
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "25.2",
+          "title": "Descent of the Holy City: The Heavenly New Jerusalem",
+          "time": null,
+          "summary": "",
+          "scriptures": [],
+          "children": [
+            {
+              "id": "25.2.1",
+              "title": "City Adorned as a Bride for Her Husband",
+              "time": null,
+              "summary": "The New Jerusalem descends from God out of heaven to dwell eternally with redeemed humanity.",
+              "scriptures": [
+                "Revelation 21:2-3",
+                "Ether 13:3"
+              ],
+              "children": []
+            },
+            {
+              "id": "25.2.2",
+              "title": "No More Death, Sorrow, or Pain",
+              "time": null,
+              "summary": "God wipes away all tears; all things are made new, and the saints inherit all things.",
+              "scriptures": [
+                "Revelation 21:4-7",
+                "Doctrine and Covenants 88:107"
+              ],
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
