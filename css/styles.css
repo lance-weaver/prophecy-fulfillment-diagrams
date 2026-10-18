@@ -356,7 +356,7 @@ button, a { font-family: inherit; }
   border: 1px solid #d6d3d1;
   border-radius: 14px;
   box-shadow: 0 16px 40px rgba(28, 25, 23, 0.14);
-  padding: 14px 42px 12px 14px;
+  padding: 40px 14px 12px 14px;
   pointer-events: auto;
 }
 
@@ -391,8 +391,13 @@ button, a { font-family: inherit; }
 .pfd-open {
   display: inline-block;
   margin-top: 4px;
-  font-weight: 700;
-  color: #1d4e89;
+  font-weight: 650;
+  color: #6bb7ea;
+}
+
+.pfd-open:hover,
+.pfd-open:focus-visible {
+  color: #3d9ad6;
 }
 
 .pfd-refname a { color: inherit; }
@@ -402,7 +407,9 @@ button, a { font-family: inherit; }
 .pfd-tip-summary {
   margin: 0;
   font-family: var(--serif);
-  font-size: 1.05rem;
+  font-size: 1.08rem;
+  font-weight: 800;
+  color: #0c0a09;
   line-height: 1.35;
 }
 
@@ -536,4 +543,224 @@ button, a { font-family: inherit; }
 
 @media (prefers-reduced-motion: reduce) {
   * { scroll-behavior: auto !important; }
+}
+
+.pfd-reader-tab {
+  position: fixed;
+  z-index: 42;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  writing-mode: vertical-rl;
+  text-orientation: sideways;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  font-weight: 750;
+  color: #fff;
+  background: #1c1917;
+  border: 0;
+  border-radius: 10px 0 0 10px;
+  padding: 14px 9px;
+  cursor: pointer;
+  box-shadow: -4px 0 16px rgba(28, 25, 23, 0.16);
+}
+
+.pfd-reader-tab:hover,
+.pfd-reader-tab:focus-visible {
+  background: #44403c;
+}
+
+.pfd-reader.is-open .pfd-reader-tab {
+  right: min(400px, calc(100vw - 48px));
+}
+
+.pfd-reader-panel {
+  position: fixed;
+  z-index: 41;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: min(400px, calc(100vw - 48px));
+  background: #fff;
+  color: var(--ink);
+  border-left: 1px solid #d6d3d1;
+  box-shadow: -16px 0 40px rgba(28, 25, 23, 0.14);
+  display: flex;
+  flex-direction: column;
+  transform: translateX(100%);
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.pfd-reader.is-open .pfd-reader-panel {
+  transform: translateX(0);
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.pfd-reader-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 14px 12px 10px 16px;
+  border-bottom: 1px solid var(--line);
+  flex: 0 0 auto;
+}
+
+.pfd-reader-head h2 {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  font-weight: 760;
+  color: #0c0a09;
+  flex: 0 0 auto;
+}
+
+.pfd-reader-live {
+  flex: 1 1 auto;
+  min-width: 0;
+  color: #a8a29e;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.pfd-reader-live:hover,
+.pfd-reader-live:focus-visible {
+  color: #78716c;
+  text-decoration: underline;
+}
+
+.pfd-reader-live[hidden] { display: none; }
+
+.pfd-reader-close {
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: #78716c;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pfd-reader-close:hover,
+.pfd-reader-close:focus-visible {
+  background: #f5f5f4;
+  color: #1c1917;
+}
+
+.pfd-reader-body {
+  flex: 1 1 auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  padding: 8px 18px 48px;
+}
+
+.pfd-reader-jumps {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin: 8px 0 18px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--line);
+}
+
+.pfd-reader-jumps a {
+  color: #6bb7ea;
+  font-size: 0.86rem;
+  font-weight: 650;
+  text-decoration: none;
+  line-height: 1.35;
+}
+
+.pfd-reader-jumps a:hover,
+.pfd-reader-jumps a:focus-visible {
+  color: #3d9ad6;
+  text-decoration: underline;
+}
+
+.pfd-reader-section {
+  margin: 18px 0 8px;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #6bb7ea;
+  font-weight: 750;
+}
+
+.pfd-reader-jumps + .pfd-reader-section { margin-top: 10px; }
+
+.pfd-millennium {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d6c4a8;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #faf6ef 0%, #f1e6d4 100%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), 0 1px 2px rgba(28, 25, 23, 0.05);
+  font-family: var(--sans);
+  color: #1c1917;
+}
+
+.pfd-millennium strong {
+  display: block;
+  font-size: inherit;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1.3;
+  color: #1c1917;
+}
+
+.pfd-millennium span {
+  display: block;
+  margin-top: 6px;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: #57534e;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.pfd-reader-verse {
+  margin: 0 0 8px;
+  padding: 4px 8px;
+  margin-left: -8px;
+  margin-right: -8px;
+  border-radius: 8px;
+  font-family: var(--serif);
+  font-size: 0.98rem;
+  line-height: 1.5;
+  color: #1c1917;
+}
+
+.pfd-reader-verse.is-gap { margin-top: 14px; }
+
+.pfd-reader-verse.is-hot {
+  background: #f4efe6;
+  box-shadow: inset 3px 0 0 #b08958;
+}
+
+.pfd-reader-empty {
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pfd-reader-panel { transition: none; }
 }

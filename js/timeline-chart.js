@@ -76,6 +76,23 @@
     return url + "?lang=eng";
   }
 
+  function churchStudyUrl(book, chapter, verse) {
+    var slug = SLUGS[book];
+    if (!slug) return "";
+    var url = "https://www.churchofjesuschrist.org/study/scriptures/" + slug[0] + "/" + slug[1];
+    if (chapter) url += "/" + chapter;
+    url += "?lang=eng";
+    if (verse) url += "&id=p" + verse + "#p" + verse;
+    return url;
+  }
+
+  function liveRefLabel(book, chapter, verse) {
+    if (!book) return "";
+    if (chapter && verse) return book + " " + chapter + ":" + verse;
+    if (chapter) return book + " " + chapter;
+    return String(book);
+  }
+
   function walk(nodes, fn, level) {
     level = level || 1;
     (nodes || []).forEach(function (node) {
@@ -123,6 +140,7 @@
     var layoutRailX = 48;
     var dragState = null;
     var inlineForm = null;
+    var reader = null;
 
     function notify() {
       changeHandlers.forEach(function (fn) { fn(); });
@@ -130,6 +148,7 @@
 
     function allowHoverPreview(event) {
       if (editing || dragState) return false;
+      if (reader && reader.isOpen()) return false;
       var type = event && event.pointerType;
       if (type === "touch") return false;
       return finePointer.matches || type === "mouse" || type === "pen" || type == null || type === "";
@@ -225,6 +244,7 @@
     var columnsEl = root.querySelector(".pfd-columns");
     var stage = root.querySelector(".pfd-stage");
     var svg = d3.select(root.querySelector(".pfd-svg"));
+    var svgNode = root.querySelector(".pfd-svg");
     var dropLine = root.querySelector(".pfd-drop-line");
     var tip = root.querySelector(".pfd-tooltip");
     var loginEl = root.querySelector(".pfd-login");
@@ -273,7 +293,10 @@
         if (editing) global.localStorage.setItem(AUTH_KEY, "1");
         else global.localStorage.removeItem(AUTH_KEY);
       } catch (err) {}
-      if (editing) loadDraft();
+      if (editing) {
+        loadDraft();
+        ensureUids();
+      }
       renderLogin();
       hideTip(true);
       draw(true);
@@ -365,9 +388,37 @@
       return (node.children || []).some(function (child) { return nodeContains(child, id); });
     }
 
+    function newUid() {
+      return "e-" + Math.random().toString(36).slice(2, 10);
+    }
+
+    function ensureUids(nodes) {
+      (nodes || events).forEach(function (node) {
+        if (!node.uid) node.uid = newUid();
+        if (node.children && node.children.length) ensureUids(node.children);
+      });
+    }
+
+    function findByUid(uid, nodes, parent) {
+      if (!uid) return null;
+      nodes = nodes || events;
+      for (var i = 0; i < nodes.length; i++) {
+        if (String(nodes[i].uid) === String(uid)) {
+          return { list: nodes, index: i, node: nodes[i], parent: parent || null };
+        }
+        var kids = nodes[i].children;
+        if (kids && kids.length) {
+          var nested = findByUid(uid, kids, nodes[i]);
+          if (nested) return nested;
+        }
+      }
+      return null;
+    }
+
     function reassignIds() {
       function walk(nodes, prefix) {
         (nodes || []).forEach(function (node, i) {
+          if (!node.uid) node.uid = newUid();
           node.id = prefix ? prefix + "." + (i + 1) : String(i + 1);
           walk(node.children || [], node.id);
         });
@@ -697,6 +748,156 @@
       return list;
     }
 
+    function citedRefs() {
+      var seen = {};
+      var list = [];
+      walk(events, function (node) {
+        (node.scriptures || []).forEach(function (reference) {
+          if (seen[reference]) return;
+          seen[reference] = true;
+          list.push({
+            reference: reference,
+            book: bookOf(reference),
+            url: scriptureUrl(bookOf(reference), reference)
+          });
+        });
+      });
+      list.sort(function (a, b) {
+        var ia = bookOrder.indexOf(a.book);
+        var ib = bookOrder.indexOf(b.book);
+        if (ia < 0) ia = 800;
+        if (ib < 0) ib = 800;
+        if (ia !== ib) return ia - ib;
+        return String(a.reference).localeCompare(String(b.reference), undefined, { numeric: true });
+      });
+      return list;
+    }
+
+    function parseRefChapter(reference, book) {
+      var rest = String(reference || "");
+      if (book && rest.indexOf(book) === 0) rest = rest.slice(book.length).trim();
+      var match = rest.match(/^(\d+)/);
+      return match ? Number(match[1]) || 0 : 0;
+    }
+
+    function verseCoords(n, fallbackChapter) {
+      var raw = String(n == null ? "" : n).trim();
+      var dotted = raw.match(/^(\d+)\s*:\s*(\d+)$/);
+      if (dotted) {
+        return { chapter: Number(dotted[1]) || 0, verse: Number(dotted[2]) || 0, displayN: dotted[2] };
+      }
+      return { chapter: fallbackChapter || 0, verse: Number(raw) || 0, displayN: raw || "" };
+    }
+
+    function eventUidFor(reference) {
+      var entry = passages[reference];
+      if (entry && !Array.isArray(entry) && entry.eventUid && findByUid(entry.eventUid)) {
+        return entry.eventUid;
+      }
+      var found = null;
+      walk(events, function (node) {
+        if (found) return;
+        if ((node.scriptures || []).indexOf(reference) !== -1) found = node.uid || "";
+      });
+      return found || "";
+    }
+
+    function layoutYForUid(uid) {
+      var loc = findByUid(uid);
+      if (!loc) return null;
+      var node = loc.node;
+      while (node) {
+        var laid = laidOf(node.id);
+        if (laid) return laid.connectY;
+        loc = findLoc(node.id);
+        node = loc && loc.parent;
+      }
+      return null;
+    }
+
+    function readerEntries() {
+      var items = [];
+      var seen = {};
+      citedRefs().forEach(function (ref) {
+        var info = passageOf(ref.reference);
+        var anchor = eventUidFor(ref.reference);
+        var fallbackCh = parseRefChapter(ref.reference, ref.book);
+        (info.verses || []).forEach(function (verse) {
+          var coords = verseCoords(verse.n, fallbackCh);
+          var key = ref.book + ":" + coords.chapter + ":" + coords.verse;
+          if (seen[key]) return;
+          seen[key] = true;
+          items.push({
+            book: ref.book,
+            chapter: coords.chapter,
+            verse: coords.verse,
+            n: coords.displayN,
+            text: verse.text || "",
+            ref: ref.reference,
+            anchorId: anchor,
+            label: liveRefLabel(ref.book, coords.chapter, coords.verse),
+            href: churchStudyUrl(ref.book, coords.chapter, coords.verse)
+          });
+        });
+      });
+      items.sort(function (a, b) {
+        var ia = bookOrder.indexOf(a.book);
+        var ib = bookOrder.indexOf(b.book);
+        if (ia < 0) ia = 800;
+        if (ib < 0) ib = 800;
+        if (ia !== ib) return ia - ib;
+        if (a.chapter !== b.chapter) return a.chapter - b.chapter;
+        return a.verse - b.verse;
+      });
+      var groups = [];
+      var current = null;
+      items.forEach(function (item) {
+        var key = item.book + ":" + item.chapter;
+        if (!current || current.key !== key) {
+          var prevCount = current ? current.verses.length : 0;
+          var bookChanged = !current || current.book !== item.book;
+          current = {
+            key: key,
+            book: item.book,
+            chapter: item.chapter,
+            heading: item.chapter ? item.book + " " + item.chapter : item.book,
+            showHeading: !groups.length || bookChanged || prevCount > 8,
+            verses: []
+          };
+          groups.push(current);
+        }
+        current.verses.push(item);
+      });
+      return groups.filter(function (group) { return group.verses.length; });
+    }
+
+    function focusReaderVerse(verse, alignOnly) {
+      if (!verse || !verse.ref) {
+        if (!alignOnly) {
+          hoverEvent = null;
+          hoverRef = null;
+          restyle();
+        }
+        return;
+      }
+      hoverRef = verse.ref;
+      hoverEvent = null;
+      hideTip(true);
+      restyle();
+      var y = layoutYForUid(verse.anchorId);
+      if (y == null) {
+        visibleRows().some(function (row) {
+          if ((row.node.scriptures || []).indexOf(verse.ref) === -1) return false;
+          var laid = laidOf(row.node.id);
+          if (laid) y = laid.connectY;
+          return !!laid;
+        });
+      }
+      if (y != null && global.ScriptureReader) {
+        global.ScriptureReader.alignSvgY(svgNode, y, verse.centerY);
+      }
+    }
+
     function linksFor(rows, refs) {
       var refY = {};
       refs.forEach(function (ref) { refY[ref.reference] = true; });
@@ -720,7 +921,7 @@
       hideTimer = 0;
     }
     function scheduleHide() {
-      if (tipPinned) return;
+      if (tipPinned || (reader && reader.isOpen())) return;
       cancelHide();
       hideTimer = global.setTimeout(function () {
         hideTimer = 0;
@@ -838,6 +1039,7 @@
       if (!tipPinned || tip.hidden) return;
       if (tip.contains(event.target)) return;
       var el = event.target;
+      if (el && el.closest && el.closest(".pfd-reader")) return;
       if (el && el.closest && el.closest(".pfd-ref, .pfd-link, .pfd-event")) return;
       hideTip(true);
       hoverEvent = null;
@@ -953,7 +1155,31 @@
       var prevEpochYear = null;
       var eventIndex = new Map();
       laidEvents = [];
+      var bannerCfg = cfg.millenniumBanner || {
+        beforeUid: "e-22",
+        title: "MILLENNIUM OCCURS HERE IN EARTH'S HIGHER DIMENSION.",
+        body: "The Righteous are transfigured into it for a thousand years, while the wicked stay on a self-destructing earth as if no time has passed."
+      };
+      var laidBanners = [];
       rows.forEach(function (row) {
+        if (bannerCfg && String(row.node.uid) === String(bannerCfg.beforeUid)) {
+          var bannerIndent = eventIndent(1);
+          var boxW = Math.max(96, eventW - bannerIndent - 4);
+          var titleSize = narrow ? 12.5 : 12;
+          var titleLines = wrapLines(bannerCfg.title || "", boxW - 24, titleSize);
+          var bodyLines = wrapLines(bannerCfg.body || "", boxW - 24, 10);
+          var bannerH = 16 + titleLines.length * (titleSize + 4) + 8 + bodyLines.length * 13 + 14;
+          laidBanners.push({
+            x: bannerIndent,
+            y: y,
+            w: boxW,
+            h: bannerH,
+            title: bannerCfg.title || "",
+            body: bannerCfg.body || "",
+            titleSize: titleSize
+          });
+          y += bannerH + 14;
+        }
         if (row.level === 1) {
           var year = parseYear(row.node.time);
           if (prevEpochYear != null && year != null) {
@@ -1158,6 +1384,20 @@
       });
 
       var eventLayer = svg.append("g").attr("class", "pfd-events");
+      laidBanners.forEach(function (banner) {
+        var fo = eventLayer.append("foreignObject")
+          .attr("class", "pfd-millennium-fo")
+          .attr("x", banner.x)
+          .attr("y", banner.y)
+          .attr("width", banner.w)
+          .attr("height", banner.h)
+          .style("pointer-events", "none");
+        var box = fo.append("xhtml:div")
+          .attr("class", "pfd-millennium")
+          .style("font-size", banner.titleSize + "px");
+        box.append("xhtml:strong").text(banner.title);
+        box.append("xhtml:span").text(banner.body);
+      });
       laidEvents.forEach(function (item) {
         var row = item.row;
         var group = eventLayer.append("g")
@@ -1312,6 +1552,7 @@
         });
       });
       restyle();
+      if (reader) reader.refresh();
     }
 
     function scheduleDraw() {
@@ -1330,15 +1571,44 @@
 
     try { editing = global.localStorage.getItem(AUTH_KEY) === "1"; } catch (err) {}
     if (editing) loadDraft();
+    ensureUids();
     root.classList.toggle("is-editing", editing);
     renderLogin();
     renderDepth();
+    if (global.ScriptureReader) {
+      reader = global.ScriptureReader.create({
+        mount: document.body,
+        strings: strings,
+        showLive: true,
+        jumps: cfg.readerJumps || [
+          { label: "Isaiah", book: "Isaiah" },
+          { label: "Daniel 7-11", book: "Daniel", chapter: 7 },
+          { label: "Zechariah", book: "Zechariah" },
+          { label: "Revelation", book: "Revelation" },
+          { label: "2 Nephi 25–30 (Nephi’s Latter-Day Prophecies)", book: "2 Nephi", chapter: 25 },
+          { label: "3 Nephi 11-28", book: "3 Nephi", chapter: 11 },
+          { label: "D&C 29:8-27", book: "Doctrine and Covenants", chapter: 29, verse: 8 },
+          { label: "D&C 43:17-26,31", book: "Doctrine and Covenants", chapter: 43, verse: 17 },
+          { label: "D&C 45:15-71", book: "Doctrine and Covenants", chapter: 45, verse: 15 },
+          { label: "D&C 88:25-114", book: "Doctrine and Covenants", chapter: 88, verse: 25 },
+          { label: "JS-Matthew", book: "JS-Matthew" }
+        ],
+        getEntries: readerEntries,
+        onFocus: focusReaderVerse,
+        onClose: function () {
+          hoverEvent = null;
+          hoverRef = null;
+          restyle();
+        }
+      });
+    }
     draw(true);
 
     return {
       onChange: function (fn) { changeHandlers.push(fn); },
       destroy: function () {
         disposed = true;
+        if (reader) reader.destroy();
         document.removeEventListener("pointerdown", onDocPointerDown);
         global.removeEventListener("resize", scheduleDraw);
         global.removeEventListener("pointermove", onWinPointerMove);

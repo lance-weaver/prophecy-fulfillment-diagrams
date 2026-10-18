@@ -30,6 +30,9 @@
     "depth3": "Expand All",
     "openScripture": "Open on churchofjesuschrist.org",
     "readScripture": "Read on churchofjesuschrist.org",
+    "openScriptures": "Open Scriptures",
+    "closeScriptures": "Close Scriptures",
+    "scriptureReader": "Scriptures",
     "loading": "Loading timeline…",
     "error": "The timeline could not be loaded.",
     "noVerses": "No public-domain text is stored here for this source.",
@@ -42,5 +45,23 @@
     "wrongPass": "That passphrase did not match."
   },
   "editorPassphrase": "edit",
-  "colorBy": "target"
+  "colorBy": "target",
+  "readerJumps": [
+    { "label": "Isaiah", "book": "Isaiah" },
+    { "label": "Daniel 7-11", "book": "Daniel", "chapter": 7 },
+    { "label": "Zechariah", "book": "Zechariah" },
+    { "label": "Revelation", "book": "Revelation" },
+    { "label": "2 Nephi 25–30 (Nephi’s Latter-Day Prophecies)", "book": "2 Nephi", "chapter": 25 },
+    { "label": "3 Nephi 11-28", "book": "3 Nephi", "chapter": 11 },
+    { "label": "D&C 29:8-27", "book": "Doctrine and Covenants", "chapter": 29, "verse": 8 },
+    { "label": "D&C 43:17-26,31", "book": "Doctrine and Covenants", "chapter": 43, "verse": 17 },
+    { "label": "D&C 45:15-71", "book": "Doctrine and Covenants", "chapter": 45, "verse": 15 },
+    { "label": "D&C 88:25-114", "book": "Doctrine and Covenants", "chapter": 88, "verse": 25 },
+    { "label": "JS-Matthew", "book": "JS-Matthew" }
+  ],
+  "millenniumBanner": {
+    "beforeUid": "e-22",
+    "title": "MILLENNIUM OCCURS HERE IN EARTH'S HIGHER DIMENSION.",
+    "body": "The Righteous are transfigured into it for a thousand years, while the wicked stay on a self-destructing earth as if no time has passed."
+  }
 }
