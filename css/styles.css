@@ -356,8 +356,34 @@ button, a { font-family: inherit; }
   border: 1px solid #d6d3d1;
   border-radius: 14px;
   box-shadow: 0 16px 40px rgba(28, 25, 23, 0.14);
-  padding: 12px 14px 10px;
+  padding: 14px 42px 12px 14px;
   pointer-events: auto;
+}
+
+.pfd-tip-close {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: #78716c;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.pfd-tip-close:hover,
+.pfd-tip-close:focus-visible {
+  background: #f5f5f4;
+  color: #1c1917;
 }
 
 .pfd-tooltip.is-pinned { pointer-events: auto; }

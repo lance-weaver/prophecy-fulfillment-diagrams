@@ -755,11 +755,18 @@
       tip.style.left = Math.round(x) + "px";
       tip.style.top = Math.round(y) + "px";
     }
+    function closeTip() {
+      hideTip(true);
+      hoverEvent = null;
+      hoverRef = null;
+      restyle();
+    }
+
     function fillTip(html, event, pin) {
       cancelHide();
       tipPinned = !!pin;
       tip.classList.toggle("is-pinned", tipPinned);
-      tip.innerHTML = html;
+      tip.innerHTML = '<button type="button" class="pfd-tip-close" aria-label="Close">×</button>' + html;
       tip.hidden = false;
       if (event) placeTip(event);
     }
@@ -812,7 +819,20 @@
     tip.addEventListener("pointerenter", function () { tipOver = true; cancelHide(); });
     tip.addEventListener("pointerleave", function () { tipOver = false; scheduleHide(); });
     tip.addEventListener("wheel", function (event) { event.stopPropagation(); }, { passive: true });
-    tip.addEventListener("pointerdown", function (event) { event.stopPropagation(); });
+    tip.addEventListener("pointerdown", function (event) {
+      event.stopPropagation();
+      if (event.target && event.target.closest && event.target.closest(".pfd-tip-close")) {
+        event.preventDefault();
+        closeTip();
+      }
+    });
+    tip.addEventListener("click", function (event) {
+      if (event.target && event.target.closest && event.target.closest(".pfd-tip-close")) {
+        event.preventDefault();
+        event.stopPropagation();
+        closeTip();
+      }
+    });
 
     function onDocPointerDown(event) {
       if (!tipPinned || tip.hidden) return;
@@ -918,6 +938,10 @@
       layoutRailX = railX;
       var eventW = Math.round(Math.min(narrow ? width * 0.48 : 400, Math.max(narrow ? 148 : 256, width * 0.36)));
       var refW = Math.round(Math.min(narrow ? 120 : 170, Math.max(narrow ? 88 : 120, width * 0.18)));
+      var firstRight = narrow
+        ? Math.round(Math.min(width * 0.64, width - refW - 28))
+        : Math.min(400, width - refW - 36);
+      if (firstRight < eventW) firstRight = eventW;
       root.style.setProperty("--event", eventW + "px");
       root.style.setProperty("--scripture", refW + "px");
       root.style.setProperty("--event-indent", eventIndent(1) + "px");
@@ -941,13 +965,21 @@
           if (year != null) prevEpochYear = year;
         }
         var size = row.level === 1 ? (narrow ? 12.5 : 12) : row.level === 2 ? 11.5 : 11;
-        var maxText = Math.max(48, eventW - eventIndent(row.level) - 10);
+        var wrapRight = row.level === 1 ? firstRight : eventW;
+        var maxText = Math.max(48, wrapRight - eventIndent(row.level) - 10);
         var lines = wrapLines(row.node.title, maxText, size);
         var block = 8 + lines.length * (size + 3);
         if (row.level === 1 && row.node.time) block += 14;
         var mid = y + block / 2;
-        eventIndex.set(String(row.node.id), mid);
-        laidEvents.push({ row: row, y: y, mid: mid, lines: lines, size: size, h: block });
+        var textY = y + (row.level === 1 && row.node.time ? 24 : 12);
+        var connectY = row.level === 1 ? textY : mid;
+        var connectX = row.level === 1 ? firstRight - 2 : eventW - 2;
+        var cited = (row.node.scriptures || []).length > 0;
+        eventIndex.set(String(row.node.id), { x: connectX, y: connectY, cited: cited });
+        laidEvents.push({
+          row: row, y: y, mid: mid, textY: textY, connectX: connectX, connectY: connectY,
+          cited: cited, lines: lines, size: size, h: block
+        });
         y += block + (row.level === 1 ? 10 : 4);
       });
       var leftHeight = y + 16;
@@ -1007,9 +1039,10 @@
       var x2 = width - refW + 2;
 
       var links = linksFor(rows, refs).map(function (link) {
+        var pos = eventIndex.get(link.eventId);
         return {
           link: link,
-          d: curve(x1, eventIndex.get(link.eventId), x2, refIndex.get(link.reference))
+          d: pos ? curve(pos.x, pos.y, x2, refIndex.get(link.reference)) : null
         };
       }).filter(function (row) { return row.d; });
 
@@ -1140,7 +1173,7 @@
             .attr("letter-spacing", "0.04em")
             .text(row.node.time);
         }
-        var textY = item.y + (row.level === 1 && row.node.time ? 24 : 12);
+        var textY = item.textY;
         var label = group.append("text")
           .attr("x", indent)
           .attr("y", textY)
@@ -1153,26 +1186,29 @@
             .attr("dy", i === 0 ? 0 : item.size + 3)
             .text(line);
         });
-        group.append("circle")
-          .attr("cx", x1)
-          .attr("cy", item.mid)
-          .attr("r", row.level === 1 ? 3.4 : 2.5)
-          .attr("fill", row.level === 1 ? "#1c1917" : "#78716c")
-          .style("pointer-events", "none");
+        if (item.cited) {
+          group.append("circle")
+            .attr("class", "pfd-connect-dot")
+            .attr("cx", item.connectX)
+            .attr("cy", item.connectY)
+            .attr("r", row.level === 1 ? 2 : 2.5)
+            .attr("fill", row.level === 1 ? "#c4bfb9" : "#78716c")
+            .style("pointer-events", "none");
+        }
         var mark = group.append("g").style("pointer-events", "none");
         if (row.level === 1) {
           mark.append("line")
             .attr("x1", railX - 7).attr("x2", railX + 7)
-            .attr("y1", item.mid).attr("y2", item.mid)
-            .attr("stroke", "#1c1917")
-            .attr("stroke-width", 1.2);
+            .attr("y1", item.connectY).attr("y2", item.connectY)
+            .attr("stroke", "#a8a29e")
+            .attr("stroke-width", 1.1);
           mark.append("circle")
             .attr("cx", railX)
-            .attr("cy", item.mid)
-            .attr("r", 3.1)
+            .attr("cy", item.connectY)
+            .attr("r", 2.2)
             .attr("fill", "#fff")
-            .attr("stroke", "#1c1917")
-            .attr("stroke-width", 1.35);
+            .attr("stroke", "#a8a29e")
+            .attr("stroke-width", 1.2);
         } else {
           var stub = row.level === 2 ? 8 : 5;
           mark.append("line")

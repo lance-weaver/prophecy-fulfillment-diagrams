@@ -589,11 +589,17 @@
       }, 320);
     }
 
+    function closeTip() {
+      hideTip(true);
+      hoverRef = null;
+      restyle();
+    }
+
     function fillTip(html, event, pin) {
       cancelHide();
       tipPinned = !!pin;
       tip.classList.toggle("is-pinned", tipPinned);
-      tip.innerHTML = html;
+      tip.innerHTML = '<button type="button" class="pfd-tip-close" aria-label="Close">×</button>' + html;
       tip.hidden = false;
       if (event) placeTip(event);
     }
@@ -657,6 +663,17 @@
     }, { passive: true });
     tip.addEventListener("pointerdown", function (event) {
       event.stopPropagation();
+      if (event.target && event.target.closest && event.target.closest(".pfd-tip-close")) {
+        event.preventDefault();
+        closeTip();
+      }
+    });
+    tip.addEventListener("click", function (event) {
+      if (event.target && event.target.closest && event.target.closest(".pfd-tip-close")) {
+        event.preventDefault();
+        event.stopPropagation();
+        closeTip();
+      }
     });
     tip.addEventListener("touchstart", function (event) {
       event.stopPropagation();
