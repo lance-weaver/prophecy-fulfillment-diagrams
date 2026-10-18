@@ -506,9 +506,16 @@
 
     function passageBlock(ref, withOpen) {
       var verses = versesOf(data, ref);
-      var html = '<p class="pfd-tip-ref" style="color:' + esc(colorForBook(ref.book)) + '">' + esc(ref.reference) + "</p>";
-      if (verses.length) html += '<p class="pfd-tip-passage">' + passageHtml(verses) + "</p>";
-      if (withOpen) html += openLinkHtml(ref);
+      var inner = "";
+      if (verses.length) inner += '<p class="pfd-tip-passage">' + passageHtml(verses) + "</p>";
+      if (withOpen) inner += openLinkHtml(ref);
+      var html = '<div class="pfd-tip-expando">' +
+        '<button type="button" class="pfd-tip-expando-btn" aria-expanded="false">' +
+          '<span class="pfd-tip-expando-ref" style="color:' + esc(colorForBook(ref.book)) + '">' + esc(ref.reference) + "</span>" +
+          '<span class="pfd-tip-expando-arrow" aria-hidden="true"></span>' +
+        "</button>" +
+        '<div class="pfd-tip-expando-panel" hidden>' + inner + "</div>" +
+        "</div>";
       return { html: html, truncated: false, used: verses.length };
     }
 
@@ -676,7 +683,18 @@
         event.preventDefault();
         event.stopPropagation();
         closeTip();
+        return;
       }
+      var btn = event.target && event.target.closest && event.target.closest(".pfd-tip-expando-btn");
+      if (!btn) return;
+      event.preventDefault();
+      event.stopPropagation();
+      var box = btn.closest(".pfd-tip-expando");
+      var panel = box && box.querySelector(".pfd-tip-expando-panel");
+      var open = btn.getAttribute("aria-expanded") === "true";
+      btn.setAttribute("aria-expanded", open ? "false" : "true");
+      if (box) box.classList.toggle("is-open", !open);
+      if (panel) panel.hidden = open;
     });
     tip.addEventListener("touchstart", function (event) {
       event.stopPropagation();
@@ -818,6 +836,8 @@
         if (!current || current.key !== key) {
           current = {
             key: key,
+            book: ref.book,
+            chapter: chapter,
             heading: chapter ? ref.book + " " + chapter : ref.book,
             verses: [],
             seen: {}
@@ -830,11 +850,17 @@
           var n = String(verse.n);
           if (current.seen[n]) return;
           current.seen[n] = true;
+          var bookLabel = ref.book === "Doctrine and Covenants" ? "D&C" : ref.book;
           current.verses.push({
             n: verse.n,
             text: String(verse.text || "").replace(/__/g, ""),
             ref: ref.reference,
-            anchorId: item ? String(item.id) : ""
+            book: ref.book,
+            chapter: chapter,
+            verse: verse.n,
+            anchorId: item ? String(item.id) : "",
+            label: bookLabel + (chapter ? " " + chapter + ":" + verse.n : ""),
+            href: ref.url || ""
           });
         });
       });
@@ -1324,6 +1350,7 @@
       reader = global.ScriptureReader.create({
         mount: document.body,
         strings: strings,
+        showLive: true,
         getEntries: readerEntries,
         onFocus: focusReaderVerse,
         onClose: function () {
