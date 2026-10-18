@@ -1,9 +1,10 @@
 {
-  "howToEdit": "This file is the outline, in Google Doc BODY order (ignore the table of contents at the top of that doc). Reorder objects in events[] (and nested children[]) to rearrange the chart. Put scripture references on an event as strings; verse text is looked up from scriptures.json and is never stored here. time is the label drawn at the start of a 1st-order epoch. Leave children as [] when a heading has no nested events.",
+  "howToEdit": "This file is the outline, in Google Doc BODY order (ignore the table of contents at the top of that doc). Reorder objects in events[] (and nested children[]) to rearrange the chart. Keep each event's uid; the outline id is rewritten when items move, but uid stays put so scriptures.json eventUid still points at the same event. Put scripture references on an event as strings; verse text is looked up from scriptures.json and is never stored here. time is the label drawn at the start of a 1st-order epoch. Leave children as [] when a heading has no nested events.",
   "title": "Chronological Outline of Scripture Prophecy",
   "events": [
     {
       "id": "1",
+      "uid": "e-1",
       "title": "MOSAIC DISPENSATIONAL PATTERN & 490-YEAR PROPHECY CYCLES",
       "time": "c. 1500 BC",
       "summary": "Moses institutes the divine sevenfold pattern of chastisement, scattering, and gathering of Israel, establishing the 490-year prophetic cycle.",
@@ -14,6 +15,7 @@
       "children": [
         {
           "id": "1.1",
+          "uid": "e-1-1",
           "title": "Establishment of the Seven Dispensations of Scattering and Gathering",
           "time": null,
           "summary": "",
@@ -21,6 +23,7 @@
           "children": [
             {
               "id": "1.1.1",
+              "uid": "e-1-1-1",
               "title": "The 'Seven Times' Covenant Penalty",
               "time": null,
               "summary": "Moses declares that Israel will be punished 'seven times' for disobedience, prefiguring seven historical cycles of captivity and restoration.",
@@ -31,6 +34,7 @@
             },
             {
               "id": "1.1.2",
+              "uid": "e-1-1-2",
               "title": "The 490-Year Sabbatical Precession Framework",
               "time": null,
               "summary": "Integration of 70 sabbatical weeks (70 × 7 = 490 years) connecting the jubilee calendar with celestial cycles.",
@@ -42,6 +46,7 @@
             },
             {
               "id": "1.1.3",
+              "uid": "e-1-1-3",
               "title": "Typological Archetype of Egyptian Bondage",
               "time": null,
               "summary": "Israel's 215/430-year captivity in Egypt set as the historical pattern for latter-day gentile sojourns.",
@@ -55,6 +60,7 @@
         },
         {
           "id": "1.2",
+          "uid": "e-1-2",
           "title": "The Sabbatical Jubilee and Intercalary Probation Cycles",
           "time": null,
           "summary": "",
@@ -62,6 +68,7 @@
           "children": [
             {
               "id": "1.2.1",
+              "uid": "e-1-2-1",
               "title": "The 49-Year Jubilee Proclamation",
               "time": null,
               "summary": "The sounding of the trumpet of the jubilee on the Day of Atonement, freeing captives and returning land inheritances.",
@@ -72,6 +79,7 @@
             },
             {
               "id": "1.2.2",
+              "uid": "e-1-2-2",
               "title": "The 40-Year Probationary Offset",
               "time": null,
               "summary": "The recurrent 40-year window between decree and ultimate destruction/deliverance throughout Israelite history.",
@@ -87,6 +95,7 @@
     },
     {
       "id": "2",
+      "uid": "e-2",
       "title": "THE DAVIDIC COVENANT & THE ROYAL MESSIANIC LINEAGE",
       "time": "c. 1000 BC",
       "summary": "Establishment of the Davidic dynasty with the solemn prophetic decree that the eternal Messiah and King would emerge through the lineage of David.",
@@ -98,6 +107,7 @@
       "children": [
         {
           "id": "2.1",
+          "uid": "e-2-1",
           "title": "The Dynastic Promise of an Everlasting Throne",
           "time": null,
           "summary": "",
@@ -105,6 +115,7 @@
           "children": [
             {
               "id": "2.1.1",
+              "uid": "e-2-1-1",
               "title": "Prophecy of the Eternal King",
               "time": null,
               "summary": "Nathan foretells that David's throne and seed will be established forever before God.",
@@ -115,6 +126,7 @@
             },
             {
               "id": "2.1.2",
+              "uid": "e-2-1-2",
               "title": "The Rod from the Stem of Jesse",
               "time": null,
               "summary": "Isaiah foretells the Branch emerging from the roots of Jesse with wisdom and power.",
@@ -127,6 +139,7 @@
         },
         {
           "id": "2.2",
+          "uid": "e-2-2",
           "title": "The Suffering and Exaltation of David's Seed",
           "time": null,
           "summary": "",
@@ -134,6 +147,7 @@
           "children": [
             {
               "id": "2.2.1",
+              "uid": "e-2-2-1",
               "title": "The Psalm of Crucifixion",
               "time": null,
               "summary": "Prophetic detail of piercing hands and feet, casting lots for vesture, and intense thirst.",
@@ -144,6 +158,7 @@
             },
             {
               "id": "2.2.2",
+              "uid": "e-2-2-2",
               "title": "The Royal Melchizedek Priest-King",
               "time": null,
               "summary": "The Lord sits at the right hand of God until enemies become His footstool.",
@@ -158,6 +173,7 @@
     },
     {
       "id": "3",
+      "uid": "e-3",
       "title": "DANIEL'S FOUR SUCCESSIVE WORLD EMPIRES & 70 WEEKS",
       "time": "600 BC - 60 BC",
       "summary": "Daniel interprets the Great Metallic Image and Four Great Beasts, mapping world history from Babylon to Rome and the prophetic timeline to the Messiah.",
@@ -171,6 +187,7 @@
       "children": [
         {
           "id": "3.1",
+          "uid": "e-3-1",
           "title": "The Succession of the Four Imperial World Beasts",
           "time": null,
           "summary": "",
@@ -178,6 +195,7 @@
           "children": [
             {
               "id": "3.1.1",
+              "uid": "e-3-1-1",
               "title": "Babylonian Lion with Eagle Wings",
               "time": null,
               "summary": "The golden head and winged lion representing the Neo-Babylonian Empire (605-539 BC).",
@@ -189,6 +207,7 @@
             },
             {
               "id": "3.1.2",
+              "uid": "e-3-1-2",
               "title": "Medo-Persian Bear Raised on One Side",
               "time": null,
               "summary": "The silver chest and bear with three ribs in its mouth representing Medo-Persia (539-331 BC).",
@@ -201,6 +220,7 @@
             },
             {
               "id": "3.1.3",
+              "uid": "e-3-1-3",
               "title": "Macedonian Four-Winged Leopard",
               "time": null,
               "summary": "The bronze belly and four-headed leopard representing Alexander's empire and division into four kingdoms.",
@@ -213,6 +233,7 @@
             },
             {
               "id": "3.1.4",
+              "uid": "e-3-1-4",
               "title": "Roman Terrible Beast with Iron Teeth",
               "time": null,
               "summary": "The iron legs and ten-horned beast representing imperial Rome's shattering dominion.",
@@ -226,6 +247,7 @@
         },
         {
           "id": "3.2",
+          "uid": "e-3-2",
           "title": "Gabriel's Seventy Weeks Prophecy to Rebuild Jerusalem and Temple",
           "time": null,
           "summary": "",
@@ -233,6 +255,7 @@
           "children": [
             {
               "id": "3.2.1",
+              "uid": "e-3-2-1",
               "title": "Decree to Restore and Rebuild Jerusalem",
               "time": null,
               "summary": "From Artaxerxes' decree (457 BC) seven weeks and threescore and two weeks (483 years) until Messiah.",
@@ -244,6 +267,7 @@
             },
             {
               "id": "3.2.2",
+              "uid": "e-3-2-2",
               "title": "Messiah Cut Off but Not for Himself",
               "time": null,
               "summary": "After 62 weeks the Anointed One is executed, leading to the sacking of the sanctuary.",
@@ -258,6 +282,7 @@
     },
     {
       "id": "4",
+      "uid": "e-4",
       "title": "FIRST COMING OF CHRIST: NATIVITY, MINISTRY, & MIRACLES",
       "time": "3 BC - 30 AD",
       "summary": "The mortal advent of Jesus Christ fulfilling hundreds of detailed prophecies regarding His miraculous birth, forerunner, baptism, and ministry.",
@@ -272,6 +297,7 @@
       "children": [
         {
           "id": "4.1",
+          "uid": "e-4-1",
           "title": "The Virgin Birth and Messianic Nativity in Bethlehem",
           "time": null,
           "summary": "",
@@ -279,6 +305,7 @@
           "children": [
             {
               "id": "4.1.1",
+              "uid": "e-4-1-1",
               "title": "Virgin Birth of Immanuel",
               "time": null,
               "summary": "Fulfillment of Isaiah's sign: a virgin conceiving and bearing a Son called Immanuel.",
@@ -291,6 +318,7 @@
             },
             {
               "id": "4.1.2",
+              "uid": "e-4-1-2",
               "title": "Ruler Out of Bethlehem Ephrathah",
               "time": null,
               "summary": "Birth in Bethlehem of Judea, fulfilling Micah's ancient geographical prophecy.",
@@ -304,6 +332,7 @@
         },
         {
           "id": "4.2",
+          "uid": "e-4-2",
           "title": "The Forerunner and Mortal Ministry of Christ",
           "time": null,
           "summary": "",
@@ -311,6 +340,7 @@
           "children": [
             {
               "id": "4.2.1",
+              "uid": "e-4-2-1",
               "title": "Mission of John the Baptist",
               "time": null,
               "summary": "Voice crying in the wilderness preparing the way of the Lord; baptism of Jesus in Jordan.",
@@ -323,6 +353,7 @@
             },
             {
               "id": "4.2.2",
+              "uid": "e-4-2-2",
               "title": "Calling of the Twelve Apostles and Healing Ministry",
               "time": null,
               "summary": "Ministry of healing, preaching the Gospel of the Kingdom, and opening blind eyes in Galilee.",
@@ -339,6 +370,7 @@
     },
     {
       "id": "5",
+      "uid": "e-5",
       "title": "ATONEMENT, CRUCIFIXION, & FIRSTFRUITS RESURRECTION",
       "time": "33 AD",
       "summary": "The infinite Atonement and sacrificial death of Christ, His burial, and His victorious resurrection as the Firstfruits of them that slept.",
@@ -353,6 +385,7 @@
       "children": [
         {
           "id": "5.1",
+          "uid": "e-5-1",
           "title": "The Suffering, Rejection, and Crucifixion of the Messiah",
           "time": null,
           "summary": "",
@@ -360,6 +393,7 @@
           "children": [
             {
               "id": "5.1.1",
+              "uid": "e-5-1-1",
               "title": "Wounded for Our Transgressions",
               "time": null,
               "summary": "The Suffering Servant despised, smitten, bruised for our iniquities, and led as a lamb to slaughter.",
@@ -371,6 +405,7 @@
             },
             {
               "id": "5.1.2",
+              "uid": "e-5-1-2",
               "title": "Crucifixion Witnessed by Ancient Prophets",
               "time": null,
               "summary": "Zenok and Neum foretell the lifted up Savior and His burial in a rock sepulchre.",
@@ -385,6 +420,7 @@
         },
         {
           "id": "5.2",
+          "uid": "e-5-2",
           "title": "Resurrection and Firstfruits of the Righteous Dead",
           "time": null,
           "summary": "",
@@ -392,6 +428,7 @@
           "children": [
             {
               "id": "5.2.1",
+              "uid": "e-5-2-1",
               "title": "Opening of the Graves in Jerusalem",
               "time": null,
               "summary": "Righteous saints awake from the dust and appear to many in the holy city following Christ's resurrection.",
@@ -403,6 +440,7 @@
             },
             {
               "id": "5.2.2",
+              "uid": "e-5-2-2",
               "title": "Christ the Firstfruits",
               "time": null,
               "summary": "Conquest of death ensuring universal resurrection and the pattern of the first resurrection.",
@@ -418,6 +456,7 @@
     },
     {
       "id": "6",
+      "uid": "e-6",
       "title": "MINISTRY TO OTHER SHEEP & THREE GENERATIONS OF PEACE",
       "time": "33 - 34 AD",
       "summary": "Physical cataclysms across the Americas during the crucifixion, followed by Christ's personal post-resurrection ministry at the temple in Bountiful.",
@@ -430,6 +469,7 @@
       "children": [
         {
           "id": "6.1",
+          "uid": "e-6-1",
           "title": "Three Days of Darkness and Devastating American Seismic Cataclysms",
           "time": null,
           "summary": "",
@@ -437,6 +477,7 @@
           "children": [
             {
               "id": "6.1.1",
+              "uid": "e-6-1-1",
               "title": "Vapor of Darkness and Storms",
               "time": null,
               "summary": "Thunder, tempest, sinking and burning of wicked cities across the promised land.",
@@ -448,6 +489,7 @@
             },
             {
               "id": "6.1.2",
+              "uid": "e-6-1-2",
               "title": "Three Days of Thick Darkness",
               "time": null,
               "summary": "Total absence of light; no fires or candles can be kindled for three full days.",
@@ -461,6 +503,7 @@
         },
         {
           "id": "6.2",
+          "uid": "e-6-2",
           "title": "Christ's Personal Appearance at Bountiful and Golden Age of Peace",
           "time": null,
           "summary": "",
@@ -468,6 +511,7 @@
           "children": [
             {
               "id": "6.2.1",
+              "uid": "e-6-2-1",
               "title": "Descent of the Resurrected Lord",
               "time": null,
               "summary": "Christ descends out of heaven, shows the prints of the nails, and establishes His Church.",
@@ -478,6 +522,7 @@
             },
             {
               "id": "6.2.2",
+              "uid": "e-6-2-2",
               "title": "Three Generations of Righteous Peace",
               "time": null,
               "summary": "Two centuries of consecration, no rich or poor, no contentions, before the 4th generation apostasy.",
@@ -493,6 +538,7 @@
     },
     {
       "id": "7",
+      "uid": "e-7",
       "title": "ROMAN DESTRUCTION OF JERUSALEM & THE FIRST TRIBULATION",
       "time": "70 AD",
       "summary": "Titus and the Roman legions destroy Jerusalem and the Second Temple, fulfilling the first Abomination of Desolation and scattering Israel into all nations.",
@@ -504,6 +550,7 @@
       "children": [
         {
           "id": "7.1",
+          "uid": "e-7-1",
           "title": "The Razing of the Second Temple and Sacking of Jerusalem",
           "time": null,
           "summary": "",
@@ -511,6 +558,7 @@
           "children": [
             {
               "id": "7.1.1",
+              "uid": "e-7-1-1",
               "title": "Not One Stone Left Upon Another",
               "time": null,
               "summary": "Roman siege completely razes the temple sanctuary so no stone stands upon another.",
@@ -521,6 +569,7 @@
             },
             {
               "id": "7.1.2",
+              "uid": "e-7-1-2",
               "title": "First Fulfillment of Daniel's Abomination of Desolation",
               "time": null,
               "summary": "Idolatrous imperial Roman standards planted in the holy precincts.",
@@ -534,6 +583,7 @@
         },
         {
           "id": "7.2",
+          "uid": "e-7-2",
           "title": "Flight to the Mountains and the Worldwide Jewish Diaspora",
           "time": null,
           "summary": "",
@@ -541,6 +591,7 @@
           "children": [
             {
               "id": "7.2.1",
+              "uid": "e-7-2-1",
               "title": "Christian Flight to Pella",
               "time": null,
               "summary": "Disciples heed Christ's warning and flee into the mountains without returning for possessions.",
@@ -551,6 +602,7 @@
             },
             {
               "id": "7.2.2",
+              "uid": "e-7-2-2",
               "title": "Worldwide Dispersion Among the Gentiles",
               "time": null,
               "summary": "Surviving remnants led away captive into all nations, severed from the mother olive tree.",
@@ -566,6 +618,7 @@
     },
     {
       "id": "8",
+      "uid": "e-8",
       "title": "RISE OF THE GREAT & ABOMINABLE SYSTEM & WILDERNESS EXILE",
       "time": "150 - 500 AD",
       "summary": "Corrupted religious-political empires strip plain and precious truths from the scriptures; the true Church of the Lamb is driven into the wilderness.",
@@ -579,6 +632,7 @@
       "children": [
         {
           "id": "8.1",
+          "uid": "e-8-1",
           "title": "The Whore Riding the Ten-Horned Imperial Beast",
           "time": null,
           "summary": "",
@@ -586,6 +640,7 @@
           "children": [
             {
               "id": "8.1.1",
+              "uid": "e-8-1-1",
               "title": "Persecution of the Saints of God",
               "time": null,
               "summary": "Slaying of the apostles and suppression of pure doctrine under Roman authority.",
@@ -597,6 +652,7 @@
             },
             {
               "id": "8.1.2",
+              "uid": "e-8-1-2",
               "title": "Excising Plain and Precious Covenants",
               "time": null,
               "summary": "Deliberate removal of fundamental gospel truths from the biblical record.",
@@ -609,6 +665,7 @@
         },
         {
           "id": "8.2",
+          "uid": "e-8-2",
           "title": "The 1,260-Year Wilderness Exile of the True Church",
           "time": null,
           "summary": "",
@@ -616,6 +673,7 @@
           "children": [
             {
               "id": "8.2.1",
+              "uid": "e-8-2-1",
               "title": "The Woman Flees to the Wilderness",
               "time": null,
               "summary": "The spiritual authority and priesthood withdrawn for a symbolic 1,260 days/years.",
@@ -627,6 +685,7 @@
             },
             {
               "id": "8.2.2",
+              "uid": "e-8-2-2",
               "title": "Apostasy Across the Gentile Nations",
               "time": null,
               "summary": "Loss of direct revelation and universal fracturing into competing creeds.",
@@ -642,6 +701,7 @@
     },
     {
       "id": "9",
+      "uid": "e-9",
       "title": "THE LONG DISPERSION & THE ERA OF TRIBULATION",
       "time": "200 - 1800 AD",
       "summary": "Centuries of spiritual darkness, persistent wars, rumors of wars, false Christs, and natural chastisements while Israel remains scattered.",
@@ -653,6 +713,7 @@
       "children": [
         {
           "id": "9.1",
+          "uid": "e-9-1",
           "title": "Persistent Social, Doctrinal, and Political Evils",
           "time": null,
           "summary": "",
@@ -660,6 +721,7 @@
           "children": [
             {
               "id": "9.1.1",
+              "uid": "e-9-1-1",
               "title": "The Love of Many Waxes Cold",
               "time": null,
               "summary": "Iniquity abounds, and mankind declares that the Lord delayeth His coming.",
@@ -671,6 +733,7 @@
             },
             {
               "id": "9.1.2",
+              "uid": "e-9-1-2",
               "title": "Proliferation of Deceivers and False Christs",
               "time": null,
               "summary": "Emergence of worldly philosophies and false messiahs leading millions astray.",
@@ -683,6 +746,7 @@
         },
         {
           "id": "9.2",
+          "uid": "e-9-2",
           "title": "Voice of Nature and Global Pestilences Calling Men to Repent",
           "time": null,
           "summary": "",
@@ -690,6 +754,7 @@
           "children": [
             {
               "id": "9.2.1",
+              "uid": "e-9-2-1",
               "title": "Earthquakes, Tempests, and Plagues",
               "time": null,
               "summary": "Divine warnings through lightnings, famines, and the voice of thunder.",
@@ -701,6 +766,7 @@
             },
             {
               "id": "9.2.2",
+              "uid": "e-9-2-2",
               "title": "Wars and Rumors of Wars",
               "time": null,
               "summary": "Incessant empire clashes while the end is yet withheld.",
@@ -715,6 +781,7 @@
     },
     {
       "id": "10",
+      "uid": "e-10",
       "title": "REDISCOVERY OF THE PROMISED LAND & BIRTH OF A FREE NATION",
       "time": "1492 - 1776 AD",
       "summary": "The Spirit of God leads explorers and pilgrims across the great waters to establish a land of liberty dedicated to the restoration of the covenant.",
@@ -726,6 +793,7 @@
       "children": [
         {
           "id": "10.1",
+          "uid": "e-10-1",
           "title": "Voyages Across the Waters to the Choice Land",
           "time": null,
           "summary": "",
@@ -733,6 +801,7 @@
           "children": [
             {
               "id": "10.1.1",
+              "uid": "e-10-1-1",
               "title": "The Man Among the Gentiles",
               "time": null,
               "summary": "Columbus and early voyagers wrought upon by the Spirit of the Lord to cross the ocean.",
@@ -743,6 +812,7 @@
             },
             {
               "id": "10.1.2",
+              "uid": "e-10-1-2",
               "title": "Deliverance from Gentile Captivity",
               "time": null,
               "summary": "Pilgrims and settlers humbleness before God, preserved from European crowns.",
@@ -755,6 +825,7 @@
         },
         {
           "id": "10.2",
+          "uid": "e-10-2",
           "title": "Establishment of the Constitutional Land of Liberty",
           "time": null,
           "summary": "",
@@ -762,6 +833,7 @@
           "children": [
             {
               "id": "10.2.1",
+              "uid": "e-10-2-1",
               "title": "Divine Foundation of American Freedom",
               "time": null,
               "summary": "Gentiles delivered by the power of God out of the hands of all other nations in 1776.",
@@ -772,6 +844,7 @@
             },
             {
               "id": "10.2.2",
+              "uid": "e-10-2-2",
               "title": "Preservation of Rights for Gospel Restoration",
               "time": null,
               "summary": "The Constitution established by wise men raised up for that very purpose.",
@@ -787,7 +860,8 @@
     },
     {
       "id": "11",
-      "title": "RESTORATION OF THE GOSPEL & OPENING OF THE TIMES OF GENTILES",
+      "uid": "e-11",
+      "title": "RESTORATION OF THE GOSPEL & OPENING OF THE FULNESS OF TIMES",
       "time": "1830 AD",
       "summary": "Heavenly visions to Joseph Smith, translation of the Book of Mormon, restoration of priesthood keys, and the gathering of Israel begins.",
       "scriptures": [
@@ -800,6 +874,7 @@
       "children": [
         {
           "id": "11.1",
+          "uid": "e-11-1",
           "title": "The Great and Marvelous Work Commences",
           "time": null,
           "summary": "",
@@ -807,6 +882,7 @@
           "children": [
             {
               "id": "11.1.1",
+              "uid": "e-11-1-1",
               "title": "First Vision and Angelic Ministrations",
               "time": null,
               "summary": "Father and Son appear to Joseph Smith; Moroni delivers ancient Nephite records.",
@@ -817,6 +893,7 @@
             },
             {
               "id": "11.1.2",
+              "uid": "e-11-1-2",
               "title": "Translation of the Book of Mormon",
               "time": null,
               "summary": "Ancient record translated by the gift and power of God to convince Jew and Gentile that Jesus is the Christ.",
@@ -830,6 +907,7 @@
         },
         {
           "id": "11.2",
+          "uid": "e-11-2",
           "title": "Restoration of Priesthood Keys and the Times of the Gentiles",
           "time": null,
           "summary": "",
@@ -837,6 +915,7 @@
           "children": [
             {
               "id": "11.2.1",
+              "uid": "e-11-2-1",
               "title": "Moses, Elias, and Elijah in Kirtland Temple",
               "time": null,
               "summary": "Commitment of keys for gathering Israel, the dispensation of Abraham, and turning hearts.",
@@ -847,6 +926,7 @@
             },
             {
               "id": "11.2.2",
+              "uid": "e-11-2-2",
               "title": "Light Breaks Forth Among Those in Darkness",
               "time": null,
               "summary": "The Times of the Gentiles dualistically 'comes in' with the fullness of the gospel restored. Times of the Gentiles began at Israel's destruction in 70 AD.",
@@ -862,6 +942,7 @@
     },
     {
       "id": "12",
+      "uid": "e-12",
       "title": "MODERN INGATHERING OF JUDAH & 20TH-CENTURY GLOBAL CONFLICTS",
       "time": "1917 - 1987 AD",
       "summary": "World Wars I and II break imperial powers; Jewish remnants return to Palestine, establishing the State of Israel (1948) as the fig tree blossoms.",
@@ -873,6 +954,7 @@
       "children": [
         {
           "id": "12.1",
+          "uid": "e-12-1",
           "title": "World Wars and the Gathering to Palestine",
           "time": null,
           "summary": "",
@@ -880,6 +962,7 @@
           "children": [
             {
               "id": "12.1.1",
+              "uid": "e-12-1-1",
               "title": "The Parable of the Fig Tree Fulfilled",
               "time": null,
               "summary": "Tender branches shoot forth in 1948 as Israel is reborn after nineteen centuries of dispersion.",
@@ -890,6 +973,7 @@
             },
             {
               "id": "12.1.2",
+              "uid": "e-12-1-2",
               "title": "Gathering of Jewish Exiles from the Four Quarters",
               "time": null,
               "summary": "Immigration waves return descendants of Judah to the mountains of their fathers.",
@@ -903,6 +987,7 @@
         },
         {
           "id": "12.2",
+          "uid": "e-12-2",
           "title": "Consolidation of the Modern First World Beast System",
           "time": null,
           "summary": "",
@@ -910,6 +995,7 @@
           "children": [
             {
               "id": "12.2.1",
+              "uid": "e-12-2-1",
               "title": "Global Governance Consolidation",
               "time": null,
               "summary": "Post-WWII emergence of multilateral institutions exercising dominion across all nations.",
@@ -920,6 +1006,7 @@
             },
             {
               "id": "12.2.2",
+              "uid": "e-12-2-2",
               "title": "The 70-Year Hegemonic Cycle",
               "time": null,
               "summary": "Western and Soviet power blocks dominating global politics throughout the mid-20th century.",
@@ -934,6 +1021,7 @@
     },
     {
       "id": "13",
+      "uid": "e-13",
       "title": "LATTER-DAY SCOURGES & REJECTION OF GOSPEL FULLNESS",
       "time": "2019 - 2027 AD",
       "summary": "Desolating sicknesses and pandemic scourges cover the earth; society rejects covenant foundations, setting the stage for Gentile judgment.",
@@ -945,6 +1033,7 @@
       "children": [
         {
           "id": "13.1",
+          "uid": "e-13-1",
           "title": "Desolating Sickness and the Overflowing Scourge",
           "time": null,
           "summary": "",
@@ -952,6 +1041,7 @@
           "children": [
             {
               "id": "13.1.1",
+              "uid": "e-13-1-1",
               "title": "Global Pandemic and Economic Commotion",
               "time": null,
               "summary": "Fulfillment of D&C 45:31: an overflowing scourge and desolating sickness covering the land.",
@@ -962,6 +1052,7 @@
             },
             {
               "id": "13.1.2",
+              "uid": "e-13-1-2",
               "title": "Men's Hearts Failing Them for Fear",
               "time": null,
               "summary": "Widespread societal anxiety and institutional breakdown across the nations.",
@@ -975,6 +1066,7 @@
         },
         {
           "id": "13.2",
+          "uid": "e-13-2",
           "title": "Rejection of the Light and Fulfilled Gentile Probation",
           "time": null,
           "summary": "",
@@ -982,6 +1074,7 @@
           "children": [
             {
               "id": "13.2.1",
+              "uid": "e-13-2-1",
               "title": "Turning Hearts from God Through Precepts of Men",
               "time": null,
               "summary": "Wickedness abounds as Gentile cultures fully reject gospel standards.",
@@ -992,6 +1085,7 @@
             },
             {
               "id": "13.2.2",
+              "uid": "e-13-2-2",
               "title": "The Times of the Gentiles Reaching Fullness",
               "time": null,
               "summary": "Probationary window begins closing, transitioning the gospel priority back to Israel.",
@@ -1007,6 +1101,7 @@
     },
     {
       "id": "14",
+      "uid": "e-14",
       "title": "THE 70TH HEBDOMAD & SECOND ABOMINATION OF DESOLATION (FULLNESS OF THE GENTILES)",
       "time": "Final 7-Year Period (~2027-2034 AD)",
       "summary": "The final week of Daniel: Jerusalem is besieged, the daily sacrifice taken away, holy places trampled for 42 months, and Two Witnesses minister in sackcloth.",
@@ -1019,6 +1114,7 @@
       "children": [
         {
           "id": "14.1",
+          "uid": "e-14-1",
           "title": "The Siege of Jerusalem and Fall of the City",
           "time": null,
           "summary": "",
@@ -1026,6 +1122,7 @@
           "children": [
             {
               "id": "14.1.1",
+              "uid": "e-14-1-1",
               "title": "Second Fulfillment of Daniel's Abomination",
               "time": null,
               "summary": "Jerusalem besieged again with fierce tribulation upon the Jews.",
@@ -1037,6 +1134,7 @@
             },
             {
               "id": "14.1.2",
+              "uid": "e-14-1-2",
               "title": "Trampling of the Holy City for Forty-Two Months",
               "time": null,
               "summary": "Half the city goes into exile while foreign armies occupy the temple courts for 3.5 years.",
@@ -1050,6 +1148,7 @@
         },
         {
           "id": "14.2",
+          "uid": "e-14-2",
           "title": "Ministry and Resurrection of the Two Witnesses",
           "time": null,
           "summary": "",
@@ -1057,6 +1156,7 @@
           "children": [
             {
               "id": "14.2.1",
+              "uid": "e-14-2-1",
               "title": "Prophesying in Sackcloth for 1,260 Days",
               "time": null,
               "summary": "Two prophets seal the heavens, turn water to blood, and smite the earth with plagues.",
@@ -1068,6 +1168,7 @@
             },
             {
               "id": "14.2.2",
+              "uid": "e-14-2-2",
               "title": "Death and Public Resurrection of the Witnesses",
               "time": null,
               "summary": "Slain in the streets of Jerusalem, lying unburied 3.5 days, then standing and ascending into heaven.",
@@ -1082,6 +1183,7 @@
     },
     {
       "id": "15",
+      "uid": "e-15",
       "title": "COALITION ATTACK OF GOG & MAGOG FROM SYRIA",
       "time": "~2027-2034",
       "summary": "Northern and Middle Eastern powers form a strategic military alliance encircling the mountains of Israel in preparation for the end-times siege.",
@@ -1093,6 +1195,7 @@
       "children": [
         {
           "id": "15.1",
+          "uid": "e-15-1",
           "title": "The Strategic League of Northern and Regional Powers",
           "time": null,
           "summary": "",
@@ -1100,6 +1203,7 @@
           "children": [
             {
               "id": "15.1.1",
+              "uid": "e-15-1-1",
               "title": "The Northern Chief Prince and Allies",
               "time": null,
               "summary": "Gog of Magog (northern power) allied with Persia (Iran), Cush (Ethiopia), and Put (Libya).",
@@ -1110,6 +1214,7 @@
             },
             {
               "id": "15.1.2",
+              "uid": "e-15-1-2",
               "title": "Gomer and the House of Togarmah",
               "time": null,
               "summary": "Central Asian and Anatolian forces joining the coalition against unfortified Israeli settlements.",
@@ -1122,6 +1227,7 @@
         },
         {
           "id": "15.2",
+          "uid": "e-15-2",
           "title": "Jerusalem Made a Cup of Trembling and Heavy Stone",
           "time": null,
           "summary": "",
@@ -1129,6 +1235,7 @@
           "children": [
             {
               "id": "15.2.1",
+              "uid": "e-15-2-1",
               "title": "Global Diplomatic Isolation of Israel",
               "time": null,
               "summary": "All surrounding nations and international bodies aligning against Jerusalem.",
@@ -1139,6 +1246,7 @@
             },
             {
               "id": "15.2.2",
+              "uid": "e-15-2-2",
               "title": "Withholding of Western Allied Protection",
               "time": null,
               "summary": "The great betrayal wherein traditional allies withhold effective defense during the crisis.",
@@ -1153,6 +1261,7 @@
     },
     {
       "id": "16",
+      "uid": "e-16",
       "title": "ARM OF THE LORD BEGINS TO FALL ON GENTILE NATIONS & MISSIONARIES CALLED HOME",
       "time": "Closing Gentile Era (2027-2047)",
       "summary": "Judgment begins at the house of the Lord and strikes the Gentiles; missionaries are called home as economic totalitarianism and internal collapses spread.",
@@ -1166,6 +1275,7 @@
       "children": [
         {
           "id": "16.1",
+          "uid": "e-16-1",
           "title": "Missionaries Called Home and Sealing of the Law",
           "time": null,
           "summary": "",
@@ -1173,6 +1283,7 @@
           "children": [
             {
               "id": "16.1.1",
+              "uid": "e-16-1-1",
               "title": "Elders Called Out of the Vineyard",
               "time": null,
               "summary": "Ministry among the Gentiles terminates as elders shake dust from their feet.",
@@ -1183,6 +1294,7 @@
             },
             {
               "id": "16.1.2",
+              "uid": "e-16-1-2",
               "title": "Testimony Sealed by the Wrath of Nature",
               "time": null,
               "summary": "Earthquakes, tempests, and waves heaving beyond their bounds witness against the wicked.",
@@ -1195,6 +1307,7 @@
         },
         {
           "id": "16.2",
+          "uid": "e-16-2",
           "title": "Rise of the Second Beast and American Fragmentation",
           "time": null,
           "summary": "",
@@ -1202,6 +1315,7 @@
           "children": [
             {
               "id": "16.2.1",
+              "uid": "e-16-2-1",
               "title": "Totalitarian Commerce and Mark Enforcement",
               "time": null,
               "summary": "Second beast mandates allegiance to buy or sell, persecuting those who refuse.",
@@ -1212,6 +1326,7 @@
             },
             {
               "id": "16.2.2",
+              "uid": "e-16-2-2",
               "title": "The Constitution Hanging by a Thread",
               "time": null,
               "summary": "National collapse of gentile governments while righteous elders uphold liberty in Zion.",
@@ -1227,6 +1342,7 @@
     },
     {
       "id": "17",
+      "uid": "e-17",
       "title": "WORLD WAR III (ARMAGEDDON) & OVERTHROW OF BABYLON/ BEAST SYSTEM?",
       "time": "Culmination of Gentile Wars",
       "summary": "World armies gather into the valley of Megiddo against Jerusalem; divine wrath descends, incinerating the beast, false prophet, and Babylon the Great.",
@@ -1240,6 +1356,7 @@
       "children": [
         {
           "id": "17.1",
+          "uid": "e-17-1",
           "title": "Gathering of Global Armies to the Valley of Decision",
           "time": null,
           "summary": "",
@@ -1247,6 +1364,7 @@
           "children": [
             {
               "id": "17.1.1",
+              "uid": "e-17-1-1",
               "title": "Spirits of Devils Muster Earth's Kings",
               "time": null,
               "summary": "Armies numbering 200 million converge around the mountains of Israel for total conquest.",
@@ -1258,6 +1376,7 @@
             },
             {
               "id": "17.1.2",
+              "uid": "e-17-1-2",
               "title": "Final Distress and Siege of Jerusalem's Remnant",
               "time": null,
               "summary": "Israel's defense shattered, pushed to the brink of utter extermination.",
@@ -1271,6 +1390,7 @@
         },
         {
           "id": "17.2",
+          "uid": "e-17-2",
           "title": "Fall and Burning of Babylon the Great",
           "time": null,
           "summary": "",
@@ -1278,6 +1398,7 @@
           "children": [
             {
               "id": "17.2.1",
+              "uid": "e-17-2-1",
               "title": "Destruction of the Great Whore by Fire",
               "time": null,
               "summary": "The corrupt world system collapsed in one hour, burned with devouring fire.",
@@ -1289,6 +1410,7 @@
             },
             {
               "id": "17.2.2",
+              "uid": "e-17-2-2",
               "title": "Casting of the Beast and False Prophet into the Lake of Fire",
               "time": null,
               "summary": "Military and religious impostors destroyed without hand by divine power.",
@@ -1304,6 +1426,7 @@
     },
     {
       "id": "18",
+      "uid": "e-18",
       "title": "PUBLIC ADVENT: CHRIST SYMBOLIC ENTRANCE THROUGH THE MOUNT OF OLIVES",
       "time": "The Day of the Lord",
       "summary": "Christ symbolically enters Jerusalem from the east; His foot touches the Mount of Olives, cleaving it in twain; the Jewish remnant recognizes their crucified Redeemer.",
@@ -1316,6 +1439,7 @@
       "children": [
         {
           "id": "18.1",
+          "uid": "e-18-1",
           "title": "The Cleaving of Mount Olivet and Valley of Refuge",
           "time": null,
           "summary": "",
@@ -1323,6 +1447,7 @@
           "children": [
             {
               "id": "18.1.1",
+              "uid": "e-18-1-1",
               "title": "The Mount Cleaves East and West",
               "time": null,
               "summary": "Jews escape through Mount Olives, the mounts split (symbolically?) and Christ enters..",
@@ -1334,6 +1459,7 @@
             },
             {
               "id": "18.1.2",
+              "uid": "e-18-1-2",
               "title": "The Lord Utters His Voice from Zion and Jerusalem",
               "time": null,
               "summary": "All ends of the earth hear His decree; mountains melt and continents quake.",
@@ -1347,6 +1473,7 @@
         },
         {
           "id": "18.2",
+          "uid": "e-18-2",
           "title": "Recognition of the Messiah by the Jewish Remnant",
           "time": null,
           "summary": "",
@@ -1354,6 +1481,7 @@
           "children": [
             {
               "id": "18.2.1",
+              "uid": "e-18-2-1",
               "title": "What Are These Wounds in Thine Hands?",
               "time": null,
               "summary": "Jews examine His pierced hands and feet, discovering He was wounded in the house of friends.",
@@ -1365,6 +1493,7 @@
             },
             {
               "id": "18.2.2",
+              "uid": "e-18-2-2",
               "title": "Mourning and National Redemption of Israel",
               "time": null,
               "summary": "Bitterness of tears as the remnant realizes Jesus of Nazareth is their true King.",
@@ -1380,6 +1509,7 @@
     },
     {
       "id": "19",
+      "uid": "e-19",
       "title": "OPENING OF THE SEVENTH SEAL & CELESTIAL TERRORS",
       "time": "Immediately After Tribulation (~March 2034 AD)",
       "summary": "Immediately following the tribulation of Jerusalem: the sun is blackened, the moon bathed in blood, stars fall like figs, and kings hide in caves.",
@@ -1392,6 +1522,7 @@
       "children": [
         {
           "id": "19.1",
+          "uid": "e-19-1",
           "title": "Cosmic Disturbances and Solar-Lunar Eclipses",
           "time": null,
           "summary": "",
@@ -1399,6 +1530,7 @@
           "children": [
             {
               "id": "19.1.1",
+              "uid": "e-19-1-1",
               "title": "Sun Darkened and Moon Bathed in Blood (Near-east eclipse March 2034)",
               "time": null,
               "summary": "The sun hides its face in shame; the moon turns to deep blood before the great day.",
@@ -1410,6 +1542,7 @@
             },
             {
               "id": "19.1.2",
+              "uid": "e-19-1-2",
               "title": "Stars Falling as Ripe Figs, Wormwood/Apophis (April 2029/March 2036)",
               "time": null,
               "summary": "Meteorite storms and falling celestial debris shaking the stability of earth.",
@@ -1423,6 +1556,7 @@
         },
         {
           "id": "19.2",
+          "uid": "e-19-2",
           "title": "Worldwide Earthquakes and Terror Among Earth's Elites",
           "time": null,
           "summary": "",
@@ -1430,6 +1564,7 @@
           "children": [
             {
               "id": "19.2.1",
+              "uid": "e-19-2-1",
               "title": "The Earth Reeling to and Fro (Major Solar flare begins earth expansion event ~40yrs)",
               "time": null,
               "summary": "Seismic waves shake continents; islands and mountains move out of their places.",
@@ -1441,6 +1576,7 @@
             },
             {
               "id": "19.2.2",
+              "uid": "e-19-2-2",
               "title": "Mighty Men Fleeing to Rocks and Caves",
               "time": null,
               "summary": "Captains, kings, and bondmen cry for the mountains to fall on them and hide them from the Lamb.",
@@ -1455,6 +1591,7 @@
     },
     {
       "id": "20",
+      "uid": "e-20",
       "title": "THE GREAT SIGN OF THE SON OF MAN & PRIVATE ADVENT IN CLOUDS",
       "time": "Following Celestial Signs (~2034 AD)",
       "summary": "The Great Sign of the Son of Man appears across the sky, visible to all humanity; Christ appears in glory to His watching saints afar off.",
@@ -1467,6 +1604,7 @@
       "children": [
         {
           "id": "20.1",
+          "uid": "e-20-1",
           "title": "The Global Celestial Ensign of the Coming Lord",
           "time": null,
           "summary": "",
@@ -1474,6 +1612,7 @@
           "children": [
             {
               "id": "20.1.1",
+              "uid": "e-20-1-1",
               "title": "Great Sign in Heaven Seen Together",
               "time": null,
               "summary": "A glorious astronomical manifestation appearing like morning light shining from east to west.",
@@ -1485,6 +1624,7 @@
             },
             {
               "id": "20.1.2",
+              "uid": "e-20-1-2",
               "title": "Mourning of the Unprepared Tribes",
               "time": null,
               "summary": "Inhabitants of the earth lament as the undeniable presence of the King draws near.",
@@ -1498,6 +1638,7 @@
         },
         {
           "id": "20.2",
+          "uid": "e-20-2",
           "title": "Private Appearance in Glory to Watchers and Virgins",
           "time": null,
           "summary": "",
@@ -1505,6 +1646,7 @@
           "children": [
             {
               "id": "20.2.1",
+              "uid": "e-20-2-1",
               "title": "Appearance to Those Who Watch and Wait",
               "time": null,
               "summary": "Christ reveals Himself in the clouds of heaven with holy angels to those who have oil in their lamps.",
@@ -1516,6 +1658,7 @@
             },
             {
               "id": "20.2.2",
+              "uid": "e-20-2-2",
               "title": "Cut Off Are Those Who Fell Asleep",
               "time": null,
               "summary": "The foolish virgins and careless disciples caught unprepared when the Bridegroom arrives.",
@@ -1530,6 +1673,7 @@
     },
     {
       "id": "21",
+      "uid": "e-21",
       "title": "FIRST TRUMP & FIRSTFRUITS OF THE RESURRECTION",
       "time": "Before Gentile Destruction (2034-2074)",
       "summary": "The sounding of the first trump: righteous dead awake and rise from graves, and living faithful saints are quickened and caught up into the clouds.",
@@ -1542,6 +1686,7 @@
       "children": [
         {
           "id": "21.1",
+          "uid": "e-21-1",
           "title": "The Resurrection of the Sleeping Saints",
           "time": null,
           "summary": "",
@@ -1549,6 +1694,7 @@
           "children": [
             {
               "id": "21.1.1",
+              "uid": "e-21-1-1",
               "title": "The Trump Sounds on Mount Sinai",
               "time": null,
               "summary": "The angelic trumpet awakes those who died in the covenant to receive crowns of glory.",
@@ -1560,6 +1706,7 @@
             },
             {
               "id": "21.1.2",
+              "uid": "e-21-1-2",
               "title": "Emergence from Graves into the Cloud",
               "time": null,
               "summary": "Righteous dead ascend in the midst of the pillar of heaven to be with Christ.",
@@ -1573,6 +1720,7 @@
         },
         {
           "id": "21.2",
+          "uid": "e-21-2",
           "title": "Quickening and Catching Up of the Living Faithful",
           "time": null,
           "summary": "",
@@ -1580,6 +1728,7 @@
           "children": [
             {
               "id": "21.2.1",
+              "uid": "e-21-2-1",
               "title": "Translation in the Twinkling of an Eye",
               "time": null,
               "summary": "Living righteous saints changed without tasting the lingering sting of death.",
@@ -1591,6 +1740,7 @@
             },
             {
               "id": "21.2.2",
+              "uid": "e-21-2-2",
               "title": "Caught Up Together with the Saints",
               "time": null,
               "summary": "Saints caught up to meet the Lord in the air before judgment falls on the nations.",
@@ -1606,6 +1756,7 @@
     },
     {
       "id": "22",
+      "uid": "e-22",
       "title": "DISPENSATION OF THE FULNESS OF TIMES & GATHERING TO ZION FOR SAFETY",
       "time": "20-40 Year Period (2034-2074)",
       "summary": "Heavenly silence for the space of half an hour; judgments stayed while the 144,000 are sealed and the righteous gather to Zion, the only nation at peace.",
@@ -1619,6 +1770,7 @@
       "children": [
         {
           "id": "22.1",
+          "uid": "e-22-1",
           "title": "The Heavenly Silence and Sealing of the 144,000",
           "time": null,
           "summary": "",
@@ -1626,6 +1778,7 @@
           "children": [
             {
               "id": "22.1.1",
+              "uid": "e-22-1-1",
               "title": "Four Angels Holding the Four Winds",
               "time": null,
               "summary": "Destructions restrained across the sea and earth until servants are sealed in their foreheads.",
@@ -1637,6 +1790,7 @@
             },
             {
               "id": "22.1.2",
+              "uid": "e-22-1-2",
               "title": "Ordination of the 144,000 High Priests",
               "time": null,
               "summary": "High priests ordained from all tribes to minister the everlasting gospel and gather the elect.",
@@ -1650,6 +1804,7 @@
         },
         {
           "id": "22.2",
+          "uid": "e-22-2",
           "title": "Establishment and Refuge of the New Jerusalem (Zion)",
           "time": null,
           "summary": "",
@@ -1657,6 +1812,7 @@
           "children": [
             {
               "id": "22.2.1",
+              "uid": "e-22-2-1",
               "title": "Decree to Gather to One Place",
               "time": null,
               "summary": "Saints called to purchase lands and build up Zion as a city of refuge and safety.",
@@ -1668,6 +1824,7 @@
             },
             {
               "id": "22.2.2",
+              "uid": "e-22-2-2",
               "title": "The Only Nation Not at War",
               "time": null,
               "summary": "Every man refusing to take arms against his neighbor must flee to Zion for defense.",
@@ -1682,8 +1839,9 @@
     },
     {
       "id": "23",
+      "uid": "e-23",
       "title": "'LITTLE SEASON' WICKEDNESS & FINAL CONFLICT OF GOG AND MAGOG",
-      "time": "End of the 1,000 Years",
+      "time": "End of Fulness of Times",
       "summary": "At the close of the Millennium, Satan is loosed for a little season; Michael leads heaven's hosts against hell's armies; the devil is cast out forever.",
       "scriptures": [
         "Revelation 20:7-10",
@@ -1693,6 +1851,7 @@
       "children": [
         {
           "id": "23.1",
+          "uid": "e-23-1",
           "title": "Satan Loosed to Deceive the Nations Once More",
           "time": null,
           "summary": "",
@@ -1700,6 +1859,7 @@
           "children": [
             {
               "id": "23.1.1",
+              "uid": "e-23-1-1",
               "title": "Men Begin Again to Deny God",
               "time": null,
               "summary": "Mortal probation produces a final contingent who reject the divine government.",
@@ -1710,6 +1870,7 @@
             },
             {
               "id": "23.1.2",
+              "uid": "e-23-1-2",
               "title": "Muster of the Final Rebellious Host",
               "time": null,
               "summary": "Satan gathers his forces like the sand of the sea around the camp of the saints.",
@@ -1722,6 +1883,7 @@
         },
         {
           "id": "23.2",
+          "uid": "e-23-2",
           "title": "Michael's Final Triumph and the Great White Throne",
           "time": null,
           "summary": "",
@@ -1729,6 +1891,7 @@
           "children": [
             {
               "id": "23.2.1",
+              "uid": "e-23-2-1",
               "title": "Battle of the Great God",
               "time": null,
               "summary": "Michael the Archangel leads heavenly legions; hell's armies cast into outer darkness forever.",
@@ -1740,6 +1903,7 @@
             },
             {
               "id": "23.2.2",
+              "uid": "e-23-2-2",
               "title": "General Resurrection and Final Judgment",
               "time": null,
               "summary": "Rest of the dead awake; books are opened; every soul judged according to works.",
@@ -1755,8 +1919,9 @@
     },
     {
       "id": "24",
+      "uid": "e-24",
       "title": "CLEANSING BY FIRE & INAUGURATION OF TERRESTRIAL EARTH",
-      "time": "Commencement of 1,000-Year Reign",
+      "time": "Commencement of FallenTelestial Earth (2250 - 2700",
       "summary": "God's presence melts mountains and boils waters; wicked consumed by plagues and fire; continents re-unite; Satan bound for a thousand years of peace.",
       "scriptures": [
         "Isaiah 64:1-2",
@@ -1768,6 +1933,7 @@
       "children": [
         {
           "id": "24.1",
+          "uid": "e-24-1",
           "title": "Global Cleansing of Wickedness by Melting Fire",
           "time": null,
           "summary": "",
@@ -1775,6 +1941,7 @@
           "children": [
             {
               "id": "24.1.1",
+              "uid": "e-24-1-1",
               "title": "Presence as a Melting Fire",
               "time": null,
               "summary": "Corruptible elements melt with fervent heat; proud and wicked burn as stubble.",
@@ -1786,6 +1953,7 @@
             },
             {
               "id": "24.1.2",
+              "uid": "e-24-1-2",
               "title": "Flesh-Consuming Plague Smashing Oppressors",
               "time": null,
               "summary": "Plague strikes enemy armies: eyes rot in sockets and tongues consume in mouths.",
@@ -1799,6 +1967,7 @@
         },
         {
           "id": "24.2",
+          "uid": "e-24-2",
           "title": "Transfiguration to Terrestrial Glory and Satan Bound",
           "time": null,
           "summary": "",
@@ -1806,6 +1975,7 @@
           "children": [
             {
               "id": "24.2.1",
+              "uid": "e-24-2-1",
               "title": "Satan Chained in the Bottomless Pit",
               "time": null,
               "summary": "The adversary bound so he can have no place in the hearts of men for 1,000 years.",
@@ -1817,6 +1987,7 @@
             },
             {
               "id": "24.2.2",
+              "uid": "e-24-2-2",
               "title": "Universal Harmony: No Death or Sorrow",
               "time": null,
               "summary": "Lion feeds with ox; infants live to the age of a tree and are changed in a twinkling.",
@@ -1832,6 +2003,7 @@
     },
     {
       "id": "25",
+      "uid": "e-25",
       "title": "NEW HEAVEN, NEW EARTH, & CELESTIAL GLORY",
       "time": "Eternity",
       "summary": "The temporal earth passes away as by fire and is resurrected into a celestial sphere like a sea of glass; New Jerusalem descends from God out of heaven.",
@@ -1845,6 +2017,7 @@
       "children": [
         {
           "id": "25.1",
+          "uid": "e-25-1",
           "title": "Resurrection and Sanctification of the Globe",
           "time": null,
           "summary": "",
@@ -1852,6 +2025,7 @@
           "children": [
             {
               "id": "25.1.1",
+              "uid": "e-25-1-1",
               "title": "The Earth Resurrected to Celestial Order",
               "time": null,
               "summary": "Earth abides the celestial law and is crowned with glory to become a great Urim and Thummim.",
@@ -1863,6 +2037,7 @@
             },
             {
               "id": "25.1.2",
+              "uid": "e-25-1-2",
               "title": "The Sea of Glass and Fire",
               "time": null,
               "summary": "Sanctified, immortal state where all things past, present, and future are manifest before God.",
@@ -1877,6 +2052,7 @@
         },
         {
           "id": "25.2",
+          "uid": "e-25-2",
           "title": "Descent of the Holy City: The Heavenly New Jerusalem",
           "time": null,
           "summary": "",
@@ -1884,6 +2060,7 @@
           "children": [
             {
               "id": "25.2.1",
+              "uid": "e-25-2-1",
               "title": "City Adorned as a Bride for Her Husband",
               "time": null,
               "summary": "The New Jerusalem descends from God out of heaven to dwell eternally with redeemed humanity.",
@@ -1895,6 +2072,7 @@
             },
             {
               "id": "25.2.2",
+              "uid": "e-25-2-2",
               "title": "No More Death, Sorrow, or Pain",
               "time": null,
               "summary": "God wipes away all tears; all things are made new, and the saints inherit all things.",

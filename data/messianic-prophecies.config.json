@@ -29,6 +29,9 @@
     "entries": "entries",
     "openFull": "Click or tap for the full passage below the chart.",
     "openScripture": "Open on lds.org",
+    "openScriptures": "Open Scriptures",
+    "closeScriptures": "Close Scriptures",
+    "scriptureReader": "Scriptures",
     "moreVerses": "Open the reference on lds.org to read the rest of the passage.",
     "loading": "Loading chart…",
     "error": "The chart could not be loaded."
