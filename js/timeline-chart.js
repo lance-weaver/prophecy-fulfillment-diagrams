@@ -87,10 +87,20 @@
   }
 
   function liveRefLabel(book, chapter, verse) {
-    if (!book) return "";
-    if (chapter && verse) return book + " " + chapter + ":" + verse;
-    if (chapter) return book + " " + chapter;
-    return String(book);
+    var name = book === "Doctrine and Covenants" ? "D&C" : book;
+    if (!name) return "";
+    if (chapter && verse) return name + " " + chapter + ":" + verse;
+    if (chapter) return name + " " + chapter;
+    return String(name);
+  }
+
+  function ldsVerseUrl(book, chapter, verse) {
+    var slug = SLUGS[book];
+    if (!slug) return "";
+    var url = "https://www.lds.org/scriptures/" + slug[0] + "/" + slug[1];
+    if (chapter) url += "/" + chapter;
+    if (verse) url += "." + verse;
+    return url + "?lang=eng";
   }
 
   function walk(nodes, fn, level) {
@@ -126,6 +136,7 @@
     var hideTimer = 0;
     var lastWidth = -1;
     var lastDepth = -1;
+    var lastPhone = null;
     var drawTimer = 0;
     var lastTouchPin = 0;
     var pointerDownAt = null;
@@ -836,7 +847,7 @@
             ref: ref.reference,
             anchorId: anchor,
             label: liveRefLabel(ref.book, coords.chapter, coords.verse),
-            href: churchStudyUrl(ref.book, coords.chapter, coords.verse)
+            href: ldsVerseUrl(ref.book, coords.chapter, coords.verse)
           });
         });
       });
@@ -980,6 +991,25 @@
       tip.hidden = true;
     }
 
+    function scriptureExpandoHtml(reference, color, verses, url) {
+      var hasVerses = !!(verses && verses.length);
+      var inner = "";
+      if (hasVerses) inner += '<p class="pfd-tip-passage">' + versesHtml(verses) + "</p>";
+      if (url) {
+        inner += '<p class="pfd-tip-more"><a class="pfd-open" href="' + esc(url) + '" target="_blank" rel="noopener noreferrer">' +
+          esc(hasVerses ? (strings.openScripture || "Open on lds.org") : (strings.readScripture || "Read on churchofjesuschrist.org")) + "</a></p>";
+      } else if (!hasVerses) {
+        inner += '<p class="pfd-tip-more">' + esc(strings.noVerses || "Verse text has not been added for this reference yet.") + "</p>";
+      }
+      return '<div class="pfd-tip-expando">' +
+        '<button type="button" class="pfd-tip-expando-btn" aria-expanded="false">' +
+          '<span class="pfd-tip-expando-ref"' + (color ? ' style="color:' + esc(color) + '"' : "") + ">" + esc(reference) + "</span>" +
+          '<span class="pfd-tip-expando-arrow" aria-hidden="true"></span>' +
+        "</button>" +
+        '<div class="pfd-tip-expando-panel" hidden>' + inner + "</div>" +
+        "</div>";
+    }
+
     function eventTipHtml(node) {
       var html = '<p class="pfd-tip-summary">' + esc(node.title) + "</p>";
       if (node.time) html += '<p class="pfd-tip-more">' + esc(node.time) + "</p>";
@@ -987,17 +1017,7 @@
       (node.scriptures || []).forEach(function (reference) {
         var info = passageOf(reference);
         var book = info.book || bookOf(reference);
-        html += '<p class="pfd-tip-kicker">' + esc(reference) + "</p>";
-        if (info.verses && info.verses.length) {
-          html += '<p class="pfd-tip-passage">' + versesHtml(info.verses) + "</p>";
-        }
-        var url = scriptureUrl(book, reference);
-        if (url) {
-          html += '<p class="pfd-tip-more"><a class="pfd-open" href="' + esc(url) + '" target="_blank" rel="noopener noreferrer">' +
-            esc(info.verses && info.verses.length ? (strings.openScripture || "Open on lds.org") : (strings.readScripture || "Read on churchofjesuschrist.org")) + "</a></p>";
-        } else if (!(info.verses && info.verses.length)) {
-          html += '<p class="pfd-tip-more">' + esc(strings.noVerses || "Verse text has not been added for this reference yet.") + "</p>";
-        }
+        html += scriptureExpandoHtml(reference, colorForBook(book), info.verses, scriptureUrl(book, reference));
       });
       return html;
     }
@@ -1005,16 +1025,7 @@
     function refTipHtml(reference) {
       var info = passageOf(reference);
       var book = info.book || bookOf(reference);
-      var html = '<p class="pfd-tip-ref" style="color:' + esc(colorForBook(book)) + '">' + esc(reference) + "</p>";
-      if (info.verses && info.verses.length) html += '<p class="pfd-tip-passage">' + versesHtml(info.verses) + "</p>";
-      var url = scriptureUrl(book, reference);
-      if (url) {
-        html += '<p class="pfd-tip-more"><a class="pfd-open" href="' + esc(url) + '" target="_blank" rel="noopener noreferrer">' +
-          esc(info.verses && info.verses.length ? (strings.openScripture || "Open on lds.org") : (strings.readScripture || "Read on churchofjesuschrist.org")) + "</a></p>";
-      } else if (!(info.verses && info.verses.length)) {
-        html += '<p class="pfd-tip-more">' + esc(strings.noVerses || "Verse text has not been added for this reference yet.") + "</p>";
-      }
-      return html;
+      return scriptureExpandoHtml(reference, colorForBook(book), info.verses, scriptureUrl(book, reference));
     }
 
     tip.addEventListener("pointerenter", function () { tipOver = true; cancelHide(); });
@@ -1032,7 +1043,18 @@
         event.preventDefault();
         event.stopPropagation();
         closeTip();
+        return;
       }
+      var btn = event.target && event.target.closest && event.target.closest(".pfd-tip-expando-btn");
+      if (!btn) return;
+      event.preventDefault();
+      event.stopPropagation();
+      var box = btn.closest(".pfd-tip-expando");
+      var panel = box && box.querySelector(".pfd-tip-expando-panel");
+      var open = btn.getAttribute("aria-expanded") === "true";
+      btn.setAttribute("aria-expanded", open ? "false" : "true");
+      if (box) box.classList.toggle("is-open", !open);
+      if (panel) panel.hidden = open;
     });
 
     function onDocPointerDown(event) {
@@ -1130,24 +1152,31 @@
       if (disposed || !global.d3) return;
       var width = Math.floor(stage.clientWidth);
       if (width < 40) return;
-      if (!force && width === lastWidth && depth === lastDepth) return;
+      var phone = width < 640;
+      if (!force && width === lastWidth && depth === lastDepth && phone === lastPhone) return;
       lastWidth = width;
       lastDepth = depth;
+      lastPhone = phone;
       var narrow = width < 760;
       var rows = visibleRows();
-      var refs = visibleRefs();
-      var railX = narrow ? 42 : 52;
+      var refs = phone ? [] : visibleRefs();
+      var railX = phone ? 36 : narrow ? 42 : 52;
       layoutRailX = railX;
-      var eventW = Math.round(Math.min(narrow ? width * 0.48 : 400, Math.max(narrow ? 148 : 256, width * 0.36)));
-      var refW = Math.round(Math.min(narrow ? 120 : 170, Math.max(narrow ? 88 : 120, width * 0.18)));
-      var firstRight = narrow
-        ? Math.round(Math.min(width * 0.64, width - refW - 28))
-        : Math.min(400, width - refW - 36);
+      var eventW = phone
+        ? Math.round(Math.max(180, width - 8))
+        : Math.round(Math.min(narrow ? width * 0.48 : 400, Math.max(narrow ? 148 : 256, width * 0.36)));
+      var refW = phone ? 0 : Math.round(Math.min(narrow ? 120 : 170, Math.max(narrow ? 88 : 120, width * 0.18)));
+      var firstRight = phone
+        ? eventW
+        : narrow
+          ? Math.round(Math.min(width * 0.64, width - refW - 28))
+          : Math.min(400, width - refW - 36);
       if (firstRight < eventW) firstRight = eventW;
+      root.classList.toggle("is-phone", phone);
       root.style.setProperty("--event", eventW + "px");
       root.style.setProperty("--scripture", refW + "px");
       root.style.setProperty("--event-indent", eventIndent(1) + "px");
-      columnsEl.style.gridTemplateColumns = eventW + "px 1fr " + refW + "px";
+      columnsEl.style.gridTemplateColumns = phone ? "1fr" : eventW + "px 1fr " + refW + "px";
       layoutEventW = eventW;
       closeInlineEdit(false);
 
@@ -1289,15 +1318,17 @@
         });
 
       var axis = svg.append("g").attr("class", "pfd-axis").style("pointer-events", "none");
-      millennia.forEach(function (tick) {
-        axis.append("line")
-          .attr("x1", railX)
-          .attr("x2", x1 - 8)
-          .attr("y1", tick.y)
-          .attr("y2", tick.y)
-          .attr("stroke", "#e7e5e4")
-          .attr("stroke-width", 1);
-      });
+      if (!phone) {
+        millennia.forEach(function (tick) {
+          axis.append("line")
+            .attr("x1", railX)
+            .attr("x2", x1 - 8)
+            .attr("y1", tick.y)
+            .attr("y2", tick.y)
+            .attr("stroke", "#e7e5e4")
+            .attr("stroke-width", 1);
+        });
+      }
       if (laidEvents.length) {
         axis.append("line")
           .attr("x1", railX).attr("x2", railX)
@@ -1426,7 +1457,7 @@
             .attr("dy", i === 0 ? 0 : item.size + 3)
             .text(line);
         });
-        if (item.cited) {
+        if (item.cited && !phone) {
           group.append("circle")
             .attr("class", "pfd-connect-dot")
             .attr("cx", item.connectX)
@@ -1497,7 +1528,7 @@
 
       var refLayer = svg.append("g").attr("class", "pfd-books");
       var maxRefText = refW - 18;
-      sections.forEach(function (sec) {
+      if (!phone) sections.forEach(function (sec) {
         refLayer.append("text")
           .attr("x", x2 + 12)
           .attr("y", sec.y + 11)
