@@ -713,6 +713,14 @@ button, a { font-family: inherit; }
   color: #78716c;
 }
 
+.pfd-reader-livebtn.is-plain {
+  cursor: default;
+}
+
+.pfd-reader-livebtn.is-plain .pfd-reader-chevron {
+  display: none;
+}
+
 .pfd-reader-livelist {
   position: absolute;
   top: calc(100% + 6px);

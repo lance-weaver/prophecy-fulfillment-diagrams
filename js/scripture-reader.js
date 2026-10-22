@@ -170,23 +170,33 @@
 
     function buildLiveList() {
       if (!liveList) return;
-      var seen = {};
+      var jumps = options.jumps || [];
+      if (liveBtn) liveBtn.classList.toggle("is-plain", !jumps.length);
+      if (!jumps.length) {
+        liveList.innerHTML = "";
+        return;
+      }
       var html = "";
-      body.querySelectorAll(".pfd-reader-verse").forEach(function (el) {
-        var label = el.getAttribute("data-label") || "";
-        if (!label || seen[label]) return;
-        seen[label] = true;
-        html += '<button type="button" class="pfd-reader-liveopt" role="option" data-label="' +
-          esc(label) + '">' + esc(label) + "</button>";
+      jumps.forEach(function (jump, i) {
+        html += '<button type="button" class="pfd-reader-liveopt" role="option" data-jump="' +
+          i + '">' + esc(jump.label || "") + "</button>";
       });
       liveList.innerHTML = html;
     }
 
     function markActiveOption() {
-      if (!liveList || !liveLabel) return;
-      var current = liveLabel.textContent || "";
+      if (!liveList) return;
+      var verse = payloadFrom(verseAtCenter());
+      var jumps = options.jumps || [];
+      var active = -1;
+      jumps.forEach(function (jump, i) {
+        if (!verse) return;
+        if ((jump.book || "") !== (verse.book || "")) return;
+        if (jump.chapter && String(jump.chapter) !== String(verse.chapter || "")) return;
+        active = i;
+      });
       liveList.querySelectorAll(".pfd-reader-liveopt").forEach(function (opt) {
-        var on = opt.getAttribute("data-label") === current;
+        var on = Number(opt.getAttribute("data-jump")) === active;
         opt.classList.toggle("is-active", on);
         if (on && listOpen) {
           var box = liveList.getBoundingClientRect();
@@ -311,6 +321,7 @@
     if (liveBtn) {
       liveBtn.addEventListener("click", function (event) {
         event.preventDefault();
+        if (!(options.jumps || []).length) return;
         setListOpen(!listOpen);
       });
     }
@@ -319,13 +330,10 @@
         var opt = event.target && event.target.closest && event.target.closest(".pfd-reader-liveopt");
         if (!opt) return;
         event.preventDefault();
-        var label = opt.getAttribute("data-label") || "";
-        var target = null;
-        body.querySelectorAll(".pfd-reader-verse").forEach(function (el) {
-          if (!target && el.getAttribute("data-label") === label) target = el;
-        });
+        var jumps = options.jumps || [];
+        var jump = jumps[Number(opt.getAttribute("data-jump"))];
         setListOpen(false);
-        scrollToNode(target);
+        scrollToNode(jumpTarget(jump));
       });
     }
     body.addEventListener("scroll", onScroll, { passive: true });

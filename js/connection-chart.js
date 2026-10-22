@@ -506,16 +506,9 @@
 
     function passageBlock(ref, withOpen) {
       var verses = versesOf(data, ref);
-      var inner = "";
-      if (verses.length) inner += '<p class="pfd-tip-passage">' + passageHtml(verses) + "</p>";
-      if (withOpen) inner += openLinkHtml(ref);
-      var html = '<div class="pfd-tip-expando">' +
-        '<button type="button" class="pfd-tip-expando-btn" aria-expanded="false">' +
-          '<span class="pfd-tip-expando-ref" style="color:' + esc(colorForBook(ref.book)) + '">' + esc(ref.reference) + "</span>" +
-          '<span class="pfd-tip-expando-arrow" aria-hidden="true"></span>' +
-        "</button>" +
-        '<div class="pfd-tip-expando-panel" hidden>' + inner + "</div>" +
-        "</div>";
+      var html = '<p class="pfd-tip-ref" style="color:' + esc(colorForBook(ref.book)) + '">' + esc(ref.reference) + "</p>";
+      if (verses.length) html += '<p class="pfd-tip-passage">' + passageHtml(verses) + "</p>";
+      if (withOpen) html += openLinkHtml(ref);
       return { html: html, truncated: false, used: verses.length };
     }
 
