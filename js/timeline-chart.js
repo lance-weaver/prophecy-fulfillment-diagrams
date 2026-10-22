@@ -124,6 +124,23 @@
     var strings = cfg.strings || {};
     var eventsSource = JSON.parse(JSON.stringify((eventsDoc && eventsDoc.events) || []));
     var events = JSON.parse(JSON.stringify(eventsSource));
+
+    function eventOrder(node) {
+      if (!node) return "";
+      if (node.order != null && node.order !== "") return String(node.order);
+      if (node.id != null && node.id !== "") return String(node.id);
+      return "";
+    }
+
+    function normalizeTree(nodes) {
+      (nodes || []).forEach(function (node) {
+        if (node.order == null && node.id != null) node.order = String(node.id);
+        if (Object.prototype.hasOwnProperty.call(node, "id")) delete node.id;
+        if (node.children && node.children.length) normalizeTree(node.children);
+      });
+    }
+    normalizeTree(eventsSource);
+    normalizeTree(events);
     var passages = (scripturesDoc && scripturesDoc.passages) || {};
     var bookOrder = (scripturesDoc && scripturesDoc.bookOrder) || [];
     var changeHandlers = [];
@@ -291,6 +308,7 @@
         var parsed = JSON.parse(raw);
         if (parsed && Array.isArray(parsed.events) && parsed.events.length) {
           events = parsed.events;
+          normalizeTree(events);
           return true;
         }
       } catch (err) {}
@@ -381,7 +399,7 @@
     function findLoc(id, nodes, parent) {
       nodes = nodes || events;
       for (var i = 0; i < nodes.length; i++) {
-        if (String(nodes[i].id) === String(id)) {
+        if (eventOrder(nodes[i]) === String(id)) {
           return { list: nodes, index: i, node: nodes[i], parent: parent || null };
         }
         var kids = nodes[i].children;
@@ -395,12 +413,37 @@
 
     function nodeContains(node, id) {
       if (!node || id == null) return false;
-      if (String(node.id) === String(id)) return true;
+      if (eventOrder(node) === String(id)) return true;
       return (node.children || []).some(function (child) { return nodeContains(child, id); });
     }
 
+    function parseUidNum(uid) {
+      var match = String(uid || "").match(/^#(\d{1,3})$/);
+      return match ? Number(match[1]) : 0;
+    }
+
+    function formatUid(n) {
+      var s = String(n);
+      while (s.length < 3) s = "0" + s;
+      return "#" + s;
+    }
+
+    function usedUidNums(nodes, into) {
+      into = into || {};
+      (nodes || events).forEach(function (node) {
+        var n = parseUidNum(node.uid);
+        if (n) into[n] = true;
+        if (node.children && node.children.length) usedUidNums(node.children, into);
+      });
+      return into;
+    }
+
     function newUid() {
-      return "e-" + Math.random().toString(36).slice(2, 10);
+      var used = usedUidNums();
+      for (var i = 1; i <= 999; i++) {
+        if (!used[i]) return formatUid(i);
+      }
+      return formatUid(1);
     }
 
     function ensureUids(nodes) {
@@ -426,12 +469,13 @@
       return null;
     }
 
-    function reassignIds() {
+    function reassignOrders() {
       function walk(nodes, prefix) {
         (nodes || []).forEach(function (node, i) {
           if (!node.uid) node.uid = newUid();
-          node.id = prefix ? prefix + "." + (i + 1) : String(i + 1);
-          walk(node.children || [], node.id);
+          node.order = prefix ? prefix + "." + (i + 1) : String(i + 1);
+          if (Object.prototype.hasOwnProperty.call(node, "id")) delete node.id;
+          walk(node.children || [], node.order);
         });
       }
       walk(events, "");
@@ -441,7 +485,7 @@
       var hit = findLoc(id);
       if (!hit) return;
       if (parentId && nodeContains(hit.node, parentId)) return;
-      var sameParent = ((hit.parent && hit.parent.id) || null) === (parentId || null);
+      var sameParent = (eventOrder(hit.parent) || null) === (parentId || null);
       if (sameParent && (index === hit.index || index === hit.index + 1)) return;
       var node = hit.list.splice(hit.index, 1)[0];
       var list;
@@ -455,18 +499,18 @@
       if (sameParent && hit.index < index) index -= 1;
       index = Math.max(0, Math.min(index, list.length));
       list.splice(index, 0, node);
-      reassignIds();
+      reassignOrders();
     }
 
     function laidOf(id) {
       for (var i = 0; i < laidEvents.length; i++) {
-        if (String(laidEvents[i].row.node.id) === String(id)) return laidEvents[i];
+        if (eventOrder(laidEvents[i].row.node) === String(id)) return laidEvents[i];
       }
       return null;
     }
 
     function lastVisible(node) {
-      var kids = (node.children || []).filter(function (child) { return laidOf(child.id); });
+      var kids = (node.children || []).filter(function (child) { return laidOf(eventOrder(child)); });
       if (!kids.length) return node;
       return lastVisible(kids[kids.length - 1]);
     }
@@ -481,9 +525,9 @@
         slots.push({ y: y, parentId: parentId || null, index: index });
       }
       function addBlock(node, parentId, index) {
-        var row = laidOf(node.id);
+        var row = laidOf(eventOrder(node));
         if (row) add(row.y, parentId, index);
-        var end = laidOf(lastVisible(node).id);
+        var end = laidOf(eventOrder(lastVisible(node)));
         if (end) add(end.y + end.h + 2, parentId, index + 1);
       }
       if (level === 1) {
@@ -491,20 +535,20 @@
       } else if (level === 2) {
         events.forEach(function (epoch) {
           var kids = epoch.children || [];
-          kids.forEach(function (child, i) { addBlock(child, epoch.id, i); });
+          kids.forEach(function (child, i) { addBlock(child, eventOrder(epoch), i); });
           if (!kids.length) {
-            var parentRow = laidOf(epoch.id);
-            if (parentRow) add(parentRow.y + parentRow.h + 4, epoch.id, 0);
+            var parentRow = laidOf(eventOrder(epoch));
+            if (parentRow) add(parentRow.y + parentRow.h + 4, eventOrder(epoch), 0);
           }
         });
       } else {
         events.forEach(function (epoch) {
           (epoch.children || []).forEach(function (phase) {
             var kids = phase.children || [];
-            kids.forEach(function (child, i) { addBlock(child, phase.id, i); });
+            kids.forEach(function (child, i) { addBlock(child, eventOrder(phase), i); });
             if (!kids.length) {
-              var parentRow = laidOf(phase.id);
-              if (parentRow) add(parentRow.y + parentRow.h + 4, phase.id, 0);
+              var parentRow = laidOf(eventOrder(phase));
+              if (parentRow) add(parentRow.y + parentRow.h + 4, eventOrder(phase), 0);
             }
           });
         });
@@ -684,7 +728,7 @@
         root.classList.add("is-dragging");
       }
       var dragged = dragState.item.row.node;
-      var slots = slotsFor(dragState.item.row.level, dragged.id);
+      var slots = slotsFor(dragState.item.row.level, eventOrder(dragged));
       dragState.drop = nearestSlot(slots, svgY(event));
       showDrop(dragState.drop);
     }
@@ -698,7 +742,7 @@
       root.classList.remove("is-dragging");
       showDrop(null);
       if (wasDrag && drop) {
-        moveNode(item.row.node.id, drop.parentId, drop.index);
+        moveNode(eventOrder(item.row.node), drop.parentId, drop.index);
         persistDraft();
         draw(true);
         notify();
@@ -818,9 +862,9 @@
       if (!loc) return null;
       var node = loc.node;
       while (node) {
-        var laid = laidOf(node.id);
+        var laid = laidOf(eventOrder(node));
         if (laid) return laid.connectY;
-        loc = findLoc(node.id);
+        loc = findLoc(eventOrder(node));
         node = loc && loc.parent;
       }
       return null;
@@ -899,7 +943,7 @@
       if (y == null) {
         visibleRows().some(function (row) {
           if ((row.node.scriptures || []).indexOf(verse.ref) === -1) return false;
-          var laid = laidOf(row.node.id);
+          var laid = laidOf(eventOrder(row.node));
           if (laid) y = laid.connectY;
           return !!laid;
         });
@@ -917,7 +961,7 @@
         (row.node.scriptures || []).forEach(function (reference) {
           if (!refY[reference]) return;
           links.push({
-            eventId: String(row.node.id),
+            eventId: eventOrder(row.node),
             event: row.node,
             reference: reference,
             book: bookOf(reference)
@@ -991,16 +1035,25 @@
       tip.hidden = true;
     }
 
+    function scriptureLinkHtml(hasVerses, url) {
+      if (!url) return hasVerses ? "" : '<p class="pfd-tip-more">' + esc(strings.noVerses || "Verse text has not been added for this reference yet.") + "</p>";
+      return '<p class="pfd-tip-more"><a class="pfd-open" href="' + esc(url) + '" target="_blank" rel="noopener noreferrer">' +
+        esc(hasVerses ? (strings.openScripture || "Open on lds.org") : (strings.readScripture || "Read on churchofjesuschrist.org")) + "</a></p>";
+    }
+
+    function scriptureOpenHtml(reference, color, verses, url) {
+      var hasVerses = !!(verses && verses.length);
+      var html = '<p class="pfd-tip-ref"' + (color ? ' style="color:' + esc(color) + '"' : "") + ">" + esc(reference) + "</p>";
+      if (hasVerses) html += '<p class="pfd-tip-passage">' + versesHtml(verses) + "</p>";
+      html += scriptureLinkHtml(hasVerses, url);
+      return html;
+    }
+
     function scriptureExpandoHtml(reference, color, verses, url) {
       var hasVerses = !!(verses && verses.length);
       var inner = "";
       if (hasVerses) inner += '<p class="pfd-tip-passage">' + versesHtml(verses) + "</p>";
-      if (url) {
-        inner += '<p class="pfd-tip-more"><a class="pfd-open" href="' + esc(url) + '" target="_blank" rel="noopener noreferrer">' +
-          esc(hasVerses ? (strings.openScripture || "Open on lds.org") : (strings.readScripture || "Read on churchofjesuschrist.org")) + "</a></p>";
-      } else if (!hasVerses) {
-        inner += '<p class="pfd-tip-more">' + esc(strings.noVerses || "Verse text has not been added for this reference yet.") + "</p>";
-      }
+      inner += scriptureLinkHtml(hasVerses, url);
       return '<div class="pfd-tip-expando">' +
         '<button type="button" class="pfd-tip-expando-btn" aria-expanded="false">' +
           '<span class="pfd-tip-expando-ref"' + (color ? ' style="color:' + esc(color) + '"' : "") + ">" + esc(reference) + "</span>" +
@@ -1025,7 +1078,7 @@
     function refTipHtml(reference) {
       var info = passageOf(reference);
       var book = info.book || bookOf(reference);
-      return scriptureExpandoHtml(reference, colorForBook(book), info.verses, scriptureUrl(book, reference));
+      return scriptureOpenHtml(reference, colorForBook(book), info.verses, scriptureUrl(book, reference));
     }
 
     tip.addEventListener("pointerenter", function () { tipOver = true; cancelHide(); });
@@ -1089,9 +1142,9 @@
           .attr("opacity", state === "dim" ? 0 : 0.95);
       });
       svg.selectAll(".pfd-event").each(function (row) {
-        var hot = hoverEvent && hoverEvent === String(row.node.id);
+        var hot = hoverEvent && hoverEvent === eventOrder(row.node);
         var connected = !hoverRef && !hoverEvent ? true : (hoverEvent
-          ? String(row.node.id) === hoverEvent
+          ? eventOrder(row.node) === hoverEvent
           : (row.node.scriptures || []).indexOf(hoverRef) !== -1);
         d3.select(this).select("text")
           .attr("opacity", connected ? 1 : 0.28)
@@ -1108,7 +1161,7 @@
           connected = (function () {
             var match = false;
             visibleRows().forEach(function (ev) {
-              if (String(ev.node.id) === hoverEvent && (ev.node.scriptures || []).indexOf(row.ref.reference) !== -1) match = true;
+              if (eventOrder(ev.node) === hoverEvent && (ev.node.scriptures || []).indexOf(row.ref.reference) !== -1) match = true;
             });
             return match;
           })();
@@ -1185,7 +1238,7 @@
       var eventIndex = new Map();
       laidEvents = [];
       var bannerCfg = cfg.millenniumBanner || {
-        beforeUid: "e-22",
+        beforeUid: "#151",
         title: "MILLENNIUM OCCURS HERE IN EARTH'S HIGHER DIMENSION.",
         body: "The Righteous are transfigured into it for a thousand years, while the wicked stay on a self-destructing earth as if no time has passed."
       };
@@ -1230,7 +1283,7 @@
         var connectY = row.level === 1 ? textY : mid;
         var connectX = row.level === 1 ? firstRight - 2 : eventW - 2;
         var cited = (row.node.scriptures || []).length > 0;
-        eventIndex.set(String(row.node.id), { x: connectX, y: connectY, cited: cited });
+        eventIndex.set(eventOrder(row.node), { x: connectX, y: connectY, cited: cited });
         laidEvents.push({
           row: row, y: y, mid: mid, textY: textY, connectX: connectX, connectY: connectY,
           cited: cited, lines: lines, size: size, h: block
@@ -1401,14 +1454,14 @@
           hoverEvent = row.link.eventId;
           hoverRef = null;
           restyle();
-          fillTip(eventTipHtml(row.link.event), event, false);
+          fillTip(refTipHtml(row.link.reference), event, false);
         });
         hit.on("pointerleave", function () { scheduleHide(); });
         hit.on("pointerdown", markPointerDown);
         hit.on("click", function (event) {
           event.stopPropagation();
           if (preferPin(event) || isTouchLike(event)) {
-            fillTip(eventTipHtml(row.link.event), event, true);
+            fillTip(refTipHtml(row.link.reference), event, true);
             lastTouchPin = Date.now();
           }
         });
@@ -1494,7 +1547,7 @@
             .attr("fill", row.level === 2 ? "#78716c" : "#a8a29e");
         }
         function focus(event, pin) {
-          hoverEvent = String(row.node.id);
+          hoverEvent = eventOrder(row.node);
           hoverRef = null;
           restyle();
           fillTip(eventTipHtml(row.node), event, pin);
